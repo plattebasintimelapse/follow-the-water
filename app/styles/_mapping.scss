@@ -11,6 +11,21 @@
     }
 }
 
+.dam-image {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 5px;
+}
+
+.dam-link {
+    color: black;
+    font-size: .8em;
+}
+
+.dam-link:hover {
+    color: $blue;
+}
+
 .leaflet-popup-content {
     margin: 5px 8px;
 }

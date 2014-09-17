@@ -40,8 +40,10 @@ function makeDamMap() {
             "type": "Feature",
             "properties": {
                 "name": "Kortes Dam",
-                "year": "1909",
-                "marker-color": "red"
+                "year": "1946-1951",
+                "marker-color": "red",
+                "image": "www.usbr.gov/projects/ImageServer?imgName=A_KORTES01.JPG",
+                "link": "http://www.usbr.gov/projects/Project.jsp?proj_Name=Kortes%20Unit"
             },
             "geometry": {
                 "type": "Point",
@@ -110,7 +112,7 @@ function makeDamMap() {
         maxBounds: bounds
     });
 
-    var geojsonLayer = new L.GeoJSON.AJAX("/data/dams.json");
+    // var geojsonLayer = new L.GeoJSON.AJAX("/data/dams.json");
 
     var damInfoPanel = document.getElementById('dam-info-panel');
 
@@ -122,7 +124,8 @@ function makeDamMap() {
                 '<p> Year completed: ' + feature.properties.year + '</p>' +
                 '<p> Capacity: ' + feature.properties.capacity + '</p>' +
                 '<p> Project: ' + feature.properties.project + '</p>' + 
-                '<img src="http://' + feature.properties.image + '"/>'
+                '<img class="dam-image" src="http://' + feature.properties.image + '"/>' +
+                '<a class="dam-link" src= "' + feature.properties.link + '" >Read More</a>'
             layer.bindPopup(popup_content);
 
             layer.on('click', function(e) {
