@@ -1,8 +1,6 @@
 function makeDamMap() {
     console.log('making map');
-    var dams = {
-        "type": "FeatureCollection",
-        features: [{
+    var dams = [{
             "type": "Feature",
             "properties": {
                 "name": "Pathfinder Dam",
@@ -91,7 +89,6 @@ function makeDamMap() {
                 "coordinates": [-104.69052,42.1683]
             }
         }]
-    };
 
     // L.mapbox.access_token = 'pk.eyJ1Ijoic3R2bnNwY2hyIiwiYSI6InhEclV5MTgifQ.Ly3cNBJjEqglMpeOmzeFiA#9';
     // var myURL = "https://a.tiles.mapbox.com/v4/stvnspchr.jgpagedp/page.html?access_token=pk.eyJ1Ijoic3R2bnNwY2hyIiwiYSI6InhEclV5MTgifQ.Ly3cNBJjEqglMpeOmzeFiA#9/41.9421/-105.6747";
@@ -108,12 +105,15 @@ function makeDamMap() {
         maxBounds: bounds
     });
 
+    var damInfoBox = document.getElementById('dam-info');
 
     var geoDams = L.geoJson(dams, {
         onEachFeature: function (feature, layer) {
             var content = '<h3>' + feature.properties.name + '</h3>' +
-                '<p> Year completed: ' + feature.properties.year + '</p>'
+                '<p> Year completed: ' + feature.properties.year + '</p>' +
+                '<p> Layer ' + layer + '</p>'
             layer.bindPopup(content);
+            damInfoBox.innerHTML = content;
         }
 
     }).addTo(map);
@@ -259,7 +259,7 @@ $('#new-wells-chart').waypoint(function() {
 
 
 setTimeout(function() {
-    $('.pull-quote').fadeOut('slow')
+    $('.opening-pull-quote').fadeOut('slow')
 }, 4000)
 
 setTimeout(function() {
@@ -295,7 +295,6 @@ function setOpeningStyles() {
 
 function listenForAudioCntl( sound ) {
     // sound is a jQuery object, convert to javascript element to play() or pause()
-    
     // sound[0].volume=0;
     // sound.animate({volume: 1}, 3000);
 

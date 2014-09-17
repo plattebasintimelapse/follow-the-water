@@ -48,6 +48,15 @@ img {
 	width: 100%;
 }
 
+a {
+	color: white;
+}
+
+a:hover {
+	color: $red;
+	text-decoration: none;
+}
+
 blockquote {
 	font-size: 1.1em;
 	padding: 10px 20px;
