@@ -61,21 +61,24 @@ footer {
 }
 
 // TEXT
-.opening-title {
+.text-over-image {
 	position: absolute;
 	color:white;
 	text-shadow: 1px 1px 1px #000;
 }
+.opening-title {
+	@extend .text-over-image;
+}
 
 .opening-title-center {
-	@extend .opening-title;
+	@extend .text-over-image;
 	text-align:center;
 	top: 25%;
 	width: 100%;
 }
 
 .opening-title-right {
-	@extend .opening-title;
+	@extend .text-over-image;
 	text-align:right;
 	top: 25%;
 	right: 10%;
@@ -83,7 +86,7 @@ footer {
 }
 
 .opening-title-left {
-	@extend .opening-title;
+	@extend .text-over-image;
 	text-align:left;
 	top: 25%;
 	left: 10%;
@@ -91,7 +94,7 @@ footer {
 }
 
 .opening-scroll {
-	@extend .opening-title;
+	@extend .text-over-image;
 	bottom: 1%;
 	display:none;
 	text-align: center;
@@ -122,12 +125,21 @@ footer {
 }
 
 .opening-pull-quote {
-	@extend .opening-title;
+	@extend .text-over-image;
     top: 30%;
     left: 10%;
     font-size: 3em;
     line-height: 1em;
     width:50%;
+}
+
+//  BLOCK QUOTES
+
+.blockquote-behind {
+	@extend .text-over-image;
+	font-size: 2.4em;
+	top: 40%;
+	left: 5%;
 }
 
 // INLINE MEDIA

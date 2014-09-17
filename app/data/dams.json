@@ -1,0 +1,99 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Pathfinder Dam",
+                "year": "1909",
+                "capacity": "1,200,000",
+                "project": "North Platte Project",
+                "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1342825977603",
+                "marker-color": "red"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-106.8131, 42.43746]
+            }
+        },{
+            "type": "Feature",
+            "properties": {
+                "name": "Seminoe Dam",
+                "year": "1909",
+                "marker-color": "red"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-106.91393, 42.15662]
+            }
+        },{
+            "type": "Feature",
+            "properties": {
+                "name": "Whalen Diversion Dam",
+                "year": "1909",
+                "marker-color": "red"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-104.62913, 42.24802]
+            }
+        },{
+            "type": "Feature",
+            "properties": {
+                "name": "Kortes Dam",
+                "year": "1909",
+                "marker-color": "red"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-106.88088, 42.17413]
+            }
+        },{
+            "type": "Feature",
+            "properties": {
+                "name": "Guernsey Dam",
+                "year": "1909",
+                "marker-color": "red"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-104.763737,42.290167]
+            }
+        },{
+            "type": "Feature",
+            "properties": {
+                "name": "Glendo Dam",
+                "year": "1909",
+                "marker-color": "red"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-104.9483031, 42.4796911]
+            }
+        },{
+            "type": "Feature",
+            "properties": {
+                "name": "Alcova Dam",
+                "year": "1909",
+                "marker-color": "red"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-106.719444,42.548056]
+            }
+        },{
+            "type": "Feature",
+            "properties": {
+                "name": "Grayrocks Dam",
+                "year": "1909",
+                "capacity": "1,200,000",
+                "project": "Kendrick",
+                "marker-color": "red"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-104.69052,42.1683]
+            }
+        }
+    ]
+}

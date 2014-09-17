@@ -2,6 +2,19 @@
     height: 600px;
 }
 
+#dam-info-panel {
+    h3 {
+        font-weight: bold;
+    }
+    p {
+        margin-bottom: 2px;
+    }
+}
+
+.leaflet-popup-content {
+    margin: 5px 8px;
+}
+
 .popover-title {
     font-size: 16px;
     padding: 4px 8px;
