@@ -1,0 +1,70 @@
+
+#pop-chart, #snow-chart1 {
+    font-size: 12px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path, .y.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke-width: 1px;
+}
+
+.scotts-bluff-co {
+  stroke-width: 3px;
+  stroke: "red";
+}
+
+.population-list {
+    height: 700px;
+    width: 200px;
+    overflow:auto;
+    font-size: .8em;
+
+    ul {
+        list-style-type: none;
+        padding-left: 0px;
+    }
+
+    li {
+        margin: 0px;
+        height: 20px;
+        display: list-item;
+        p {
+          display: inline-block;
+          font-size:.8em;
+          margin-bottom: 0px;
+          padding: 5px;
+          margin: 5px;
+          &.scotts-bluff-co {
+            color:$red;
+          }
+        }
+        p:hover {
+            background-color: $blue;
+            color: white;
+        }
+    }
+}
+
+#snow-charts .line {
+  fill: none;
+  stroke-width: .5px;
+}
+
+#average {
+    stroke: lightgray;
+}
+
+#actual {
+    stroke: $red;
+}

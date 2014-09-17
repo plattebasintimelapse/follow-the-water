@@ -1,0 +1,28 @@
+
+
+// bower:scss
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
+// endbower
+
+@import 'variables';
+
+@import 'blocks';
+@import 'sections';
+@import 'tags';
+
+@import 'intro';
+
+@import 'interactives';
+@import 'charts';
+@import 'mapping';
+
+
+@import 'shame';
+
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}

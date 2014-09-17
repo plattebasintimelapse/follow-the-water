@@ -1,0 +1,22 @@
+//TEMP MEDIA STUFF
+
+#image-featured-behind {
+	background-image: url('/media/samples/image-featured-behind.jpg');
+}
+#field-opening {
+	background-image: url('/media/cinemagraph-field.gif');
+    opacity: .9;
+}
+#pathfinder-opening {
+    background-image: url('/media/pathfinder.gif');
+    opacity: .9;
+}
+
+.sound-container {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    padding: 0px 10px;
+    color: white;
+    cursor: pointer;
+}

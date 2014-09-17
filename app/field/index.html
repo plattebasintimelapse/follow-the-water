@@ -1,0 +1,228 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Field</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css /styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) /styles/main.css -->
+        <link rel="stylesheet" href="/styles/main.css">
+        <!-- endbuild -->
+        <!-- build:js /scripts/vendor/modernizr.js -->
+        <script src="../bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+        <script type="text/javascript" src="//use.typekit.net/dlv3qjg.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    </head>
+
+    <body id="part-three">
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" data-200-start="margin-top:-60px;" data-800-start="margin-top:0px;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <h4 href="#">North Platte Irrigation</h4>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">intro</a></li>
+                        <li><a href="/snow">1</a></li>
+                        <li><a href="/storage">2</a></li>
+                        <li class="active"><a href="/field">3</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+            <div class="container-fluid" id="pager-progress">
+                <div id="pager" data-0="width:0%" data-end="width:100%;">
+                    
+                </div>
+            </div>
+        </nav>
+
+        <header class="image-featured-behind">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-full" id="field-opening"></div>
+                </div>
+            </div>
+            
+            <div class="opening-title-right" data-start="opacity:1;" data-600-start="opacity:0;">
+                <h1>To the Fields!</h1>
+            </div>
+            <div class="opening-scroll" data-start="opacity:1; bottom:1%;" data-100-start="opacity:0; bottom: -10%;">
+                <p>scroll</p>
+                <span class="lead-scroll-arrow glyphicon glyphicon-chevron-down"></span>
+            </div>
+        </header>
+
+        <section class="second-title">
+            <div class="container">
+                <div class="row-md-12">
+                    <h2>A Second Title</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="copy-left">
+            <div class="container container-small">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quibusdam cumque velit nihil perspiciatis voluptatum consequatur tenetur laudantium voluptatem temporibus, atque necessitatibus sapiente praesentium porro maiores est odit adipisci consequuntur!</p>
+                        <p>Iure repudiandae necessitatibus minus consequuntur earum minima ea officiis repellendus veniam. Labore, sequi quisquam earum dicta perspiciatis neque suscipit, illum doloremque similique odio nobis quam dolores eum, non provident nisi?</p>
+
+                        <div class="inline-media-small">
+                            <div class="inline-media-wrapper">
+                                <img class="zoom" src="/media/samples/image-aside.jpg" alt="">
+                                <span class="image-caption image-caption-right"><img class="zoom-in-icon" src="/media/zoom.png" />This is an inline media element, small sized. You can also zoom in on this image!</span>
+                            </div>
+                        </div>
+
+                        <p>Asperiores, veritatis harum vitae minus commodi. Quam sit explicabo perspiciatis deleniti, labore quas maiores non temporibus laudantium, cumque excepturi, accusantium sunt esse voluptas nulla! Doloremque debitis qui, repudiandae suscipit recusandae?</p>
+                        <p>Doloremque voluptatum, voluptas architecto facilis reiciendis doloribus neque at suscipit rerum nemo mollitia sit nulla quaerat totam impedit enim repellat qui quidem aut similique aperiam maiores veniam ullam amet. Quod.</p>
+
+                        <div class="inline-media-medium">
+                            <div class="inline-media-wrapper">
+                                <img class="zoom" src="/media/samples/image-aside.jpg" alt="">
+                                <span class="image-caption image-caption-right"><img class="zoom-in-icon" src="/media/zoom.png" />This is an inline media element, medium sized. You can also zoom in on this image!</span>
+                            </div>
+                        </div>
+
+                        <p>Asperiores, veritatis harum vitae minus commodi. Quam sit explicabo perspiciatis deleniti, labore quas maiores non temporibus laudantium, cumque excepturi, accusantium sunt esse voluptas nulla! Doloremque debitis qui, repudiandae suscipit recusandae?</p>
+                        <p>Doloremque voluptatum, voluptas architecto facilis reiciendis doloribus neque at suscipit rerum nemo mollitia sit nulla quaerat totam impedit enim repellat qui quidem aut similique aperiam maiores veniam ullam amet. Quod.</p>
+
+                        <div class="inline-media-large">
+                            <div class="inline-media-wrapper">
+                                <img class="zoom" src="/media/samples/image.jpg" alt="">
+                                <span class="image-caption image-caption-right"><img class="zoom-in-icon" src="/media/zoom.png" />This is an inline media element, large sized. You can also zoom in on this image!</span>
+                            </div>
+                        </div>
+
+                        <p>Asperiores, veritatis harum vitae minus commodi. Quam sit explicabo perspiciatis deleniti, labore quas maiores non temporibus laudantium, cumque excepturi, accusantium sunt esse voluptas nulla! Doloremque debitis qui, repudiandae suscipit recusandae?</p>
+                        <p>Doloremque voluptatum, voluptas architecto facilis reiciendis doloribus neque at suscipit rerum nemo mollitia sit nulla quaerat totam impedit enim repellat qui quidem aut similique aperiam maiores veniam ullam amet. Quod.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="image-featured-behind footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="image-featured-behind"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-2">
+                        <p class="credits">credits</p>
+                        <p class="credit">Design and Development: Billy Bob Joe</p>
+                        <p class="credit">Reporting: Junior Poopy Pants</p>
+                        <p class="credit">Multimedia: Ysha the Cat</p>
+                        <p class="credit">Video Editing: A Young Man, A Scholar</p>
+                        <p class="credit">Historical Research: Some History Dude</p>
+                        <p class="credit">Geospatial Resea  rch: Mappy McGee</p>
+                        <p class="credit">Prodution Intern: Some Other Folks Here Too</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <!-- <p class="next-page">Part Two</p> -->
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- build:js /scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+        <script src="../bower_components/jquery-waypoints/waypoints.js"></script>
+        <script src="../bower_components/highcharts-release/highcharts.js"></script>
+        <script src="../bower_components/highcharts-release/highcharts-more.js"></script>
+        <script src="../bower_components/highcharts-release/modules/exporting.js"></script>
+        <script src="../bower_components/jquery-zoom/jquery.zoom.js"></script>
+        <script src="../bower_components/skrollr/src/skrollr.js"></script>
+        <script src="../bower_components/d3/d3.js"></script>
+        <script src="../bower_components/vimeo-player-api/javascript/froogaloop.min.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+        <!-- build:js /scripts/plugins.js -->
+
+        <!-- endbuild -->
+        <!-- build:js({app,.tmp}) /scripts/main.js -->
+        <script src="/scripts/main.js"></script>
+        <script src="/scripts/pop-charts.js"></script>
+        <script src="/scripts/snow-charts.js"></script>
+        <!-- endbuild -->
+        
+        
+        <script>
+            var s = skrollr.init();
+            var iframe = document.getElementById('autoplay');
+
+             // $f == Froogaloop
+            var player = $f(iframe);
+
+             //Play when iframe is in viewport
+            $('#autoplay').waypoint(function() {
+                player.api("play");
+            }, {
+                offset: 'bottom-in-view'
+            });
+
+             //Pause when top of iframe is in viewport
+            $('#autoplay').waypoint(function() {
+                player.api("pause");
+            });
+            var s = skrollr.init();
+            $('img.dam').popover({
+                trigger : 'hover',
+                html : 'true'
+            });
+
+                $(document).ready( function() {
+                    $('body').animate({
+                        opacity: 1}
+                    );
+                })
+                setTimeout(function() {
+                    $('.pull-quote').fadeOut('slow')
+                }, 4000)
+                setTimeout(function() {
+                    $('.opening-title-right').fadeIn('slow')
+                }, 5000)
+        </script>
+    </body>
+</html>
