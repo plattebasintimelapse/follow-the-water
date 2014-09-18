@@ -5,22 +5,24 @@
             "type": "Feature",
             "properties": {
                 "name": "Pathfinder Dam",
-                "year": "1909",
-                "capacity": "1,200,000",
-                "project": "North Platte Project",
+                "info": "<p>Part of the North Platte Project</p><p>Built: 1905-1909</p><p>Capacity: 1,016,000 af</p>",
                 "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1342825977603",
-                "marker-color": "red"
+                "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
+                "marker-color": "#b42f1d",
+                "marker_radius": "6"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-106.8131, 42.43746]
+                "coordinates": [-106.853889, 42.468056]
             }
         },{
             "type": "Feature",
             "properties": {
                 "name": "Seminoe Dam",
-                "year": "1909",
-                "marker-color": "red"
+                "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1342825977603",
+                "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
+                "marker-color": "steelblue",
+                "marker_radius": "5"
             },
             "geometry": {
                 "type": "Point",
@@ -30,8 +32,10 @@
             "type": "Feature",
             "properties": {
                 "name": "Whalen Diversion Dam",
-                "year": "1909",
-                "marker-color": "red"
+                "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1342825977603",
+                "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
+                "marker-color": "steelblue",
+                "marker_radius": "6"
             },
             "geometry": {
                 "type": "Point",
@@ -41,8 +45,10 @@
             "type": "Feature",
             "properties": {
                 "name": "Kortes Dam",
-                "year": "1909",
-                "marker-color": "red"
+                "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1342825977603",
+                "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
+                "marker-color": "steelblue",
+                "marker_radius": "6"
             },
             "geometry": {
                 "type": "Point",
@@ -52,8 +58,10 @@
             "type": "Feature",
             "properties": {
                 "name": "Guernsey Dam",
-                "year": "1909",
-                "marker-color": "red"
+                "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1342825977603",
+                "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
+                "marker-color": "steelblue",
+                "marker_radius": "6"
             },
             "geometry": {
                 "type": "Point",
@@ -63,8 +71,10 @@
             "type": "Feature",
             "properties": {
                 "name": "Glendo Dam",
-                "year": "1909",
-                "marker-color": "red"
+                "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1342825977603",
+                "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
+                "marker-color": "steelblue",
+                "marker_radius": "6"
             },
             "geometry": {
                 "type": "Point",
@@ -74,8 +84,10 @@
             "type": "Feature",
             "properties": {
                 "name": "Alcova Dam",
-                "year": "1909",
-                "marker-color": "red"
+                "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1342825977603",
+                "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
+                "marker-color": "steelblue",
+                "marker_radius": "5"
             },
             "geometry": {
                 "type": "Point",
@@ -85,14 +97,53 @@
             "type": "Feature",
             "properties": {
                 "name": "Grayrocks Dam",
-                "year": "1909",
-                "capacity": "1,200,000",
-                "project": "Kendrick",
-                "marker-color": "red"
+                "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1342825977603",
+                "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
+                "marker-color": "steelblue",
+                "marker_radius": "5"
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [-104.69052,42.1683]
+            }
+        },{
+            "type": "Feature",
+            "properties": {
+                "name": "Lake Minatare",
+                "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1342825977603",
+                "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
+                "marker-color": "steelblue",
+                "marker_radius": "5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-103.493056,41.918118]
+            }
+        },{
+            "type": "Feature",
+            "properties": {
+                "name": "Lake Alice",
+                "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1342825977603",
+                "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
+                "marker-color": "steelblue",
+                "marker_radius": "5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-103.596632,41.983420]
+            }
+        },{
+            "type": "Feature",
+            "properties": {
+                "name": "Lake McConaughy",
+                "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1342825977603",
+                "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
+                "marker-color": "steelblue",
+                "marker_radius": "5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-101.716667, 41.225]
             }
         }
     ]

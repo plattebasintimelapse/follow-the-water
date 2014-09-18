@@ -1,108 +1,10 @@
 function makeDamMap() {
     console.log('making map');
-    var dams = [{
-            "type": "Feature",
-            "properties": {
-                "name": "Pathfinder Dam",
-                "year": "1909",
-                "capacity": "1,200,000",
-                "project": "North Platte Project",
-                "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1342825977603",
-                "marker-color": "red"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-106.8131, 42.43746]
-            }
-        },{
-            "type": "Feature",
-            "properties": {
-                "name": "Seminoe Dam",
-                "year": "1909",
-                "marker-color": "red"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-106.91393, 42.15662]
-            }
-        },{
-            "type": "Feature",
-            "properties": {
-                "name": "Whalen Diversion Dam",
-                "year": "1909",
-                "marker-color": "red"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-104.62913, 42.24802]
-            }
-        },{
-            "type": "Feature",
-            "properties": {
-                "name": "Kortes Dam",
-                "year": "1946-1951",
-                "marker-color": "red",
-                "image": "www.usbr.gov/projects/ImageServer?imgName=A_KORTES01.JPG",
-                "link": "http://www.usbr.gov/projects/Project.jsp?proj_Name=Kortes%20Unit"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-106.88088, 42.17413]
-            }
-        },{
-            "type": "Feature",
-            "properties": {
-                "name": "Guernsey Dam",
-                "year": "1909",
-                "marker-color": "red"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-104.763737,42.290167]
-            }
-        },{
-            "type": "Feature",
-            "properties": {
-                "name": "Glendo Dam",
-                "year": "1909",
-                "marker-color": "red"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-104.9483031, 42.4796911]
-            }
-        },{
-            "type": "Feature",
-            "properties": {
-                "name": "Alcova Dam",
-                "year": "1909",
-                "marker-color": "red"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-106.719444,42.548056]
-            }
-        },{
-            "type": "Feature",
-            "properties": {
-                "name": "Grayrocks Dam",
-                "year": "1909",
-                "capacity": "1,200,000",
-                "project": "Kendrick",
-                "marker-color": "red"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-104.69052,42.1683]
-            }
-        }]
-
-    // L.mapbox.access_token = 'pk.eyJ1Ijoic3R2bnNwY2hyIiwiYSI6InhEclV5MTgifQ.Ly3cNBJjEqglMpeOmzeFiA#9';
-    // var myURL = "https://a.tiles.mapbox.com/v4/stvnspchr.jgpagedp/page.html?access_token=pk.eyJ1Ijoic3R2bnNwY2hyIiwiYSI6InhEclV5MTgifQ.Ly3cNBJjEqglMpeOmzeFiA#9/41.9421/-105.6747";
 
     var southWest = L.latLng(39.3853, -99.624),
         northEast = L.latLng(43.7552, -109.9951),
-        bounds = L.latLngBounds(southWest, northEast);
+        bounds = L.latLngBounds(southWest, northEast),
+        damInfoPanel = document.getElementById('dam-info-panel');
 
     var map = L.map('dam-map', {
         center: [42.105, -105.99],
@@ -112,32 +14,47 @@ function makeDamMap() {
         maxBounds: bounds
     });
 
-    // var geojsonLayer = new L.GeoJSON.AJAX("/data/dams.json");
-
-    var damInfoPanel = document.getElementById('dam-info-panel');
-
-    var geoDams = L.geoJson(dams, {
-        onEachFeature: function (feature, layer) {
-            var popup_content = '<h5>' + feature.properties.name + '</h5>'
-
-            var panel_content = '<h3>' + feature.properties.name + '</h3>' +
-                '<p> Year completed: ' + feature.properties.year + '</p>' +
-                '<p> Capacity: ' + feature.properties.capacity + '</p>' +
-                '<p> Project: ' + feature.properties.project + '</p>' + 
-                '<img class="dam-image" src="http://' + feature.properties.image + '"/>' +
-                '<a class="dam-link" src= "' + feature.properties.link + '" >Read More</a>'
-            layer.bindPopup(popup_content);
-
-            layer.on('click', function(e) {
-                damInfoPanel.innerHTML = panel_content;
-            })
-        }
-    }).addTo(map);
-
-    var basemap = L.tileLayer('http://{s}.tiles.mapbox.com/v3/stvnspchr.jh6fm2pa/{z}/{x}/{y}.png', {
+    var basemap = L.tileLayer('http://{s}.tiles.mapbox.com/v3/plattebasintl.jhkb20af/{z}/{x}/{y}.png', {
         minZoom: 7,
         maxZoom: 10
     }).addTo(map);
+
+    $.ajax({
+        dataType: "json",
+        url: '/data/dams.json',
+        success: function (data) {
+            var geojson = L.geoJson(data, {
+                onEachFeature: function (feature, layer) {
+                    var popup_content = '<h5>' + feature.properties.name + '</h5>'
+
+                    var panel_content = '<h3>' + feature.properties.name + '</h3>' +
+                        feature.properties.info +
+                        '<img class="dam-image" src="http://' + feature.properties.image + '"/>' +
+                        '<p><a class="dam-link" src= "http://' + feature.properties.link + '">Read More</a></p>'
+                    layer.bindPopup(popup_content);
+
+                    layer.on('click', function(e) {s
+                        damInfoPanel.innerHTML = panel_content;
+                    })
+                },
+                pointToLayer: function (feature, latlng) {
+                    return new L.CircleMarker(latlng, {
+                        radius: feature.properties.marker_radius,
+                        fillColor: '#b42f1d',
+                        color: '#b42f1d',
+                        opacity: 0,
+                        fillOpacity: .6
+                    });
+                }
+            });
+
+            map.addLayer(geojson);
+        },
+        error: function (errorThrown) {
+            console.log(errorThrown);
+        }
+
+    });
 }
 
 $(function() {
@@ -260,6 +177,12 @@ function listenForAudioCntl( sound ) {
         }
     }, { offset: 300 });
 }
+
+// INTRO NAV TOGGLES
+$('.intro-nav-button').click(function() {
+    $('.intro-nav-container').toggleClass('hidden');
+    $('#intro-nav').toggleClass('down');
+});
 
 $(document).ready(function() {
     // makeDamMap();

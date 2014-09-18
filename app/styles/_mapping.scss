@@ -1,12 +1,24 @@
+#np-dams-map {
+    h2 {
+        text-align: left;
+        margin-bottom: 0;
+    }
+}
+
 #dam-map {
     height: 600px;
 }
 
 #dam-info-panel {
+    text-align: right;
+    .default-text {
+        margin-top: 90%;
+    }
     h3 {
         font-weight: bold;
     }
     p {
+        font-size: .7em;
         margin-bottom: 2px;
     }
 }
@@ -14,12 +26,13 @@
 .dam-image {
     width: 90%;
     margin: 0 auto;
-    padding: 10px 5px;
+    padding: 10px 0;
 }
 
 .dam-link {
     color: black;
     font-size: .8em;
+    cursor: pointer;
 }
 
 .dam-link:hover {
