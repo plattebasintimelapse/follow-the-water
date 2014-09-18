@@ -21,7 +21,7 @@ function makeDamMap() {
 
     $.ajax({
         dataType: "json",
-        url: '/data/dams.json',
+        url: '../data/dams.json',
         success: function (data) {
             var geojson = L.geoJson(data, {
                 onEachFeature: function (feature, layer) {
@@ -97,7 +97,7 @@ $(function() {
             player.api("unload");
             $('.video-wrapper').remove();
             $('#intro header').remove();
-            window.location.href = "/snow";
+            window.location.href = "snow";
 
         }
     }
@@ -106,10 +106,10 @@ $(function() {
 var w = true;
 $('#toggle-canals').click(function(){
     if (w) {
-        $('#np-map').attr('src', '/media/north-platte-canals.png');
+        $('#np-map').attr('src', '../media/north-platte-canals.png');
         w = false;
     } else {
-        $('#np-map').attr('src', '/media/north-platte-river.png');
+        $('#np-map').attr('src', '../media/north-platte-river.png');
         w = true;
     }
 });
@@ -183,6 +183,11 @@ $('.intro-nav-button').click(function() {
     $('.intro-nav-container').toggleClass('hidden');
     $('#intro-nav').toggleClass('down');
 });
+
+$('#intro-menu img').hover(function() {
+    $('#intro-nav-title').toggleClass('hidden');
+    $('#intro-nav-title').text( $(this).attr('data-title') );
+})
 
 $(document).ready(function() {
     // makeDamMap();

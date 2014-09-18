@@ -7,15 +7,15 @@
         <meta name="viewport" content="width=device-width">
         <link rel="shortcut icon" href="/favicon.ico">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <!-- build:css /styles/vendor.css -->
+        <!-- build:css ../styles/vendor.css -->
         <!-- bower:css -->
         <link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.css" />
         <!-- endbower -->
         <!-- endbuild -->
-        <!-- build:css(.tmp) /styles/main.css -->
+        <!-- build:css(.tmp) ../styles/main.css -->
         <link rel="stylesheet" href="/styles/main.css">
         <!-- endbuild -->
-        <!-- build:js /scripts/vendor/modernizr.js -->
+        <!-- build:js ../scripts/vendor/modernizr.js -->
         <script src="../bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
         <script type="text/javascript" src="//use.typekit.net/dlv3qjg.js"></script>
@@ -43,9 +43,9 @@
 
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li><a href="/">intro</a></li>
-                        <li><a href="/snow">1</a></li>
-                        <li><a href="/storage">2</a></li>
+                        <li><a href="../">intro</a></li>
+                        <li><a href="../snow">1</a></li>
+                        <li><a href="../storage">2</a></li>
                         <li class="active"><a href="/field">3</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -60,7 +60,7 @@
         <header class="image-featured-behind">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-full" id="field-opening"></div>
+                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-full image-featured-title" id="field-opening"></div>
                 </div>
             </div>
             
@@ -144,8 +144,8 @@
             <div class="container container-large">
                 <div class="row" id="stack-maps">
                     <div class="col-sm-12">
-                        <img id="np-map" src="/media/north-platte-river.png">
-                        <!-- <img id="after" src="/media/north-platte-canals.png"> -->
+                        <img id="np-map" src="../media/north-platte-river.png">
+                        <!-- <img id="after" src="../media/north-platte-canals.png"> -->
                     </div>
                     <button class="btn btn-default" id="toggle-canals">Toggle Canals</button>
                 </div>
@@ -182,7 +182,7 @@
             </div>
         </footer>
 
-        <!-- build:js /scripts/vendor.js -->
+        <!-- build:js ../scripts/vendor.js -->
         <!-- bower:js -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
         <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
@@ -195,7 +195,6 @@
         <script src="../bower_components/d3/d3.js"></script>
         <script src="../bower_components/vimeo-player-api/javascript/froogaloop.min.js"></script>
         <script src="../bower_components/leaflet/dist/leaflet.js"></script>
-        <script src="../bower_components/leaflet-ajax/dist/leaflet.ajax.min.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -209,10 +208,10 @@
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
 
-        <!-- build:js /scripts/plugins.js -->
+        <!-- build:js ../scripts/plugins.js -->
 
         <!-- endbuild -->
-        <!-- build:js({app,.tmp}) /scripts/main.js -->
+        <!-- build:js({app,.tmp}) ../scripts/main.js -->
         <script src="/scripts/main.js"></script>
         <script src="/scripts/pop-charts.js"></script>
         <script src="/scripts/snow-charts.js"></script>

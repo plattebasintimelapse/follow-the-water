@@ -34,7 +34,7 @@ function makePopChart() {
       .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.tsv("/data/pop-selected-counties.tsv", function(error, data) {
+    d3.tsv("../data/pop-selected-counties.tsv", function(error, data) {
         color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
 
         data.forEach(function(d) {

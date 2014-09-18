@@ -7,15 +7,15 @@
         <meta name="viewport" content="width=device-width">
         <link rel="shortcut icon" href="/favicon.ico">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <!-- build:css /styles/vendor.css -->
+        <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
         <link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.min.css" />
         <!-- endbower -->
         <!-- endbuild -->
-        <!-- build:css(.tmp) /styles/main.css -->
+        <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="/styles/main.css">
         <!-- endbuild -->
-        <!-- build:js /scripts/vendor/modernizr.js -->
+        <!-- build:js scripts/vendor/modernizr.js -->
         <script src="../bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
         <script type="text/javascript" src="//use.typekit.net/dlv3qjg.js"></script>
@@ -56,16 +56,24 @@
                     </div>
                     <div class="intro-nav-container hidden">
                         <ul id="intro-menu">
-                            <li id="one"><a href="/snow"><img src="/media/nav-item.jpg" alt=""></a></li>
-                            <li id="one"><a href="/storage"><img src="/media/nav-item.jpg" alt=""></a></li>
-                            <li id="one"><a href="/field"><img src="/media/nav-item.jpg" alt=""></a></li>
+                            <li id="one"><a href="snow"><img data-title="Part One: &#10; The White Wonder" src="img/snow-nav.jpg" alt=""></a></li>
+                            <li id="two"><a href="storage"><img data-title="Part Two: &#10; Guiding Each Precious Drop" src="img/storage-nav.jpg" alt=""></a></li>
+                            <li id="three"><a href="field"><img data-title="Part Three: &#10; To The Field!" src="img/field-nav.jpg" alt=""></a></li>
+                            <li><h3 id="intro-nav-title" class="hidden"></h3></li>
                         </ul>
+
+                        <ul id="intro-menu-mobile">
+                            <li id="one"><a href="snow"><h5>Part One: The White Wonder</h5></a></li>
+                            <li id="two"><a href="storage"><h5>Part Two: Guiding Each Precious Drop</h5></a></li>
+                            <li id="three"><a href="field"><h5>Part Three: To The Field!</h5></a></li>
+                        </ul>
+                        
                     </div>
                 </div>
             </nav>
         </header>
 
-        <!-- build:js /scripts/vendor.js -->
+        <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
         <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
@@ -78,7 +86,6 @@
         <script src="../bower_components/d3/d3.js"></script>
         <script src="../bower_components/vimeo-player-api/javascript/froogaloop.min.js"></script>
         <script src="../bower_components/leaflet/dist/leaflet.js"></script>
-        <script src="../bower_components/leaflet-ajax/dist/leaflet.ajax.min.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -91,10 +98,10 @@
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
 
-        <!-- build:js /scripts/plugins.js -->
+        <!-- build:js scripts/plugins.js -->
 
         <!-- endbuild -->
-        <!-- build:js({app,.tmp}) /scripts/main.js -->
+        <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="/scripts/main.js"></script>
         <script src="/scripts/pop-charts.js"></script>
         <script src="/scripts/snow-charts.js"></script>
