@@ -51,10 +51,10 @@ module.exports = function (grunt) {
                 files: ['<%= config.app %>/styles/{,*/}*.css'],
                 tasks: ['newer:copy:styles', 'autoprefixer']
             },
-            // handlebars: {
-            //     files: ['<%= yeoman.app %>/templates/*.hbs'],
-            //     tasks: ['handlebars']
-            // },
+            bake: {
+                files: ['<%= config.app %>/templates/**'],
+                tasks: ['bake:build']
+            },
             livereload: {
                 options: {
                     livereload: '<%= connect.options.livereload %>'
@@ -122,6 +122,19 @@ module.exports = function (grunt) {
                 }]
             },
             server: '.tmp'
+        },
+
+        bake: {
+            build: {
+                // options: {
+                //     content: '<%= config.app %>/content/content.json'
+                // },
+                files: {
+                    '<%= config.app %>/<%= config.one %>/index.html': '<%= config.app %>/templates/one.html',
+                    '<%= config.app %>/<%= config.two %>/index.html': '<%= config.app %>/templates/two.html',
+                    '<%= config.app %>/<%= config.three %>/index.html': '<%= config.app %>/templates/three.html'
+                }
+            }
         },
 
         // Make sure code styles are up to par and there are no obvious mistakes
@@ -436,6 +449,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
+        'bake',
         'useminPrepare',
         'concurrent:dist',
         'autoprefixer',
@@ -451,7 +465,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', [
         // 'newer:jshint',
-        'test',
+        // 'test',
         'build'
     ]);
 };
