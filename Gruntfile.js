@@ -126,9 +126,9 @@ module.exports = function (grunt) {
 
         bake: {
             build: {
-                // options: {
-                //     content: '<%= config.app %>/content/content.json'
-                // },
+                options: {
+                    content: '<%= config.app %>/templates/content/copy.json'
+                },
                 files: {
                     '<%= config.app %>/<%= config.one %>/index.html': '<%= config.app %>/templates/one.html',
                     '<%= config.app %>/<%= config.two %>/index.html': '<%= config.app %>/templates/two.html',

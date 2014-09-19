@@ -36,7 +36,7 @@
             </div>
             
             <div class="opening-title-right" data-start="opacity:1;" data-600-start="opacity:0;">
-                <h1>To the Fields!</h1>
+                <!--(bake includes/chapter_title.html _section="field")-->
             </div>
             <div class="opening-scroll" data-start="opacity:1; bottom:1%;" data-100-start="opacity:0; bottom: -10%;">
                 <p>scroll</p>
@@ -138,13 +138,7 @@
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-2">
                         <p class="credits">credits</p>
-                        <p class="credit">Design and Development: Billy Bob Joe</p>
-                        <p class="credit">Reporting: Junior Poopy Pants</p>
-                        <p class="credit">Multimedia: Ysha the Cat</p>
-                        <p class="credit">Video Editing: A Young Man, A Scholar</p>
-                        <p class="credit">Historical Research: Some History Dude</p>
-                        <p class="credit">Geospatial Resea  rch: Mappy McGee</p>
-                        <p class="credit">Prodution Intern: Some Other Folks Here Too</p>
+                        <!--(bake includes/credits.html _foreach="credits:credits")-->
                     </div>
                     <div class="col-sm-4">
                         <!-- <p class="next-page">Part Two</p> -->
@@ -153,42 +147,9 @@
             </div>
         </footer>
 
-        <!-- build:js ../scripts/vendor.js -->
-        <!-- bower:js -->
-        <script src="../bower_components/jquery/dist/jquery.js"></script>
-        <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
-        <script src="../bower_components/jquery-waypoints/waypoints.js"></script>
-        <script src="../bower_components/highcharts-release/highcharts.js"></script>
-        <script src="../bower_components/highcharts-release/highcharts-more.js"></script>
-        <script src="../bower_components/highcharts-release/modules/exporting.js"></script>
-        <script src="../bower_components/jquery-zoom/jquery.zoom.js"></script>
-        <script src="../bower_components/skrollr/src/skrollr.js"></script>
-        <script src="../bower_components/d3/d3.js"></script>
-        <script src="../bower_components/vimeo-player-api/javascript/froogaloop.min.js"></script>
-        <script src="../bower_components/leaflet/dist/leaflet.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
-
-        <!-- build:js ../scripts/plugins.js -->
-
-        <!-- endbuild -->
-        <!-- build:js({app,.tmp}) ../scripts/main.js -->
-        <script src="/scripts/main.js"></script>
-        <script src="/scripts/pop-charts.js"></script>
-        <script src="/scripts/snow-charts.js"></script>
-        <!-- endbuild -->
+        <!--(bake includes/footer.html)-->
         
-        
+        <!-- PAGE SPECIFIC SCRIPTS -->
         <script>
             var s = skrollr.init();
             var iframe = document.getElementById('autoplay');
