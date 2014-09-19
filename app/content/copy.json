@@ -1,4 +1,9 @@
 {
+	"main": {
+		"hed": "Follow the Water",
+		"subhed": "Follow a tiny snowflake as it makes its way to a sugarbeet field in the pandhandle of Nebraska."
+	},
+
 	"snow": {
 		"hed": "Water Comes from White Wonder",
 		"subhed": "It all begins up high, where snow piles in sheets, in waves, in avalanche cascades in Colorado’s Rocky Mountains.",
@@ -178,14 +183,26 @@
 		}
 	},
 
-	"credits": [{
-		"credit": "Text",
-		"name": "Ariana Brocious"
-	},{
-		"credit": "Design and Development",
-		"name": "Steven Speicher"
-	},{
-		"credit": "Multimedia",
-		"name": "Peter Stegen"
-	}]
+	"credits": [
+		{
+			"credit": "Design and Development",
+			"name": "Steven Speicher"
+		},{
+			"credit": "Reporting",
+			"name": "Ariana Brocious"
+		},{
+			"credit": "Video Editing",
+			"name": "Peter Stegen"
+		},{
+			"credit": "Multimedia",
+			"name": "Peter Stegen & Steven Speicher"
+		},{
+			"credit": "Production Assistants",
+			"name": "Mariah Lundgren, Joe Arneson & Sierra Harris"
+		},{
+			"credit": "Historical Research",
+			"name": "Andrew DeCamp"
+		}
+		
+	]
 }

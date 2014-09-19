@@ -1,0 +1,51 @@
+<!--(bake partials/header.html title="North Platte Irrigation" id="intro")-->
+
+        <header class="image-featured-behind">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-full" id="field-opening"></div>
+                </div>
+            </div>
+            <div class="opening-title-center">
+                <!--(bake partials/section_title.html _section="main")-->
+                <button class="btn btn-lg btn-default" id="btn-intro">Watch</button>
+                <button class="btn btn-lg btn-default btn-skip">Skip</button>
+            </div>
+            <div class="video-wrapper">
+                <div class="fluid-video-wrapper">
+                    <iframe id="video-title" src="//player.vimeo.com/video/105373392?title=0&amp;byline=0&amp;portrait=0&amp;loop=0&amp;player_id=video-title&amp;api=1" frameborder="0"></iframe>
+
+                </div>
+                <div class="intro-btn-group">
+                    <button class="btn btn-sm btn-default btn-skip">Skip</button>
+                    <button class="btn btn-sm btn-default" id="btn-audio">Audio <i class="fa fa-volume-off"></i></button>
+                </div>
+            </div>
+            <nav id="intro-nav" role="navigation" class="down">
+                <div class="intro-nav-wrapper">
+                    <div class="intro-nav-button">
+                        <h4><i class="fa fa-reorder"></i>Chapters</h4>
+                    </div>
+                    <div class="intro-nav-container hidden">
+                        <ul id="intro-menu">
+                            <li id="one"><a href="snow"><img data-title="Part One: &#10; The White Wonder" src="img/snow-nav.jpg" alt=""></a></li>
+                            <li id="two"><a href="storage"><img data-title="Part Two: &#10; Guiding Each Precious Drop" src="img/storage-nav.jpg" alt=""></a></li>
+                            <li id="three"><a href="field"><img data-title="Part Three: &#10; To The Field!" src="img/field-nav.jpg" alt=""></a></li>
+                            <li><h3 id="intro-nav-title" class="hidden"></h3></li>
+                        </ul>
+
+                        <ul id="intro-menu-mobile">
+                            <li id="one"><a href="snow"><h5>Part One: The White Wonder</h5></a></li>
+                            <li id="two"><a href="storage"><h5>Part Two: Guiding Each Precious Drop</h5></a></li>
+                            <li id="three"><a href="field"><h5>Part Three: To The Field!</h5></a></li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!--(bake partials/footer.html)-->
+
+    </body>
+</html>

@@ -57,51 +57,50 @@ function makeDamMap() {
     });
 }
 
-$(function() {
-    if ( $('body').is('#intro')  ) {
-        console.log("Has Video");
-        var iframe = $('#video-title')[0];
-        var player = $f(iframe);
-        var status = $('.status');
+function listenForIntro() {
+    console.log("Listening to Video...");
+    var iframe = $('#video-title')[0];
+    var player = $f(iframe);
+    var status = $('.status');
 
-        player.addEvent('ready', ready);
+    player.addEvent('ready', ready);
 
-        function ready(player_id) {
-            player.addEvent('finish', finish);
+    function ready(player_id) {
+        player.addEvent('finish', finish);
 
-             //Play when iframe is in viewport
-            $('#btn-intro').click(function() {
-                $('.video-wrapper').fadeIn();
-                player.api("play");
-                $('.video-wrapper iframe').addClass('playing');
-            });
-            $('.btn-skip').click(function() {
-                $('.video-wrapper iframe').removeClass('playing');
-                player.api("stop");
-                finish();
-            });
-            var vol_on = true;
-            $('#btn-audio').click(function() {
-                if (vol_on) {
-                    player.api('setVolume',0);
-                    $(this).find('i').addClass('fa-volume-up').removeClass('fa-volume-off');
-                    vol_on = false;
-                } else {
-                    $(this).find('i').addClass('fa-volume-off').removeClass('fa-volume-up');
-                    player.api('setVolume',1);
-                    vol_on = true;
-                }
-            });
-        }
-        function finish(player_id) {
-            player.api("unload");
-            $('.video-wrapper').remove();
-            $('#intro header').remove();
-            window.location.href = "snow";
-
-        }
+         //Play when iframe is in viewport
+        $('#btn-intro').click(function() {
+            $('.video-wrapper').fadeIn();
+            player.api("play");
+            $('.video-wrapper iframe').addClass('playing');
+        });
+        $('.btn-skip').click(function() {
+            $('.video-wrapper iframe').removeClass('playing');
+            player.api("stop");
+            finish();
+        });
+        var vol_on = true;
+        $('#btn-audio').click(function() {
+            if (vol_on) {
+                player.api('setVolume',0);
+                $(this).find('i').addClass('fa-volume-up').removeClass('fa-volume-off');
+                vol_on = false;
+            } else {
+                $(this).find('i').addClass('fa-volume-off').removeClass('fa-volume-up');
+                player.api('setVolume',1);
+                vol_on = true;
+            }
+        });
     }
-});
+    
+    function finish(player_id) {
+        player.api("unload");
+        $('.video-wrapper').remove();
+        $('#intro header').remove();
+        window.location.href = "snow";
+
+    }
+};
 
 var w = true;
 $('#toggle-canals').click(function(){
@@ -122,7 +121,7 @@ setTimeout(function() {
     $('.opening-title-right').fadeIn('slow')
 }, 5000)
 
-function setOpeningStyles() {
+function setMasterStyles() {
     console.log("Setting Opening Styles")
     var wHeight = $(window).height();
     var wWidth = $(window).width();
@@ -150,9 +149,6 @@ function setOpeningStyles() {
 }
 
 function listenForAudioCntl( sound ) {
-    // sound is a jQuery object, convert to javascript element to play() or pause()
-    // sound[0].volume=0;
-    // sound.animate({volume: 1}, 3000);
 
     var playing = true;
 
@@ -190,28 +186,37 @@ $('#intro-menu img').hover(function() {
 })
 
 $(document).ready(function() {
-    // makeDamMap();
-    setOpeningStyles();
+    setMasterStyles();
+});
+
+$(window).resize(function() {
+    setMasterStyles();
 });
 
 $(window).load(function() {
-    // setOpeningStyles();
     if ( $('body').is('#intro')  ) {
+
+        // INTRO
         console.log("INTRO");
+        listenForIntro();
+
     } else if ( $('body').is('#part-one')  ) {
+
+        // PART ONE: SNOW
         console.log("PART ONE");
         listenForAudioCntl( $("#snow-sounds") );
         makeSnowChart();
         
     } else if ( $('body').is('#part-two')  ) {
+
+        // PART TWO: STORAGE
         console.log("PART TWO");
         makeDamMap();
+
     } else if ( $('body').is('#part-three')  ) {
+
+        // PART THREE: FIELD
         console.log("PART THREE");
         makePopChart();
     }
-});
-
-$(window).resize(function() {
-    setOpeningStyles();
 });

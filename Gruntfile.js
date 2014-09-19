@@ -52,7 +52,7 @@ module.exports = function (grunt) {
                 tasks: ['newer:copy:styles', 'autoprefixer']
             },
             bake: {
-                files: ['<%= config.app %>/templates/**'],
+                files: ['<%= config.app %>/templates/**', '<%= config.app %>/content/copy.json'],
                 tasks: ['bake:build']
             },
             livereload: {
@@ -127,9 +127,10 @@ module.exports = function (grunt) {
         bake: {
             build: {
                 options: {
-                    content: '<%= config.app %>/templates/content/copy.json'
+                    content: '<%= config.app %>/content/copy.json'
                 },
                 files: {
+                    '<%= config.app %>/index.html': '<%= config.app %>/templates/main.html',
                     '<%= config.app %>/<%= config.one %>/index.html': '<%= config.app %>/templates/one.html',
                     '<%= config.app %>/<%= config.two %>/index.html': '<%= config.app %>/templates/two.html',
                     '<%= config.app %>/<%= config.three %>/index.html': '<%= config.app %>/templates/three.html'
@@ -206,7 +207,7 @@ module.exports = function (grunt) {
         // Automatically inject Bower components into the HTML file
         bowerInstall: {
             app: {
-                src: ['<%= config.app %>/index.html', '<%= config.app %>/<%= config.one %>/index.html', '<%= config.app %>/<%= config.two %>/index.html','<%= config.app %>/<%= config.three %>/index.html']
+                src: ['<%= config.app %>/templates/partials/footer.html']
             },
             sass: {
                 src: ['<%= config.app %>/styles/{,*/}*.{scss,sass}']
