@@ -13,7 +13,7 @@
 		<!-- endbower -->
 		<!-- endbuild -->
 		<!-- build:css(.tmp) ../styles/main.css -->
-		<link rel="stylesheet" href="/styles/main.css">
+		<link rel="stylesheet" href="../styles/main.css">
 		<!-- endbuild -->
 		<!-- build:js ../scripts/vendor/modernizr.js -->
 		<script src="../bower_components/modernizr/modernizr.js"></script>
@@ -75,14 +75,6 @@
             </div>
         </header>
 
-        <section class="second-title">
-            <div class="container">
-                <div class="row-md-12">
-                    <h2>A Second Title</h2>
-                </div>
-            </div>
-        </section>
-
         <section class="copy">
             <div class="container container-small">
                 <div class="row">
@@ -112,6 +104,18 @@
                 <div class="row">
                     <div class="col-sm-2">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam asperiores totam quibusdam consectetur expedita adipisci architecto recusandae eum similique veritatis incidunt placeat, nisi, esse distinctio temporibus possimus vel praesentium quis.</p>
+                    </div>
+                    <div class="col-sm-5">
+                        <img class="zoom" src="../media/pathfinder-1.jpg" alt="">
+                        <span class="image-caption image-caption-left"><img class="zoom-in-icon" src="../media/zoom.png" /> This is a feature image caption left. And it's a longer caption so I can see if it wraps around the image okay.</span>
+                    </div>
+                    <div class="col-sm-5">
+                        <img class="zoom" src="../media/pathfinder-2.jpg" alt="">
+                        <span class="image-caption image-caption-right"><img class="zoom-in-icon" src="../media/zoom.png" /> This is a feature image caption right. And it's a longer caption so I can see if it wraps around the image okay.</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
                     </div>
                     <div class="col-sm-5">
                         <img class="zoom" src="../media/pathfinder-1.jpg" alt="">
@@ -214,18 +218,6 @@
             </div>
         </section>
 
-        <section class="video">
-            <div class="container container-large">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="vid-wrap video-wrapper-3-2">
-                            <iframe id="autoplay" src="//player.vimeo.com/video/59031251?api=1&player_id=autoplay&title=0&amp;byline=0&amp;portrait=0" width="100%" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="image-featured-behind footer">
             <div class="container-fluid">
                 <div class="row">
@@ -303,9 +295,9 @@
         
         <!-- endbuild -->
         <!-- build:js({app,.tmp}) ../scripts/main.js -->
-        <script src="/scripts/main.js"></script>
-        <script src="/scripts/pop-charts.js"></script>
-        <script src="/scripts/snow-charts.js"></script>
+        <script src="../scripts/main.js"></script>
+        <script src="../scripts/pop-charts.js"></script>
+        <script src="../scripts/snow-charts.js"></script>
         <!-- endbuild -->
         
         
@@ -313,27 +305,6 @@
         <!-- PAGE SPECIFIC SCRIPTS -->
         <script>
             var s = skrollr.init();
-            var iframe = document.getElementById('autoplay');
-
-             // $f == Froogaloop
-            var player = $f(iframe);
-
-             //Play when iframe is in viewport
-            $('#autoplay').waypoint(function() {
-                player.api("play");
-            }, {
-                offset: 'bottom-in-view'
-            });
-
-             //Pause when top of iframe is in viewport
-            $('#autoplay').waypoint(function() {
-                player.api("pause");
-            });
-            var s = skrollr.init();
-            $('img.dam').popover({
-                trigger : 'hover',
-                html : 'true'
-            });
 
                 $(document).ready( function() {
                     $('body').animate({

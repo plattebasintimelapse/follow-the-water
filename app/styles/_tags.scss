@@ -2,6 +2,7 @@ body {
 	font-size: $global-font-size;
 	font-family: $global-font-family;
 	line-height: 1.5em;
+	-webkit-overflow-scrolling: touch;
 }
 
 section {
@@ -9,6 +10,10 @@ section {
 	padding: 40px 0;
 	background-color:white;
 	margin: 0 auto;
+}
+
+section.tl-sequence {
+	padding: 1px 0;
 }
 
 section:first-child {
