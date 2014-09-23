@@ -1,0 +1,209 @@
+<!--(bake partials/header.html title="Storage" id="part-two")-->
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" data-200-start="margin-top:-60px;" data-800-start="margin-top:0px;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <h4 href="#">North Platte Irrigation</h4>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../">intro</a></li>
+                        <li><a href="../snow">1</a></li>
+                        <li class="active"><a href="../storage">2</a></li>
+                        <li><a href="../field">3</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+            <div class="container-fluid" id="pager-progress">
+                <div id="pager" data-0="width:0%" data-end="width:100%;">
+                </div>
+            </div>
+        </nav>
+
+        <header class="image-featured-behind">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-full image-featured-title" id="pathfinder-opening"></div>
+                </div>
+            </div>
+
+            <div class="opening-title-left" data-start="opacity:1;" data-600-start="opacity:0;">
+                <!--(bake partials/section_title.html _section="storage")-->
+            </div>
+            <div class="opening-scroll" data-start="opacity:1; bottom:1%;" data-100-start="opacity:0; bottom: -10%;">
+                <p>scroll</p>
+                <span class="lead-scroll-arrow glyphicon glyphicon-chevron-down"></span>
+            </div>
+        </header>
+
+        <section class="copy">
+            <div class="container container-small">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!--(bake partials/copy.html _foreach="grafs:storage.section_one.grafs")-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="interactive">
+            <div class=" container container-large">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2>Pathfinder Dam</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam asperiores totam quibusdam consectetur expedita adipisci architecto recusandae eum similique veritatis incidunt placeat, nisi, esse distinctio temporibus possimus vel praesentium quis.</p>
+                    </div>
+                    <div class="col-sm-5">
+                        <img class="zoom" src="../media/pathfinder-1.jpg" alt="">
+                        <span class="image-caption image-caption-left"><img class="zoom-in-icon" src="../media/zoom.png" /> This is a feature image caption left. And it's a longer caption so I can see if it wraps around the image okay.</span>
+                    </div>
+                    <div class="col-sm-5">
+                        <img class="zoom" src="../media/pathfinder-2.jpg" alt="">
+                        <span class="image-caption image-caption-right"><img class="zoom-in-icon" src="../media/zoom.png" /> This is a feature image caption right. And it's a longer caption so I can see if it wraps around the image okay.</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-5">
+                        <img class="zoom" src="../media/pathfinder-1.jpg" alt="">
+                        <span class="image-caption image-caption-left"><img class="zoom-in-icon" src="../media/zoom.png" /> This is a feature image caption left. And it's a longer caption so I can see if it wraps around the image okay.</span>
+                    </div>
+                    <div class="col-sm-5">
+                        <img class="zoom" src="../media/pathfinder-2.jpg" alt="">
+                        <span class="image-caption image-caption-right"><img class="zoom-in-icon" src="../media/zoom.png" /> This is a feature image caption right. And it's a longer caption so I can see if it wraps around the image okay.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="copy">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!--(bake partials/copy.html _foreach="grafs:storage.section_two.grafs")-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="interactive" id="np-dams-map">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-3 col-sm-offset-1">
+                        <h2>The Dams of the North Platte River</h2>
+                        <div id="dam-info-panel">
+                            <p class="default-text"><em>Click markers on the map to learn about the dams in the North Platte River basin.</em></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-7"><div id="dam-map"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="copy">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!--(bake partials/copy.html _foreach="grafs:storage.section_three.grafs")-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="image-featured">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12-sm">
+                        <img src="../media/samples/image-featured.jpg" alt="">
+                        <span class="image-caption image-caption-left">This is a feature image caption left.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="copy">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!--(bake partials/copy.html _foreach="grafs:storage.section_four.grafs")-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="image-featured-behind footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="image-featured-behind"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="copy">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p>As third generation Nebraska farmer Bob Busch puts it,</p>
+                        <p class="blockquote">“without water, we have nothing.”</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="image-featured-behind footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="image-featured-behind"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-2">
+                        <p class="credits">credits</p>
+                        <!--(bake partials/credits.html _foreach="credits:credits")-->
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="next-page"><a href="../field">Part Three</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!--(bake partials/footer.html)-->
+        
+
+        <!-- PAGE SPECIFIC SCRIPTS -->
+        <script>
+            var s = skrollr.init();
+
+                $(document).ready( function() {
+                    $('body').animate({
+                        opacity: 1}
+                    );
+                })
+                setTimeout(function() {
+                    $('.pull-quote').fadeOut('slow')
+                }, 4000)
+                setTimeout(function() {
+                    $('.opening-title-right').fadeIn('slow')
+                }, 5000)
+        </script>
+    </body>
+</html>

@@ -3,30 +3,24 @@
     font-size: 12px;
 }
 
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-.x.axis path, .y.axis path {
-  display: none;
-}
-
-.line {
-  fill: none;
-  stroke-width: 1px;
-}
-
-.scotts-bluff-co {
-  stroke-width: 3px;
-  stroke: "red";
+#pop-chart svg {
+    @include breakpoint(mama-bear) { 
+        height: 500px;
+    }
+    @include breakpoint(baby-bear) { 
+        height: 300px;
+    }
 }
 
 .population-list {
-    height: 700px;
-    width: 200px;
+    height: 300px;
+    @include breakpoint(papa-bear) {
+        height: 700px;
+    }
+    @include breakpoint(mama-bear) { 
+        height: 400px;
+    }
+
     overflow:auto;
     font-size: .8em;
 
@@ -55,6 +49,29 @@
         }
     }
 }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path, .y.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke-width: 1px;
+}
+
+.scotts-bluff-co {
+  stroke-width: 3px;
+  stroke: "red";
+}
+
+
 
 #snow-charts .line {
   fill: none;

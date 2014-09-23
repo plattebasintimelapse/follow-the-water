@@ -51,10 +51,10 @@ module.exports = function (grunt) {
                 files: ['<%= config.app %>/styles/{,*/}*.css'],
                 tasks: ['newer:copy:styles', 'autoprefixer']
             },
-            // handlebars: {
-            //     files: ['<%= yeoman.app %>/templates/*.hbs'],
-            //     tasks: ['handlebars']
-            // },
+            bake: {
+                files: ['<%= config.app %>/templates/**', '<%= config.app %>/content/copy.json'],
+                tasks: ['bake:build']
+            },
             livereload: {
                 options: {
                     livereload: '<%= connect.options.livereload %>'
@@ -124,6 +124,20 @@ module.exports = function (grunt) {
             server: '.tmp'
         },
 
+        bake: {
+            build: {
+                options: {
+                    content: '<%= config.app %>/content/copy.json'
+                },
+                files: {
+                    '<%= config.app %>/index.html': '<%= config.app %>/templates/main.html',
+                    '<%= config.app %>/<%= config.one %>/index.html': '<%= config.app %>/templates/one.html',
+                    '<%= config.app %>/<%= config.two %>/index.html': '<%= config.app %>/templates/two.html',
+                    '<%= config.app %>/<%= config.three %>/index.html': '<%= config.app %>/templates/three.html'
+                }
+            }
+        },
+
         // Make sure code styles are up to par and there are no obvious mistakes
         jshint: {
             options: {
@@ -178,7 +192,7 @@ module.exports = function (grunt) {
         // Add vendor prefixed styles
         autoprefixer: {
             options: {
-                browsers: ['last 1 version']
+                browsers: ['last 2 version', 'ie 8', 'ie 9']
             },
             dist: {
                 files: [{
@@ -193,7 +207,7 @@ module.exports = function (grunt) {
         // Automatically inject Bower components into the HTML file
         bowerInstall: {
             app: {
-                src: ['<%= config.app %>/index.html', '<%= config.app %>/<%= config.one %>/index.html', '<%= config.app %>/<%= config.two %>/index.html','<%= config.app %>/<%= config.three %>/index.html']
+                src: ['<%= config.app %>/templates/partials/footer.html']
             },
             sass: {
                 src: ['<%= config.app %>/styles/{,*/}*.{scss,sass}']
@@ -318,7 +332,9 @@ module.exports = function (grunt) {
                         'images/{,*/}*.webp',
                         '{,*/}*.html',
                         'styles/fonts/{,*/}*.*',
-                        'media/{,*/}*.*'
+                        'media/{,*/}*.*',
+                        'img/{,*/}*.*',
+                        'data/{,*/}*.*'
                     ]
                 }, {
                     expand: true,
@@ -434,6 +450,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
+        'bake',
         'useminPrepare',
         'concurrent:dist',
         'autoprefixer',
@@ -449,7 +466,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', [
         // 'newer:jshint',
-        'test',
+        // 'test',
         'build'
     ]);
 };
