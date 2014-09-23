@@ -83,6 +83,11 @@ footer {
 	top: 25%;
 	right: 10%;
 	width: 40%;
+
+	@include breakpoint(baby-bear) {
+		width: 100%;
+		top: 5%;
+	}
 }
 
 .opening-title-left {
@@ -239,6 +244,12 @@ img.zoomImg {
 .image-featured .image-caption, .image-featured-behind .image-caption {
 	padding: 5px 40px;
 	width: 30%;
+	@include breakpoint(mama-bear) {
+		width: 50%;
+	}
+	@include breakpoint(baby-bear) {
+		width: 90%;
+	}
 }
 
 // INTERACTIVES

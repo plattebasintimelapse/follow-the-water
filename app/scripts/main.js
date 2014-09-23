@@ -205,7 +205,8 @@ $(window).load(function() {
         // PART ONE: SNOW
         console.log("PART ONE");
         listenForAudioCntl( $("#snow-sounds") );
-        makeSnowChart();
+        makeSWE();
+        makeSnotelChart();
         
     } else if ( $('body').is('#part-two')  ) {
 

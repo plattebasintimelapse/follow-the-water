@@ -6,9 +6,18 @@
 }
 #equals {
 	height: 30px;
-	border-bottom: 3px solid lightgray;
-	border-top: 3px solid lightgray;
-	margin-top: 50px;
+	border-bottom: 2px solid gray;
+	border-top: 2px solid gray;
+	margin-top: 150px;
+}
+
+#snowflakes, #waterdrops {
+    height: 400px;
+    display:flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+    align-items: flex-start;
+    align-content: flex-start;
 }
 
 .zoom-in-icon {
@@ -16,21 +25,12 @@
     width: 15px;
 }
 
-.new-wells-pop-ups {
-    position: absolute;
-    width: 150px;
-    z-index: 1;
-    display: none;
-    font-size: .6em;
+#interactive-swe span {
+    padding: 4px;
 }
-
-#pop-up-1956 {
-    top: 38%;
-    left: 28%;
+#interactive-swe .snowflake {
+    padding: 2px;
 }
-
-#pop-up-1976 {
-    top: 30%;
-    left: 61%;
-    width: 180px;
+#interactive-swe img {
+    width: auto;
 }

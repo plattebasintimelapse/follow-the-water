@@ -10,6 +10,7 @@
 		<!-- build:css ../styles/vendor.css -->
 		<!-- bower:css -->
 		<link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="../bower_components/jquery-ui/themes/redmond/jquery-ui.css" />
 		<!-- endbower -->
 		<!-- endbuild -->
 		<!-- build:css(.tmp) ../styles/main.css -->
@@ -82,11 +83,10 @@
             <div class="sound-container"><i class="fa fa-volume-off fa-lg"></i><audio id="snow-sounds" loop src="../media/Life Is Good_DWCD 0558_18_De Wolfe Lawrence Oakley and Mark Waterfield and Tamara Schlesinger.wav"></audio></div>
         </header>
 
-        <section class="image-featured-behind">
+        <section class="image-featured-behind no-padding">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <img src="../media/north-platte-river-system-part-1.png" alt="">
+                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="snow-map">
                     </div>
                 </div>
             </div>
@@ -146,115 +146,66 @@
             </div>
         </section>
 
-        <section class="interactive">
+        <section class="interactive" id="interactive-swe">
             <div class="container container-large">
-              <!--   <div class="row">
-                    <div class="col-sm-12">
-                        <h2>Snowpack Equivalency!</h2>
-                    </div>
-                </div> -->
+
                 <div class="row">
-                    <div class="col-sm-3">
-                        <!-- <h4>Water Drops</h4> -->
-                        <span class="water-drop"><i class="fa fa-coffee"></i></span>
-                        <span class="water-drop"><i class="fa fa-coffee"></i></span>
-                        <span class="water-drop"><i class="fa fa-coffee"></i></span>
-                        <span class="water-drop"><i class="fa fa-coffee"></i></span>
-                        <span class="water-drop"><i class="fa fa-coffee"></i></span>
-                        <span class="water-drop"><i class="fa fa-coffee"></i></span>
-                        <span class="water-drop"><i class="fa fa-coffee"></i></span>
-                        <span class="water-drop"><i class="fa fa-coffee"></i></span>
-                        <span class="water-drop"><i class="fa fa-coffee"></i></span>
-                    </div>
-                    <div class="col-sm-1">
-                        <div id="equals">
+                    <div class="col-sm-2">
+                            <div class="row">
+                                <div class="col-xs-8">
+                                    <h4>Depth</h4>
+                                    <p id="depth-text"></p>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div id="slider"></div>
+                                </div>
                         </div>
+                        
+
+                        <h4>Snow Type</h4>
+                        <select id="snow-type">
+                            <option value="new-snow">New Snow</option>
+                            <option value="settled-snow">Settled Snow</option>
+                            <option value="depth-hoar">Depth Hoar</option>
+                            <option value="wind-packed-snow">Wind Packed Snow</option>
+                            <option value="firn">Firn</option>
+                            <option value="very-wet-snow">Very Wet Snow</option>
+                        </select>
                     </div>
-                    <div class="col-sm-4">
-                        <!-- <h4>Snowflakes<h4> -->
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
-                        <span class="snowflake"><i class="fa fa-beer"></i></span>
+                    <div class="col-sm-3">
+                        <div id="snowflakes"></div>
                     </div>
-                    <div class="col-sm-3 col-sm-offset-1">
-                        <p>This is text for the interactive. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis est debitis repellendus doloribus quod, sit incidunt iste dignissimos, quaerat inventore.</p>
+                    
+                    <div class="col-sm-1">
+                        <div id="equals"></div>
+                    </div>
+                    <div class="col-sm-3" >
+                        <div id="waterdrops"></div>
+                    </div>
+                    
+                    <div class="col-sm-3">
+                        <p>Snow Water Equivalency is calculated by first measuring a snow's density and depth. Differnet types of snow have different densities. These two values are plugged into the following equation <b>SWE = Density * Depth</b>. April 1st is generally considered the ideal day to predict water flowing downstream.</p>
+                        
+                        
+                       <!--  <h5>Depth</h5>
+                        <select id="snow-depth">
+                            <option value="5">5 in</option>
+                            <option value="10">10 in</option>
+                            <option value="20">20 in</option>
+                            <option value="40">40 in</option>
+                            <option value="50">50 in</option>
+                            <option value="80">80 in</option>
+                        </select> -->
+
+                        <p><span><img src="../media/snow.png" alt=""> = 1 inch of snow</span></p>
+                        <p><span><img src="../media/waterdrop.png" alt=""> = 1 inch of water</span></p>
+
+                        
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12">
-                        <blockquote>With fresh snow, it's about a 10 to 1 ratio, so 10 inches of snow depth for one inch of SWE.</blockquote>
+                    <div class="col-sm-4">
+                        
                     </div>
                 </div>
             </div>
@@ -297,59 +248,21 @@
             </div>
         </section>
 
-        <section class="image-large">
-            <div class="container container-large">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <img src="../media/samples/image-large.jpg" alt="">
-                        <span class="image-caption image-caption-left">This is a feature image caption left.</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="interactive">
             <div class="container container-large">
                 <div class="row">
-                    <div class="col-sm-3">
-                        <div id="snow-chart1"></div>
+                    <div class="col-sm-8">
+                        <div id="snotel-chart"></div>
                     </div>
-                    <div class="col-sm-3">
-                        <div id="snow-chart2"></div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div id="snow-chart3"></div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div id="snow-chart4"></div>
+                    <div class="col-sm-4">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat unde hic voluptas perferendis, magnam consectetur tenetur aperiam, excepturi in nemo molestias omnis voluptates at perspiciatis cum nostrum minus cupiditate sit!</p>
+                        <p>Temporibus, cum, laborum! Sed modi saepe voluptate sequi deserunt facere at velit qui magni? Voluptate odit, non quibusdam velit necessitatibus a recusandae quia error placeat quisquam tempora amet, soluta, repellendus.</p>
+                        <p>Vel dolorum facilis quos quibusdam voluptates amet ratione fuga, ipsam ea voluptatem, soluta reiciendis commodi. Dignissimos, ab tempora autem qui placeat voluptates necessitatibus adipisci minima, reiciendis, soluta magni atque ratione!</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-3">
                         <p id="snow-text1"></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="image-featured">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12-sm">
-                        <img src="../media/samples/image-featured.jpg" alt="">
-                        <span class="image-caption image-caption-left">This is a feature image caption left.</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="video">
-            <div class="container container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="vid-wrap video-wrapper-3-2">
-                            <iframe id="autoplay" src="//player.vimeo.com/video/59031251?api=1&player_id=autoplay&title=0&amp;byline=0&amp;portrait=0" width="100%" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -396,6 +309,8 @@
         <!-- build:js ../scripts/vendor.js -->
         <!-- bower:js -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
+        <script src="../bower_components/jquery-ui-touch-punch-working/jquery.ui.touch-punch.min.js"></script>
         <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
         <script src="../bower_components/jquery-waypoints/waypoints.js"></script>
         <script src="../bower_components/highcharts-release/highcharts.js"></script>
@@ -424,6 +339,7 @@
         <!-- endbuild -->
         <!-- build:js({app,.tmp}) ../scripts/main.js -->
         <script src="../scripts/main.js"></script>
+        <script src="../scripts/swe.js"></script>
         <script src="../scripts/pop-charts.js"></script>
         <script src="../scripts/snow-charts.js"></script>
         <!-- endbuild -->
@@ -433,6 +349,7 @@
         <!-- PAGE SPECIFIC SCRIPTS -->
         <script>
             var s = skrollr.init();
+            $('#ui-slider-handle').draggable();
 
             var iframe = document.getElementById('autoplay');
 
@@ -450,7 +367,6 @@
             $('#autoplay').waypoint(function() {
                 player.api("pause");
             });
-            var s = skrollr.init();
             $('img.dam').popover({
                 trigger : 'hover',
                 html : 'true'

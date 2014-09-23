@@ -1,12 +1,12 @@
-// SNOW CHARTS
-function makeSnowChart() {
-    console.log("making snow chart");
-    var margin = {top: 0, right: 0, bottom: 0, left: 0},
-        width = 300,
-        height = 200;
+// POPULATION CHART
+function makeSnotelChart() {
+    console.log("making snotel_site chart");
+    
+    var margin = {top: 20, right: 80, bottom: 40, left: 50};
+        width = 800 - margin.left - margin.right,
+        height = 400 - margin.top - margin.bottom;
 
-    var parseDate = d3.time.format("%b-%y").parse
-        bisectDate = d3.bisector(function(d) { return d.date; }).left;
+    var parseDate = d3.time.format("%b-%y").parse;
 
     var x = d3.time.scale()
         .range([0, width]);
@@ -14,7 +14,7 @@ function makeSnowChart() {
     var y = d3.scale.linear()
         .range([height, 0]);
 
-    var color = d3.scale.category20c();
+    var color = d3.scale.category10();
 
     var xAxis = d3.svg.axis()
         .scale(x)
@@ -29,20 +29,20 @@ function makeSnowChart() {
         .x(function(d) { return x(d.date); })
         .y(function(d) { return y(d.swe); });
 
-    var svg = d3.select("#snow-chart1").append("svg")
+    var svg = d3.select("#snotel-chart").append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
       .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.tsv("../data/roach-monthly-data.tsv", function(error, data) {
+    d3.tsv("../data/snotel.tsv", function(error, data) {
         color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
 
         data.forEach(function(d) {
             d.date = parseDate(d.date);
         });
 
-        var measurements = color.domain().map(function(name) {
+        var snotel_sites = color.domain().map(function(name) {
             return {
                 name: name,
                 values: data.map(function(d) {
@@ -54,83 +54,58 @@ function makeSnowChart() {
         x.domain(d3.extent(data, function(d) { return d.date; }));
 
         y.domain([
-            d3.min(measurements, function(c) { return d3.min(c.values, function(v) { return v.swe; }); }),
-            d3.max(measurements, function(c) { return d3.max(c.values, function(v) { return v.swe; }); })
+            d3.min(snotel_sites, function(c) { return d3.min(c.values, function(v) { return v.swe; }); }),
+            d3.max(snotel_sites, function(c) { return d3.max(c.values, function(v) { return v.swe; }); })
         ]);
 
-        // svg.append("g")
-        //     .attr("class", "x axis")
-        //     .attr("transform", "translate(0," + height + ")")
-        //     .call(xAxis);
+        svg.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAxis);
 
-        // svg.append("g")
-        //     .attr("class", "y axis")
-        //     .call(yAxis);
+        svg.append("g")
+            .attr("class", "y axis")
+            .call(yAxis);
 
-        var vertical = d3.select("#snow-chart1")
-            .append("div")
-            .attr("class", "remove")
-            .style("position", "absolute")
-            .style("display", "none")
-            .style("z-index", "19")
-            .style("width", "2px")
-            .style("height", height)
-            .style("top", "15px")
-            .style("bottom", "15px")
-            .style("left", "0px")
-            .style("background", "gray");
-
-      d3.select("#snow-chart1")
-          .on("mousemove", function(){
-             mousex = d3.mouse(this);
-             mousex = mousex[0]+15;
-             vertical.style("display", "block").style("left", mousex + "px" )})
-          .on("mouseover", function(){
-             mousex = d3.mouse(this);
-             mousex = mousex[0]+15;
-             vertical.style("display", "block").style("left", mousex + "px")})
-          .on("mouseout", function(){
-             vertical.style("display", "none")})
-          .on("mousemove", mousemove);
-
-          var focus = d3.select("#snow-text1");
-
-        function mousemove() {
-            var x0 = x.invert(d3.mouse(this)[0]),
-                i = bisectDate(data, x0, 1),
-                d0 = data[i - 1],
-                d1 = data[i],
-                d = x0 - d0.date > d1.date - x0 ? d1 : d0;
-            focus.attr("transform", "translate(" + x(d.date) + "," + y(d.swe) + ")");
-            console.log( d.swe );
-            focus.text( d.swe );
-          }
-
-        var measurement = svg.selectAll(".measurement")
-            .data(measurements)
+        var snotel_site = svg.selectAll(".county")
+            .data(snotel_sites)
           .enter().append("g")
-            .attr("class", "measurement");
+            .attr("class", "snotel_site");
 
-        measurement.append("path")
+        snotel_site.append("path")
             .attr("class", "line")
             .attr("id", function(d) { return d.name.replace(/\s+/g, '-').toLowerCase(); })
-            .attr("d", function(d) { return line(d.values); });
-            // .on("mouseover", function(d) {
-            //     d3.select(this).style("stroke", "steelblue").style("stroke-width", "4px").moveToFront();
-            //     var c = d3.select(this).attr("id");
-            //     // d3.select(".measurement-list-entry" + " #" + c).style("background-color", "steelblue").style("color", "white");
-            // })
-            // .on("mouseout", function(d) {
-            //     d3.select(this).style("stroke", "lightgray").style("stroke-width", "1px");
-            //     var c = d3.select(this).attr("id");
-            //     // d3.select(".measurement-list-entry" + " #" + c).style("background-color", "white").style("color", "black");
-            // })
-
-        d3.selection.prototype.moveToFront = function() {
-            return this.each(function(){
-                this.parentNode.parentNode.appendChild(this.parentNode);
+            .attr("d", function(d) { return line(d.values); })
+            .style("stroke", function(d) { return color(d.name); })
+            .on("mouseover", function(d) {
+                d3.select(this).style("stroke-width", "3px");
+            })
+            .on("mouseout", function(d) {
+                d3.select(this).style("stroke-width", "1px");
             });
-        };
+
+        function resize() {
+            var width = parseInt(d3.select("#pop-chart").style("width")) - margin.left,
+            height = parseInt(d3.select("#pop-chart").style("height")) - margin.top - margin.bottom;
+             
+            /* Update the range of the scale with new width/height */
+            x.range([0, width]).nice(d3.time.year);
+            y.range([height, 0]).nice();
+             
+            /* Update the axis with the new scale */
+            svg.select('.x.axis')
+              .attr("transform", "translate(0," + height + ")")
+              .call(xAxis);
+             
+            svg.select('.y.axis')
+              .call(yAxis);
+             
+            /* Force D3 to recalculate and update the line */
+            svg.selectAll('.line')
+              .attr("d", function(d) { return line(d.values); }) 
+        }
+
+        d3.select(window).on('resize', resize);
 
     });
 };
