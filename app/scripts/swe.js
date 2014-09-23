@@ -5,8 +5,8 @@ function makeSWE() {
         snowTypeOptionBox   = $( '#snow-type'),
         snowFlakesCanvas    = $( '#snowflakes' ),
         waterDropsCanvas    = $( '#waterdrops'),
-        snowTypeSelection   = 'new-snow',
-        snowDepthSelection  = '20';
+        snowTypeSelection   = 'wind-packed-snow',
+        snowDepthSelection  = '50';
 
     drawCanvas();
 
@@ -17,7 +17,7 @@ function makeSWE() {
 
         $( "#slider" ).slider({
             orientation: 'vertical',
-            value:20,
+            value:50,
             min: 0,
             max: 100,
             step: 5,

@@ -34,3 +34,18 @@
 #interactive-swe img {
     width: auto;
 }
+
+.ui-slider-vertical {
+    width: .5em;
+    height: 150px;
+}
+
+.ui-slider-vertical .ui-slider-handle {
+left: -.25em;
+}
+
+.ui-slider .ui-slider-handle {
+    width: .9em;
+    height: .9em;
+}
+
