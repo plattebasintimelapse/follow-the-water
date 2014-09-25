@@ -21,21 +21,11 @@ function makeSWE() {
             min: 0,
             max: 100,
             step: 5,
-            create: function( event, ui) {
-                $( "#depth-text" ).text( snowDepthSelection + " inches");
-            },
             slide: function( event, ui ) {
                 snowDepthSelection = ui.value;
                 drawCanvas();
-                $( "#depth-text" ).text( snowDepthSelection + " inches");
             }
         });
-
-
-    // snowDepthOptionBox.change(function() {
-    //     snowDepthSelection = $(this).val();
-    //     drawCanvas();
-    // });
 
     function drawCanvas() {
         var snowDensity;
@@ -78,6 +68,8 @@ function makeSWE() {
         console.log("SWE: " + swe);
         console.log("----------------------------");
 
+        $( "#snow-depth-text" ).text( snowDepthSelection + " inches");
+        $( "#water-depth-text" ).text( swe + " inches");
 
         console.log(snowFlakePadding);
         $('#interactive-swe span.snowflake').css('padding', snowFlakePadding);

@@ -122,7 +122,7 @@ setTimeout(function() {
 }, 5000)
 
 function setMasterStyles() {
-    console.log("Setting Opening Styles")
+    console.log("Setting Master Styles")
     var wHeight = $(window).height();
     var wWidth = $(window).width();
 
@@ -133,18 +133,13 @@ function setMasterStyles() {
     var title_top = ( wHeight - $('#video-title').height() ) / 2;
     // $('.fluid-video-wrapper').css('margin-top', '100px');
 
-    $('img.zoom')
-        .wrap('<span style="display:inline-block"></span>')
-        .css('display', 'block')
-        .parent()
-        .zoom({
-            on: 'grab',
-            magnify: '2'
-        });
+    // $('body').animate({
+    //     opacity: 1}
+    // );
 
-    $('body').animate({
-        opacity: 1}
-    );
+    setTimeout(function() {
+        $('.opening-scroll').fadeIn('slow')
+    }, 2000)
 
 }
 
@@ -187,6 +182,14 @@ $('#intro-menu img').hover(function() {
 
 $(document).ready(function() {
     setMasterStyles();
+    $('img.zoom')
+        .wrap('<span style="display:inline-block"></span>')
+        .css('display', 'block')
+        .parent()
+        .zoom({
+            on: 'grab',
+            magnify: '2'
+        });
 });
 
 $(window).resize(function() {

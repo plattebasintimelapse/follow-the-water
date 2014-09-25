@@ -1,6 +1,6 @@
 body {
-    opacity: 0;
-    background-color:black;
+    // opacity: 0;
+    // background-color:black;
 }
 
 .no-js body {
@@ -101,11 +101,11 @@ footer {
 .opening-scroll {
 	@extend .text-over-image;
 	bottom: 1%;
+	left: 50%;
 	display:none;
 	text-align: center;
 
 	p {
-
 		font-size: .9em;
 		margin-bottom: 0px;
 	}
@@ -158,6 +158,14 @@ footer {
 
 .inline-media {
 	float:right;
+	margin-right: -150px;
+	@include breakpoint(mama-bear) {
+		margin-right: 0;
+	}
+	@include breakpoint(baby-bear) {
+		width: 100%;
+		margin-right: 0;
+	}
 }
 
 .inline-media-large {
@@ -175,8 +183,10 @@ footer {
 }
 
 .inline-media-wrapper {
-	padding: 10px;
+	padding-top: 25px;
 	margin: 10px 20px;
+	border-bottom: 1px solid lightgray;
+	border-top: 1px solid lightgray;
 }
 
 // IMAGES
@@ -219,22 +229,17 @@ img.zoomImg {
 // CAPTIONS
 
 .image-caption {
+	display: block;
 	font-size: .7em;
 	line-height: 1.2em;
-	width: 90%;
-	margin-bottom: 10px;
+	width: 100%;
+	padding: 5px 0px;
 	&.image-caption-right {
-		float: right;
 		text-align: right;
 	}
 	&.image-caption-left {
-		float: left;
 		text-align: left;
 	}
-}
-
-.image .image-caption {
-	padding: 5px 0px;
 }
 
 .image-large .image-caption {
@@ -275,7 +280,7 @@ p.interactive-note {
 
 .video-wrapper-16-9 {
 	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
+	padding-bottom: 52.25%; /* 16:9 */
 	padding-top: 25px;
 	height: 0;
 }

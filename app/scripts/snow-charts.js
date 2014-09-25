@@ -14,7 +14,7 @@ function makeSnotelChart() {
     var y = d3.scale.linear()
         .range([height, 0]);
 
-    var color = d3.scale.category10();
+    var color = d3.scale.category20c();
 
     var xAxis = d3.svg.axis()
         .scale(x)
@@ -78,31 +78,37 @@ function makeSnotelChart() {
             .attr("d", function(d) { return line(d.values); })
             .style("stroke", function(d) { return color(d.name); })
             .on("mouseover", function(d) {
-                d3.select(this).style("stroke-width", "3px");
+                d3.select(this).style("stroke-width", "4px").moveToFront();
             })
             .on("mouseout", function(d) {
-                d3.select(this).style("stroke-width", "1px");
+                d3.select(this).style("stroke-width", "2px");
             });
+
+        d3.selection.prototype.moveToFront = function() {
+            return this.each(function(){
+                this.parentNode.parentNode.appendChild(this.parentNode);
+            });
+        };
 
         function resize() {
             var width = parseInt(d3.select("#pop-chart").style("width")) - margin.left,
             height = parseInt(d3.select("#pop-chart").style("height")) - margin.top - margin.bottom;
-             
+
             /* Update the range of the scale with new width/height */
             x.range([0, width]).nice(d3.time.year);
             y.range([height, 0]).nice();
-             
+
             /* Update the axis with the new scale */
             svg.select('.x.axis')
               .attr("transform", "translate(0," + height + ")")
               .call(xAxis);
-             
+
             svg.select('.y.axis')
               .call(yAxis);
-             
+
             /* Force D3 to recalculate and update the line */
             svg.selectAll('.line')
-              .attr("d", function(d) { return line(d.values); }) 
+              .attr("d", function(d) { return line(d.values); })
         }
 
         d3.select(window).on('resize', resize);

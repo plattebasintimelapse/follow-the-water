@@ -45,49 +45,40 @@
             </div>
             <div class="opening-scroll" data-start="opacity:1; bottom:1%;" data-100-start="opacity:0; bottom: -10%;">
                 <p>scroll</p>
-                <span class="lead-scroll-arrow glyphicon glyphicon-chevron-down"></span>
+                <i class="fa fa-chevron-down"></i>
             </div>
-            <div class="sound-container"><i class="fa fa-volume-off fa-lg"></i><audio id="snow-sounds" loop src="../media/Life Is Good_DWCD 0558_18_De Wolfe Lawrence Oakley and Mark Waterfield and Tamara Schlesinger.wav"></audio></div>
+            <div class="sound-container" data-start="opacity:1;" data-300-start="opacity:0;">
+                <i class="fa fa-volume-off fa-lg"></i><audio id="snow-sounds" loop src="../media/Life Is Good_DWCD 0558_18_De Wolfe Lawrence Oakley and Mark Waterfield and Tamara Schlesinger.wav"></audio>
+            </div>
         </header>
 
-        <section class="image-featured-behind no-padding">
+        <!-- <section class="image-featured-behind no-padding">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="snow-map">
+                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="snow-map" data-100="transform:translateY(250px);" data-700="transform:translateY(0px);">
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="copy">
             <div class="container container-small">
                 <div class="row">
                     <div class="col-sm-12">
+
                         <!--(bake partials/copy.html _foreach="grafs:snow.section_one.grafs")-->
-                        
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="image-featured-behind">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-full" id="image-featured-behind">
-                        <div class="blockquote-behind">
-                            <p>This is a blockquote-behind!</p>
+                        <div class="inline-media-large">
+                            <div class="inline-media-wrapper">
+                                <div class="video-wrapper-16-9 vid-wrap">
+                                    <iframe src="//player.vimeo.com/video/107067451?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                </div>
+                                <span class="image-caption image-caption-right">Mage explains a SNOTEL site.</span>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <span class="image-caption image-caption-right">This is a image featured behind caption. It moves with the lower panel over the featured image.</span>
-            </div>
-        </section>
 
-        <section class="copy">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
                         <!--(bake partials/copy.html _foreach="grafs:snow.section_two.grafs")-->
+                        
                     </div>
                 </div>
             </div>
@@ -95,64 +86,46 @@
 
         <section class="interactive" id="interactive-swe">
             <div class="container container-large">
-
+                <div class="row">
+                    <h2>Measuring Snowpack</h2>
+                </div>
                 <div class="row">
                     <div class="col-sm-2">
-                            <div class="row">
-                                <div class="col-xs-8">
-                                    <h4>Depth</h4>
-                                    <p id="depth-text"></p>
-                                </div>
-                                <div class="col-xs-4">
-                                    <div id="slider"></div>
-                                </div>
+                        <div class="row">
+                            <div class="col-xs-10">
+                                <h4>Snow Type</h4>
+                                <select id="snow-type">
+                                    <option value="new-snow">New Snow</option>
+                                    <option value="settled-snow">Settled Snow</option>
+                                    <option value="depth-hoar">Depth Hoar</option>
+                                    <option value="wind-packed-snow" selected="selected">Wind Packed Snow</option>
+                                    <option value="firn">Firn</option>
+                                    <option value="very-wet-snow">Very Wet Snow</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-2">
+                                <div id="slider"></div>
+                            </div>
                         </div>
-                        
-
-                        <h4>Snow Type</h4>
-                        <select id="snow-type">
-                            <option value="new-snow">New Snow</option>
-                            <option value="settled-snow">Settled Snow</option>
-                            <option value="depth-hoar">Depth Hoar</option>
-                            <option value="wind-packed-snow" selected="selected">Wind Packed Snow</option>
-                            <option value="firn">Firn</option>
-                            <option value="very-wet-snow">Very Wet Snow</option>
-                        </select>
                     </div>
                     <div class="col-sm-3">
                         <div id="snowflakes"></div>
+                        <p class="swe-totals" id="snow-depth-text"></p>
                     </div>
-                    
+
                     <div class="col-sm-1">
                         <div id="equals"></div>
                     </div>
                     <div class="col-sm-3" >
                         <div id="waterdrops"></div>
+                        <p class="swe-totals" id="water-depth-text"></p>
                     </div>
-                    
+
                     <div class="col-sm-3">
-                        <p>Snow Water Equivalency is calculated by first measuring a snow's density and depth. Differnet types of snow have different densities. These two values are plugged into the following equation <b>SWE = Density * Depth</b>. April 1st is generally considered the ideal day to predict water flowing downstream.</p>
-                        
-                        
-                       <!--  <h5>Depth</h5>
-                        <select id="snow-depth">
-                            <option value="5">5 in</option>
-                            <option value="10">10 in</option>
-                            <option value="20">20 in</option>
-                            <option value="40">40 in</option>
-                            <option value="50">50 in</option>
-                            <option value="80">80 in</option>
-                        </select> -->
+                        <p>Snow water equivalency is calculated by knowing snowpack's density and depth. Different types of snow have different densities. Using the following equation <b>SWE = Density * Depth</b>, snow water equivalency can be approximated. April 1st is generally considered the ideal day to predict water flowing downstream.</p>
 
                         <p><span><img src="../media/snow.png" alt=""> = 1 inch of snow</span></p>
                         <p><span><img src="../media/waterdrop.png" alt=""> = 1 inch of water</span></p>
-
-                        
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        
                     </div>
                 </div>
             </div>
@@ -162,29 +135,35 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
+
                         <!--(bake partials/copy.html _foreach="grafs:snow.section_three.grafs")-->
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="image">
+        <section class="copy">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <img src="../media/samples/image.jpg" alt="">
-                        <span class="image-caption image-caption-left">This is a feature image caption left.</span>
+                        <div class="inline-media-large">
+                            <div class="inline-media-wrapper">
+                                <div class="video-wrapper-16-9 vid-wrap">
+                                    <iframe src="//player.vimeo.com/video/107071437?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                </div>
+                                <span class="image-caption image-caption-right">Mage explains a SNOTEL site.</span>
+                            </div>
+                        </div>
+                        <!--(bake partials/copy.html _foreach="grafs:snow.section_four.grafs")-->
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="copy">
-            <div class="container">
+        <section class="image-featured-behind footer">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <!--(bake partials/copy.html _foreach="grafs:snow.section_four.grafs")-->
-                    </div>
+                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="image-featured-behind"></div>
                 </div>
             </div>
         </section>

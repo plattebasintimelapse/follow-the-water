@@ -9,7 +9,7 @@
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 		<!-- build:css ../styles/vendor.css -->
 		<!-- bower:css -->
-		<link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="../bower_components/fontawesome/scss/font-awesome.scss" />
 		<link rel="stylesheet" href="../bower_components/jquery-ui/themes/redmond/jquery-ui.css" />
 		<!-- endbower -->
 		<!-- endbuild -->
@@ -72,7 +72,7 @@
             </div>
             <div class="opening-scroll" data-start="opacity:1; bottom:1%;" data-100-start="opacity:0; bottom: -10%;">
                 <p>scroll</p>
-                <span class="lead-scroll-arrow glyphicon glyphicon-chevron-down"></span>
+                <i class="fa fa-chevron-down"></i>
             </div>
         </header>
 
@@ -95,7 +95,7 @@
             </div>
         </section>
 
-        <section class="interactive">
+        <section class="interactive" id="pathfinder-historicals">
             <div class=" container container-large">
                 <div class="row">
                     <div class="col-sm-12">
@@ -104,27 +104,25 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-2">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam asperiores totam quibusdam consectetur expedita adipisci architecto recusandae eum similique veritatis incidunt placeat, nisi, esse distinctio temporibus possimus vel praesentium quis.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam asperiores totam quibusdam consectetur expedita adipisci architecto recusandae eum similique veritatis incidunt placeat, nisi, esse distinctio temporibus possimus vel praesentium quis.<img class="zoom-in-icon" src="../media/zoom.png" /></p>
                     </div>
-                    <div class="col-sm-5">
-                        <img class="zoom" src="../media/pathfinder-1.jpg" alt="">
-                        <span class="image-caption image-caption-left"><img class="zoom-in-icon" src="../media/zoom.png" /> This is a feature image caption left. And it's a longer caption so I can see if it wraps around the image okay.</span>
-                    </div>
-                    <div class="col-sm-5">
-                        <img class="zoom" src="../media/pathfinder-2.jpg" alt="">
-                        <span class="image-caption image-caption-right"><img class="zoom-in-icon" src="../media/zoom.png" /> This is a feature image caption right. And it's a longer caption so I can see if it wraps around the image okay.</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-2">
-                    </div>
-                    <div class="col-sm-5">
-                        <img class="zoom" src="../media/pathfinder-1.jpg" alt="">
-                        <span class="image-caption image-caption-left"><img class="zoom-in-icon" src="../media/zoom.png" /> This is a feature image caption left. And it's a longer caption so I can see if it wraps around the image okay.</span>
-                    </div>
-                    <div class="col-sm-5">
-                        <img class="zoom" src="../media/pathfinder-2.jpg" alt="">
-                        <span class="image-caption image-caption-right"><img class="zoom-in-icon" src="../media/zoom.png" /> This is a feature image caption right. And it's a longer caption so I can see if it wraps around the image okay.</span>
+                    <div class="col-sm-10">
+                         <div class="row">
+                            <div class="col-sm-6">
+                                <img class="zoom" src="../media/pathfinder-1.jpg" alt="">
+                            </div>
+                            <div class="col-sm-6">
+                                <img class="zoom" src="../media/pathfinder-2.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img class="zoom" src="../media/pathfinder-1.jpg" alt="">
+                            </div>
+                            <div class="col-sm-6">
+                                <img class="zoom" src="../media/pathfinder-2.jpg" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -273,9 +271,6 @@
         <script src="../bower_components/jquery-ui-touch-punch-working/jquery.ui.touch-punch.min.js"></script>
         <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
         <script src="../bower_components/jquery-waypoints/waypoints.js"></script>
-        <script src="../bower_components/highcharts-release/highcharts.js"></script>
-        <script src="../bower_components/highcharts-release/highcharts-more.js"></script>
-        <script src="../bower_components/highcharts-release/modules/exporting.js"></script>
         <script src="../bower_components/jquery-zoom/jquery.zoom.js"></script>
         <script src="../bower_components/skrollr/src/skrollr.js"></script>
         <script src="../bower_components/d3/d3.js"></script>
@@ -298,10 +293,10 @@
         
         <!-- endbuild -->
         <!-- build:js({app,.tmp}) ../scripts/main.js -->
-        <script src="../scripts/main.js"></script>
-        <script src="../scripts/swe.js"></script>
         <script src="../scripts/pop-charts.js"></script>
         <script src="../scripts/snow-charts.js"></script>
+        <script src="../scripts/swe.js"></script>
+        <script src="../scripts/main.js"></script>
         <!-- endbuild -->
         
         

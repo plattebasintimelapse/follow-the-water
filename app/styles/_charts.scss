@@ -4,10 +4,10 @@
 }
 
 #pop-chart svg {
-    @include breakpoint(mama-bear) { 
+    @include breakpoint(mama-bear) {
         height: 500px;
     }
-    @include breakpoint(baby-bear) { 
+    @include breakpoint(baby-bear) {
         height: 300px;
     }
 }
@@ -17,7 +17,7 @@
     @include breakpoint(papa-bear) {
         height: 700px;
     }
-    @include breakpoint(mama-bear) { 
+    @include breakpoint(mama-bear) {
         height: 400px;
     }
 
@@ -61,6 +61,10 @@
   display: none;
 }
 
+#snotel-chart .line {
+  fill: none;
+  stroke-width: 2px;
+}
 .line {
   fill: none;
   stroke-width: 1px;

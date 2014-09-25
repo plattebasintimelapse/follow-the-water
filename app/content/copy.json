@@ -18,14 +18,6 @@
 					"Ski fanatics know exactly how much fresh powder each storm brings to their mountains. But others track that data, too. For the last 100 years, this is when the cycle of water management begins, as hydrologists answer a critical question: how much water is up there this year?"
 				},{ "graf":
 					"Mage Hultstrand glides through deep snow, approaching a collection of silvery devices coated in icy powder. “We measure the water content of the snow here,” says Hultstrand, a hydrologist with the Natural Resources Conservation Service’s snow survey program in Denver. She’s at the Joe Wright SNOTEL site in the Cache la Poudre drainage, part of the South Platte River Basin."
-				},{ "graf":
-					"She explains each of the snow-covered instruments, including a snow “pillow,” full of an antifreeze solution. It acts like a liquid scale, measuring the weight of the snow and converting it to total water content of the snowpack. SNOTEL stands for “snowpack telemetry”—basically remote data collection and transmission. Every year more than 700 remote stations like this one track snowpack and climate data across the West. That’s especially critical in Colorado."
-				},{ "graf":
-					"“This is the headwater state, so this is where all of your water is coming from,” says Hultstrand, “with the exception of whatever precipitation is received in spring and summer. But really this is the bulk of it.”"
-				},{ "graf":
-					"The SNOTEL system has been in place for decades, transmitting data back to centralized offices where it’s assessed and compiled into reports. But it complements an even older method of data collection: manual snow surveys. From January through May, teams go out to specific sites--the same ones year after year--to collect information about snowpack. They ski or snowshoe through forests heavy with snow to the more remote sites, weathering sleet, blizzards or ice storms."
-				},{ "graf":
-					"A professor at the University of Nevada named Dr. Frank Church pioneered the system of snow surveying in 1905. “He wanted to find a better way of forecasting runoff,” says Matt Hoobler, a snow surveyor with the Wyoming State Engineer's Office who conducts manual surveys each winter. And his method proved durable: during the last century, things haven’t changed much. “The basic premise of filling a tube full of snow and weighing it...we do something very similar today,” says Hoobler."
 				}
 			]
 		},
@@ -33,6 +25,14 @@
 		"section_two": {
 			"grafs": [
 				{ "graf":
+					"She explains each of the snow-covered instruments, including a snow “pillow,” full of an antifreeze solution. It acts like a liquid scale, measuring the weight of the snow and converting it to total water content of the snowpack. SNOTEL stands for “snowpack telemetry”—basically remote data collection and transmission. Every year more than 700 remote stations like this one track snowpack and climate data across the West. That’s especially critical in Colorado."
+				},{ "graf":
+					"“This is the headwater state, so this is where all of your water is coming from,” says Hultstrand, “with the exception of whatever precipitation is received in spring and summer. But really this is the bulk of it.”"
+				},{ "graf":
+					"The SNOTEL system has been in place for decades, transmitting data back to centralized offices where it’s assessed and compiled into reports. But it complements an even older method of data collection: manual snow surveys. From January through May, teams go out to specific sites--the same ones year after year--to collect information about snowpack. They ski or snowshoe through forests heavy with snow to the more remote sites, weathering sleet, blizzards or ice storms."
+				},{ "graf":
+					"A professor at the University of Nevada named Dr. Frank Church pioneered the system of snow surveying in 1905. “He wanted to find a better way of forecasting runoff,” says Matt Hoobler, a snow surveyor with the Wyoming State Engineer's Office who conducts manual surveys each winter. And his method proved durable: during the last century, things haven’t changed much. “The basic premise of filling a tube full of snow and weighing it...we do something very similar today,” says Hoobler."
+				},{ "graf":
 					"Near the summit of Interstate 80 in southeastern Wyoming, weak sunlight makes its way through the thin air to where Hoobler is taking a core sample of the snowpack. He carefully holds a specially calibrated cylinder, which measures snow depth, weight, and density, then drops it vertically into the snow, twists it, and pulls it back out to analyze."
 				},{ "graf":
 					"“Water content at this site is 5.5 inches,” says Hoobler. “That means if this snow was to melt instantaneously, there’d be 5.5 inches of water sitting in this meadow.”"

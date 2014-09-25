@@ -72,7 +72,10 @@
     background-image: url('../media/field/field12.JPG');
 }
 
-
+.zoom-in-icon {
+    height: 15px;
+    width: 15px;
+}
 
 .sound-container {
     position: absolute;
@@ -81,4 +84,8 @@
     padding: 0px 10px;
     color: white;
     cursor: pointer;
+}
+
+#pathfinder-historicals .col-sm-6 {
+    padding-bottom: 25px;
 }
