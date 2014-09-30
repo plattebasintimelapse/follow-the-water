@@ -1,6 +1,6 @@
 body {
     // opacity: 0;
-    // background-color:black;
+    background-color:black;
 }
 
 .no-js body {
@@ -269,6 +269,48 @@ img.zoomImg {
 		text-align:center;
 		margin-bottom: 50px;
 	}
+
+	h4 {
+		text-align:center;
+	}
+
+	.credit {
+		margin-top: 15px;
+		font-size: .7em;
+    	text-align: right;
+    	color: gray;
+    	a {color: $blue;}
+    	a:hover {color: black;}
+	}
+}
+
+p.interactive-note {
+	font-size: .5em;
+	margin-bottom: 0px;
+}
+
+// CHARTS
+
+.chart {
+	padding: 40px 0;
+	h2 {
+		text-align:center;
+		margin-bottom: 50px;
+	}
+
+	.chart-copy {
+		font-size: .9em;
+		line-height: 1.2em;
+	}
+
+	.credit {
+		margin-top: 15px;
+		font-size: .7em;
+    	text-align: right;
+    	color: gray;
+    	a {color: $blue;}
+    	a:hover {color: black;}
+	}
 }
 
 p.interactive-note {
@@ -280,7 +322,7 @@ p.interactive-note {
 
 .video-wrapper-16-9 {
 	position: relative;
-	padding-bottom: 52.25%; /* 16:9 */
+	padding-bottom: 54.25%; /* 16:9 */
 	padding-top: 25px;
 	height: 0;
 }

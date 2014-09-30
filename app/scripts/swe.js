@@ -6,31 +6,69 @@ function makeSWE() {
         snowFlakesCanvas    = $( '#snowflakes' ),
         waterDropsCanvas    = $( '#waterdrops'),
         snowTypeSelection   = 'wind-packed-snow',
-        snowDepthSelection  = '50';
+        snowDepthSelection  = '50',
+        snowTypeLabels      = [ $('#new-snow'), $('#settled-snow'), $('#depth-hoar'), $('#wind-packed-snow'), $('#firn'), $('#very-wet-snow') ]
 
     drawCanvas();
 
-    snowTypeOptionBox.change(function() {
-        snowTypeSelection = $(this).val();
+    $('#new-snow').on('click', function() {
+        snowTypeSelection = 'new-snow';
+        toggleLabel($(this));
         drawCanvas();
     });
 
-        $( "#slider" ).slider({
-            orientation: 'vertical',
-            value:50,
-            min: 0,
-            max: 100,
-            step: 5,
-            slide: function( event, ui ) {
-                snowDepthSelection = ui.value;
-                drawCanvas();
-            }
+    $('#settled-snow').on('click', function() {
+        snowTypeSelection = 'settled-snow';
+        toggleLabel($(this));
+        drawCanvas();
+    });
+
+    $('#depth-hoar').on('click', function() {
+        snowTypeSelection = 'depth-hoar';
+        toggleLabel($(this));
+        drawCanvas();
+    });
+
+    $('#wind-packed-snow').on('click', function() {
+        snowTypeSelection = 'wind-packed-snow';
+        toggleLabel($(this));
+        drawCanvas();
+    });
+
+    $('#firn').on('click', function() {
+        snowTypeSelection = 'firn';
+        toggleLabel($(this));
+        drawCanvas();
+    });
+
+    $('#very-wet-snow').on('click', function() {
+        snowTypeSelection = 'very-wet-snow';
+        toggleLabel($(this));
+        drawCanvas();
+    });
+
+    $( "#slider" ).slider({
+        orientation: 'vertical',
+        value: 50,
+        min: 0,
+        max: 100,
+        step: 5,
+        slide: function( event, ui ) {
+            snowDepthSelection = ui.value;
+            drawCanvas();
+        }
+    });
+
+    function toggleLabel(select){
+        $(snowTypeLabels).each(function() {
+            this.removeClass('selected');
         });
+        select.addClass('selected');
+    }
 
     function drawCanvas() {
         var snowDensity;
         var SWE;
-        var snowFlakePadding = '6px';
 
         waterDropsCanvas.empty();
         snowFlakesCanvas.empty();
@@ -38,49 +76,40 @@ function makeSWE() {
         switch (snowTypeSelection) {
             case 'new-snow':
                 snowDensity = 50;
-                snowFlakePadding = '6px';
                 break;
             case 'settled-snow':
                 snowDensity = 200;
-                snowFlakePadding = '5px';
                 break;
             case 'depth-hoar':
                 snowDensity = 300;
-                snowFlakePadding = '4px';
                 break;
             case 'wind-packed-snow':
                 snowDensity = 400;
-                snowFlakePadding = '3px';
                 break;
             case 'firn':
                 snowDensity = 600;
-                snowFlakePadding = '2px';
                 break;
             case 'very-wet-snow':
                 snowDensity = 800;
-                snowFlakePadding = '0px';
                 break;
         }
 
         swe = snowDepthSelection * snowDensity / 1000;
-        console.log("Depth: " + snowDepthSelection);
-        console.log("Density: " + snowDensity);
-        console.log("SWE: " + swe);
-        console.log("----------------------------");
+        // console.log("Depth: " + snowDepthSelection);
+        // console.log("Density: " + snowDensity);
+        // console.log("SWE: " + swe);
+        // console.log("----------------------------");
 
         $( "#snow-depth-text" ).text( snowDepthSelection + " inches");
         $( "#water-depth-text" ).text( swe + " inches");
 
-        console.log(snowFlakePadding);
-        $('#interactive-swe span.snowflake').css('padding', snowFlakePadding);
-
         var j = parseInt( snowDepthSelection );
         for ( var i = 0; i < j; i++ ) {
-            snowFlakesCanvas.append( '<span class="snowflake"><img src="../media/snow.png"></span>' );
+            snowFlakesCanvas.append( '<span class="snowflake"><img src="../media/swe/' + snowTypeSelection + '.png"></span>' );
         }
 
         for ( var i = 0; i < swe; i++ ) {
-            waterDropsCanvas.append( '<span class="water-drop"><img src="../media/waterdrop.png"></span>' );
+            waterDropsCanvas.append( '<span class="water-drop"><img src="../media/swe/waterdrop.png"></span>' );
         }
     }
 

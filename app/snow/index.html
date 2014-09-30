@@ -9,8 +9,8 @@
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 		<!-- build:css ../styles/vendor.css -->
 		<!-- bower:css -->
-		<link rel="stylesheet" href="../bower_components/fontawesome/scss/font-awesome.scss" />
-		<link rel="stylesheet" href="../bower_components/jquery-ui/themes/redmond/jquery-ui.css" />
+		<link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="../bower_components/jquery-ui/themes/smoothness/jquery-ui.css" />
 		<!-- endbower -->
 		<!-- endbuild -->
 		<!-- build:css(.tmp) ../styles/main.css -->
@@ -81,18 +81,9 @@
                 <i class="fa fa-chevron-down"></i>
             </div>
             <div class="sound-container" data-start="opacity:1;" data-300-start="opacity:0;">
-                <i class="fa fa-volume-off fa-lg"></i><audio id="snow-sounds" loop src="../media/Life Is Good_DWCD 0558_18_De Wolfe Lawrence Oakley and Mark Waterfield and Tamara Schlesinger.wav"></audio>
+                <!-- <i class="fa fa-volume-off fa-lg"></i><audio id="snow-sounds" loop src="../media/Life Is Good_DWCD 0558_18_De Wolfe Lawrence Oakley and Mark Waterfield and Tamara Schlesinger.wav"></audio> -->
             </div>
         </header>
-
-        <!-- <section class="image-featured-behind no-padding">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="snow-map" data-100="transform:translateY(250px);" data-700="transform:translateY(0px);">
-                    </div>
-                </div>
-            </div>
-        </section> -->
 
         <section class="copy">
             <div class="container container-small">
@@ -108,17 +99,17 @@
                         <p>Mage Hultstrand glides through deep snow, approaching a collection of silvery devices coated in icy powder. “We measure the water content of the snow here,” says Hultstrand, a hydrologist with the Natural Resources Conservation Service’s snow survey program in Denver. She’s at the Joe Wright SNOTEL site in the Cache la Poudre drainage, part of the South Platte River Basin.</p>
                         
 
-                        <div class="inline-media-large">
+                        <div class="inline-media-large inline-video" id="snotel-video">
                             <div class="inline-media-wrapper">
                                 <div class="video-wrapper-16-9 vid-wrap">
-                                    <iframe src="//player.vimeo.com/video/107067451?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                    <iframe id="snotel" src="//player.vimeo.com/video/107067451?title=0&amp;byline=0&amp;portrait=0&amp;loop=0&amp;player_id=snotel&amp;api=1" frameborder="0"></iframe>
                                 </div>
                                 <span class="image-caption image-caption-right">Mage explains a SNOTEL site.</span>
                             </div>
                         </div>
 
-                        <p>She explains each of the snow-covered instruments, including a snow “pillow,” full of an antifreeze solution. It acts like a liquid scale, measuring the weight of the snow and converting it to total water content of the snowpack. SNOTEL stands for “snowpack telemetry”—basically remote data collection and transmission. Every year more than 700 remote stations like this one track snowpack and climate data across the West. That’s especially critical in Colorado.</p>
-                        
+                        <p>She <span class="inline-video-btn" id="play-snotel"><i class="fa fa-play"></i> explains</span><span class="mama-bear">explains</span> each of the snow-covered instruments, including a snow “pillow,” full of an antifreeze solution. It acts like a liquid scale, measuring the weight of the snow and converting it to total water content of the snowpack. SNOTEL stands for “snowpack telemetry”—basically remote data collection and transmission. Every year more than 700 remote stations like this one track snowpack and climate data across the West. That’s especially critical in Colorado.</p>
+
                         <p>“This is the headwater state, so this is where all of your water is coming from,” says Hultstrand, “with the exception of whatever precipitation is received in spring and summer. But really this is the bulk of it.”</p>
                         
                         <p>The SNOTEL system has been in place for decades, transmitting data back to centralized offices where it’s assessed and compiled into reports. But it complements an even older method of data collection: manual snow surveys. From January through May, teams go out to specific sites--the same ones year after year--to collect information about snowpack. They ski or snowshoe through forests heavy with snow to the more remote sites, weathering sleet, blizzards or ice storms.</p>
@@ -129,9 +120,23 @@
                         
                         <p>“Water content at this site is 5.5 inches,” says Hoobler. “That means if this snow was to melt instantaneously, there’d be 5.5 inches of water sitting in this meadow.”</p>
                         
-                        <p>Hoobler collects snowpack information at sites throughout Wyoming, like his colleagues in 12 other Western states. He says understanding the relationship between snowpack and water supply is critical.</p>
+
+                        <div class="inline-media-large inline-video" id="snowpack-video">
+                            <div class="inline-media-wrapper">
+                                <div class="video-wrapper-16-9 vid-wrap">
+                                    <iframe id="snowpack" src="//player.vimeo.com/video/107071437?title=0&amp;byline=0&amp;portrait=0&amp;loop=0&amp;player_id=snowpack&amp;api=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                </div>
+                                <span class="image-caption image-caption-right">Matt Hoobler measures snowpack in the Rocky Mountains for river forecasting.</span>
+                            </div>
+                        </div>
+
+                        <p>Hoobler <span class="inline-video-btn" id="play-snowpack"><i class="fa fa-play"></i> collect</span><span class="mama-bear">collects</span> snowpack information at sites throughout Wyoming, like his colleagues in 12 other Western states. He says understanding the relationship between snowpack and water supply is critical."</p>
                         
+                        <p>“The main reason we’re up here for snow survey is for river forecasting. In other words, once it all turns to water, how much water is going to exist in our rivers and our reservoirs,” says Hoobler.</p>
                         
+                        <p>Each year surveyors add new data to the collection, validating the record and improving accuracy. The field data coming in from snow surveys and SNOTEL sites, including precipitation, is compiled into monthly stream flow forecasts for the spring and summer. That information is critical to many diverse downstream users, especially farmers who rely on irrigation water. Knowing if the water supply is above or below average can determine a boom or bust year for crops, if rancher have to sell their cows, if migrating birds will have enough water to nest successfully, if raft guides will have summer employment.</p>
+                        
+
                     </div>
                 </div>
             </div>
@@ -144,17 +149,22 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-2">
+                       <!--  <div class="row">
+                            <div class="col-xs-8">
+                                <h4>Select a snow <em>type</em> and <em>depth</em>:</h4>
+                            </div>
+                        </div> -->
                         <div class="row">
                             <div class="col-xs-10">
-                                <h4>Snow Type</h4>
-                                <select id="snow-type">
-                                    <option value="new-snow">New Snow</option>
-                                    <option value="settled-snow">Settled Snow</option>
-                                    <option value="depth-hoar">Depth Hoar</option>
-                                    <option value="wind-packed-snow" selected="selected">Wind Packed Snow</option>
-                                    <option value="firn">Firn</option>
-                                    <option value="very-wet-snow">Very Wet Snow</option>
-                                </select>
+                                <h4>Select a snow <em>type</em> and <em>depth</em>:</h4>
+                                <div id="snow-type-selection">
+                                    <p id="new-snow" data-toggle="popover" data-content="<span>Density: <b>50-70kg/m<sup>3</sup></b></span><br />Fresh snow immediately after falling in calm conditions"><span><img src="../media/swe/new-snow.png" alt="">New Snow</span></p>
+                                    <p id="settled-snow" data-toggle="popover" data-content="Density: <b>200-300 kg/m<sup>3</sup></b>"><span><img src="../media/swe/settled-snow.png" alt="">Settled Snow</span></p>
+                                    <p id="depth-hoar" data-toggle="popover" data-content="<span>Density: <b>100-300kg/m<sup>3</sup></b></span><br />Depth hoar are ice crystals at the base of a snowpack caused by uprising water vapor"><span><img src="../media/swe/depth-hoar.png" alt="">Depth Hoar</span></p>
+                                    <p class="selected" data-toggle="popover" data-content="Density: <b>350-400kg/m<sup>3</sup></b>" id="wind-packed-snow"><span><img src="../media/swe/wind-packed-snow.png" alt="">Wind Packed Snow</span></p>
+                                    <p data-toggle="popover" data-content="<span>Density: <b>400-830kg/m<sup>3</sup></b></span><br />Granular and partially compacted snow that has passed through one summer’s melting season but has not yet turned to glacial ice" id="firn"><span><img src="../media/swe/firn.png" alt="">Firn</span></p>
+                                    <p data-toggle="popover" data-content="Density: <b>700-800 kg/m<sup>3</sup></b>" id="very-wet-snow"><span><img src="../media/swe/very-wet-snow.png" alt="">Very Wet Snow</span></p>
+                                </div>
                             </div>
                             <div class="col-xs-2">
                                 <div id="slider"></div>
@@ -174,11 +184,16 @@
                         <p class="swe-totals" id="water-depth-text"></p>
                     </div>
 
-                    <div class="col-sm-3">
-                        <p>Snow water equivalency is calculated by knowing snowpack's density and depth. Different types of snow have different densities. Using the following equation <b>SWE = Density * Depth</b>, snow water equivalency can be approximated. April 1st is generally considered the ideal day to predict water flowing downstream.</p>
+                    <div class="col-sm-3" id="swe-desc">
+                        <p>Scientists use the equation <b>SWE = Density * Depth</b> to approximate snow water equivalency: basically, how much water will result from the snow once it melts. Due to factors like wind, temperature and compaction over time, different types of snow have different densities. The Natural Resources Conservation Service collects and compiles this data into monthly reports. April 1st is generally the starting point in predicting spring and summer streamflow for major river systems.</p>
 
-                        <p><span><img src="../media/snow.png" alt=""> = 1 inch of snow</span></p>
-                        <p><span><img src="../media/waterdrop.png" alt=""> = 1 inch of water</span></p>
+                       <!--  <p><span><img src="../media/swe/wind-packed-snow.png" alt=""> = 1 inch of snow</span></p>
+                        <p><span><img src="../media/swe/waterdrop.png" alt=""> = 1 inch of water</span></p> -->
+                    </div>
+                </div>
+                <div class="row credit">
+                    <div class="col-xs-12">
+                        <p>Source: Paterson, W.S.B. 1994. <em></em> via <a target="_blank" href="http://www.sciencelearn.org.nz/Contexts/Icy-Ecosystems/Looking-closer/Snow-and-ice-density">http://www.sciencelearn.org</a></p>
                     </div>
                 </div>
             </div>
@@ -188,28 +203,6 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-
-                        <p>“The main reason we’re up here for snow survey is for river forecasting. In other words, once it all turns to water, how much water is going to exist in our rivers and our reservoirs,” says Hoobler.</p>
-                        
-                        <p>Each year surveyors add new data to the collection, validating the record and improving accuracy. The field data coming in from snow surveys and SNOTEL sites, including precipitation, is compiled into monthly stream flow forecasts for the spring and summer. That information is critical to many diverse downstream users, especially farmers who rely on irrigation water. Knowing if the water supply is above or below average can determine a boom or bust year for crops, if rancher have to sell their cows, if migrating birds will have enough water to nest successfully, if raft guides will have summer employment.</p>
-                        
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="copy">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="inline-media-large">
-                            <div class="inline-media-wrapper">
-                                <div class="video-wrapper-16-9 vid-wrap">
-                                    <iframe src="//player.vimeo.com/video/107071437?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                                </div>
-                                <span class="image-caption image-caption-right">Mage explains a SNOTEL site.</span>
-                            </div>
-                        </div>
                         <p>It’s generally hard for climatologists to predict what kind of a year it will be for snowpack, though global climate events like El Nino and La Nina often impact western weather. But snow accumulation is only one part of the story, since the climate of the region matters too. In 2012, some farmers ran out of their irrigation water partway through the season, even as scorching temperatures continued and rain never came. (Those that could drew heavily on the massive supply of ancient groundwater in the Ogallala Aquifer, two-thirds of which lies beneath Nebraska.) This year, irrigation demands were slow to start because of a cool, wet spring. Combined with a high snowpack runoff season, reservoirs along the North Platte River had time to fill, banking water for another dry year in the future.</p>
                         
                         <p>As winter relaxes into spring, that massive quantity of water stored high in the mountains begins to melt and make its way into streams and rivers, where it is channeled through dams and reservoirs to feed crops. The North Platte River starts to creep north from Colorado into Wyoming, where it meets the first of several stops along the way to a farmer’s field.</p>
@@ -219,10 +212,14 @@
             </div>
         </section>
 
-        <section class="image-featured-behind footer">
-            <div class="container-fluid">
+        <section>
+            <div class="container container-large">
                 <div class="row">
-                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="image-featured-behind"></div>
+                    <div class="col-xs-12">
+                        <div class="video-wrapper-16-9 vid-wrap">
+                            <iframe id="snowpack" src="//player.vimeo.com/video/107632078?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -230,13 +227,20 @@
         <section class="interactive">
             <div class="container container-large">
                 <div class="row">
-                    <div class="col-sm-8">
+                    <div class="col-md-8">
+                        <h4>Snowfall varies Year to Year</h4>
                         <div id="snotel-chart"></div>
+                        <div id="snotel-legend"></div>
+                        <div class="credit">
+                            <p>Data from the <a href="http://www.wcc.nrcs.usda.gov/snow/">Natural Resources Conservation Service</a></p>
+                        </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-md-4">
+                        
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat unde hic voluptas perferendis, magnam consectetur tenetur aperiam, excepturi in nemo molestias omnis voluptates at perspiciatis cum nostrum minus cupiditate sit!</p>
-                        <p>Temporibus, cum, laborum! Sed modi saepe voluptate sequi deserunt facere at velit qui magni? Voluptate odit, non quibusdam velit necessitatibus a recusandae quia error placeat quisquam tempora amet, soluta, repellendus.</p>
-                        <p>Vel dolorum facilis quos quibusdam voluptates amet ratione fuga, ipsam ea voluptatem, soluta reiciendis commodi. Dignissimos, ab tempora autem qui placeat voluptates necessitatibus adipisci minima, reiciendis, soluta magni atque ratione!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat unde hic voluptas perferendis, magnam consectetur tenetur aperiam, excepturi in nemo molestias omnis voluptates at perspiciatis cum nostrum minus cupiditate sit!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat unde hic voluptas perferendis, magnam consectetur tenetur aperiam, excepturi in nemo molestias omnis voluptates at perspiciatis cum nostrum minus cupiditate sit!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat unde hic voluptas perferendis, magnam consectetur tenetur aperiam, excepturi in nemo molestias omnis voluptates at perspiciatis cum nostrum minus cupiditate sit!</p>
                     </div>
                 </div>
                 <div class="row">
@@ -250,21 +254,29 @@
         <section class="copy">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <p>Asperiores, veritatis harum vitae minus commodi. Quam sit explicabo perspiciatis deleniti, labore quas maiores non temporibus laudantium, cumque excepturi, accusantium sunt esse voluptas nulla! Doloremque debitis qui, repudiandae suscipit recusandae?</p>
+                    <div class="col-md-12">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat unde hic voluptas perferendis, magnam consectetur tenetur aperiam, excepturi in nemo molestias omnis voluptates at perspiciatis cum nostrum minus cupiditate sit!</p>
+                        <p>Temporibus, cum, laborum! Sed modi saepe voluptate sequi deserunt facere at velit qui magni? Voluptate odit, non quibusdam velit necessitatibus a recusandae quia error placeat quisquam tempora amet, soluta, repellendus.</p>
+                        <p>Vel dolorum facilis quos quibusdam voluptates amet ratione fuga, ipsam ea voluptatem, soluta reiciendis commodi. Dignissimos, ab tempora autem qui placeat voluptates necessitatibus adipisci minima, reiciendis, soluta magni atque ratione!</p>
+
+                        <p>Temporibus, cum, laborum! Sed modi saepe voluptate sequi deserunt facere at velit qui magni? Voluptate odit, non quibusdam velit necessitatibus a recusandae quia error placeat quisquam tempora amet, soluta, repellendus.</p>
+                        <p>Vel dolorum facilis quos quibusdam voluptates amet ratione fuga, ipsam ea voluptatem, soluta reiciendis commodi. Dignissimos, ab tempora autem qui placeat voluptates necessitatibus adipisci minima, reiciendis, soluta magni atque ratione!</p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="image-featured-behind footer">
+<!-- data-600-top="opacity: 0;" data-center="opacity: 1;" -->
+        <section class="gap-full" data-600-top="opacity: 0;" data-center="opacity: 1;">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="image-featured-behind"></div>
+                    <div class="video-behind">
+                        <video id="jack-creek-video" loop preload="metadata">
+                            <source src="../media/jack-creek.mp4" type="video/mp4">
+                        </video>
+                    </div>
                 </div>
             </div>
         </section>
-
 
         <footer>
             <div class="container-fluid">
@@ -314,6 +326,7 @@
         
         <!-- endbuild -->
         <!-- build:js({app,.tmp}) ../scripts/main.js -->
+        <script src="../scripts/colorbrewer.js"></script>
         <script src="../scripts/pop-charts.js"></script>
         <script src="../scripts/snow-charts.js"></script>
         <script src="../scripts/swe.js"></script>
@@ -324,29 +337,25 @@
 
         <!-- PAGE SPECIFIC SCRIPTS -->
         <script>
-            var s = skrollr.init();
+            
             $('#ui-slider-handle').draggable();
-
-            var iframe = document.getElementById('autoplay');
-
-             // $f == Froogaloop
-            var player = $f(iframe);
-
-             //Play when iframe is in viewport
-            $('#autoplay').waypoint(function() {
-                player.api("play");
-            }, {
-                offset: 'bottom-in-view'
-            });
-
-             //Pause when top of iframe is in viewport
-            $('#autoplay').waypoint(function() {
-                player.api("pause");
-            });
-            $('img.dam').popover({
+            $('#snow-type-selection p').popover({
                 trigger : 'hover',
                 html : 'true'
             });
+
+            $('#snotel-chart').waypoint(function(direction) {
+                var video = document.getElementById('jack-creek-video');
+                // video.load();
+                video.style.display="block";
+
+                if (direction == "up") {
+                    video.pause();
+                    video.style.display="none";
+                } else if (direction == "down") {
+                    video.play();
+                }
+            }, {offset: -500});
         </script>
     </body>
 </html>

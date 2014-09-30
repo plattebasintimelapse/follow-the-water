@@ -25,8 +25,6 @@
 		"section_two": {
 			"grafs": [
 				{ "graf":
-					"She explains each of the snow-covered instruments, including a snow “pillow,” full of an antifreeze solution. It acts like a liquid scale, measuring the weight of the snow and converting it to total water content of the snowpack. SNOTEL stands for “snowpack telemetry”—basically remote data collection and transmission. Every year more than 700 remote stations like this one track snowpack and climate data across the West. That’s especially critical in Colorado."
-				},{ "graf":
 					"“This is the headwater state, so this is where all of your water is coming from,” says Hultstrand, “with the exception of whatever precipitation is received in spring and summer. But really this is the bulk of it.”"
 				},{ "graf":
 					"The SNOTEL system has been in place for decades, transmitting data back to centralized offices where it’s assessed and compiled into reports. But it complements an even older method of data collection: manual snow surveys. From January through May, teams go out to specific sites--the same ones year after year--to collect information about snowpack. They ski or snowshoe through forests heavy with snow to the more remote sites, weathering sleet, blizzards or ice storms."
@@ -36,8 +34,6 @@
 					"Near the summit of Interstate 80 in southeastern Wyoming, weak sunlight makes its way through the thin air to where Hoobler is taking a core sample of the snowpack. He carefully holds a specially calibrated cylinder, which measures snow depth, weight, and density, then drops it vertically into the snow, twists it, and pulls it back out to analyze."
 				},{ "graf":
 					"“Water content at this site is 5.5 inches,” says Hoobler. “That means if this snow was to melt instantaneously, there’d be 5.5 inches of water sitting in this meadow.”"
-				},{ "graf":
-					"Hoobler collects snowpack information at sites throughout Wyoming, like his colleagues in 12 other Western states. He says understanding the relationship between snowpack and water supply is critical."
 				}
 			]
 		},
@@ -139,15 +135,23 @@
 	},
 
 	"field": {
-		"hed": "The Hed",
-		"subhed": "The Subhed",
+		"hed": "Lifeblood of the Cultivated Land",
+		"subhed": "Mountain snowmelt arrives onto the plains to water thirsty fields, supporting the economy of an entire region.",
 
 		"section_one": {
 			"grafs": [
 				{"graf":
-					""
+					"“I’ll be waiting for you at seven, in my blue truck in the driveway,” instructed the kind yet gruff voice of Bob Busch on the phone. He’s prompt, and expects the same from visitors. Just past seven the next day, he directed the way to one of his sugar beet fields along the Gering/Fort Laramie Irrigation District’s canal in the cool morning breeze."
 				},{"graf":
-					""
+					"Wearing faded denim overalls, a toothy smile and a Kelly Bean Co. mesh hat, Busch watched his grandson and a farm hand “move water” with an approving gaze. He knows this process well. A third-generation farmer in the Nebraska panhandle, Busch has spent nearly all of his 77 years on the same patch of land outside of Gering. After a short stint at college, he took over farming the family property from his father in 1959."
+				},{ "graf":
+					"“I dearly love farming,” Busch said. “I don’t like some of the adversity we have. Weather… You’d get a hail storm, oh, mercy. You’d be done. But farming’s my life and always has been.”"
+				},{ "graf":
+					"Busch’s son Kendall, 52, now runs the operation, more than 1,000 acres of corn, sugar beets, dry edible beans and alfalfa. They still use flood or furrow irrigation, an older method than ?? that requires a lot of early summer mornings. "
+				},{ "graf":
+					"After setting the siphon tubes, they’ll let the water flow across this field for 24 hours before moving it (what - the water or the tubes or the process?)again tomorrow morning. They do this throughout the irrigation season, from May through September, making the most of their water."
+				},{ "graf":
+					"“Our [operation] is very labor intense. It takes a lot of manpower and a lot of time,” Kendall Busch said. "
 				}
 			]
 		},

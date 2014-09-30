@@ -14,7 +14,7 @@ function makeDamMap() {
         maxBounds: bounds
     });
 
-    var basemap = L.tileLayer('http://{s}.tiles.mapbox.com/v3/plattebasintl.jhkb20af/{z}/{x}/{y}.png', {
+    var basemap = L.tileLayer('http://{s}.tiles.mapbox.com/v3/plattebasintl.jkn0h0cn/{z}/{x}/{y}.png', {
         minZoom: 7,
         maxZoom: 10
     }).addTo(map);
@@ -33,7 +33,7 @@ function makeDamMap() {
                         '<p><a class="dam-link" src= "http://' + feature.properties.link + '">Read More</a></p>'
                     layer.bindPopup(popup_content);
 
-                    layer.on('click', function(e) {s
+                    layer.on('click', function(e) {
                         damInfoPanel.innerHTML = panel_content;
                     })
                 },
@@ -59,8 +59,8 @@ function makeDamMap() {
 
 function listenForIntro() {
     console.log("Listening to Video...");
-    var iframe = $('#video-title')[0];
-    var player = $f(iframe);
+    var $iframe = $('#video-title')[0];
+    var player = $f($iframe);
     var status = $('.status');
 
     player.addEvent('ready', ready);
@@ -68,7 +68,6 @@ function listenForIntro() {
     function ready(player_id) {
         player.addEvent('finish', finish);
 
-         //Play when iframe is in viewport
         $('#btn-intro').click(function() {
             $('.video-wrapper').fadeIn();
             player.api("play");
@@ -97,10 +96,89 @@ function listenForIntro() {
         player.api("unload");
         $('.video-wrapper').remove();
         $('#intro header').remove();
-        window.location.href = "snow";
-
+        // window.location.href = "snow";
     }
 };
+
+function snotelVideo(){
+    var $iframe = $('#snotel')[0];
+    var player = $f($iframe);
+
+    var $inline_btn = $('.inline-video-btn i');
+    var $vid_containder = $('#snotel-video');
+
+    player.addEvent('ready', function() {
+        player.addEvent('play', play);
+        player.addEvent('finish', onFinish);
+        player.addEvent('pause', pause);
+
+        var playing = false;
+        $('#play-snotel').click(function() {
+            if (playing) {
+                player.api('pause');
+                playing = false;
+            } else {
+                player.api('play');
+                playing = true;
+            }
+        });
+    });
+
+    function play(id) {
+        $vid_containder.toggleClass('playing-inline-video');
+        $inline_btn.addClass('fa-pause').removeClass('fa-play');
+    }
+
+    function pause(id) {
+        $vid_containder.toggleClass('playing-inline-video');
+        $inline_btn.addClass('fa-play').removeClass('fa-pause');
+    }
+
+    function onFinish(id) {
+        $vid_containder.removeClass('playing-inline-video');
+        $inline_btn.addClass('fa-play').removeClass('fa-pause');
+    }
+}
+
+function snowpackVideo(){
+    var $iframe = $('#snowpack')[0];
+    var player = $f($iframe);
+
+    var $inline_btn = $('.inline-video-btn i');
+    var $vid_containder = $('#snowpack-video');
+
+    player.addEvent('ready', function() {
+        player.addEvent('play', play);
+        player.addEvent('finish', onFinish);
+        player.addEvent('pause', pause);
+
+        var playing = false;
+        $('#play-snowpack').click(function() {
+            if (playing) {
+                player.api('pause');
+                playing = false;
+            } else {
+                player.api('play');
+                playing = true;
+            }
+        });
+    });
+
+    function play(id) {
+        $vid_containder.toggleClass('playing-inline-video');
+        $inline_btn.addClass('fa-pause').removeClass('fa-play');
+    }
+
+    function pause(id) {
+        $vid_containder.toggleClass('playing-inline-video');
+        $inline_btn.addClass('fa-play').removeClass('fa-pause');
+    }
+
+    function onFinish(id) {
+        $vid_containder.removeClass('playing-inline-video');
+        $inline_btn.addClass('fa-play').removeClass('fa-pause');
+    }
+}
 
 var w = true;
 $('#toggle-canals').click(function(){
@@ -123,14 +201,17 @@ setTimeout(function() {
 
 function setMasterStyles() {
     console.log("Setting Master Styles")
-    var wHeight = $(window).height();
-    var wWidth = $(window).width();
+    var $wHeight = $(window).height();
+    var $wWidth = $(window).width();
 
-    $('.image-featured-behind-full').height(wHeight);
-    $('.video-wrapper').height(wHeight);
-    $('.video-wrapper').width(wWidth);
+    $('.gap-full').height($wHeight * 2);
+    $('.gap-full').width($wWidth);
+
+    $('.image-featured-behind-full').height($wHeight);
+    $('.video-wrapper').height($wHeight);
+    $('.video-wrapper').width($wWidth);
     // $('.intro-btn-group').css('left', (wWidth / 2) - ( 100 ) );
-    var title_top = ( wHeight - $('#video-title').height() ) / 2;
+    var title_top = ( $wHeight - $('#video-title').height() ) / 2;
     // $('.fluid-video-wrapper').css('margin-top', '100px');
 
     // $('body').animate({
@@ -141,7 +222,10 @@ function setMasterStyles() {
         $('.opening-scroll').fadeIn('slow')
     }, 2000)
 
+    var s = skrollr.init();
 }
+
+
 
 function listenForAudioCntl( sound ) {
 
@@ -207,7 +291,9 @@ $(window).load(function() {
 
         // PART ONE: SNOW
         console.log("PART ONE");
-        listenForAudioCntl( $("#snow-sounds") );
+        // listenForAudioCntl( $("#snow-sounds") );
+        snotelVideo();
+        snowpackVideo();
         makeSWE();
         makeSnotelChart();
         

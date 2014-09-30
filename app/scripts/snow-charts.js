@@ -2,9 +2,11 @@
 function makeSnotelChart() {
     console.log("making snotel_site chart");
     
-    var margin = {top: 20, right: 80, bottom: 40, left: 50};
-        width = 800 - margin.left - margin.right,
-        height = 400 - margin.top - margin.bottom;
+    var margin = {top: 20, right: 20, bottom: 40, left: 30},
+        width = parseInt(d3.select("#snotel-chart").style("width")) - margin.left - margin.right,
+        height = parseInt(d3.select("#snotel-chart").style("height")) - margin.top - margin.bottom;
+
+    var mobileThreshold = 800;
 
     var parseDate = d3.time.format("%b-%y").parse;
 
@@ -14,11 +16,17 @@ function makeSnotelChart() {
     var y = d3.scale.linear()
         .range([height, 0]);
 
-    var color = d3.scale.category20c();
+    var color = d3.scale.ordinal()
+        .range(colorbrewer.PuBuGn[9]);
 
     var xAxis = d3.svg.axis()
         .scale(x)
         .orient("bottom");
+
+    if ( parseInt( $(window).width() ) < mobileThreshold) {
+        console.log("mobile");
+        xAxis.ticks(5);
+    }
 
     var yAxis = d3.svg.axis()
         .scale(y)
@@ -67,7 +75,7 @@ function makeSnotelChart() {
             .attr("class", "y axis")
             .call(yAxis);
 
-        var snotel_site = svg.selectAll(".county")
+        var snotel_site = svg.selectAll(".snotel_site")
             .data(snotel_sites)
           .enter().append("g")
             .attr("class", "snotel_site");
@@ -76,13 +84,26 @@ function makeSnotelChart() {
             .attr("class", "line")
             .attr("id", function(d) { return d.name.replace(/\s+/g, '-').toLowerCase(); })
             .attr("d", function(d) { return line(d.values); })
-            .style("stroke", function(d) { return color(d.name); })
-            .on("mouseover", function(d) {
-                d3.select(this).style("stroke-width", "4px").moveToFront();
-            })
-            .on("mouseout", function(d) {
-                d3.select(this).style("stroke-width", "2px");
-            });
+            .style("stroke", function(d) { return color(d.name); });
+            // .on("mouseover", function(d) {
+            //     d3.select(this).style("stroke-width", "4px").moveToFront();
+            // })
+            // .on("mouseout", function(d) {
+            //     d3.select(this).style("stroke-width", "1px");
+            // });
+
+        var snotel_legend = d3.select("#snotel-legend").selectAll(".snotel_data")
+            .data(snotel_sites)
+          .enter().append("div")
+            .attr("class", "snotel_site");
+
+        snotel_legend.append("div")
+            // .attr("id", function(d) { return d.name.replace(/\s+/g, '-').toLowerCase(); })
+            .attr("class", "legend-icon")
+            .style("background-color", function(d) { return color(d.name); });
+
+        snotel_legend.append("p")
+            .text(function(d) { return d.name });
 
         d3.selection.prototype.moveToFront = function() {
             return this.each(function(){
@@ -91,8 +112,8 @@ function makeSnotelChart() {
         };
 
         function resize() {
-            var width = parseInt(d3.select("#pop-chart").style("width")) - margin.left,
-            height = parseInt(d3.select("#pop-chart").style("height")) - margin.top - margin.bottom;
+            var width = parseInt(d3.select("#snotel-chart").style("width")) - margin.left - margin.right,
+            height = parseInt(d3.select("#snotel-chart").style("height")) - margin.top - margin.bottom;
 
             /* Update the range of the scale with new width/height */
             x.range([0, width]).nice(d3.time.year);
@@ -102,6 +123,10 @@ function makeSnotelChart() {
             svg.select('.x.axis')
               .attr("transform", "translate(0," + height + ")")
               .call(xAxis);
+
+            if ( parseInt( $(window).width() ) < mobileThreshold) {
+                xAxis.ticks(5);
+            }
 
             svg.select('.y.axis')
               .call(yAxis);

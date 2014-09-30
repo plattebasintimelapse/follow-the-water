@@ -1,0 +1,119 @@
+.inline-video {
+	@include breakpoint(mama-bear) {
+		width: 100%;
+		margin: 30px 0;
+		.inline-media-wrapper {
+			border: none;
+		}
+	}
+
+	// -webkit-transition: width 300ms linear;
+ //    -moz-transition: width 300ms linear;
+ //    -o-transition: width 300ms linear;
+ //    transition: width 300ms linear;
+
+    &.playing-inline-video {
+    	width: 140%;
+
+    	@include breakpoint(mama-bear) {
+			width: 100%;
+		}
+    	.inline-media-wrapper {
+    		border: none;
+    	}
+    }
+}
+
+.inline-video-btn {
+	background: #e1e1e1;
+	cursor: pointer;
+	padding: 2px 6px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+	@include breakpoint(mama-bear) {
+		display:none;
+	}
+}
+
+.tl-sequence {
+	.text-over-image {
+		position: absolute;
+		left: 15px;
+		bottom: 5px;
+	}
+}
+
+#jack-creek-video {
+	width: 100%;
+	display: none;
+}
+.video-behind {
+	position: fixed;
+	top:0;
+	left:0;
+	z-index: -100;
+}
+
+#snow-opening {
+    // background-image: url('http://projects.plattebasintimelapse.com/assets/static/gifs/snowfall.gif');
+    background-image: url('../media/snowfall.gif');
+}
+#pathfinder-opening {
+    // background-image: url('http://projects.plattebasintimelapse.com/assets/static/gifs/pathfinder.gif');
+    background-image: url('../media/pathfinder.gif');
+}
+
+#field-opening {
+    // background-image: url('http://projects.plattebasintimelapse.com/assets/static/gifs/field.gif');
+    background-image: url('../media/field.gif');
+}
+
+#field1 {
+    background-image: url('../media/field/field01.JPG');
+}
+
+#field2 {
+    background-image: url('../media/field/field02.JPG');
+}
+
+#field3 {
+    background-image: url('../media/field/field03.JPG');
+}
+
+#field4 {
+    background-image: url('../media/field/field04.JPG');
+}
+
+#field5 {
+    background-image: url('../media/field/field05.JPG');
+}
+
+#field6 {
+    background-image: url('../media/field/field06.JPG');
+}
+
+#field7 {
+    background-image: url('../media/field/field07.JPG');
+}
+
+#field8 {
+    background-image: url('../media/field/field08.JPG');
+}
+
+#field9 {
+    background-image: url('../media/field/field09.JPG');
+}
+
+#field10 {
+    background-image: url('../media/field/field10.JPG');
+}
+
+#field11 {
+    background-image: url('../media/field/field11.JPG');
+}
+
+#field12 {
+    background-image: url('../media/field/field12.JPG');
+}
