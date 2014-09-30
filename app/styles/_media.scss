@@ -7,10 +7,10 @@
 		}
 	}
 
-	// -webkit-transition: width 300ms linear;
- //    -moz-transition: width 300ms linear;
- //    -o-transition: width 300ms linear;
- //    transition: width 300ms linear;
+	-webkit-transition: width 300ms linear;
+    -moz-transition: width 300ms linear;
+    -o-transition: width 300ms linear;
+    transition: width 300ms linear;
 
     &.playing-inline-video {
     	width: 140%;

@@ -59,6 +59,27 @@
 
                         <!--(bake partials/copy.html _foreach="grafs:snow.section_one.grafs")-->
 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="image-featured">
+            <div class="container-fluid">
+                <div class="row">
+                    <img src="/media/winter-wonderland.jpg" alt="">
+                    <span class="image-caption image-caption-right">Late winter at Jack Creek, near the headwaters of the North Platte River.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="copy">
+            <div class="container container-small">
+                <div class="row">
+                    <div class="col-sm-12">
+
+                        <!--(bake partials/copy.html _foreach="grafs:snow.section_two.grafs")-->
+
                         <div class="inline-media-large inline-video" id="snotel-video">
                             <div class="inline-media-wrapper">
                                 <div class="video-wrapper-16-9 vid-wrap">
@@ -68,24 +89,21 @@
                             </div>
                         </div>
 
-                        <p>She <span class="inline-video-btn" id="play-snotel"><i class="fa fa-play"></i> explains</span><span class="mama-bear">explains</span> each of the snow-covered instruments, including a snow “pillow,” full of an antifreeze solution. It acts like a liquid scale, measuring the weight of the snow and converting it to total water content of the snowpack. SNOTEL stands for “snowpack telemetry”—basically remote data collection and transmission. Every year more than 700 remote stations like this one track snowpack and climate data across the West. That’s especially critical in Colorado.</p>
+                        <p>She <span class="inline-video-btn" id="play-snotel"><i class="fa fa-play"></i> explained</span><span class="mama-bear">explained</span> each of the snow-covered instruments, including a snow “pillow,” full of an antifreeze solution. It acts like a liquid scale, measuring the weight of the snow and converting it to total water content of the snowpack. SNOTEL stands for “snowpack telemetry”—basically remote data collection and transmission. Every year more than 700 remote stations like this one track snowpack and climate data across the West. That’s especially critical in Colorado. </p>
 
-                        <!--(bake partials/copy.html _foreach="grafs:snow.section_two.grafs")-->
-
-                        <div class="inline-media-large inline-video" id="snowpack-video">
-                            <div class="inline-media-wrapper">
-                                <div class="video-wrapper-16-9 vid-wrap">
-                                    <iframe id="snowpack" src="//player.vimeo.com/video/107071437?title=0&amp;byline=0&amp;portrait=0&amp;loop=0&amp;player_id=snowpack&amp;api=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                                </div>
-                                <span class="image-caption image-caption-right">Matt Hoobler measures snowpack in the Rocky Mountains for river forecasting.</span>
-                            </div>
-                        </div>
-
-                        <p>Hoobler <span class="inline-video-btn" id="play-snowpack"><i class="fa fa-play"></i> collect</span><span class="mama-bear">collects</span> snowpack information at sites throughout Wyoming, like his colleagues in 12 other Western states. He says understanding the relationship between snowpack and water supply is critical."</p>
-                        
-                        <!--(bake partials/copy.html _foreach="grafs:snow.section_three.grafs")-->
-
+                        <!--(bake partials/copy.html _foreach="grafs:snow.sectoin_three.grafs")-->
                     </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section class="image-featured">
+            <div class="container-fluid">
+                <div class="row">
+                    <img src="/media/winter-wonderland.jpg" alt="">
+                    <span class="image-caption image-caption-right">Late winter at Jack Creek, near the headwaters of the North Platte River.</span>
                 </div>
             </div>
         </section>
@@ -97,11 +115,6 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-2">
-                       <!--  <div class="row">
-                            <div class="col-xs-8">
-                                <h4>Select a snow <em>type</em> and <em>depth</em>:</h4>
-                            </div>
-                        </div> -->
                         <div class="row">
                             <div class="col-xs-10">
                                 <h4>Select a snow <em>type</em> and <em>depth</em>:</h4>
@@ -148,10 +161,58 @@
         </section>
 
         <section class="copy">
-            <div class="container">
+            <div class="container container-small">
                 <div class="row">
                     <div class="col-sm-12">
                         <!--(bake partials/copy.html _foreach="grafs:snow.section_four.grafs")-->
+
+                        <div class="inline-media-large inline-video" id="snowpack-video">
+                            <div class="inline-media-wrapper">
+                                <div class="video-wrapper-16-9 vid-wrap">
+                                    <iframe id="snowpack" src="//player.vimeo.com/video/107071437?title=0&amp;byline=0&amp;portrait=0&amp;loop=0&amp;player_id=snowpack&amp;api=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                </div>
+                                <span class="image-caption image-caption-right">Matt Hoobler measures snowpack near Cheyenne, Wyo.</span>
+                            </div>
+                        </div>
+
+                        <p>Hoobler <span class="inline-video-btn" id="play-snowpack"><i class="fa fa-play"></i> collects</span><span class="mama-bear">collects</span> snowpack information at sites throughout Wyoming, like his colleagues in 12 other Western states. Understanding the relationship between snowpack and water supply is critical, he said. </p>
+                        
+                        <!--(bake partials/copy.html _foreach="grafs:snow.section_five.grafs")-->
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="interactive">
+            <div class="container container-large">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>Something about how unpredictable it can be</h3>
+                        <div id="snotel-chart"></div>
+                        <div id="snotel-legend"></div>
+                        <div class="credit">
+                            <p>Data from the <a href="http://www.wcc.nrcs.usda.gov/snow/">Natural Resources Conservation Service</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <p>SNOTEL locations across the Rocky Mountains record snow water equivalency throughout the year. The spikes in these graphs indicate the quantity of snow at each location, indicative of the overall snowpack year.</p>
+                        <p>On any given year, it's difficult to predict how much snow a range will recieve. In just the last 10 years, the upper North Platte river has seen the highest snowpack in thirty years. The following year was one of the worst snowpacks on record.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p id="snow-text1"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="copy">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!--(bake partials/copy.html _foreach="grafs:snow.section_six.grafs")-->
                     </div>
                 </div>
             </div>
@@ -169,47 +230,17 @@
             </div>
         </section>
 
-        <section class="interactive">
-            <div class="container container-large">
-                <div class="row">
-                    <div class="col-md-8">
-                        <h4>Snowfall varies Year to Year</h4>
-                        <div id="snotel-chart"></div>
-                        <div id="snotel-legend"></div>
-                        <div class="credit">
-                            <p>Data from the <a href="http://www.wcc.nrcs.usda.gov/snow/">Natural Resources Conservation Service</a></p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat unde hic voluptas perferendis, magnam consectetur tenetur aperiam, excepturi in nemo molestias omnis voluptates at perspiciatis cum nostrum minus cupiditate sit!</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat unde hic voluptas perferendis, magnam consectetur tenetur aperiam, excepturi in nemo molestias omnis voluptates at perspiciatis cum nostrum minus cupiditate sit!</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat unde hic voluptas perferendis, magnam consectetur tenetur aperiam, excepturi in nemo molestias omnis voluptates at perspiciatis cum nostrum minus cupiditate sit!</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat unde hic voluptas perferendis, magnam consectetur tenetur aperiam, excepturi in nemo molestias omnis voluptates at perspiciatis cum nostrum minus cupiditate sit!</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-3">
-                        <p id="snow-text1"></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="copy">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat unde hic voluptas perferendis, magnam consectetur tenetur aperiam, excepturi in nemo molestias omnis voluptates at perspiciatis cum nostrum minus cupiditate sit!</p>
-                        <p>Temporibus, cum, laborum! Sed modi saepe voluptate sequi deserunt facere at velit qui magni? Voluptate odit, non quibusdam velit necessitatibus a recusandae quia error placeat quisquam tempora amet, soluta, repellendus.</p>
-                        <p>Vel dolorum facilis quos quibusdam voluptates amet ratione fuga, ipsam ea voluptatem, soluta reiciendis commodi. Dignissimos, ab tempora autem qui placeat voluptates necessitatibus adipisci minima, reiciendis, soluta magni atque ratione!</p>
-
-                        <p>Temporibus, cum, laborum! Sed modi saepe voluptate sequi deserunt facere at velit qui magni? Voluptate odit, non quibusdam velit necessitatibus a recusandae quia error placeat quisquam tempora amet, soluta, repellendus.</p>
-                        <p>Vel dolorum facilis quos quibusdam voluptates amet ratione fuga, ipsam ea voluptatem, soluta reiciendis commodi. Dignissimos, ab tempora autem qui placeat voluptates necessitatibus adipisci minima, reiciendis, soluta magni atque ratione!</p>
+                    <div class="col-sm-12">
+                        <!--(bake partials/copy.html _foreach="grafs:snow.section_seven.grafs")-->
                     </div>
                 </div>
             </div>
         </section>
+
+    
 <!-- data-600-top="opacity: 0;" data-center="opacity: 1;" -->
         <section class="gap-full" data-600-top="opacity: 0;" data-center="opacity: 1;">
             <div class="container-fluid">

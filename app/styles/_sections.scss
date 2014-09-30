@@ -248,7 +248,7 @@ img.zoomImg {
 
 .image-featured .image-caption, .image-featured-behind .image-caption {
 	padding: 5px 40px;
-	width: 30%;
+	width: 100%;
 	@include breakpoint(mama-bear) {
 		width: 50%;
 	}
@@ -270,7 +270,7 @@ img.zoomImg {
 		margin-bottom: 50px;
 	}
 
-	h4 {
+	h3 {
 		text-align:center;
 	}
 
@@ -305,7 +305,7 @@ p.interactive-note {
 
 	.credit {
 		margin-top: 15px;
-		font-size: .7em;
+		font-size: .6em;
     	text-align: right;
     	color: gray;
     	a {color: $blue;}
