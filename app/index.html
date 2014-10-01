@@ -10,6 +10,7 @@
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
         <link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.css" />
+        <link rel="stylesheet" href="../bower_components/jquery-ui/themes/redmond/jquery-ui.css" />
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
@@ -39,7 +40,7 @@
                 <h1>Follow the Water</h1>
                 <h3>Follow a tiny snowflake as it makes its way to a sugarbeet field in the pandhandle of Nebraska.</h3>
                 <button class="btn btn-lg btn-default" id="btn-intro">Watch</button>
-                <button class="btn btn-lg btn-default btn-skip">Skip</button>
+                <a href="snow" class="btn btn-lg btn-default btn-skip" role="button">Skip</a>
             </div>
             <div class="video-wrapper">
                 <div class="fluid-video-wrapper">
@@ -47,7 +48,7 @@
 
                 </div>
                 <div class="intro-btn-group">
-                    <button class="btn btn-sm btn-default btn-skip">Skip</button>
+                    <a href="snow" class="btn btn-sm btn-default btn-skip" role="button">Skip</a>
                     <button class="btn btn-sm btn-default" id="btn-audio">Audio <i class="fa fa-volume-off"></i></button>
                 </div>
             </div>
@@ -78,11 +79,10 @@
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
+        <script src="../bower_components/jquery-ui-touch-punch-working/jquery.ui.touch-punch.min.js"></script>
         <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
         <script src="../bower_components/jquery-waypoints/waypoints.js"></script>
-        <script src="../bower_components/highcharts-release/highcharts.js"></script>
-        <script src="../bower_components/highcharts-release/highcharts-more.js"></script>
-        <script src="../bower_components/highcharts-release/modules/exporting.js"></script>
         <script src="../bower_components/jquery-zoom/jquery.zoom.js"></script>
         <script src="../bower_components/skrollr/src/skrollr.js"></script>
         <script src="../bower_components/d3/d3.js"></script>
@@ -105,9 +105,11 @@
 
         <!-- endbuild -->
         <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="/scripts/colorbrewer.js"></script>
         <script src="/scripts/main.js"></script>
         <script src="/scripts/pop-charts.js"></script>
         <script src="/scripts/snow-charts.js"></script>
+        <script src="/scripts/swe.js"></script>
         <!-- endbuild -->
 
 

@@ -113,8 +113,6 @@ function makePopChart() {
                 var c = d3.select(this).attr("id");
                 d3.select(".county-list-entry" + " #" + c).style("background-color", "white").style("color", "black");
             });
-            // .on("mousemove", mMove)
-            // .append('title');
 
         function mMove(){
             console.log("hovering");
@@ -147,14 +145,5 @@ function makePopChart() {
 
         d3.select('.county #scotts-bluff-county-ne').style("stroke", "#b42f1d", "important").style("stroke-width", "2px", "important").moveToFront();
 
-        
-
-
-      // county.append("text")
-      //     .datum(function(d) { return {name: d.name, value: d.values[d.values.length - 1]}; })
-      //     .attr("transform", function(d) { return "translate(" + x(d.value.date) + "," + y(d.value.popluation) + ")"; })
-      //     .attr("x", 3)
-      //     .attr("dy", ".35em")
-      //     .text(function(d) { return d.name; });
-    }); 
+    });
 };

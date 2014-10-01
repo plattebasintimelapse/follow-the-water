@@ -1,13 +1,13 @@
 
-#pop-chart, #snow-chart1 {
+#pop-chart, #snotel-chart {
     font-size: 12px;
 }
 
 #pop-chart svg {
-    @include breakpoint(mama-bear) { 
+    @include breakpoint(mama-bear) {
         height: 500px;
     }
-    @include breakpoint(baby-bear) { 
+    @include breakpoint(baby-bear) {
         height: 300px;
     }
 }
@@ -17,7 +17,7 @@
     @include breakpoint(papa-bear) {
         height: 700px;
     }
-    @include breakpoint(mama-bear) { 
+    @include breakpoint(mama-bear) {
         height: 400px;
     }
 
@@ -71,17 +71,93 @@
   stroke: "red";
 }
 
-
-
-#snow-charts .line {
-  fill: none;
-  stroke-width: .5px;
-}
-
 #average {
     stroke: lightgray;
 }
 
 #actual {
     stroke: $red;
+}
+
+// SNOTEL CHART
+
+#snotel-chart {
+    height: 400px;
+
+    @include breakpoint(mama-bear) {
+        height: 300px;
+    }
+
+    .line {
+      fill: none;
+      stroke-width: 1px;
+    }
+
+
+}
+
+#snotel-legend {
+    margin-bottom: 16px;
+    font-size: .7em;
+    .snotel_site {
+        height: 20px;
+        padding: 0 6px;
+        display: inline;
+    }
+    .legend-icon {
+        height: 10px;
+        width: 10px;
+        display: inline-block;
+        margin-right: 4px;
+    }
+    p {
+        display: inline-block;
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+
+
+// SCOTTS BLUFF ECON
+
+.table-title {
+    text-align: center;
+    font-size: 1em;
+}
+
+table {
+    width: 100%;
+    font-size: .7em;
+
+    &:first-child {
+        margin: 10px 0 20px 0;
+
+        @include breakpoint(mama-bear) {
+            margin: 10px 0 60px 0;
+        }
+    }
+    tr:first-child {
+        font-size: 1.1em;
+        color: $blue;
+        font-weight: bold;
+    }
+
+    tr {
+        margin: 8px;
+        border-bottom: 1px solid lightgray;
+        td:first-child {
+            padding: 4px 28px 4px 0;
+        }
+        td.amount {
+            padding: 4px 0 4px 14px;
+            text-align: center;
+        }
+        td.rank {
+            padding: 4px 0 4px 14px;
+            text-align: center;
+        }
+    }
 }
