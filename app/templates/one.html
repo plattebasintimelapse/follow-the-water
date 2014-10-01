@@ -52,7 +52,7 @@
             </div>
         </header>
 
-        <section class="copy">
+        <section class="copy first">
             <div class="container container-small">
                 <div class="row">
                     <div class="col-sm-12">
@@ -67,8 +67,8 @@
         <section class="image-featured">
             <div class="container-fluid">
                 <div class="row">
-                    <img src="/media/winter-wonderland.jpg" alt="">
-                    <span class="image-caption image-caption-right">Late winter at Jack Creek, near the headwaters of the North Platte River.</span>
+                    <img src="../media/agnes.jpg" alt="">
+                    <span class="image-caption image-caption-right">Kickass Agnes</span>
                 </div>
             </div>
         </section>
@@ -99,12 +99,13 @@
 
         
 
-        <section class="image-featured">
+        <section class="image-featured-behind">
             <div class="container-fluid">
                 <div class="row">
-                    <img src="/media/winter-wonderland.jpg" alt="">
-                    <span class="image-caption image-caption-right">Late winter at Jack Creek, near the headwaters of the North Platte River.</span>
+                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-small" id="jack-creek"></div>
+                    
                 </div>
+                <span class="image-caption image-caption-right">Late winter at Jack Creek, near the headwaters of the North Platte River.</span>
             </div>
         </section>
 
@@ -134,7 +135,7 @@
                     </div>
                     <div class="col-sm-3">
                         <div id="snowflakes"></div>
-                        <p class="swe-totals" id="snow-depth-text"></p>
+                        
                     </div>
 
                     <div class="col-sm-1">
@@ -142,7 +143,7 @@
                     </div>
                     <div class="col-sm-3" >
                         <div id="waterdrops"></div>
-                        <p class="swe-totals" id="water-depth-text"></p>
+                        
                     </div>
 
                     <div class="col-sm-3" id="swe-desc">
@@ -151,6 +152,12 @@
                        <!--  <p><span><img src="../media/swe/wind-packed-snow.png" alt=""> = 1 inch of snow</span></p>
                         <p><span><img src="../media/swe/waterdrop.png" alt=""> = 1 inch of water</span></p> -->
                     </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-3"><p class="swe-totals" id="snow-depth-text"></p></div>
+                    <div class="col-sm-1"><p class="swe-totals">equals</p></div>
+                    <div class="col-sm-3"><p class="swe-totals" id="water-depth-text"></p></div>
                 </div>
                 <div class="row credit">
                     <div class="col-xs-12">
@@ -196,8 +203,11 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <p>SNOTEL locations across the Rocky Mountains record snow water equivalency throughout the year. The spikes in these graphs indicate the quantity of snow at each location, indicative of the overall snowpack year.</p>
-                        <p>On any given year, it's difficult to predict how much snow a range will recieve. In just the last 10 years, the upper North Platte river has seen the highest snowpack in thirty years. The following year was one of the worst snowpacks on record.</p>
+                        <p>From January through June, SNOTEL sites record snowpack data across the mountains of the American West. Each line in this graph represents the highest snow water equivalency measured for 10 selected SNOTEL sites within the North Platte River Basin in northern Colorado for the last decade.</p>
+
+                        <p>While sites receive different amounts of snowfall due to their location, taken together these 10 sites demonstrate the wide variability of snowpack from year to year.</p>
+
+                        <p>In the last decade, the North Platte River Basin has seen the highest snowpack in 30 years (in 2011), followed by one of the lowest snowpack years on record (in 2012). In any given year, it's difficult to predict how much snow a mountain range will receive.</p>
                     </div>
                 </div>
                 <div class="row">
@@ -218,7 +228,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="part-one-closing-video">
             <div class="container container-large">
                 <div class="row">
                     <div class="col-xs-12">
@@ -280,9 +290,9 @@
                 html : 'true'
             });
 
-            $('#snotel-chart').waypoint(function(direction) {
+            $('#part-one-closing-video').waypoint(function(direction) {
                 var video = document.getElementById('jack-creek-video');
-                // video.load();
+                video.load();
                 video.style.display="block";
 
                 if (direction == "up") {

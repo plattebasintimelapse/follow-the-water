@@ -1,5 +1,5 @@
 body {
-    // opacity: 0;
+    opacity: 0;
     background-color:black;
 }
 
@@ -213,9 +213,27 @@ footer {
 }
 .image-featured-behind-large {
 	height: 900px;
+	@include breakpoint(papa-bear) {
+		height: 800px;
+	}
+	@include breakpoint(mama-bear) {
+		height: 600px;
+	}
+	@include breakpoint(baby-bear) {
+		height: 400px;
+	}
 }
 .image-featured-behind-small {
-	height: 500px;
+	height: 800px;
+	@include breakpoint(papa-bear) {
+		height: 700px;
+	}
+	@include breakpoint(mama-bear) {
+		height: 500px;
+	}
+	@include breakpoint(baby-bear) {
+		height: 300px;
+	}
 }
 
 img.zoomImg {

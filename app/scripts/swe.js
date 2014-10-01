@@ -100,8 +100,8 @@ function makeSWE() {
         // console.log("SWE: " + swe);
         // console.log("----------------------------");
 
-        $( "#snow-depth-text" ).text( snowDepthSelection + " inches");
-        $( "#water-depth-text" ).text( swe + " inches");
+        $( "#snow-depth-text" ).text( snowDepthSelection + " inches of snow");
+        $( "#water-depth-text" ).text( swe + " inches of water");
 
         var j = parseInt( snowDepthSelection );
         for ( var i = 0; i < j; i++ ) {

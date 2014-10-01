@@ -95,10 +95,10 @@ function makeSnotelChart() {
         var snotel_legend = d3.select("#snotel-legend").selectAll(".snotel_data")
             .data(snotel_sites)
           .enter().append("div")
-            .attr("class", "snotel_site");
+            .attr("class", "snotel_site")
+            .attr("id", function(d) { return d.name.replace(/\s+/g, '-').toLowerCase(); });
 
         snotel_legend.append("div")
-            // .attr("id", function(d) { return d.name.replace(/\s+/g, '-').toLowerCase(); })
             .attr("class", "legend-icon")
             .style("background-color", function(d) { return color(d.name); });
 

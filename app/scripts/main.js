@@ -96,7 +96,7 @@ function listenForIntro() {
         player.api("unload");
         $('.video-wrapper').remove();
         $('#intro header').remove();
-        // window.location.href = "snow";
+        window.location.href = "snow";
     }
 };
 
@@ -214,9 +214,9 @@ function setMasterStyles() {
     var title_top = ( $wHeight - $('#video-title').height() ) / 2;
     // $('.fluid-video-wrapper').css('margin-top', '100px');
 
-    // $('body').animate({
-    //     opacity: 1}
-    // );
+    $('body').animate({
+        opacity: 1}
+    );
 
     setTimeout(function() {
         $('.opening-scroll').fadeIn('slow')
