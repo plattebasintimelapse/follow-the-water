@@ -113,8 +113,6 @@ function makePopChart() {
                 var c = d3.select(this).attr("id");
                 d3.select(".county-list-entry" + " #" + c).style("background-color", "white").style("color", "black");
             });
-            // .on("mousemove", mMove)
-            // .append('title');
 
         function mMove(){
             console.log("hovering");

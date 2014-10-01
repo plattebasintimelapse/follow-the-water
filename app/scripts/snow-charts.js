@@ -85,12 +85,6 @@ function makeSnotelChart() {
             .attr("id", function(d) { return d.name.replace(/\s+/g, '-').toLowerCase(); })
             .attr("d", function(d) { return line(d.values); })
             .style("stroke", function(d) { return color(d.name); });
-            // .on("mouseover", function(d) {
-            //     d3.select(this).style("stroke-width", "4px").moveToFront();
-            // })
-            // .on("mouseout", function(d) {
-            //     d3.select(this).style("stroke-width", "1px");
-            // });
 
         var snotel_legend = d3.select("#snotel-legend").selectAll(".snotel_data")
             .data(snotel_sites)
@@ -100,7 +94,17 @@ function makeSnotelChart() {
 
         snotel_legend.append("div")
             .attr("class", "legend-icon")
-            .style("background-color", function(d) { return color(d.name); });
+            .style("background-color", function(d) { return color(d.name); })
+            .on("mouseover", function(d) {
+                var c = d3.select(this).attr("id");
+                console.log(c);
+                d3.select(".line" + " #" + c).style("stroke", "steelblue");
+            })
+            .on("mouseout", function(d) {
+                d3.select(this).style("stroke", "lightgray").style("stroke-width", "1px");
+                var c = d3.select(this).attr("id");
+                d3.select(".line" + " #" + c).style("stroke", "red");
+            });
 
         snotel_legend.append("p")
             .text(function(d) { return d.name });
