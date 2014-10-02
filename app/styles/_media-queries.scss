@@ -9,3 +9,13 @@
     @media (max-width: 650px)  { @content; }
   }
 }
+
+.mama-bear {
+	display: none;
+}
+
+@include breakpoint(mama-bear) {
+    .mama-bear {
+    	display: inline-block;
+    }
+}

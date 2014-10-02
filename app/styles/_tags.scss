@@ -2,14 +2,20 @@ body {
 	font-size: $global-font-size;
 	font-family: $global-font-family;
 	line-height: 1.5em;
-	-webkit-overflow-scrolling: touch;
 }
 
 section {
 	width:100%;
 	padding: 40px 0;
+	@include breakpoint(baby-bear) {
+		padding: 10px 0;
+	}
 	background-color:white;
 	margin: 0 auto;
+}
+
+section.no-padding {
+	padding: 0;
 }
 
 section.tl-sequence {
@@ -18,6 +24,9 @@ section.tl-sequence {
 
 section:first-child {
 	margin-top:0px;
+}
+section.first {
+	padding-top: 80px;
 }
 
 section.last {
@@ -45,7 +54,21 @@ h1,h2,h3,h4,h5,h6 {
 	font-family: $titles-font-family;
 }
 
-h1 { font-size: 3em; }
+h1 {
+	font-size: 3em;
+
+	@include breakpoint(papa-bear) {
+		font-size:2.4em;
+	}
+	@include breakpoint(mama-bear) {
+		font-size:1.8em;
+	}
+	@include breakpoint(baby-bear) {
+		font-size:1.2em;
+	}
+	
+	
+}
 
 h2 { font-size: 1.6em; }
 

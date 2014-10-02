@@ -334,7 +334,8 @@ module.exports = function (grunt) {
                         'styles/fonts/{,*/}*.*',
                         'media/{,*/}*.*',
                         'img/{,*/}*.*',
-                        'data/{,*/}*.*'
+                        'data/{,*/}*.*',
+                        'bower_components/fontawesome/css/fonts/{,*/}*.*'
                     ]
                 }, {
                     expand: true,

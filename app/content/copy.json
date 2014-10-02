@@ -11,21 +11,13 @@
 		"section_one": {
 			"grafs": [
 				{ "graf":
-					"The sharp peaks of the Nokhu Crags emerge slowly and gracefully above a dark ridge of pine on the steep climb to Lake Agnes. The trail ends on a rocky outcropping above a lake of black glass, where the sides of snowy mountains slide down to the shore. Winter winds whip around this remote alpine spot, the birthplace of the North Platte River."
+					"The sharp peaks of the Nokhu Crags emerge slowly and gracefully above a dark ridge of pine on the steep climb to Lake Agnes. The trail ends on a rocky outcropping above a lake of black glass, where the sides of snowy mountains slide down to the shore. Winter winds whip around this remote alpine spot, near the headwaters of the North Platte River."
 				},{ "graf":
-					"As it has for centuries, water arrives annually to these mountains as snow and ice, collecting at high elevations to wait for spring’s warmth. In the arid west, the majority of the water that fills streams and rivers comes from winter snowpack. Every year, farmers, raft guides, fishermen and others wait anxiously to see what winter will bring."
+					"As it has for centuries, water arrives annually to these mountains as snow and ice, collecting at high elevations to wait for spring’s warmth. In the arid west, the majority of the water that fills streams and rivers comes from winter snowpack. Every year, farmers, raft guides, conservationists, fishermen, city planners and others wait anxiously to see what winter will bring."
 				},{ "graf":
-					"Ski fanatics know exactly how much fresh powder each storm brings to their mountains. But others track that data, too. For the last 100 years, this is when the cycle of water management begins, as hydrologists answer a critical question: how much water is up there this year?"
+					"The answer is the difference between a good year and a bad one. Water is the life and livelihood of downstream users, and it all starts high in the mountains with a single snowflake."
 				},{ "graf":
-					"Mage Hultstrand glides through deep snow, approaching a collection of silvery devices coated in icy powder. “We measure the water content of the snow here,” says Hultstrand, a hydrologist with the Natural Resources Conservation Service’s snow survey program in Denver. She’s at the Joe Wright SNOTEL site in the Cache la Poudre drainage, part of the South Platte River Basin."
-				},{ "graf":
-					"She explains each of the snow-covered instruments, including a snow “pillow,” full of an antifreeze solution. It acts like a liquid scale, measuring the weight of the snow and converting it to total water content of the snowpack. SNOTEL stands for “snowpack telemetry”—basically remote data collection and transmission. Every year more than 700 remote stations like this one track snowpack and climate data across the West. That’s especially critical in Colorado."
-				},{ "graf":
-					"“This is the headwater state, so this is where all of your water is coming from,” says Hultstrand, “with the exception of whatever precipitation is received in spring and summer. But really this is the bulk of it.”"
-				},{ "graf":
-					"The SNOTEL system has been in place for decades, transmitting data back to centralized offices where it’s assessed and compiled into reports. But it complements an even older method of data collection: manual snow surveys. From January through May, teams go out to specific sites--the same ones year after year--to collect information about snowpack. They ski or snowshoe through forests heavy with snow to the more remote sites, weathering sleet, blizzards or ice storms."
-				},{ "graf":
-					"A professor at the University of Nevada named Dr. Frank Church pioneered the system of snow surveying in 1905. “He wanted to find a better way of forecasting runoff,” says Matt Hoobler, a snow surveyor with the Wyoming State Engineer's Office who conducts manual surveys each winter. And his method proved durable: during the last century, things haven’t changed much. “The basic premise of filling a tube full of snow and weighing it...we do something very similar today,” says Hoobler."
+					"Ski fanatics know exactly how much fresh powder each storm brings to their mountains. But others track that data, too. For the last 100 years, January is when the annual cycle of water management begins, as hydrologists answer a critical question: how much water is up there this year?"
 				}
 			]
 		},
@@ -33,11 +25,7 @@
 		"section_two": {
 			"grafs": [
 				{ "graf":
-					"Near the summit of Interstate 80 in southeastern Wyoming, weak sunlight makes its way through the thin air to where Hoobler is taking a core sample of the snowpack. He carefully holds a specially calibrated cylinder, which measures snow depth, weight, and density, then drops it vertically into the snow, twists it, and pulls it back out to analyze."
-				},{ "graf":
-					"“Water content at this site is 5.5 inches,” says Hoobler. “That means if this snow was to melt instantaneously, there’d be 5.5 inches of water sitting in this meadow.”"
-				},{ "graf":
-					"Hoobler collects snowpack information at sites throughout Wyoming, like his colleagues in 12 other Western states. He says understanding the relationship between snowpack and water supply is critical."
+					"Mage Hultstrand glides through deep snow, approaching a collection of silvery devices coated in icy powder. “We measure the water content of the snow here,” Hultstrand said. She’s a hydrologist with the Natural Resources Conservation Service’s snow survey program in Denver. Today she’s at the Joe Wright SNOTEL site in the Cache la Poudre drainage, part of the South Platte River Basin."
 				}
 			]
 		},
@@ -45,9 +33,9 @@
 		"section_three": {
 			"grafs": [
 				{ "graf":
-					"“The main reason we’re up here for snow survey is for river forecasting. In other words, once it all turns to water, how much water is going to exist in our rivers and our reservoirs,” says Hoobler."
+					"“This is the headwater state, so this is where all of your water is coming from,” Hultstrand said, “with the exception of whatever precipitation is received in spring and summer. But really, this is the bulk of it.”"
 				},{ "graf":
-					"Each year surveyors add new data to the collection, validating the record and improving accuracy. The field data coming in from snow surveys and SNOTEL sites, including precipitation, is compiled into monthly stream flow forecasts for the spring and summer. That information is critical to many diverse downstream users, especially farmers who rely on irrigation water. Knowing if the water supply is above or below average can determine a boom or bust year for crops, if rancher have to sell their cows, if migrating birds will have enough water to nest successfully, if raft guides will have summer employment."
+					"The SNOTEL system has been in place for decades, transmitting data back to centralized offices where it’s assessed and compiled into public reports. But it complements an even older method of data collection: manual snow surveys. From January through May, teams go out to specific locations--the same ones year after year--to collect information about snowpack. They ski or snowshoe through forests heavy with snow to the more remote sites, weathering sleet, blizzards or ice storms."
 				}
 			]
 		},
@@ -55,7 +43,43 @@
 		"section_four": {
 			"grafs": [
 				{ "graf":
-					"It’s generally hard for climatologists to predict what kind of a year it will be for snowpack, though global climate events like El Nino and La Nina often impact western weather. But snow accumulation is only one part of the story, since the climate of the region matters too. In 2012, some farmers ran out of their irrigation water partway through the season, even as scorching temperatures continued and rain never came. (Those that could drew heavily on the massive supply of ancient groundwater in the Ogallala Aquifer, two-thirds of which lies beneath Nebraska.) This year, irrigation demands were slow to start because of a cool, wet spring. Combined with a high snowpack runoff season, reservoirs along the North Platte River had time to fill, banking water for another dry year in the future."
+					"A University of Nevada professor named Frank Church pioneered the system of snow surveying in 1905."
+				},{ "graf":
+					"“He wanted to find a better way of forecasting runoff,” Matt Hoobler said. And his method proved durable: during the last century, things haven’t changed much. Hoobler is a snow surveyor with the Wyoming State Engineer's Office who conducts manual surveys each winter. “The basic premise of filling a tube full of snow and weighing it...we do something very similar today,” Hoobler said."
+				},{ "graf":
+					"Near the summit of Interstate 80 in southeastern Wyoming, weak sunlight makes its way through the thin air to where Hoobler is taking a core sample of the snowpack. He carefully holds a specially calibrated cylinder, which measures snow depth, weight, and density, then drops it vertically into the snow, twists it, and pulls it back out to analyze."
+				},{ "graf":
+					"“Water content at this site is 5.5 inches,” Hoobler said. “That means if this snow was to melt instantaneously, there’d be 5.5 inches of water sitting in this meadow.”"
+				}
+			]
+		},
+
+		"section_five": {
+			"grafs": [
+				{ "graf":
+					"“The main reason we’re up here for snow survey is for river forecasting. In other words, once it all turns to water, how much water is going to exist in our rivers and our reservoirs,” Hoobler said."
+				},{ "graf":
+					"Each year surveyors add new data to the collection, validating the record and improving accuracy. The field data coming in from snow surveys and SNOTEL sites, including precipitation, is compiled into monthly stream flow forecasts for the spring and summer. That information is critical to many diverse downstream users, especially farmers who rely on irrigation water."
+				},{ "graf":
+					"Basin-wide water users generally start to make decisions based upon the April 1st report. Knowing if the water supply is above or below average can determine a boom or bust year for crops, if rancher have to sell their cows, if migrating birds will have adequate nesting habitat, if raft guides will have summer employment."
+				}
+			]
+		},
+
+		"section_six": {
+			"grafs": [
+				{ "graf":
+					"“Society depends on water -- whether it’s growing the crops we’re going to eat or producing hydroelectric power. 50 to 80 percent of flows of North Platte River depend on this white stuff – snow,” Hoobler said. "
+				}, { "graf":
+					"Because quantity and quality of snowpack is the source of water for so many uses, a dry year can cause a cascade of impacts, flowing all the way down to a farmer’s beet crop in the Nebraska panhandle. The past three years have seen two snowpack extremes: the huge water year of 2011 followed by 2012, the hottest and driest on record for many places in the intermountain west and plains. 2013 remained drier than average, but 2014 has once again proven to be a big water year in the mountains. That wide variability, Hoobler said, is “what makes farmers pray for rain and snow.”"
+				}
+			]
+		},
+
+		"section_seven": {
+			"grafs": [
+				{ "graf":
+					"It’s generally hard for climatologists to predict what kind of a year it will be for snowpack, though global climate events like El Nino and La Nina often impact western weather. But snow accumulation is only one part of the story, since the climate of the region matters too. In 2012, some farmers ran out of their river irrigation water partway through the season, even as scorching temperatures continued and rain never came. Those that could drew heavily from the aquifer, pumping groundwater up to their fields when river water ran out. This year, irrigation demands were slow to start because of a cool, wet spring. Combined with a high snowpack runoff season, reservoirs along the North Platte River had time to fill, banking water for another dry year in the future."
 				},{ "graf":
 					"As winter relaxes into spring, that massive quantity of water stored high in the mountains begins to melt and make its way into streams and rivers, where it is channeled through dams and reservoirs to feed crops. The North Platte River starts to creep north from Colorado into Wyoming, where it meets the first of several stops along the way to a farmer’s field."
 				}
@@ -139,15 +163,23 @@
 	},
 
 	"field": {
-		"hed": "The Hed",
-		"subhed": "The Subhed",
+		"hed": "Lifeblood of the Cultivated Land",
+		"subhed": "Mountain snowmelt arrives onto the plains to water thirsty fields, supporting the economy of an entire region.",
 
 		"section_one": {
 			"grafs": [
 				{"graf":
-					""
+					"“I’ll be waiting for you at seven, in my blue truck in the driveway,” instructed the kind yet gruff voice of Bob Busch on the phone. He’s prompt, and expects the same from visitors. Just past seven the next day, he directed the way to one of his sugar beet fields along the Gering/Fort Laramie Irrigation District’s canal in the cool morning breeze."
 				},{"graf":
-					""
+					"Wearing faded denim overalls, a toothy smile and a Kelly Bean Co. mesh hat, Busch watched his grandson and a farm hand “move water” with an approving gaze. He knows this process well. A third-generation farmer in the Nebraska panhandle, Busch has spent nearly all of his 77 years on the same patch of land outside of Gering. After a short stint at college, he took over farming the family property from his father in 1959."
+				},{ "graf":
+					"“I dearly love farming,” Busch said. “I don’t like some of the adversity we have. Weather… You’d get a hail storm, oh, mercy. You’d be done. But farming’s my life and always has been.”"
+				},{ "graf":
+					"Busch’s son Kendall, 52, now runs the operation, more than 1,000 acres of corn, sugar beets, dry edible beans and alfalfa. They still use flood or furrow irrigation, an older method than ?? that requires a lot of early summer mornings. "
+				},{ "graf":
+					"After setting the siphon tubes, they’ll let the water flow across this field for 24 hours before moving it (what - the water or the tubes or the process?)again tomorrow morning. They do this throughout the irrigation season, from May through September, making the most of their water."
+				},{ "graf":
+					"“Our [operation] is very labor intense. It takes a lot of manpower and a lot of time,” Kendall Busch said. "
 				}
 			]
 		},

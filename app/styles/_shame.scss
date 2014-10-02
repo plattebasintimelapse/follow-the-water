@@ -4,71 +4,20 @@
 	background-image: url('../media/samples/image-featured-behind.jpg');
 }
 
-#snow-opening {
-    background-image: url('../media/snowfall.gif');
-}
-
-#pathfinder-opening {
-    background-image: url('../media/pathfinder.gif');
-}
-
-#field-opening {
-	background-image: url('../media/cinemagraph-field.gif');
+#snow-map {
+    background-image: url('../media/north-platte-river-system-part-1.png')
 }
 
 #temp-field {
     background-image: url('../media/sweetbeetfield2.jpg');
 }
 
-#field1 {
-    background-image: url('../media/field/field01.JPG');
+
+
+.zoom-in-icon {
+    height: 15px;
+    width: 15px;
 }
-
-#field2 {
-    background-image: url('../media/field/field02.JPG');
-}
-
-#field3 {
-    background-image: url('../media/field/field03.JPG');
-}
-
-#field4 {
-    background-image: url('../media/field/field04.JPG');
-}
-
-#field5 {
-    background-image: url('../media/field/field05.JPG');
-}
-
-#field6 {
-    background-image: url('../media/field/field06.JPG');
-}
-
-#field7 {
-    background-image: url('../media/field/field07.JPG');
-}
-
-#field8 {
-    background-image: url('../media/field/field08.JPG');
-}
-
-#field9 {
-    background-image: url('../media/field/field09.JPG');
-}
-
-#field10 {
-    background-image: url('../media/field/field10.JPG');
-}
-
-#field11 {
-    background-image: url('../media/field/field11.JPG');
-}
-
-#field12 {
-    background-image: url('../media/field/field12.JPG');
-}
-
-
 
 .sound-container {
     position: absolute;
@@ -77,4 +26,8 @@
     padding: 0px 10px;
     color: white;
     cursor: pointer;
+}
+
+#pathfinder-historicals .col-sm-6 {
+    padding-bottom: 25px;
 }

@@ -83,6 +83,11 @@ footer {
 	top: 25%;
 	right: 10%;
 	width: 40%;
+
+	@include breakpoint(baby-bear) {
+		width: 100%;
+		top: 5%;
+	}
 }
 
 .opening-title-left {
@@ -96,11 +101,11 @@ footer {
 .opening-scroll {
 	@extend .text-over-image;
 	bottom: 1%;
+	left: 50%;
 	display:none;
 	text-align: center;
 
 	p {
-
 		font-size: .9em;
 		margin-bottom: 0px;
 	}
@@ -153,6 +158,14 @@ footer {
 
 .inline-media {
 	float:right;
+	margin-right: -150px;
+	@include breakpoint(mama-bear) {
+		margin-right: 0;
+	}
+	@include breakpoint(baby-bear) {
+		width: 100%;
+		margin-right: 0;
+	}
 }
 
 .inline-media-large {
@@ -170,8 +183,10 @@ footer {
 }
 
 .inline-media-wrapper {
-	padding: 10px;
+	padding-top: 25px;
 	margin: 10px 20px;
+	border-bottom: 1px solid lightgray;
+	border-top: 1px solid lightgray;
 }
 
 // IMAGES
@@ -198,9 +213,27 @@ footer {
 }
 .image-featured-behind-large {
 	height: 900px;
+	@include breakpoint(papa-bear) {
+		height: 800px;
+	}
+	@include breakpoint(mama-bear) {
+		height: 600px;
+	}
+	@include breakpoint(baby-bear) {
+		height: 400px;
+	}
 }
 .image-featured-behind-small {
-	height: 500px;
+	height: 800px;
+	@include breakpoint(papa-bear) {
+		height: 700px;
+	}
+	@include breakpoint(mama-bear) {
+		height: 500px;
+	}
+	@include breakpoint(baby-bear) {
+		height: 300px;
+	}
 }
 
 img.zoomImg {
@@ -214,22 +247,17 @@ img.zoomImg {
 // CAPTIONS
 
 .image-caption {
+	display: block;
 	font-size: .7em;
 	line-height: 1.2em;
-	width: 90%;
-	margin-bottom: 10px;
+	width: 100%;
+	padding: 5px 0px;
 	&.image-caption-right {
-		float: right;
 		text-align: right;
 	}
 	&.image-caption-left {
-		float: left;
 		text-align: left;
 	}
-}
-
-.image .image-caption {
-	padding: 5px 0px;
 }
 
 .image-large .image-caption {
@@ -238,7 +266,13 @@ img.zoomImg {
 
 .image-featured .image-caption, .image-featured-behind .image-caption {
 	padding: 5px 40px;
-	width: 30%;
+	width: 100%;
+	@include breakpoint(mama-bear) {
+		width: 50%;
+	}
+	@include breakpoint(baby-bear) {
+		width: 90%;
+	}
 }
 
 // INTERACTIVES
@@ -253,6 +287,48 @@ img.zoomImg {
 		text-align:center;
 		margin-bottom: 50px;
 	}
+
+	h3 {
+		text-align:center;
+	}
+
+	.credit {
+		margin-top: 15px;
+		font-size: .7em;
+    	text-align: right;
+    	color: gray;
+    	a {color: $blue;}
+    	a:hover {color: black;}
+	}
+}
+
+p.interactive-note {
+	font-size: .5em;
+	margin-bottom: 0px;
+}
+
+// CHARTS
+
+.chart {
+	padding: 40px 0;
+	h2 {
+		text-align:center;
+		margin-bottom: 50px;
+	}
+
+	.chart-copy {
+		font-size: .9em;
+		line-height: 1.2em;
+	}
+
+	.credit {
+		margin-top: 15px;
+		font-size: .6em;
+    	text-align: right;
+    	color: gray;
+    	a {color: $blue;}
+    	a:hover {color: black;}
+	}
 }
 
 p.interactive-note {
@@ -264,7 +340,7 @@ p.interactive-note {
 
 .video-wrapper-16-9 {
 	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
+	padding-bottom: 54.25%; /* 16:9 */
 	padding-top: 25px;
 	height: 0;
 }

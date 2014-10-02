@@ -5,15 +5,15 @@
     "modernizr": "~2.6.2",
     "jquery": "~1.11.0",
     "jquery-waypoints": "~2.0.5",
-    "highcharts-release": "~4.0.3",
     "fontawesome": "~4.2.0",
     "jquery-zoom": "~1.7.13",
     "skrollr": "~0.6.26",
     "vimeo-player-api": "*",
     "d3": "~3.4.11",
     "bootstrap-sass-official": "~3.2.0",
-    "handlebars": "~2.0.0",
-    "leaflet": "~0.7.3"
+    "leaflet": "~0.7.3",
+    "jquery-ui": "~1.11.1",
+    "jquery-ui-touch-punch-working": "*"
   },
   "version": "0.0.0",
   "authors": [

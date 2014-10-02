@@ -1,0 +1,132 @@
+#snowflakes, #waterdrops {
+    height: 300px;
+    display:flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+#waterdrops .water-drop {
+    height: 28px;
+    width: 26px;
+
+    padding: 5px;
+    img {
+        width: 100%;
+    }
+
+    @include breakpoint(baby-bear) {
+        height: 18px;
+        width: 16px;
+        padding: 2px;
+    }
+    @include breakpoint(mama-bear) {
+        height: 22px;
+        width: 20px;
+    }
+}
+
+#snowflakes .snowflake {
+    height: 28px;
+    width: 28px;
+
+    padding: 4px;
+    img {
+        width: 100%;
+    }
+
+    @include breakpoint(baby-bear) {
+        height: 18px;
+        width: 16px;
+        padding: 2px;
+    }
+    @include breakpoint(mama-bear) {
+        height: 22px;
+        width: 20px;
+    }
+}
+
+.snowflake {
+    color: steelblue;
+}
+.water-drop {
+    color:#ff5d58;
+}
+#equals {
+	height: 30px;
+	border-bottom: 8px solid darkgray;
+	border-top: 8px solid darkgray;
+	margin-top: 180px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.swe-totals {
+    font-size: 1.1em !important;
+    text-align:center;
+    margin-top: 30px;
+}
+
+#snow-type-selection {
+    margin-top: 20px;
+    img {
+        width: 16px;
+        margin-right: 4px;
+    }
+    p {
+        font-size: .6em;
+        cursor: pointer;
+        padding: 6px;
+        margin-bottom: 0;
+    }
+
+    .selected {
+        border: 1px solid lightgray;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+
+        -moz-box-shadow:    inset 0 0 6px gray;
+       -webkit-box-shadow: inset 0 0 6px gray;
+       box-shadow:         inset 0 0 6px gray;
+    }
+}
+
+#snow-type-selection .popover-content {
+    width: 180px;
+    font-size: .6em;
+    line-height:1.1em;
+    span {
+        display:inline-block;
+        margin-bottom: 4px;
+        padding-bottom: 2px;
+        border-bottom: 1px solid gray;
+
+    }
+}
+
+#swe-desc {
+    img {
+        width: 20px;
+    }
+}
+
+#interactive-swe img {
+    // width: auto;
+}
+
+.ui-slider-vertical {
+    width: .3em;
+    height: 300px;
+}
+
+.ui-slider-vertical .ui-slider-handle {
+    left: -.25em;
+}
+
+.ui-slider .ui-slider-handle {
+    width: .7em;
+    height: .7em;
+}
+
