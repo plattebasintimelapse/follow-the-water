@@ -274,13 +274,7 @@ $(document).ready(function() {
             on: 'grab',
             magnify: '2'
         });
-});
 
-$(window).resize(function() {
-    setMasterStyles();
-});
-
-$(window).load(function() {
     if ( $('body').is('#intro')  ) {
 
         // INTRO
@@ -309,4 +303,12 @@ $(window).load(function() {
         console.log("PART THREE");
         makePopChart();
     }
+});
+
+$(window).resize(function() {
+    setMasterStyles();
+});
+
+$(window).load(function() {
+    
 });

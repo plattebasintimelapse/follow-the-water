@@ -16,6 +16,10 @@ function makeSnotelChart() {
     var y = d3.scale.linear()
         .range([height, 0]);
 
+    var colorbrewer = {PuBuGn: {
+        9: ["#d0d1e6","#a6bddb","#67a9cf","#3690c0","#02818a","#016c59","#014636"]
+    }};
+
     var color = d3.scale.ordinal()
         .range(colorbrewer.PuBuGn[9]);
 
