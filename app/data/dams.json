@@ -20,7 +20,7 @@
             "properties": {
                 "name": "Seminoe Dam",
                 "info": "<p>Project: Kendrick Project</p><p>Built: 1936-1939</p><p>Capacity: 1,017,273 af</p>",
-                "image": "www.usbr.gov/projects/ImageServer?imgName=SEMINOLE.JPG",
+                "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1355775448101",
                 "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
                 "marker-color": "steelblue",
                 "marker_radius": "4"
@@ -104,7 +104,7 @@
             "properties": {
                 "name": "Grayrocks Dam",
                 "info": "<p>Project: Missouri Basin Power Project</p><p>Built: 1974-1980</p><p>Capacity: 104,000 af</p>",
-                "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1342825977603",
+                "image": "basinelectric.files.wordpress.com/2010/07/grayrocks_dam_aerial_july2010.jpg?w=250&h=166",
                 "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
                 "marker-color": "steelblue",
                 "marker_radius": "4"
@@ -146,7 +146,7 @@
             "properties": {
                 "name": "Kingsley Dam",
                 "info": "<p>Project: North Platte Project</p><p>Built: 1936-1941</p><p>Capacity: 1,740,000 af</p>",
-                "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1342825977603",
+                "image": "watercenter.unl.edu/watermap/maps/kingsleydam.jpg",
                 "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
                 "marker-color": "steelblue",
                 "marker_radius": "4"

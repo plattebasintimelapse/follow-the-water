@@ -1,36 +1,12 @@
 // POPULATION CHART
 function makePopChart() {
     console.log("making population chart");
-
-    d3.select(window).on('load', resize); 
-    d3.select(window).on('resize', resize);
     
-    var margin = {top: 20, right: 80, bottom: 40, left: 50};
-        width = 900 - margin.left - margin.right,
-        height = 800 - margin.top - margin.bottom;
+    var margin = {top: 20, right: 20, bottom: 40, left: 50},
+        width = parseInt(d3.select("#pop-chart").style("width")) - margin.left - margin.right,
+        height = parseInt(d3.select("#pop-chart").style("height")) - margin.top - margin.bottom;
 
-        function resize() {
-            var width = parseInt(d3.select("#pop-chart").style("width")) - margin.left,
-            height = parseInt(d3.select("#pop-chart").style("height")) - margin.top - margin.bottom;
-             
-            /* Update the range of the scale with new width/height */
-            x.range([0, width]).nice(d3.time.year);
-            y.range([height, 0]).nice();
-             
-            /* Update the axis with the new scale */
-            svg.select('.x.axis')
-              .attr("transform", "translate(0," + height + ")")
-              .call(xAxis);
-             
-            svg.select('.y.axis')
-              .call(yAxis);
-             
-            /* Force D3 to recalculate and update the line */
-            svg.selectAll('.line')
-              .attr("d", function(d) { return line(d.values); }) 
-        }
-         
-         
+    var mobileThreshold = 800;
 
     var parseDate = d3.time.format("%Y").parse;
 
@@ -49,6 +25,11 @@ function makePopChart() {
     var yAxis = d3.svg.axis()
         .scale(y)
         .orient("left");
+
+    if ( parseInt( $(window).width() ) < mobileThreshold) {
+        console.log("mobile");
+        xAxis.ticks(5);
+    }
 
     var line = d3.svg.line()
         .interpolate("basis")
@@ -105,27 +86,17 @@ function makePopChart() {
             .style("stroke", "lightgray")
             .on("mouseover", function(d) {
                 d3.select(this).style("stroke", "steelblue").style("stroke-width", "4px").moveToFront();
+                d3.select('.county #scotts-bluff-county-ne').moveToFront();
                 var c = d3.select(this).attr("id");
-                d3.select(".county-list-entry" + " #" + c).style("background-color", "steelblue").style("color", "white");
+                d3.select(".county-list-entry" + " #" + c).attr("class", "county-list-entry hover");
             })
             .on("mouseout", function(d) {
                 d3.select(this).style("stroke", "lightgray").style("stroke-width", "1px");
                 var c = d3.select(this).attr("id");
-                d3.select(".county-list-entry" + " #" + c).style("background-color", "white").style("color", "black");
+                d3.select(".county-list-entry" + " #" + c).attr("class", "county-list-entry");
             });
 
-        function mMove(){
-            console.log("hovering");
-             var m = d3.mouse(this);
-             d3.select("title").text(m[1]);
-        }
-
-        d3.selection.prototype.moveToFront = function() {
-            return this.each(function(){
-                this.parentNode.parentNode.appendChild(this.parentNode);
-            });
-        };
-
+        
         var county_list = d3.select(".population-list").append("ul").selectAll(".county-table")
             .data(counties)
           .enter().append("li")
@@ -136,14 +107,45 @@ function makePopChart() {
             .text(function(d) { return d.name })
             .on("mouseover", function(d) {
                 var c = d3.select(this).attr("id");
+                d3.select(this).attr("class", "county-list-entry hover");
                 d3.select("#" + c).style("stroke", "steelblue").style("stroke-width", "4px").moveToFront();
+                d3.select('.county #scotts-bluff-county-ne').moveToFront();
             })
             .on("mouseout", function(d) {
                 var c = d3.select(this).attr("id");
+                d3.select(this).attr("class", "county-list-entry");
                 d3.select("#" + c).style("stroke", "lightgray").style("stroke-width", "1px");
             });
 
-        d3.select('.county #scotts-bluff-county-ne').style("stroke", "#b42f1d", "important").style("stroke-width", "2px", "important").moveToFront();
+        d3.selection.prototype.moveToFront = function() {
+            return this.each(function(){
+                this.parentNode.parentNode.appendChild(this.parentNode);
+            });
+        };
 
+        d3.select('.county #scotts-bluff-county-ne').style("stroke", "#b42f1d", "important").style("stroke-width", "4px", "important").moveToFront();
+
+        function resize() {
+            var width = parseInt(d3.select("#pop-chart").style("width")) - margin.left - margin.right,
+            height = parseInt(d3.select("#pop-chart").style("height")) - margin.top - margin.bottom;
+             
+            /* Update the range of the scale with new width/height */
+            x.range([0, width]).nice(d3.time.year);
+            y.range([height, 0]).nice();
+             
+            /* Update the axis with the new scale */
+            svg.select('.x.axis')
+              .attr("transform", "translate(0," + height + ")")
+              .call(xAxis);
+             
+            svg.select('.y.axis')
+              .call(yAxis);
+             
+            /* Force D3 to recalculate and update the line */
+            svg.selectAll('.line')
+              .attr("d", function(d) { return line(d.values); }) 
+        }
+
+        d3.select(window).on('resize', resize);
     });
 };

@@ -40,8 +40,9 @@
 .tl-sequence {
 	.text-over-image {
 		position: absolute;
-		left: 15px;
-		bottom: 5px;
+		left: 25px;
+		bottom: 15px;
+		font-size: 1.6em;
 	}
 }
 
@@ -54,6 +55,10 @@
 	top:0;
 	left:0;
 	z-index: -100;
+}
+
+#pathfinder-historicals .images {
+    padding-bottom: 25px;
 }
 
 #snow-opening {
@@ -75,14 +80,13 @@
 	top: 50%;
 	right: 10%;
 	text-align:right;
-	font-size: 2.8em;
-	line-height: 1em;
+	font-size: 2em;
+	line-height: 1.4em;
 	width: 500px;
 }
 
 #jack-creek {
-
-	background-image: url('../media/winter-wonderland.jpg');
+	background-image: url('../img/winter-wonderland.jpg');
 }
 
 #field1 {

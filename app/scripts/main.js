@@ -1,61 +1,4 @@
-function makeDamMap() {
-    console.log('making map');
 
-    var southWest = L.latLng(39.3853, -99.624),
-        northEast = L.latLng(43.7552, -109.9951),
-        bounds = L.latLngBounds(southWest, northEast),
-        damInfoPanel = document.getElementById('dam-info-panel');
-
-    var map = L.map('dam-map', {
-        center: [42.105, -105.99],
-        zoom: 7,
-        scrollWheelZoom: 'false',
-        zoomControl: 'false',
-        maxBounds: bounds
-    });
-
-    var basemap = L.tileLayer('http://{s}.tiles.mapbox.com/v3/plattebasintl.jkn0h0cn/{z}/{x}/{y}.png', {
-        minZoom: 7,
-        maxZoom: 10
-    }).addTo(map);
-
-    $.ajax({
-        dataType: "json",
-        url: '../data/dams.json',
-        success: function (data) {
-            var geojson = L.geoJson(data, {
-                onEachFeature: function (feature, layer) {
-                    var popup_content = '<h5>' + feature.properties.name + '</h5>'
-
-                    var panel_content = '<h3>' + feature.properties.name + '</h3>' +
-                        feature.properties.info +
-                        '<img class="dam-image" src="http://' + feature.properties.image + '"/>' +
-                        '<p><a class="dam-link" src= "http://' + feature.properties.link + '">Read More</a></p>'
-                    layer.bindPopup(popup_content);
-
-                    layer.on('click', function(e) {
-                        damInfoPanel.innerHTML = panel_content;
-                    })
-                },
-                pointToLayer: function (feature, latlng) {
-                    return new L.CircleMarker(latlng, {
-                        radius: feature.properties.marker_radius,
-                        fillColor: '#b42f1d',
-                        color: '#b42f1d',
-                        opacity: 0,
-                        fillOpacity: .6
-                    });
-                }
-            });
-
-            map.addLayer(geojson);
-        },
-        error: function (errorThrown) {
-            console.log(errorThrown);
-        }
-
-    });
-}
 
 function listenForIntro() {
     console.log("Listening to Video...");
@@ -180,6 +123,46 @@ function snowpackVideo(){
     }
 }
 
+function lyleVideo(){
+    var $iframe = $('#lyle')[0];
+    var player = $f($iframe);
+
+    var $inline_btn = $('.inline-video-btn i');
+    var $vid_containder = $('#lyle-video');
+
+    player.addEvent('ready', function() {
+        player.addEvent('play', play);
+        player.addEvent('finish', onFinish);
+        player.addEvent('pause', pause);
+
+        var playing = false;
+        $('#play-lyle').click(function() {
+            if (playing) {
+                player.api('pause');
+                playing = false;
+            } else {
+                player.api('play');
+                playing = true;
+            }
+        });
+    });
+
+    function play(id) {
+        $vid_containder.toggleClass('playing-inline-video');
+        $inline_btn.addClass('fa-pause').removeClass('fa-play');
+    }
+
+    function pause(id) {
+        $vid_containder.toggleClass('playing-inline-video');
+        $inline_btn.addClass('fa-play').removeClass('fa-pause');
+    }
+
+    function onFinish(id) {
+        $vid_containder.removeClass('playing-inline-video');
+        $inline_btn.addClass('fa-play').removeClass('fa-pause');
+    }
+}
+
 var w = true;
 $('#toggle-canals').click(function(){
     if (w) {
@@ -204,7 +187,7 @@ function setMasterStyles() {
     var $wHeight = $(window).height();
     var $wWidth = $(window).width();
 
-    $('.gap-full').height($wHeight * 2);
+    $('.gap-full').height($wHeight);
     $('.gap-full').width($wWidth);
 
     $('.image-featured-behind-full').height($wHeight);
@@ -222,7 +205,8 @@ function setMasterStyles() {
         $('.opening-scroll').fadeIn('slow')
     }, 2000)
 
-    var s = skrollr.init();
+        skrollr.init();
+    
 }
 
 
@@ -295,6 +279,7 @@ $(document).ready(function() {
 
         // PART TWO: STORAGE
         console.log("PART TWO");
+        lyleVideo();
         makeDamMap();
 
     } else if ( $('body').is('#part-three')  ) {

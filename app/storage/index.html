@@ -25,7 +25,7 @@
 		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
     </head>
 
-    <body id="part-two">
+    <body id="part-two skrollr-body">
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -95,34 +95,38 @@
             </div>
         </section>
 
+        <section class="image-featured">
+            <div class="container-fluid">
+                <div class="row">
+                    <img src="../media/early-pathfinder.jpg" alt="">
+                    <span class="image-caption image-caption-right">In 1904, construction began on Pathfinder Dam. It took 5 years to build.</span>
+                </div>
+            </div>
+        </section>
+
         <section class="interactive" id="pathfinder-historicals">
             <div class=" container container-large">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <h2>Pathfinder Dam</h2>
+                <div class="row images">
+                    <div class="col-sm-2">
+                        <p><img class="zoom-in-icon" src="../media/zoom.png" />Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam asperiores totam quibusdam consectetur expedita adipisci architecto recusandae eum similique veritatis incidunt placeat, nisi, esse distinctio temporibus possimus vel praesentium quis.</p>
+                    </div>
+                    <div class="col-sm-5">
+                        <img class="zoom" src="../media/pathfinder-1.jpg" alt="">
+                    </div>
+                    <div class="col-sm-5">
+                        <img class="zoom" src="../media/pathfinder-almost.jpg" alt="">
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-2">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam asperiores totam quibusdam consectetur expedita adipisci architecto recusandae eum similique veritatis incidunt placeat, nisi, esse distinctio temporibus possimus vel praesentium quis.<img class="zoom-in-icon" src="../media/zoom.png" /></p>
+                <div class="row images">
+                    
+                    <div class="col-sm-5">
+                        <img class="zoom" src="../media/pathfinder-base.jpg" alt="">
                     </div>
-                    <div class="col-sm-10">
-                         <div class="row">
-                            <div class="col-sm-6">
-                                <img class="zoom" src="../media/pathfinder-1.jpg" alt="">
-                            </div>
-                            <div class="col-sm-6">
-                                <img class="zoom" src="../media/pathfinder-2.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <img class="zoom" src="../media/pathfinder-1.jpg" alt="">
-                            </div>
-                            <div class="col-sm-6">
-                                <img class="zoom" src="../media/pathfinder-2.jpg" alt="">
-                            </div>
-                        </div>
+                    <div class="col-sm-5">
+                        <img class="zoom" src="../media/pathfinder-2.jpg" alt="">
+                    </div>
+                    <div class="col-sm-2">
+                        <p><img class="zoom-in-icon" src="../media/zoom.png" />Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam asperiores totam quibusdam consectetur expedita adipisci architecto recusandae eum similique.</p>
                     </div>
                 </div>
             </div>
@@ -149,7 +153,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-3 col-sm-offset-1">
-                        <h2>The Dams of the North Platte River</h2>
+                        <h2>The Dams of the North Platte River <i class="fa fa-hand-o-up"></i></h2>
                         <div id="dam-info-panel">
                             <p class="default-text"><em>Click markers on the map to learn about the dams in the North Platte River basin.</em></p>
                         </div>
@@ -171,8 +175,18 @@
                         
                         <p>On the North Platte system, all of these complicated agreements and allotments are controlled from one central place, the Bureau of Reclamation’s Wyoming Area Office in Casper. On a visit one recent morning, the drab official-looking building matched the overcast sky.</p>
                         
-                        <p>Lyle Myler is the deputy area manager for the office, which operates east of the Continental Divide. Each year, Myler’s office depends upon the snowpack data gathered by the Natural Conservation Resource Service and Wyoming State Engineer’s Office to make judgments based on how much water will be coming down from the mountains.</p>
-                        
+
+                        <div class="inline-media-large inline-video" id="lyle-video">
+                            <div class="inline-media-wrapper">
+                                <div class="video-wrapper-16-9 vid-wrap">
+                                    <iframe id="lyle" src="//player.vimeo.com/video/107067451?title=0&amp;byline=0&amp;portrait=0&amp;loop=0&amp;player_id=lyle&amp;api=1" frameborder="0"></iframe>
+                                </div>
+                                <span class="image-caption image-caption-right">Lyle Myler talks about dams and stuff</span>
+                            </div>
+                        </div>
+
+                        <p><span class="inline-video-btn" id="play-lyle"><i class="fa fa-play"></i> Lyle Myler</span><span class="mama-bear">Lyle Myler</span> is the deputy area manager for the office, which operates east of the Continental Divide. Each year, Myler’s office depends upon the snowpack data gathered by the Natural Conservation Resource Service and Wyoming State Engineer’s Office to make judgments based on how much water will be coming down from the mountains.</p>
+
                         <p>“We do a forecast beginning February 1st that gives an estimate of the volume of water that we think we’re going to get in four months. That gives us a feel for how we start positioning water in the reservoirs,” says Myler. Tall, with an easy smile and voice that carries just a hint of drawl, Myler is a veteran water manager. He’s been with the office for 24 years and can rattle off facts and figures from any of their systems with ease.</p>
                         
                         <p>“We keep track of the storage we deliver out and how much of that water is Glendo storage water, how much is Kendrick water, how much is North Platte storage,” says Myler. “The thing that’s difficult to judge is if you get a big rain event, how is that going to affect the volume that comes in?  So, it keeps us busy.”</p>
@@ -308,14 +322,10 @@
         <script src="../scripts/pop-charts.js"></script>
         <script src="../scripts/snow-charts.js"></script>
         <script src="../scripts/swe.js"></script>
+        <script src="../scripts/mapping.js"></script>
         <script src="../scripts/main.js"></script>
         <!-- endbuild -->
         
-        
 
-        <!-- PAGE SPECIFIC SCRIPTS -->
-        <script>
-
-        </script>
     </body>
 </html>

@@ -25,7 +25,7 @@
 		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
     </head>
 
-    <body id="part-one">
+    <body id="part-one skrollr-body">
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -81,7 +81,7 @@
                 <i class="fa fa-chevron-down"></i>
             </div>
             <div class="sound-container" data-start="opacity:1;" data-300-start="opacity:0;">
-                <!-- <i class="fa fa-volume-off fa-lg"></i><audio id="snow-sounds" loop src="../media/Life Is Good_DWCD 0558_18_De Wolfe Lawrence Oakley and Mark Waterfield and Tamara Schlesinger.wav"></audio> -->
+                <i class="fa fa-volume-off fa-lg"></i><audio id="snow-sounds" loop src=""></audio>
             </div>
         </header>
 
@@ -107,8 +107,8 @@
         <section class="image-featured">
             <div class="container-fluid">
                 <div class="row">
-                    <img src="../media/agnes.jpg" alt="">
-                    <span class="image-caption image-caption-right">Kickass Agnes</span>
+                    <img src="../img/agnes.jpg" alt="">
+                    <span class="image-caption image-caption-right">Lake Agnes in late winter, at a year's highest snowpack. On a good year here, over 8 feet of snowpack is common.</span>
                 </div>
             </div>
         </section>
@@ -132,7 +132,9 @@
 
                         <p>She <span class="inline-video-btn" id="play-snotel"><i class="fa fa-play"></i> explained</span><span class="mama-bear">explained</span> each of the snow-covered instruments, including a snow “pillow,” full of an antifreeze solution. It acts like a liquid scale, measuring the weight of the snow and converting it to total water content of the snowpack. SNOTEL stands for “snowpack telemetry”—basically remote data collection and transmission. Every year more than 700 remote stations like this one track snowpack and climate data across the West. That’s especially critical in Colorado. </p>
 
-                        <p></p>
+                        <p>“This is the headwater state, so this is where all of your water is coming from,” Hultstrand said, “with the exception of whatever precipitation is received in spring and summer. But really, this is the bulk of it.”</p>
+                        
+                        <p>The SNOTEL system has been in place for decades, transmitting data back to centralized offices where it’s assessed and compiled into public reports. But it complements an even older method of data collection: manual snow surveys. From January through May, teams go out to specific locations--the same ones year after year--to collect information about snowpack. They ski or snowshoe through forests heavy with snow to the more remote sites, weathering sleet, blizzards or ice storms.</p>
                         
                     </div>
                 </div>
@@ -154,13 +156,13 @@
         <section class="interactive" id="interactive-swe">
             <div class="container container-large">
                 <div class="row">
-                    <h2>Measuring Snowpack</h2>
+                    <h2>Measuring Snowpack </h2>
                 </div>
                 <div class="row">
                     <div class="col-sm-2">
                         <div class="row">
                             <div class="col-xs-10">
-                                <h4>Select a snow <em>type</em> and <em>depth</em>:</h4>
+                                <h4><i class="fa fa-hand-o-up"></i> Select a snow <em>type</em> and <em>depth</em>:</h4>
                                 <div id="snow-type-selection">
                                     <p id="new-snow" data-toggle="popover" data-content="<span>Density: <b>50-70kg/m<sup>3</sup></b></span><br />Fresh snow immediately after falling in calm conditions"><span><img src="../media/swe/new-snow.png" alt="">New Snow</span></p>
                                     <p id="settled-snow" data-toggle="popover" data-content="Density: <b>200-300 kg/m<sup>3</sup></b>"><span><img src="../media/swe/settled-snow.png" alt="">Settled Snow</span></p>
@@ -251,7 +253,7 @@
                     <div class="col-md-8">
                         <h3>Something about how unpredictable it can be</h3>
                         <div id="snotel-chart"></div>
-                        <div id="snotel-legend"></div>
+                        <div id="snotel-legend"><i class="fa fa-hand-o-up"></i></div>
                         <div class="credit">
                             <p>Data from the <a href="http://www.wcc.nrcs.usda.gov/snow/">Natural Resources Conservation Service</a></p>
                         </div>
@@ -285,7 +287,7 @@
             </div>
         </section>
 
-        <section id="part-one-closing-video">
+        <section>
             <div class="container container-large">
                 <div class="row">
                     <div class="col-xs-12">
@@ -312,12 +314,13 @@
 
     
 <!-- data-600-top="opacity: 0;" data-center="opacity: 1;" -->
-        <section class="gap-full" data-600-top="opacity: 0;" data-center="opacity: 1;">
+        <section class="gap-full" id="video-closing" data-600-top="opacity: 0;" data-center="opacity: 1;">
             <div class="container-fluid">
                 <div class="row">
                     <div class="video-behind">
                         <video id="jack-creek-video" loop preload="metadata">
                             <source src="../media/jack-creek.mp4" type="video/mp4">
+                            <source src="../media/jack-creek.ogg" type="video/ogg">
                         </video>
                     </div>
                 </div>
@@ -387,6 +390,7 @@
         <script src="../scripts/pop-charts.js"></script>
         <script src="../scripts/snow-charts.js"></script>
         <script src="../scripts/swe.js"></script>
+        <script src="../scripts/mapping.js"></script>
         <script src="../scripts/main.js"></script>
         <!-- endbuild -->
         
@@ -401,7 +405,8 @@
                 html : 'true'
             });
 
-            $('#part-one-closing-video').waypoint(function(direction) {
+            $('#video-closing').waypoint(function(direction) {
+                console.log('video loaded');
                 var video = document.getElementById('jack-creek-video');
                 video.load();
                 video.style.display="block";
@@ -409,10 +414,23 @@
                 if (direction == "up") {
                     video.pause();
                     video.style.display="none";
+                    $('footer').removeClass('fixed');
                 } else if (direction == "down") {
                     video.play();
+                    showFooter();
+                    $('footer').addClass('fixed');
                 }
-            }, {offset: -500});
+
+                function showFooter() {
+                    setTimeout(function() {
+                        $( "footer" ).animate({
+                            bottom: '0'
+                        }, 1000);
+                    }, 2000);
+                }
+                    
+
+            }, {offset: 500});
         </script>
     </body>
 </html>

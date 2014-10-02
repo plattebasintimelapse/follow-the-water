@@ -28,6 +28,13 @@
     cursor: pointer;
 }
 
-#pathfinder-historicals .col-sm-6 {
-    padding-bottom: 25px;
+#part-one footer {
+    
+
+    &.fixed {
+        position:fixed;
+        bottom:-400px;
+        width:100%;
+    }
 }
+

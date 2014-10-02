@@ -8,12 +8,12 @@
     "fontawesome": "~4.2.0",
     "jquery-zoom": "~1.7.13",
     "skrollr": "~0.6.26",
-    "vimeo-player-api": "*",
     "d3": "~3.4.11",
     "bootstrap-sass-official": "~3.2.0",
     "leaflet": "~0.7.3",
     "jquery-ui": "~1.11.1",
-    "jquery-ui-touch-punch-working": "*"
+    "jquery-ui-touch-punch-working": "*",
+    "vimeo-player-api": "*"
   },
   "version": "0.0.0",
   "authors": [
