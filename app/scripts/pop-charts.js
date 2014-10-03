@@ -1,8 +1,5 @@
 // POPULATION CHART
 function makePopChart() {
-
-    
-
     function makeChart() {
         var margin = {top: 20, right: 20, bottom: 40, left: 50},
             width = parseInt(d3.select("#pop-chart").style("width")) - margin.left - margin.right,
@@ -168,7 +165,7 @@ function makePopChart() {
             .attr("width", width)
             .attr("height", height);
 
-        d3.json("../data/NE.json", function(json) {
+        d3.json("../data/three_states.json", function(json) {
             var center = d3.geo.centroid(json)
             var scale  = 1000;
             var offset = [150, 120];
@@ -192,14 +189,14 @@ function makePopChart() {
                .attr("fill", "white")
                .attr("d", path)
                .on("mouseover", function(d) {
-                    d3.select(this).style("stroke", "steelblue").style("stroke-width", "4px");
+                    d3.select(this).style("fill", "steelblue");
                     var c = d3.select(this).attr("id");
                     d3.select("#" + c).style("stroke", "steelblue").style("stroke-width", "4px").moveToFront();
                     d3.select('.county #scotts-bluff-county-ne').moveToFront();
                     d3.select(".county-list-entry" + " #" + c).attr("class", "county-list-entry hover");
                 })
                 .on("mouseout", function(d) {
-                    d3.select(this).style("stroke", "black").style("stroke-width", "1px");
+                    d3.select(this).style("fill", "white");
                     var c = d3.select(this).attr("id");
                     d3.select(".county-list-entry" + " #" + c).attr("class", "county-list-entry");
                     d3.select("#" + c).style("stroke", "lightgray").style("stroke-width", "1px");
