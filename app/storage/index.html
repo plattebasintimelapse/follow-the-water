@@ -25,39 +25,88 @@
 		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
     </head>
 
-    <body id="part-two skrollr-body">
+    <body id="part-two">
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
 		
 
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" data-200-start="margin-top:-60px;" data-800-start="margin-top:0px;">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <h4 href="#">North Platte Irrigation</h4>
+        <nav id="nav" role="navigation" class="down" data-200-start="margin-top:-80px;" data-800-start="margin-top:0px;">
+            <div class="nav-wrapper container-fluid">
+                <div class="nav-button" id="home-btn">
+                    <h4><a href="http://www.plattebasintimelapse.com">PBT</a></h4>
                 </div>
-
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li><a href="../">intro</a></li>
-                        <li><a href="../snow">1</a></li>
-                        <li class="active"><a href="../storage">2</a></li>
-                        <li><a href="../field">3</a></li>
+                <div class="nav-button spacer">
+                    <h4>|</h4>
+                </div>
+                <div class="nav-button" id="credit-btn" data-toggle="modal" data-target="#credits-modal">
+                    <h4><i class="fa fa-group"></i></h4>
+                </div>
+                <div class="nav-button" id="nav-open">
+                    <h4><i class="fa fa-navicon"></i>Chapters</h4>
+                </div>
+                <div class="nav-container hidden">
+        
+                    <ul id="menu">
+                        <li id="intro"><a href="../" data-title="Intro"><i class="fa fa-chevron-left"></i></a></li>
+                        <li id="one"><a href="../snow" data-title="Part One: &#10; The White Wonder"><img src="../img/snow-nav.jpg" alt=""></a></li>
+                        <li id="two"><a href="../storage" data-title="Part Two: &#10; Guiding Each Precious Drop"><img src="../img/storage-nav.jpg" alt=""></a></li>
+                        <li id="three"><a href="../field" data-title="Part Three: &#10; To The Field!"><img src="../img/field-nav.jpg" alt=""></a></li>
+                        <li><h3 id="nav-title" class="hidden"></h3></li>
+                        
                     </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
+        
+                    <ul id="menu-mobile">
+                        <li id="intro"><a href="../"><h5>Intro</h5></a></li>
+                        <li id="one"><a href="../snow"><h5>Part One: The White Wonder</h5></a></li>
+                        <li id="two"><a href="../storage"><h5>Part Two: Guiding Each Precious Drop</h5></a></li>
+                        <li id="three"><a href="../field"><h5>Part Three: To The Field!</h5></a></li>
+                    </ul>
+                    
+                </div>
+            </div>
             <div class="container-fluid" id="pager-progress">
                 <div id="pager" data-0="width:0%" data-end="width:100%;">
                 </div>
             </div>
         </nav>
+        
+        <div class="modal fade" id="credits-modal" tabindex="-1" role="dialog" aria-labelledby="credits" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true"><i class="fa fa-times"></i></span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        <p class="modal-title" id="credits">Who Made This</p>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <p class="thanks">This project was created over the course of several years as part of the Platte Basin Timelapse project. Generous funding NET, IANR, Nebraska Environmental Trust and others made it possible.</p>
+                        </div>
+                        <div class="credits">
+                            <p class="credits">credits</p>
+                            <p class="credit">Design & Development: <span class="name">Steven Speicher</span></p>
+                            <p class="credit">Reporting: <span class="name">Ariana Brocious</span></p>
+                            <p class="credit">Video Shooting/Editing: <span class="name">Peter Stegen</span></p>
+                            <p class="credit">Multimedia: <span class="name">Peter Stegen & Steven Speicher</span></p>
+                            <p class="credit">Interactives: <span class="name">Steven Speicher</span></p>
+                            <p class="credit">Production Assistants: <span class="name">Joe Arneson</span></p>
+                            <p class="credit">Historical Research: <span class="name">Andrew DeCamp</span></p>
+                            <p class="credit">Editing: <span class="name">Matt Waite</span></p>
+                        </div>
+                        <div>
+                            <p class="credits">Speical Thanks</p>
+                            <p class="thanks">Bob Busch, Mage Hulstrand, Matt Hoobler, afna awnvawrjga a,aar gabg agakrgja rg ag, rwgbwgj gWRG,</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
 
         <header class="image-featured-behind">
             <div class="container-fluid">
@@ -262,17 +311,8 @@
         <footer>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-6 col-sm-offset-2">
-                        <p class="credits">credits</p>
-                        <p class="credit">Design and Development: Steven Speicher</p>
-                        <p class="credit">Reporting: Ariana Brocious</p>
-                        <p class="credit">Video Editing: Peter Stegen</p>
-                        <p class="credit">Multimedia: Peter Stegen & Steven Speicher</p>
-                        <p class="credit">Production Assistants: Mariah Lundgren, Joe Arneson & Sierra Harris</p>
-                        <p class="credit">Historical Research: Andrew DeCamp</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <p class="next-page"><a href="../field">Part Three</a></p>
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <p class="next-page"><a href="../field">Part Three: To The Field!</a></p>
                     </div>
                 </div>
             </div>

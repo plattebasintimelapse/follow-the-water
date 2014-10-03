@@ -1,32 +1,8 @@
 <!--(bake partials/header.html title="Snow" id="part-one")-->
 
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" data-200-start="margin-top:-60px;" data-800-start="margin-top:0px;">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <h4 href="#">North Platte Irrigation</h4>
-                </div>
 
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li><a href="../">intro</a></li>
-                        <li class="active"><a href="../snow">1</a></li>
-                        <li><a href="../storage">2</a></li>
-                        <li><a href="../field">3</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-            <div class="container-fluid" id="pager-progress">
-                <div id="pager" data-0="width:0%" data-end="width:100%;">
-                    
-                </div>
-            </div>
-        </nav>
+
+        <!--(bake partials/nav.html)-->
 
         <header class="image-featured-behind">
             <div class="container-fluid">
@@ -41,7 +17,7 @@
 
             <div class="opening-title-right" data-start="opacity:1;" data-600-start="opacity:0;">
                 <!--(bake partials/section_title.html _section="snow")-->
-                <h5>By Ariana Brocious</h5>
+                <h5>By Steven Speicher, Ariana Brocious, & Peter Stegen</h5>
             </div>
             <div class="opening-scroll" data-start="opacity:1; bottom:1%;" data-100-start="opacity:0; bottom: -10%;">
                 <p>scroll</p>
@@ -268,12 +244,8 @@
         <footer>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-6 col-sm-offset-2">
-                        <p class="credits">credits</p>
-                        <!--(bake partials/credits.html _foreach="credits:credits")-->
-                    </div>
-                    <div class="col-sm-4">
-                        <p class="next-page"><a href="../storage">Part Two</a></p>
+                    <div class="col-sm-offset-2 col-sm-6">
+                        <p class="next-page"><a href="../storage">Part Two: Guiding Each Precious Drop</a></p>
                     </div>
                 </div>
             </div>
@@ -300,11 +272,11 @@
                 if (direction == "up") {
                     video.pause();
                     video.style.display="none";
-                    $('footer').removeClass('fixed');
+                    // $('footer').removeClass('fixed');
                 } else if (direction == "down") {
                     video.play();
-                    showFooter();
-                    $('footer').addClass('fixed');
+                    // showFooter();
+                    // $('footer').addClass('fixed');
                 }
 
                 function showFooter() {

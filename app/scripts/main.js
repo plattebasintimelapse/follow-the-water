@@ -238,19 +238,27 @@ function listenForAudioCntl( sound ) {
 }
 
 // INTRO NAV TOGGLES
-$('.intro-nav-button').click(function() {
-    $('.intro-nav-container').toggleClass('hidden');
-    $('#intro-nav').toggleClass('down');
+$('#nav-open').click(function() {
+    $('.nav-container').toggleClass('hidden');
+    $('#nav').toggleClass('down');
 });
 
-$('#intro-menu img').hover(function() {
-    $('#intro-nav-title').toggleClass('hidden');
-    $('#intro-nav-title').text( $(this).attr('data-title') );
+$('#menu a').hover(function() {
+    $('#nav-title').toggleClass('hidden');
+    $('#nav-title').text( $(this).attr('data-title') );
 })
 
 $(document).ready(function() {
     setMasterStyles();
-    $('img.zoom')
+
+});
+
+$(window).resize(function() {
+    setMasterStyles();
+});
+
+$(window).load(function() {
+        $('img.zoom')
         .wrap('<span style="display:inline-block"></span>')
         .css('display', 'block')
         .parent()
@@ -288,12 +296,4 @@ $(document).ready(function() {
         console.log("PART THREE");
         makePopChart();
     }
-});
-
-$(window).resize(function() {
-    setMasterStyles();
-});
-
-$(window).load(function() {
-    
 });
