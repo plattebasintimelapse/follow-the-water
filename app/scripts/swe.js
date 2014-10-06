@@ -1,6 +1,6 @@
 // SNOW CHARTS
 function makeSWE() {
-    console.log("making SWE graph");
+    console.log("Making SWE interactive");
     var snowDepthOptionBox  = $( '#snow-depth'),
         snowTypeOptionBox   = $( '#snow-type'),
         snowFlakesCanvas    = $( '#snowflakes' ),
@@ -105,11 +105,11 @@ function makeSWE() {
 
         var j = parseInt( snowDepthSelection );
         for ( var i = 0; i < j; i++ ) {
-            snowFlakesCanvas.append( '<span class="snowflake"><img src="../media/swe/' + snowTypeSelection + '.png"></span>' );
+            snowFlakesCanvas.append( '<span class="snowflake"><img src="../img/swe/' + snowTypeSelection + '.png"></span>' );
         }
 
         for ( var i = 0; i < swe; i++ ) {
-            waterDropsCanvas.append( '<span class="water-drop"><img src="../media/swe/waterdrop.png"></span>' );
+            waterDropsCanvas.append( '<span class="water-drop"><img src="../img/swe/waterdrop.png"></span>' );
         }
     }
 

@@ -174,13 +174,6 @@ $('#toggle-canals').click(function(){
     }
 });
 
-setTimeout(function() {
-    $('.opening-pull-quote').fadeOut('slow')
-}, 4000)
-
-setTimeout(function() {
-    $('.opening-title-right').fadeIn('slow')
-}, 5000)
 
 function setMasterStyles() {
     console.log("Setting Master Styles")
@@ -193,37 +186,36 @@ function setMasterStyles() {
     $('.image-featured-behind-full').height($wHeight);
     $('.video-wrapper').height($wHeight);
     $('.video-wrapper').width($wWidth);
-    // $('.intro-btn-group').css('left', (wWidth / 2) - ( 100 ) );
     var title_top = ( $wHeight - $('#video-title').height() ) / 2;
-    // $('.fluid-video-wrapper').css('margin-top', '100px');
 
     $('body').animate({
-        opacity: 1}
-    );
+        opacity: 1
+    }, 1000);
 
     setTimeout(function() {
         $('.opening-scroll').fadeIn('slow')
     }, 2000)
 
-        skrollr.init();
-    
+    skrollr.init();
 }
-
-
 
 function listenForAudioCntl( sound ) {
 
-    var playing = true;
+    if ($(window).scrollTop() == 0) {
+        console.log("top")
+        var playing = true;
+        sound[0].play();
+    }
 
     $('.sound-container').click(function() {
         if (playing) {
             sound[0].pause();
             playing = false;
-            $('.sound-container i').removeClass('fa-volume-off').addClass('fa-volume-up');
+            $('.sound-container i').removeClass('fa-volume-up').addClass('fa-volume-off');
         } else {
             sound[0].play();
             playing = true;
-            $('.sound-container i').addClass('fa-volume-off').removeClass('fa-volume-up');
+            $('.sound-container i').addClass('fa-volume-up').removeClass('fa-volume-off');
         }
     });
 
@@ -234,7 +226,7 @@ function listenForAudioCntl( sound ) {
         } else if (direction=="up") {
             sound.animate({volume: 1}, 1000);
         }
-    }, { offset: 300 });
+    }, { offset: 500 });
 }
 
 // INTRO NAV TOGGLES
@@ -258,14 +250,6 @@ $(window).resize(function() {
 });
 
 $(window).load(function() {
-        $('img.zoom')
-        .wrap('<span style="display:inline-block"></span>')
-        .css('display', 'block')
-        .parent()
-        .zoom({
-            on: 'grab',
-            magnify: '2'
-        });
 
     if ( $('body').is('#intro')  ) {
 
@@ -277,7 +261,7 @@ $(window).load(function() {
 
         // PART ONE: SNOW
         console.log("PART ONE");
-        // listenForAudioCntl( $("#snow-sounds") );
+        listenForAudioCntl( $("#snow-sounds") );
         snotelVideo();
         snowpackVideo();
         makeSWE();

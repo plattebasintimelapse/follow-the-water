@@ -1,4 +1,4 @@
-<!--(bake partials/header.html title="Storage" id="part-two")-->
+<!--(bake partials/header.html title="Guiding Each Precious Drop" id="part-two")-->
 
         <!--(bake partials/nav.html)-->
 
@@ -32,7 +32,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <img src="../media/early-pathfinder.jpg" alt="">
-                    <span class="image-caption image-caption-right">In 1904, construction began on Pathfinder Dam. It took 5 years to build.</span>
+                    <span class="image-caption image-caption-right">Situated just below the Sweetwater and the North Platte rivers' confluence, Pathfinder Dam's 214ft of grantite was quarried and constructed on-site from 1905-1909.</span>
                 </div>
             </div>
         </section>
@@ -40,8 +40,8 @@
         <section class="interactive" id="pathfinder-historicals">
             <div class=" container container-large">
                 <div class="row images">
-                    <div class="col-sm-2">
-                        <p><img class="zoom-in-icon" src="../media/zoom.png" />Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam asperiores totam quibusdam consectetur expedita adipisci architecto recusandae eum similique veritatis incidunt placeat, nisi, esse distinctio temporibus possimus vel praesentium quis.</p>
+                    <div class="col-sm-2">                
+                        <p><img class="zoom-in-icon" src="../media/zoom.png" />At it's time, Pathfinder Dam was a tremendous undertaking. Four people died during its construction.</p><p>The top spans the girth of Fremont Canyon, offering dramatic views down steep sides to the river below.</p>
                     </div>
                     <div class="col-sm-5">
                         <img class="zoom" src="../media/pathfinder-1.jpg" alt="">
@@ -59,7 +59,7 @@
                         <img class="zoom" src="../media/pathfinder-2.jpg" alt="">
                     </div>
                     <div class="col-sm-2">
-                        <p><img class="zoom-in-icon" src="../media/zoom.png" />Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam asperiores totam quibusdam consectetur expedita adipisci architecto recusandae eum similique.</p>
+                        <p><img class="zoom-in-icon" src="../media/zoom.png" />Granite quarried from local hills was hewn into huge blocks to create the arch-style structure, 97 feet thick at the base narrowing to a mere 11 feet at the top.</p><p>The top spans the girth of Fremont Canyon, offering dramatic views down steep sides to the river below.</p>
                     </div>
                 </div>
             </div>
@@ -112,18 +112,6 @@
             </div>
         </section>
 
-        <section class="image-featured">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12-sm">
-                        <img src="../media/samples/image-featured.jpg" alt="">
-                        <span class="image-caption image-caption-left">This is a feature image caption left.</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
         <section class="copy">
             <div class="container">
                 <div class="row">
@@ -134,20 +122,11 @@
             </div>
         </section>
 
-        <section class="image-featured-behind footer">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="image-featured-behind"></div>
-                </div>
-            </div>
-        </section>
-
         <section class="copy">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
                         <p>As third generation Nebraska farmer Bob Busch puts it,</p>
-                        <p class="blockquote">“without water, we have nothing.”</p>
                     </div>
                 </div>
             </div>
@@ -156,7 +135,11 @@
         <section class="image-featured-behind footer">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="image-featured-behind"></div>
+                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="image-featured-behind">
+                        <div id="bob-water-kicker">
+                            <p class="text-over-image">“without water, we have nothing.”</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -166,13 +149,25 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <p class="next-page"><a href="../field">Part Three: To The Field!</a></p>
+                        <p class="next-page"><a href="../field">Part Three: Lifeblood of the Cultivated Land</a></p>
                     </div>
                 </div>
             </div>
         </footer>
 
         <!--(bake partials/footer.html)-->
+
+        <!-- PAGE SPECIFIC SCRIPTS -->
+        <script>
+        $('img.zoom')
+            .wrap('<span style="display:inline-block"></span>')
+            .css('display', 'block')
+            .parent()
+            .zoom({
+                on: 'grab',
+                magnify: '1'
+            });
+        </script>
 
     </body>
 </html>

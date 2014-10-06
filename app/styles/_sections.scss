@@ -51,11 +51,25 @@ footer {
 	z-index:-2
 }
 
+.col-no-pad {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.col-no-pad-right {
+	padding-right: 0;
+}
+
 // TEXT
+
+header p {
+	line-height: 1em;
+}
+
 .text-over-image {
 	position: absolute;
 	color:white;
-	text-shadow: 1px 1px 1px #000;
+	text-shadow: 4px 4px 4px #2e2e2e;
 }
 .opening-title {
 	@extend .text-over-image;
@@ -127,22 +141,6 @@ footer {
     font-size: 3em;
     line-height: 1em;
     width:50%;
-}
-
-//  BLOCK QUOTES
-
-.blockquote {
-	font-size: 3em;
-	line-height: 1em;
-	font-weight:100;
-	margin-left: 100px;
-}
-
-.blockquote-behind {
-	@extend .text-over-image;
-	font-size: 2.4em;
-	top: 40%;
-	left: 5%;
 }
 
 // INLINE MEDIA
@@ -239,7 +237,7 @@ img.zoomImg {
 
 .image-caption {
 	display: block;
-	font-size: .7em;
+	font-size: .8em;
 	line-height: 1.2em;
 	width: 100%;
 	padding: 5px 0px;
@@ -258,12 +256,6 @@ img.zoomImg {
 .image-featured .image-caption, .image-featured-behind .image-caption {
 	padding: 5px 40px;
 	width: 100%;
-	@include breakpoint(mama-bear) {
-		width: 50%;
-	}
-	@include breakpoint(baby-bear) {
-		width: 90%;
-	}
 }
 
 // INTERACTIVES

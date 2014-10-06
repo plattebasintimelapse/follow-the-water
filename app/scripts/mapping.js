@@ -1,4 +1,5 @@
 function makeDamMap() {
+    console.log("Making dam map");
     var southWest = L.latLng(39.3853, -99.624),
         northEast = L.latLng(43.7552, -109.9951),
         bounds = L.latLngBounds(southWest, northEast),
