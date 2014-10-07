@@ -42,6 +42,7 @@
                 </div>
                 <h1>Follow the Water</h1>
                 <p>Follow a tiny snowflake as it makes its way to a sugarbeet field in the pandhandle of Nebraska.</p>
+                <h5>By Steven Speicher, Ariana Brocious, & Peter Stegen</h5>
                 <button class="btn btn-lg btn-default" id="btn-intro">Watch Intro</button>
                 <a href="snow" class="btn btn-lg btn-default btn-skip" role="button">Skip Intro</a>
             </div>
@@ -53,12 +54,22 @@
                 <div class="intro-btn-group">
                     <a href="snow" class="btn btn-sm btn-default btn-skip" role="button">Skip</a>
                     <button class="btn btn-sm btn-default" id="btn-audio">Audio <i class="fa fa-volume-off"></i></button>
+                    <button class="btn btn-sm btn-default" id="btn-loop">Restart <i class="fa fa-undo"></i></button>
                 </div>
             </div>
             <nav id="intro-nav" role="navigation" class="down">
                 <div class="nav-wrapper">
                     <div class="nav-button" id="nav-open">
                         <h4><i class="fa fa-navicon"></i>Chapters</h4>
+                    </div>
+                    <div class="nav-button" id="home-btn">
+                        <h4><a href="http://www.plattebasintimelapse.com">PBT</a></h4>
+                    </div>
+                    <div class="nav-button spacer">
+                        <h4>|</h4>
+                    </div>
+                    <div class="nav-button" id="credit-btn" data-toggle="modal" data-target="#credits-modal">
+                        <h4><i class="fa fa-group"></i></h4>
                     </div>
                     <div class="nav-container hidden">
                         <ul id="menu">
@@ -78,6 +89,40 @@
                 </div>
             </nav>
         </header>
+
+        <div class="modal fade" id="credits-modal" tabindex="-1" role="dialog" aria-labelledby="credits" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true"><i class="fa fa-times"></i></span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        <p class="modal-title" id="credits">Who Made This</p>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <p class="thanks">This project was created over the course of several years as part of the Platte Basin Timelapse project. Generous funding NET, IANR, Nebraska Environmental Trust and others made it possible.</p>
+                        </div>
+                        <div class="credits">
+                            <p class="credits">credits</p>
+                            <p class="credit">Design & Development: <span class="name">Steven Speicher</span></p>
+                            <p class="credit">Reporting: <span class="name">Ariana Brocious</span></p>
+                            <p class="credit">Video Shooting/Editing: <span class="name">Peter Stegen</span></p>
+                            <p class="credit">Multimedia: <span class="name">Peter Stegen & Steven Speicher</span></p>
+                            <p class="credit">Interactives: <span class="name">Steven Speicher</span></p>
+                            <p class="credit">Production Assistants: <span class="name">Joe Arneson</span></p>
+                            <p class="credit">Historical Research: <span class="name">Andrew DeCamp</span></p>
+                            <p class="credit">Editing: <span class="name">Matt Waite</span></p>
+                        </div>
+                        <div>
+                            <p class="credits">Speical Thanks</p>
+                            <p class="thanks">Bob Busch, Mage Hulstrand, Matt Hoobler, afna awnvawrjga a,aar gabg agakrgja rg ag, rwgbwgj gWRG,</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->

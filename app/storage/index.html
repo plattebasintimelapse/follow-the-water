@@ -52,7 +52,7 @@
                         <li id="intro"><a href="../" data-title="Intro"><i class="fa fa-chevron-left"></i></a></li>
                         <li id="one"><a href="../snow" data-title="Part One: &#10; The White Wonder"><img src="../img/snow-nav.jpg" alt=""></a></li>
                         <li id="two"><a href="../storage" data-title="Part Two: &#10; Guiding Each Precious Drop"><img src="../img/storage-nav.jpg" alt=""></a></li>
-                        <li id="three"><a href="../field" data-title="Part Three: &#10; To The Field!"><img src="../img/field-nav.jpg" alt=""></a></li>
+                        <li id="three"><a href="../field" data-title="Part Three: &#10; Life Blood of the Cultivated Land"><img src="../img/field-nav.jpg" alt=""></a></li>
                         <li><h3 id="nav-title" class="hidden"></h3></li>
                         
                     </ul>
@@ -137,19 +137,20 @@
                         
                         <p>Driven by growing public pressure from westerners, in the late 1800s, Congress passed a series of acts to encourage and study the development of irrigation in the west. But it wasn’t until President Theodore Roosevelt signed the Reclamation Act in 1902 that the federal government seriously invested in western irrigation projects. Then the newly-minted U.S. Reclamation Service began to build dams and reservoirs to store water and essentially “re-time” high spring flows to deliver a steady water supply to agricultural users and municipalities throughout the year. They authorized 25 projects between 1903 and 1906.</p>
                         
-                        <p>The second of these projects was Pathfinder Dam, named in honor of one of the West’s most intrepid explorers, John C. Fremont.</p>
+                        <p>The second of these projects, named in honor of one of the West’s most intrepid explorers, John C. Fremont, was Pathfinder Dam.</p>
                         
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="image-featured">
+        <section class="image-featured-behind">
             <div class="container-fluid">
                 <div class="row">
-                    <img src="../media/early-pathfinder.jpg" alt="">
-                    <span class="image-caption image-caption-right">Situated just below the Sweetwater and the North Platte rivers' confluence, Pathfinder Dam's 214ft of grantite was quarried and constructed on-site from 1905-1909.</span>
+                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-full" id="historical-dam"></div>
+                    
                 </div>
+                <span class="image-caption image-caption-right">Situated just below the Sweetwater and the North Platte rivers' confluence, Pathfinder Dam's 214ft of grantite was quarried and constructed on-site from 1905-1909.</span>
             </div>
         </section>
 
@@ -202,9 +203,9 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-3 col-sm-offset-1">
-                        <h2>The Dams of the North Platte River <i class="fa fa-hand-o-up"></i></h2>
+                        <h2>The Dams of the North Platte River</h2>
                         <div id="dam-info-panel">
-                            <p class="default-text"><em>Click markers on the map to learn about the dams in the North Platte River basin.</em></p>
+                            <p class="default-text"><em><i class="fa fa-hand-o-up"></i> Click markers on the map to learn about the dams in the North Platte River basin.</em></p>
                         </div>
                     </div>
                     <div class="col-sm-7"><div id="dam-map"></div></div>
@@ -357,7 +358,7 @@
             .css('display', 'block')
             .parent()
             .zoom({
-                on: 'grab',
+                on: 'click',
                 magnify: '1'
             });
         </script>

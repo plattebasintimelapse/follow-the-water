@@ -28,12 +28,13 @@
             </div>
         </section>
 
-        <section class="image-featured">
+        <section class="image-featured-behind">
             <div class="container-fluid">
                 <div class="row">
-                    <img src="../media/early-pathfinder.jpg" alt="">
-                    <span class="image-caption image-caption-right">Situated just below the Sweetwater and the North Platte rivers' confluence, Pathfinder Dam's 214ft of grantite was quarried and constructed on-site from 1905-1909.</span>
+                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-full" id="historical-dam"></div>
+                    
                 </div>
+                <span class="image-caption image-caption-right">Situated just below the Sweetwater and the North Platte rivers' confluence, Pathfinder Dam's 214ft of grantite was quarried and constructed on-site from 1905-1909.</span>
             </div>
         </section>
 
@@ -79,9 +80,9 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-3 col-sm-offset-1">
-                        <h2>The Dams of the North Platte River <i class="fa fa-hand-o-up"></i></h2>
+                        <h2>The Dams of the North Platte River</h2>
                         <div id="dam-info-panel">
-                            <p class="default-text"><em>Click markers on the map to learn about the dams in the North Platte River basin.</em></p>
+                            <p class="default-text"><em><i class="fa fa-hand-o-up"></i> Click markers on the map to learn about the dams in the North Platte River basin.</em></p>
                         </div>
                     </div>
                     <div class="col-sm-7"><div id="dam-map"></div></div>
@@ -164,7 +165,7 @@
             .css('display', 'block')
             .parent()
             .zoom({
-                on: 'grab',
+                on: 'click',
                 magnify: '1'
             });
         </script>
