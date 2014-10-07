@@ -1,7 +1,7 @@
 
 
 // bower:scss
-@import "../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
 @import 'variables';
@@ -12,6 +12,7 @@
 @import 'tags';
 
 @import 'intro';
+@import 'nav';
 
 @import 'media';
 

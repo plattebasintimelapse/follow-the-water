@@ -1,61 +1,4 @@
-function makeDamMap() {
-    console.log('making map');
 
-    var southWest = L.latLng(39.3853, -99.624),
-        northEast = L.latLng(43.7552, -109.9951),
-        bounds = L.latLngBounds(southWest, northEast),
-        damInfoPanel = document.getElementById('dam-info-panel');
-
-    var map = L.map('dam-map', {
-        center: [42.105, -105.99],
-        zoom: 7,
-        scrollWheelZoom: 'false',
-        zoomControl: 'false',
-        maxBounds: bounds
-    });
-
-    var basemap = L.tileLayer('http://{s}.tiles.mapbox.com/v3/plattebasintl.jkn0h0cn/{z}/{x}/{y}.png', {
-        minZoom: 7,
-        maxZoom: 10
-    }).addTo(map);
-
-    $.ajax({
-        dataType: "json",
-        url: '../data/dams.json',
-        success: function (data) {
-            var geojson = L.geoJson(data, {
-                onEachFeature: function (feature, layer) {
-                    var popup_content = '<h5>' + feature.properties.name + '</h5>'
-
-                    var panel_content = '<h3>' + feature.properties.name + '</h3>' +
-                        feature.properties.info +
-                        '<img class="dam-image" src="http://' + feature.properties.image + '"/>' +
-                        '<p><a class="dam-link" src= "http://' + feature.properties.link + '">Read More</a></p>'
-                    layer.bindPopup(popup_content);
-
-                    layer.on('click', function(e) {
-                        damInfoPanel.innerHTML = panel_content;
-                    })
-                },
-                pointToLayer: function (feature, latlng) {
-                    return new L.CircleMarker(latlng, {
-                        radius: feature.properties.marker_radius,
-                        fillColor: '#b42f1d',
-                        color: '#b42f1d',
-                        opacity: 0,
-                        fillOpacity: .6
-                    });
-                }
-            });
-
-            map.addLayer(geojson);
-        },
-        error: function (errorThrown) {
-            console.log(errorThrown);
-        }
-
-    });
-}
 
 function listenForIntro() {
     console.log("Listening to Video...");
@@ -180,6 +123,46 @@ function snowpackVideo(){
     }
 }
 
+function lyleVideo(){
+    var $iframe = $('#lyle')[0];
+    var player = $f($iframe);
+
+    var $inline_btn = $('.inline-video-btn i');
+    var $vid_containder = $('#lyle-video');
+
+    player.addEvent('ready', function() {
+        player.addEvent('play', play);
+        player.addEvent('finish', onFinish);
+        player.addEvent('pause', pause);
+
+        var playing = false;
+        $('#play-lyle').click(function() {
+            if (playing) {
+                player.api('pause');
+                playing = false;
+            } else {
+                player.api('play');
+                playing = true;
+            }
+        });
+    });
+
+    function play(id) {
+        $vid_containder.toggleClass('playing-inline-video');
+        $inline_btn.addClass('fa-pause').removeClass('fa-play');
+    }
+
+    function pause(id) {
+        $vid_containder.toggleClass('playing-inline-video');
+        $inline_btn.addClass('fa-play').removeClass('fa-pause');
+    }
+
+    function onFinish(id) {
+        $vid_containder.removeClass('playing-inline-video');
+        $inline_btn.addClass('fa-play').removeClass('fa-pause');
+    }
+}
+
 var w = true;
 $('#toggle-canals').click(function(){
     if (w) {
@@ -191,55 +174,48 @@ $('#toggle-canals').click(function(){
     }
 });
 
-setTimeout(function() {
-    $('.opening-pull-quote').fadeOut('slow')
-}, 4000)
-
-setTimeout(function() {
-    $('.opening-title-right').fadeIn('slow')
-}, 5000)
 
 function setMasterStyles() {
     console.log("Setting Master Styles")
     var $wHeight = $(window).height();
     var $wWidth = $(window).width();
 
-    $('.gap-full').height($wHeight * 2);
+    $('.gap-full').height($wHeight);
     $('.gap-full').width($wWidth);
 
     $('.image-featured-behind-full').height($wHeight);
     $('.video-wrapper').height($wHeight);
     $('.video-wrapper').width($wWidth);
-    // $('.intro-btn-group').css('left', (wWidth / 2) - ( 100 ) );
     var title_top = ( $wHeight - $('#video-title').height() ) / 2;
-    // $('.fluid-video-wrapper').css('margin-top', '100px');
 
     $('body').animate({
-        opacity: 1}
-    );
+        opacity: 1
+    }, 1000);
 
     setTimeout(function() {
         $('.opening-scroll').fadeIn('slow')
     }, 2000)
 
-    var s = skrollr.init();
+    skrollr.init();
 }
-
-
 
 function listenForAudioCntl( sound ) {
 
-    var playing = true;
+    if ($(window).scrollTop() == 0) {
+        console.log("top")
+        var playing = true;
+        sound[0].play();
+    }
 
     $('.sound-container').click(function() {
         if (playing) {
             sound[0].pause();
             playing = false;
-            $('.sound-container i').removeClass('fa-volume-off').addClass('fa-volume-up');
+            $('.sound-container i').removeClass('fa-volume-up').addClass('fa-volume-off');
         } else {
             sound[0].play();
             playing = true;
-            $('.sound-container i').addClass('fa-volume-off').removeClass('fa-volume-up');
+            $('.sound-container i').addClass('fa-volume-up').removeClass('fa-volume-off');
         }
     });
 
@@ -250,30 +226,30 @@ function listenForAudioCntl( sound ) {
         } else if (direction=="up") {
             sound.animate({volume: 1}, 1000);
         }
-    }, { offset: 300 });
+    }, { offset: 500 });
 }
 
 // INTRO NAV TOGGLES
-$('.intro-nav-button').click(function() {
-    $('.intro-nav-container').toggleClass('hidden');
-    $('#intro-nav').toggleClass('down');
+$('#nav-open').click(function() {
+    $('.nav-container').toggleClass('hidden');
+    $('#nav').toggleClass('down');
 });
 
-$('#intro-menu img').hover(function() {
-    $('#intro-nav-title').toggleClass('hidden');
-    $('#intro-nav-title').text( $(this).attr('data-title') );
+$('#menu a').hover(function() {
+    $('#nav-title').toggleClass('hidden');
+    $('#nav-title').text( $(this).attr('data-title') );
 })
 
 $(document).ready(function() {
     setMasterStyles();
-    $('img.zoom')
-        .wrap('<span style="display:inline-block"></span>')
-        .css('display', 'block')
-        .parent()
-        .zoom({
-            on: 'grab',
-            magnify: '2'
-        });
+
+});
+
+$(window).resize(function() {
+    setMasterStyles();
+});
+
+$(window).load(function() {
 
     if ( $('body').is('#intro')  ) {
 
@@ -285,7 +261,7 @@ $(document).ready(function() {
 
         // PART ONE: SNOW
         console.log("PART ONE");
-        // listenForAudioCntl( $("#snow-sounds") );
+        listenForAudioCntl( $("#snow-sounds") );
         snotelVideo();
         snowpackVideo();
         makeSWE();
@@ -295,6 +271,7 @@ $(document).ready(function() {
 
         // PART TWO: STORAGE
         console.log("PART TWO");
+        lyleVideo();
         makeDamMap();
 
     } else if ( $('body').is('#part-three')  ) {
@@ -303,12 +280,4 @@ $(document).ready(function() {
         console.log("PART THREE");
         makePopChart();
     }
-});
-
-$(window).resize(function() {
-    setMasterStyles();
-});
-
-$(window).load(function() {
-    
 });

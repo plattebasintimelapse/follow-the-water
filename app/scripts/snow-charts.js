@@ -1,8 +1,8 @@
 // POPULATION CHART
 function makeSnotelChart() {
-    console.log("making snotel_site chart");
+    console.log("Making snotel chart");
     
-    var margin = {top: 20, right: 20, bottom: 40, left: 30},
+    var margin = {top: 20, right: 20, bottom: 40, left: 50},
         width = parseInt(d3.select("#snotel-chart").style("width")) - margin.left - margin.right,
         height = parseInt(d3.select("#snotel-chart").style("height")) - margin.top - margin.bottom;
 
@@ -69,6 +69,14 @@ function makeSnotelChart() {
             d3.min(snotel_sites, function(c) { return d3.min(c.values, function(v) { return v.swe; }); }),
             d3.max(snotel_sites, function(c) { return d3.max(c.values, function(v) { return v.swe; }); })
         ]);
+
+        svg.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("x",0 - (height / 2))
+            .attr("y", 0 - margin.left)
+            .attr("dy", "1em")
+            .style("text-anchor", "middle")
+            .text("inches");
 
         svg.append("g")
             .attr("class", "x axis")

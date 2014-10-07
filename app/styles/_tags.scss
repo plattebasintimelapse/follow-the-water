@@ -52,6 +52,7 @@ footer {
 
 h1,h2,h3,h4,h5,h6 {
 	font-family: $titles-font-family;
+	font-weight: 700;
 }
 
 h1 {
@@ -66,8 +67,6 @@ h1 {
 	@include breakpoint(baby-bear) {
 		font-size:1.2em;
 	}
-	
-	
 }
 
 h2 { font-size: 1.6em; }
