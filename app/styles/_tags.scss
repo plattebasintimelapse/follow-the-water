@@ -1,5 +1,12 @@
 body {
 	font-size: $global-font-size;
+
+	@include breakpoint(mama-bear) {
+		font-size: $med-global-font-size;
+	}
+	@include breakpoint(baby-bear) {
+		font-size: $small-global-font-size;
+	}
 	font-family: $global-font-family;
 	line-height: 1.5em;
 }

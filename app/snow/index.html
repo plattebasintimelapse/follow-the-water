@@ -5,7 +5,7 @@
 		<title>The White Wonder</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width">
-		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="shortcut icon" href="../favicon.ico">
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 		<!-- build:css ../styles/vendor.css -->
 		<!-- bower:css -->
@@ -25,7 +25,7 @@
 		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
     </head>
 
-    <body id="part-one">
+    <body class="part-one" id="skrollr-body">
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -143,9 +143,17 @@
                         
                         <p>As it has for centuries, water arrives annually to these mountains as snow and ice, collecting at high elevations to wait for spring’s warmth. In the arid west, the majority of the water that fills streams and rivers comes from winter snowpack. Every year, farmers, raft guides, conservationists, fishermen, city planners and others wait anxiously to see what winter will bring.</p>
                         
-                        <p>The answer is the difference between a good year and a bad one. Water is the life and livelihood of downstream users, and it all starts high in the mountains with a single snowflake.</p>
+
+                        <div class="inline-media-large">
+                            <div class="inline-media-wrapper">
+                                <img class="zoom" src="../media/north-platte-map.png" alt="">
+                                <span class="image-caption image-caption-right"><img class="zoom-in-icon" src="/media/zoom.png" />The North Platte River drains the northern Colorado Rockies and flows north into Wyoming. It's confluence with the South Platte River is in western Nebraska.</span>
+                            </div>
+                        </div>
+
+                        <p>The sharp peaks of the Nokhu Crags emerge slowly and gracefully above a dark ridge of pine on the steep climb to Lake Agnes. The trail ends on a rocky outcropping above a lake of black glass, where the sides of snowy mountains slide down to the shore. Winter winds whip around this remote alpine spot, near the headwaters of the North Platte River.</p>
                         
-                        <p>Ski fanatics know exactly how much fresh powder each storm brings to their mountains. But others track that data, too. For the last 100 years, January is when the annual cycle of water management begins, as hydrologists answer a critical question: how much water is up there this year?</p>
+                        <p>As it has for centuries, water arrives annually to these mountains as snow and ice, collecting at high elevations to wait for spring’s warmth. In the arid west, the majority of the water that fills streams and rivers comes from winter snowpack. Every year, farmers, raft guides, conservationists, fishermen, city planners and others wait anxiously to see what winter will bring.</p>
                         
 
                     </div>
@@ -157,7 +165,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <img src="../img/agnes.jpg" alt="">
-                    <span class="image-caption image-caption-right">Lake Agnes in late winter, at a year's highest snowpack. On a good year here, over 8 feet of snowpack is common.</span>
+                    <span class="image-caption image-caption-right">Lake Agnes, around 10,000 ft elevation, is in late winter, at a year's highest snowpack. On a good year here, over 8 feet of snowpack is common.</span>
                 </div>
             </div>
         </section>
@@ -363,9 +371,7 @@
             </div>
         </section>
 
-    
-<!-- data-600-top="opacity: 0;" data-center="opacity: 1;" -->
-        <section class="gap-full" id="video-closing" data-600-top="opacity: 0;" data-center="opacity: 1;">
+        <section class="gap-full" id="video-closing">
             <div class="container-fluid">
                 <div class="row">
                     <div class="video-behind">
@@ -440,6 +446,14 @@
 
         <!-- PAGE SPECIFIC SCRIPTS -->
         <script>
+            $('img.zoom')
+                .wrap('<span style="display:inline-block"></span>')
+                .css('display', 'block')
+                .parent()
+                .zoom({
+                    on: 'click',
+                    magnify: '1'
+                });
             
             $('#ui-slider-handle').draggable();
             $('#snow-type-selection p').popover({

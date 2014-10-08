@@ -187,7 +187,7 @@ $(window).load(function() {
         console.log("INTRO");
         listenForIntro();
 
-    } else if ( $('body').is('#part-one')  ) {
+    } else if ( $('body').is('.part-one')  ) {
 
         // PART ONE: SNOW
         console.log("PART ONE");
@@ -197,14 +197,14 @@ $(window).load(function() {
         makeSWE();
         makeSnotelChart();
         
-    } else if ( $('body').is('#part-two')  ) {
+    } else if ( $('body').is('.part-two')  ) {
 
         // PART TWO: STORAGE
         console.log("PART TWO");
         listenVideo('lyle');
         makeDamMap();
 
-    } else if ( $('body').is('#part-three')  ) {
+    } else if ( $('body').is('.part-three')  ) {
 
         // PART THREE: FIELD
         console.log("PART THREE");

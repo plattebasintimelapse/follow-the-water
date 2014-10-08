@@ -89,46 +89,50 @@ function makePopChart() {
                     d3.select('.county #scotts-bluff-county-ne').moveToFront();
 
                     var c = d3.select(this).attr("id");
-                    d3.select(".county-list-entry" + " #" + c).classed({"hover": true});
+                    // d3.select(".county-list-entry" + " #" + c).classed({"hover": true});
                     d3.select(".county-shape" + "#" + c).classed({"hover": true});
+
+                    d3.select(".county-name").html( '<h3>' + d.name + '</h3>' );
 
                 })
                 .on("mouseout", function(d) {
                     d3.select(this).classed({"hover": false});
 
                     var c = d3.select(this).attr("id");
-                    d3.select(".county-list-entry" + " #" + c).classed({"hover": false});
+                    // d3.select(".county-list-entry" + " #" + c).classed({"hover": false});
                     d3.select(".county-shape" + "#" + c).classed({"hover": false});
+
+                    d3.select(".county-name").html( '<h3></h3>' );
 
                 });
 
-            var county_list = d3.select(".population-list").append("ul").selectAll(".county-table")
-                .data(counties)
-              .enter().append("li")
-                .attr("class", "county-list-entry");
+            // var county_list = d3.select(".population-list").append("ul").selectAll(".county-table")
+            //     .data(counties)
+            //   .enter().append("li")
+            //     .attr("class", "county-list-entry");
 
-            county_list.append("p")
-                .attr("id", function(d) { return d.name.replace(/\s+/g, '-').toLowerCase(); })
-                .text(function(d) { return d.name })
-                .on("mouseover", function(d) {
-                    d3.select(this).classed({"hover": true});
+            // county_list.append("p")
+            //     .attr("id", function(d) { return d.name.replace(/\s+/g, '-').toLowerCase(); })
+            //     .text(function(d) { return d.name })
+            //     .on("mouseover", function(d) {
+            //         d3.select(this).classed({"hover": true});
 
-                    var c = d3.select(this).attr("id");
-                    d3.select(".line#" + c).classed({"hover": true}).moveToFront();
-                    d3.select('.county #scotts-bluff-county-ne').moveToFront();
+            //         var c = d3.select(this).attr("id");
+            //         d3.select(".line#" + c).classed({"hover": true}).moveToFront();
+            //         d3.select('.county #scotts-bluff-county-ne').moveToFront();
 
-                    d3.select(".county-shape" + "#" + c).classed({"hover": true});
+            //         d3.select(".county-shape" + "#" + c).classed({"hover": true});
 
-                })
-                .on("mouseout", function(d) {
-                    d3.select(this).classed({"hover": false});
+            //     })
+            //     .on("mouseout", function(d) {
+            //         d3.select(this).classed({"hover": false});
 
-                    var c = d3.select(this).attr("id");
+            //         var c = d3.select(this).attr("id");
                     
-                    d3.select(".line#" + c).classed({"hover": false});
+            //         d3.select(".line#" + c).classed({"hover": false});
 
-                    d3.select(".county-shape" + "#" + c).classed({"hover": false});
-                });
+            //         d3.select(".county-shape" + "#" + c).classed({"hover": false});
+            //     });
 
             d3.selection.prototype.moveToFront = function() {
                 return this.each(function(){
@@ -137,7 +141,7 @@ function makePopChart() {
             };
 
             d3.select('.county #scotts-bluff-county-ne').style("stroke", "#b42f1d", "important").style("stroke-width", "4px", "important").moveToFront();
-            d3.select('.county-list-entry #scotts-bluff-county-ne').style("background-color", "#b42f1d", "important").style("color", "white", "important");
+            // d3.select('.county-list-entry #scotts-bluff-county-ne').style("background-color", "#b42f1d", "important").style("color", "white", "important");
 
             d3.select(window).on('resize', resize);
 
@@ -177,21 +181,24 @@ function makePopChart() {
         d3.json("../data/three_states.json", function(json) {
             var center = d3.geo.centroid(json)
             var scale  = 1200;
-            var offset = [150, 100];
+            var offset = [150, 200];
             var xy = d3.geo.mercator().scale(scale).center(center).translate(offset);
             var path = d3.geo.path().projection(xy);
+            var stateAbbr;
 
             svg.selectAll("path")
                .data(json.features)
             .enter().append("path")
                .attr("id", function(json) {
                     if (json.properties.STATEFP10 == 31) {
-                        return json.properties.NAME10.replace(/\s+/g, '-').toLowerCase() + '-county-ne';
+                        stateAbbr = 'ne';
                     } else if  (json.properties.STATEFP10 == 56){
-                        return json.properties.NAME10.replace(/\s+/g, '-').toLowerCase() + '-county-wy';
+                        stateAbbr = 'wy';
                     } else if  (json.properties.STATEFP10 == 8){
-                        return json.properties.NAME10.replace(/\s+/g, '-').toLowerCase() + '-county-co';
+                        stateAbbr = 'co';
                     }
+                    return json.properties.NAME10.replace(/\s+/g, '-').toLowerCase() + '-county-' + stateAbbr;
+
                 })
                .attr("class", function(d) {
                     // Tag counties with no-data class if not used in pop.json file above
@@ -202,7 +209,6 @@ function makePopChart() {
                         this.parentNode.appendChild(this);
                         return "county-shape";
                     }
-                    
                })
                .attr("d", path)
                .attr("data-toggle", "tooltip")
@@ -217,15 +223,19 @@ function makePopChart() {
                     d3.select(".line#" + c).classed({"hover": true}).moveToFront();
                     d3.select('.county #scotts-bluff-county-ne').moveToFront();
 
-                    d3.select(".county-list-entry" + " #" + c).classed({"hover": true});
+                    // d3.select(".county-list-entry" + " #" + c).classed({"hover": true});
+
+                    d3.select(".county-name").html( '<h3>' + d.properties.NAMELSAD10 + '</h3>' );
                 })
                 .on("mouseout", function(d) {
                     d3.select(this).classed({"hover": false});
 
                     var c = d3.select(this).attr("id");
-                    d3.select(".county-list-entry" + " #" + c).classed({"hover": false});
+                    // d3.select(".county-list-entry" + " #" + c).classed({"hover": false});
 
                     d3.select(".line#" + c).classed({"hover": false});
+
+                    d3.select(".county-name").html( '<h3></h3>' );
                 });
 
             d3.select('.county-shape#scotts-bluff-county-ne').style("fill", "#b42f1d", "important").style("stroke", "#b42f1d", "important");

@@ -34,6 +34,15 @@
 
                         <!--(bake partials/copy.html _foreach="grafs:snow.intro.grafs")-->
 
+                        <div class="inline-media-large">
+                            <div class="inline-media-wrapper">
+                                <img class="zoom" src="../media/north-platte-map.png" alt="">
+                                <span class="image-caption image-caption-right"><img class="zoom-in-icon" src="/media/zoom.png" />The North Platte River drains the northern Colorado Rockies and flows north into Wyoming. It's confluence with the South Platte River is in western Nebraska.</span>
+                            </div>
+                        </div>
+
+                        <!--(bake partials/copy.html _foreach="grafs:snow.intro.grafs")-->
+
                     </div>
                 </div>
             </div>
@@ -43,7 +52,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <img src="../img/agnes.jpg" alt="">
-                    <span class="image-caption image-caption-right">Lake Agnes in late winter, at a year's highest snowpack. On a good year here, over 8 feet of snowpack is common.</span>
+                    <span class="image-caption image-caption-right">Lake Agnes, around 10,000 ft elevation, is in late winter, at a year's highest snowpack. On a good year here, over 8 feet of snowpack is common.</span>
                 </div>
             </div>
         </section>
@@ -227,9 +236,7 @@
             </div>
         </section>
 
-    
-<!-- data-600-top="opacity: 0;" data-center="opacity: 1;" -->
-        <section class="gap-full" id="video-closing" data-600-top="opacity: 0;" data-center="opacity: 1;">
+        <section class="gap-full" id="video-closing">
             <div class="container-fluid">
                 <div class="row">
                     <div class="video-behind">
@@ -257,6 +264,14 @@
 
         <!-- PAGE SPECIFIC SCRIPTS -->
         <script>
+            $('img.zoom')
+                .wrap('<span style="display:inline-block"></span>')
+                .css('display', 'block')
+                .parent()
+                .zoom({
+                    on: 'click',
+                    magnify: '1'
+                });
             
             $('#ui-slider-handle').draggable();
             $('#snow-type-selection p').popover({

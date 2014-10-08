@@ -37,12 +37,27 @@
 	}
 }
 
+#bob-farm-title {
+	position: absolute;
+	top: 50%;
+	right: 10%;
+	text-align:right;
+	font-size: 2em;
+	line-height: 1.4em;
+	width: 500px;
+}
+
 .tl-sequence {
 	.text-over-image {
-		position: absolute;
 		left: 25px;
 		bottom: 15px;
 		font-size: 1.6em;
+		@include breakpoint(mama-bear) {
+			font-size: 1.2em;
+		}
+		@include breakpoint(baby-bear) {
+			font-size: .6em;
+		}
 	}
 }
 
@@ -65,6 +80,9 @@
 	background-image: url('../media/early-pathfinder.jpg');
 }
 
+#lead-opening {
+	background-image: url('../media/cinemagraph-mid-snow.gif');
+}
 
 #snow-opening {
     // background-image: url('http://projects.plattebasintimelapse.com/assets/static/gifs/snowfall.gif');
@@ -80,15 +98,7 @@
     background-image: url('../media/field.gif');
 }
 
-#bob-farm-title {
-	position: absolute;
-	top: 50%;
-	right: 10%;
-	text-align:right;
-	font-size: 2em;
-	line-height: 1.4em;
-	width: 500px;
-}
+
 
 #bob-water-kicker {
 	position: absolute;

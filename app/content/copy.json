@@ -14,7 +14,13 @@
 					"The sharp peaks of the Nokhu Crags emerge slowly and gracefully above a dark ridge of pine on the steep climb to Lake Agnes. The trail ends on a rocky outcropping above a lake of black glass, where the sides of snowy mountains slide down to the shore. Winter winds whip around this remote alpine spot, near the headwaters of the North Platte River."
 				},{ "graf":
 					"As it has for centuries, water arrives annually to these mountains as snow and ice, collecting at high elevations to wait for spring’s warmth. In the arid west, the majority of the water that fills streams and rivers comes from winter snowpack. Every year, farmers, raft guides, conservationists, fishermen, city planners and others wait anxiously to see what winter will bring."
-				},{ "graf":
+				}
+			]
+		},
+
+		"intro_with_map": {
+			"grafs": [
+				{ "graf":
 					"The answer is the difference between a good year and a bad one. Water is the life and livelihood of downstream users, and it all starts high in the mountains with a single snowflake."
 				},{ "graf":
 					"Ski fanatics know exactly how much fresh powder each storm brings to their mountains. But others track that data, too. For the last 100 years, January is when the annual cycle of water management begins, as hydrologists answer a critical question: how much water is up there this year?"

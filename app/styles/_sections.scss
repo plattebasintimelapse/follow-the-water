@@ -32,6 +32,20 @@ footer {
 	.next-page {
 		font-size: 1.8em;
 	}
+
+	.credits {
+		margin-bottom: 0px;
+		font-size:.8em;
+		text-transform: uppercase;
+	}
+	.credit {
+		font-size: .6em;
+		line-height: .6em;
+	}
+	.logo {
+		width: 150px;
+		margin:0;
+	}
 }
 
 .container {
@@ -92,6 +106,26 @@ header p {
 	@include breakpoint(baby-bear) {
 		width: 100%;
 		top: 5%;
+	}
+}
+
+.part-one .opening-title-right, .part-three .opening-title-right {
+	top: 300px;
+	right: 100px;
+	@include breakpoint(baby-bear) {
+		top: 60px;
+		right: 30px;
+		width: 250px;
+	}
+}
+
+.part-two .opening-title-left {
+	top: 300px;
+	left: 100px;
+	@include breakpoint(baby-bear) {
+		top: 60px;
+		left: 30px;
+		width: 250px;
 	}
 }
 
@@ -160,6 +194,9 @@ header p {
 .inline-media-large {
 	@extend .inline-media;
 	width: 75%;
+	@include breakpoint(mama-bear) {
+		width: 100%;
+	}
 }
 
 .inline-media-medium {
@@ -176,6 +213,12 @@ header p {
 	margin: 10px 20px;
 	border-bottom: 1px solid lightgray;
 	border-top: 1px solid lightgray;
+
+	@include breakpoint(mama-bear) {
+		margin: 40px 0;
+		border-bottom: none;
+		border-top: none;
+	}
 }
 
 // IMAGES
@@ -190,6 +233,9 @@ header p {
 		background-size: cover;
 		background-attachment: fixed;
 		background-repeat: no-repeat;
+		@include breakpoint(mama-bear) {
+			background-attachment: scroll;
+		}
 	}
 }
 

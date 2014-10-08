@@ -53,7 +53,12 @@
 // POPULATION CHART - PART THREE
 
 #pop-interactive {
-    h4 {text-align: center;}
+    h2 {
+        margin-bottom: 5px;
+    }
+    h3 {
+        margin-top: 0;
+    }
 }
 
 #pop-chart {
@@ -127,7 +132,7 @@
 }
 
 #pop-map {
-    height: 240px;
+    height: 340px;
 
     .county-shape {
         fill: white;
