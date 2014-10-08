@@ -1,32 +1,8 @@
-<!--(bake partials/header.html title="Snow" id="part-one")-->
+<!--(bake partials/header.html title="The White Wonder" id="part-one")-->
 
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" data-200-start="margin-top:-60px;" data-800-start="margin-top:0px;">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <h4 href="#">North Platte Irrigation</h4>
-                </div>
 
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li><a href="../">intro</a></li>
-                        <li class="active"><a href="../snow">1</a></li>
-                        <li><a href="../storage">2</a></li>
-                        <li><a href="../field">3</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-            <div class="container-fluid" id="pager-progress">
-                <div id="pager" data-0="width:0%" data-end="width:100%;">
-                    
-                </div>
-            </div>
-        </nav>
+
+        <!--(bake partials/nav.html)-->
 
         <header class="image-featured-behind">
             <div class="container-fluid">
@@ -41,14 +17,13 @@
 
             <div class="opening-title-right" data-start="opacity:1;" data-600-start="opacity:0;">
                 <!--(bake partials/section_title.html _section="snow")-->
-                <h5>By Ariana Brocious</h5>
             </div>
             <div class="opening-scroll" data-start="opacity:1; bottom:1%;" data-100-start="opacity:0; bottom: -10%;">
                 <p>scroll</p>
                 <i class="fa fa-chevron-down"></i>
             </div>
             <div class="sound-container" data-start="opacity:1;" data-300-start="opacity:0;">
-                <!-- <i class="fa fa-volume-off fa-lg"></i><audio id="snow-sounds" loop src="../media/Life Is Good_DWCD 0558_18_De Wolfe Lawrence Oakley and Mark Waterfield and Tamara Schlesinger.wav"></audio> -->
+                <i class="fa fa-volume-up fa-lg"></i><audio id="snow-sounds" loop src="../media/snow.mp3"></audio>
             </div>
         </header>
 
@@ -57,7 +32,7 @@
                 <div class="row">
                     <div class="col-sm-12">
 
-                        <!--(bake partials/copy.html _foreach="grafs:snow.section_one.grafs")-->
+                        <!--(bake partials/copy.html _foreach="grafs:snow.intro.grafs")-->
 
                     </div>
                 </div>
@@ -67,8 +42,8 @@
         <section class="image-featured">
             <div class="container-fluid">
                 <div class="row">
-                    <img src="../media/agnes.jpg" alt="">
-                    <span class="image-caption image-caption-right">Kickass Agnes</span>
+                    <img src="../img/agnes.jpg" alt="">
+                    <span class="image-caption image-caption-right">Lake Agnes in late winter, at a year's highest snowpack. On a good year here, over 8 feet of snowpack is common.</span>
                 </div>
             </div>
         </section>
@@ -78,7 +53,7 @@
                 <div class="row">
                     <div class="col-sm-12">
 
-                        <!--(bake partials/copy.html _foreach="grafs:snow.section_two.grafs")-->
+                        <!--(bake partials/copy.html _foreach="grafs:snow.before_snotel_video.grafs")-->
 
                         <div class="inline-media-large inline-video" id="snotel-video">
                             <div class="inline-media-wrapper">
@@ -91,7 +66,7 @@
 
                         <p>She <span class="inline-video-btn" id="play-snotel"><i class="fa fa-play"></i> explained</span><span class="mama-bear">explained</span> each of the snow-covered instruments, including a snow “pillow,” full of an antifreeze solution. It acts like a liquid scale, measuring the weight of the snow and converting it to total water content of the snowpack. SNOTEL stands for “snowpack telemetry”—basically remote data collection and transmission. Every year more than 700 remote stations like this one track snowpack and climate data across the West. That’s especially critical in Colorado. </p>
 
-                        <!--(bake partials/copy.html _foreach="grafs:snow.sectoin_three.grafs")-->
+                        <!--(bake partials/copy.html _foreach="grafs:snow.after_snotel_video.grafs")-->
                     </div>
                 </div>
             </div>
@@ -112,23 +87,24 @@
         <section class="interactive" id="interactive-swe">
             <div class="container container-large">
                 <div class="row">
-                    <h2>Measuring Snowpack</h2>
+                    <h2>Science of Measuring Snowpack </h2>
                 </div>
                 <div class="row">
                     <div class="col-sm-2">
                         <div class="row">
-                            <div class="col-xs-10">
-                                <h4>Select a snow <em>type</em> and <em>depth</em>:</h4>
+                            <div class="col-xs-9 col-no-pad-right">
+                                <h4><i class="fa fa-hand-o-up"></i> Select a snow <em>type</em> and <em>depth</em>:</h4>
                                 <div id="snow-type-selection">
-                                    <p id="new-snow" data-toggle="popover" data-content="<span>Density: <b>50-70kg/m<sup>3</sup></b></span><br />Fresh snow immediately after falling in calm conditions"><span><img src="../media/swe/new-snow.png" alt="">New Snow</span></p>
-                                    <p id="settled-snow" data-toggle="popover" data-content="Density: <b>200-300 kg/m<sup>3</sup></b>"><span><img src="../media/swe/settled-snow.png" alt="">Settled Snow</span></p>
-                                    <p id="depth-hoar" data-toggle="popover" data-content="<span>Density: <b>100-300kg/m<sup>3</sup></b></span><br />Depth hoar are ice crystals at the base of a snowpack caused by uprising water vapor"><span><img src="../media/swe/depth-hoar.png" alt="">Depth Hoar</span></p>
-                                    <p class="selected" data-toggle="popover" data-content="Density: <b>350-400kg/m<sup>3</sup></b>" id="wind-packed-snow"><span><img src="../media/swe/wind-packed-snow.png" alt="">Wind Packed Snow</span></p>
-                                    <p data-toggle="popover" data-content="<span>Density: <b>400-830kg/m<sup>3</sup></b></span><br />Granular and partially compacted snow that has passed through one summer’s melting season but has not yet turned to glacial ice" id="firn"><span><img src="../media/swe/firn.png" alt="">Firn</span></p>
-                                    <p data-toggle="popover" data-content="Density: <b>700-800 kg/m<sup>3</sup></b>" id="very-wet-snow"><span><img src="../media/swe/very-wet-snow.png" alt="">Very Wet Snow</span></p>
+                                    <p id="new-snow" data-toggle="popover" data-content="<span>Density: <b>50-70 kg/m<sup>3</sup></b></span><br />Fresh snow immediately after falling in calm conditions"><span><img src="../img/swe/new-snow.png" alt="">New Snow</span></p>
+                                    <p id="settled-snow" data-toggle="popover" data-content="Density: <b>200-300 kg/m<sup>3</sup></b>"><span><img src="../img/swe/settled-snow.png" alt="">Settled Snow</span></p>
+                                    <p id="depth-hoar" data-toggle="popover" data-content="<span>Density: <b>100-300 kg/m<sup>3</sup></b></span><br />Depth hoar are ice crystals at the base of a snowpack caused by uprising water vapor"><span><img src="../img/swe/depth-hoar.png" alt="">Depth Hoar</span></p>
+                                    <p class="selected" data-toggle="popover" data-content="Density: <b>350-400 kg/m<sup>3</sup></b>" id="wind-packed-snow"><span><img src="../img/swe/wind-packed-snow.png" alt="">Wind Packed Snow</span></p>
+                                    <p data-toggle="popover" data-content="<span>Density: <b>550-830 kg/m<sup>3</sup></b></span><br />Granular and partially compacted snow that has passed through one summer’s melting season but has not yet turned to glacial ice" id="firn"><span><img src="../img/swe/firn.png" alt="">Firn</span></p>
+                                    <p data-toggle="popover" data-content="Density: <b>700-800 kg/m<sup>3</sup></b>" id="very-wet-snow"><span><img src="../img/swe/very-wet-snow.png" alt="">Very Wet Snow</span></p>
                                 </div>
                             </div>
-                            <div class="col-xs-2">
+                            <div class="col-xs-3 col-no-pad">
+                                <div class="ticks"></div>
                                 <div id="slider"></div>
                             </div>
                         </div>
@@ -138,7 +114,7 @@
                         
                     </div>
 
-                    <div class="col-sm-1">
+                    <div class="col-sm-1 col-no-pad">
                         <div id="equals"></div>
                     </div>
                     <div class="col-sm-3" >
@@ -147,7 +123,8 @@
                     </div>
 
                     <div class="col-sm-3" id="swe-desc">
-                        <p>Scientists use the equation <b>SWE = Density * Depth</b> to approximate snow water equivalency: basically, how much water will result from the snow once it melts. Due to factors like wind, temperature and compaction over time, different types of snow have different densities. The Natural Resources Conservation Service collects and compiles this data into monthly reports. April 1st is generally the starting point in predicting spring and summer streamflow for major river systems.</p>
+                        <p>Snow water equivalency is, basically, how much water will result from snow melting all at once. Scientists use the equation <b>SWE = Density * Depth</b> to calculate it.</p>
+                        <p>Due to factors like wind, temperature and compaction over time, different types of snow have different densities. The Natural Resources Conservation Service collects and compiles this data into monthly reports, issuing streamflow forcasts for that month.</p>
 
                        <!--  <p><span><img src="../media/swe/wind-packed-snow.png" alt=""> = 1 inch of snow</span></p>
                         <p><span><img src="../media/swe/waterdrop.png" alt=""> = 1 inch of water</span></p> -->
@@ -171,7 +148,7 @@
             <div class="container container-small">
                 <div class="row">
                     <div class="col-sm-12">
-                        <!--(bake partials/copy.html _foreach="grafs:snow.section_four.grafs")-->
+                        <!--(bake partials/copy.html _foreach="grafs:snow.before_snowpack_video.grafs")-->
 
                         <div class="inline-media-large inline-video" id="snowpack-video">
                             <div class="inline-media-wrapper">
@@ -184,7 +161,7 @@
 
                         <p>Hoobler <span class="inline-video-btn" id="play-snowpack"><i class="fa fa-play"></i> collects</span><span class="mama-bear">collects</span> snowpack information at sites throughout Wyoming, like his colleagues in 12 other Western states. Understanding the relationship between snowpack and water supply is critical, he said. </p>
                         
-                        <!--(bake partials/copy.html _foreach="grafs:snow.section_five.grafs")-->
+                        <!--(bake partials/copy.html _foreach="grafs:snow.after_snowpack_video.grafs")-->
 
                     </div>
                 </div>
@@ -195,15 +172,15 @@
             <div class="container container-large">
                 <div class="row">
                     <div class="col-md-8">
-                        <h3>Something about how unpredictable it can be</h3>
+                        <h3>It's tough to predict snowfall</h3>
                         <div id="snotel-chart"></div>
-                        <div id="snotel-legend"></div>
+                        <div id="snotel-legend"><i class="fa fa-hand-o-up"></i></div>
                         <div class="credit">
                             <p>Data from the <a href="http://www.wcc.nrcs.usda.gov/snow/">Natural Resources Conservation Service</a></p>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <p>All year, SNOTEL sites record snowpack data across the mountains of the American West. Each line in this graph represents the highest snow water equivalency measured for a few selected SNOTEL sites within the North Platte River Basin in northern Colorado for the last decade.</p>
+                        <p>All year, SNOTEL sites record snowpack data across the mountains of the American West. Each line in this chart represents snow water equivalency measured for selected SNOTEL sites within the North Platte River Basin in northern Colorado for the last decade.</p>
 
                         <p>While sites receive different amounts of snowfall due to their location, taken together these sites demonstrate the wide variability of snowpack from year to year.</p>
 
@@ -222,13 +199,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <!--(bake partials/copy.html _foreach="grafs:snow.section_six.grafs")-->
+                        <!--(bake partials/copy.html _foreach="grafs:snow.after_swe_chart.grafs")-->
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="part-one-closing-video">
+        <section>
             <div class="container container-large">
                 <div class="row">
                     <div class="col-xs-12">
@@ -244,7 +221,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <!--(bake partials/copy.html _foreach="grafs:snow.section_seven.grafs")-->
+                        <!--(bake partials/copy.html _foreach="grafs:snow.ending.grafs")-->
                     </div>
                 </div>
             </div>
@@ -252,12 +229,13 @@
 
     
 <!-- data-600-top="opacity: 0;" data-center="opacity: 1;" -->
-        <section class="gap-full" data-600-top="opacity: 0;" data-center="opacity: 1;">
+        <section class="gap-full" id="video-closing" data-600-top="opacity: 0;" data-center="opacity: 1;">
             <div class="container-fluid">
                 <div class="row">
                     <div class="video-behind">
                         <video id="jack-creek-video" loop preload="metadata">
                             <source src="../media/jack-creek.mp4" type="video/mp4">
+                            <source src="../media/jack-creek.ogg" type="video/ogg">
                         </video>
                     </div>
                 </div>
@@ -267,12 +245,8 @@
         <footer>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-6 col-sm-offset-2">
-                        <p class="credits">credits</p>
-                        <!--(bake partials/credits.html _foreach="credits:credits")-->
-                    </div>
-                    <div class="col-sm-4">
-                        <p class="next-page"><a href="../storage">Part Two</a></p>
+                    <div class="col-sm-offset-2 col-sm-6">
+                        <p class="next-page"><a href="../storage">Part Two: Guiding Each Precious Drop</a></p>
                     </div>
                 </div>
             </div>
@@ -290,7 +264,8 @@
                 html : 'true'
             });
 
-            $('#part-one-closing-video').waypoint(function(direction) {
+            $('#video-closing').waypoint(function(direction) {
+                console.log('video loaded');
                 var video = document.getElementById('jack-creek-video');
                 video.load();
                 video.style.display="block";
@@ -301,7 +276,9 @@
                 } else if (direction == "down") {
                     video.play();
                 }
-            }, {offset: -500});
+
+
+            }, {offset: 1500});
         </script>
     </body>
 </html>

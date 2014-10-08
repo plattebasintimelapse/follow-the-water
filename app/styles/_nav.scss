@@ -1,0 +1,137 @@
+
+#intro-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: black;
+    color: white;
+    overflow: hidden;
+    z-index: 100000;
+
+    .nav-button {
+    	i {
+    		// padding-left: 10px;
+    	}
+    }
+}
+
+#nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: black;
+    color: white;
+    overflow: hidden;
+    z-index: 100000;
+}
+
+.nav-wrapper {
+    padding: 10px 20px;
+}
+
+.nav-button {
+    cursor: pointer;
+    display:inline-block;
+    text-transform: uppercase;
+
+    &.spacer {
+        padding:0 10px;
+        &:hover {
+            color: white !important;
+        }
+    }
+    &:hover {
+    	color: $blue;
+    }
+}
+
+#nav-open i {
+	padding-right: 10px;
+}
+
+#credit-btn, #home-btn, .spacer {
+	float:right;
+}
+
+
+
+.nav-container {
+    ul {
+        padding-left: 0px;
+    }
+    li {
+        list-style-type: none;
+        padding-right: 25px;
+    }
+
+    img {
+        border-radius: 8px;
+        width: auto;
+        height: 100px;
+    }
+
+    img:hover {
+        opacity: .7;
+    }
+}
+
+#menu {
+    display: block;
+    @include breakpoint(baby-bear) { display: none; }
+    
+    li {
+        display: inline-block;
+    }
+}
+#menu-mobile {
+    display: none;
+    @include breakpoint(baby-bear) { display: block; }
+
+    li {
+        display: block;
+    }
+
+    h5 {
+        font-size: 1em;
+    }
+}
+
+#credits-modal {
+
+    .modal-dialog {
+        margin-top: 20%;
+    }
+
+	.modal-header {
+		background-color: $dark;
+		color: white;
+		font-weight: bold;
+		.close {color:white;opacity:1;}
+	}
+
+	.credits {
+		margin-bottom: 0px;
+		font-size:.9em;
+		text-transform: uppercase;
+	}
+	.credit {
+		font-size: .7em;
+		line-height: .7em;
+        .name {
+            font-size:1.3em;
+        }
+	}
+    .thanks {
+        line-height: 1.1em;
+        font-size: .7em;
+    }
+}
+
+footer a:hover {
+	color: $blue;
+}
+

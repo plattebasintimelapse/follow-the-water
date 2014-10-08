@@ -7,9 +7,8 @@
                 "name": "Pathfinder Dam",
                 "info": "<p>Project: North Platte Project</p><p>Built: 1905-1909</p><p>Capacity: 1,016,000 af</p><p>Dam Type: Cycolopean Masonry</p>",
                 "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1342825977603",
-                "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
                 "marker-color": "#b42f1d",
-                "marker_radius": "6"
+                "marker_radius": "8"
             },
             "geometry": {
                 "type": "Point",
@@ -20,10 +19,9 @@
             "properties": {
                 "name": "Seminoe Dam",
                 "info": "<p>Project: Kendrick Project</p><p>Built: 1936-1939</p><p>Capacity: 1,017,273 af</p>",
-                "image": "www.usbr.gov/projects/ImageServer?imgName=SEMINOLE.JPG",
-                "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
+                "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1355775448101",
                 "marker-color": "steelblue",
-                "marker_radius": "4"
+                "marker_radius": "6"
             },
             "geometry": {
                 "type": "Point",
@@ -35,9 +33,8 @@
                 "name": "Whalen Diversion Dam",
                 "info": "<p>Project: North Platte Project</p><p>Built: 1909</p>",
                 "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1343934240550",
-                "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
                 "marker-color": "steelblue",
-                "marker_radius": "6"
+                "marker_radius": "8"
             },
             "geometry": {
                 "type": "Point",
@@ -49,9 +46,8 @@
                 "name": "Kortes Dam",
                 "info": "<p>Project: PSMBP-Kortes Project</p><p>Built: 1946-1951</p>",
                 "image": "www.usbr.gov/projects/ImageServer?imgName=A_KORTES01.JPG",
-                "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
                 "marker-color": "steelblue",
-                "marker_radius": "6"
+                "marker_radius": "8"
             },
             "geometry": {
                 "type": "Point",
@@ -63,9 +59,8 @@
                 "name": "Guernsey Dam",
                 "info": "<p>Project: North Platte Project</p><p>Built: 1925-1927</p><p>Capacity: 73,810 af</p>",
                 "image": "www.usbr.gov/projects/ImageServer?imgName=GURNSY01.JPG",
-                "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
                 "marker-color": "steelblue",
-                "marker_radius": "6"
+                "marker_radius": "8"
             },
             "geometry": {
                 "type": "Point",
@@ -77,9 +72,8 @@
                 "name": "Glendo Dam",
                 "info": "<p>Project: PSMBP-Glendo Unit</p><p>Built: 1955-1958</p><p>Capacity: 789,402 af</p><p>Dam Type: Zoned Earthfill</p>",
                 "image": "www.nps.gov/nr/travel/ReclamationDamsAndWaterProjects/photos/Glendo%20Dam-172.jpg",
-                "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
                 "marker-color": "steelblue",
-                "marker_radius": "4"
+                "marker_radius": "6"
             },
             "geometry": {
                 "type": "Point",
@@ -91,9 +85,8 @@
                 "name": "Alcova Dam",
                 "info": "<p>Project: Kendrick Project</p><p>Built: 1935-1938</p><p>Capacity: 184,405 af</p><p>Dam Type: Zoned Earthfill</p>",
                 "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1343061141715",
-                "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
                 "marker-color": "steelblue",
-                "marker_radius": "4"
+                "marker_radius": "6"
             },
             "geometry": {
                 "type": "Point",
@@ -102,12 +95,24 @@
         },{
             "type": "Feature",
             "properties": {
+                "name": "Gray Reef Dam",
+                "info": "<p>Project: PSMBP-Glendo Unit</p><p>Built: 1959-1961</p>",
+                "image": "www.usbr.gov/projects/ImageServer?imgName=GRAYREEF.JPG",
+                "marker-color": "steelblue",
+                "marker_radius": "6"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-106.701640,42.565224]
+            }
+        },{
+            "type": "Feature",
+            "properties": {
                 "name": "Grayrocks Dam",
                 "info": "<p>Project: Missouri Basin Power Project</p><p>Built: 1974-1980</p><p>Capacity: 104,000 af</p>",
-                "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1342825977603",
-                "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
+                "image": "basinelectric.files.wordpress.com/2010/07/grayrocks_dam_aerial_july2010.jpg?w=250&h=166",
                 "marker-color": "steelblue",
-                "marker_radius": "4"
+                "marker_radius": "6"
             },
             "geometry": {
                 "type": "Point",
@@ -121,7 +126,7 @@
                 "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1346354241937",
                 "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
                 "marker-color": "steelblue",
-                "marker_radius": "6"
+                "marker_radius": "8"
             },
             "geometry": {
                 "type": "Point",
@@ -130,12 +135,24 @@
         },{
             "type": "Feature",
             "properties": {
-                "name": "Lake Alice",
-                "info": "<p>Project: North Platte Project</p><p>Built: 1908-1915</p><p>Capacity: 14,000 af</p>",
-                "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1346354031045",
-                "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
+                "name": "Lake Alice Dam No 2 (East End)",
+                "info": "<p>Project: North Platte Project</p><p>Built: 1908-1909</p><p>Capacity: 14,000 af</p>",
+                "image": "http://www.usbr.gov/projects/ImageServer?imgName=Photo_1346354171580",
                 "marker-color": "steelblue",
-                "marker_radius": "6"
+                "marker_radius": "8"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-103.596632,41.983420]
+            }
+	   },{
+            "type": "Feature",
+            "properties": {
+                "name": "Lake Alice Dam No 1 (West End)",
+                "info": "<p>Project: North Platte Project</p><p>Built: 1910-1912</p><p>Capacity: 14,000 af</p>",
+                "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1346354031045",
+                "marker-color": "steelblue",
+                "marker_radius": "8"
             },
             "geometry": {
                 "type": "Point",
@@ -144,12 +161,24 @@
         },{
             "type": "Feature",
             "properties": {
+            	"name": "Lake Winters Creek",
+            	"info": "<p>Project: North Platte Project</p><p>Built: 1979</p><p>Capacity: 2,964 af</p>",
+            	"image": "wms.mytopo.com/wrap/netmapwrapper_mytopo.aspx?VERSION=1.1.1&REQUEST=GetMap&layers=drg,hillshade&map=%5CMapserver%5Cmapfiles%5Czone13.map&width=250&height=250&bbox=620884,4644752,623384,4647252&srs=EPSG:26913&format=image/jpeg",
+            	"marker-color": "steelblue",
+            	"marker_radius": "8"
+            },
+            "geometry": {
+            	"type": "Point",
+            	"coordinates": [-103.6221652, 41.8660784]
+            }
+        },{
+            "type": "Feature",
+            "properties": {
                 "name": "Kingsley Dam",
                 "info": "<p>Project: North Platte Project</p><p>Built: 1936-1941</p><p>Capacity: 1,740,000 af</p>",
-                "image": "www.usbr.gov/projects/ImageServer?imgName=Photo_1342825977603",
-                "link": "www.usbr.gov/projects/Facility.jsp?fac_Name=Pathfinder+Dam&groupName=Overview",
+                "image": "watercenter.unl.edu/watermap/maps/kingsleydam.jpg",
                 "marker-color": "steelblue",
-                "marker_radius": "4"
+                "marker_radius": "6"
             },
             "geometry": {
                 "type": "Point",

@@ -1,54 +1,4 @@
-
-#pop-chart, #snotel-chart {
-    font-size: 12px;
-}
-
-#pop-chart svg {
-    @include breakpoint(mama-bear) {
-        height: 500px;
-    }
-    @include breakpoint(baby-bear) {
-        height: 300px;
-    }
-}
-
-.population-list {
-    height: 300px;
-    @include breakpoint(papa-bear) {
-        height: 700px;
-    }
-    @include breakpoint(mama-bear) {
-        height: 400px;
-    }
-
-    overflow:auto;
-    font-size: .8em;
-
-    ul {
-        list-style-type: none;
-        padding-left: 0px;
-    }
-
-    li {
-        margin: 0px;
-        height: 20px;
-        display: list-item;
-        p {
-          display: inline-block;
-          font-size:.8em;
-          margin-bottom: 0px;
-          padding: 5px;
-          margin: 5px;
-          &.scotts-bluff-co {
-            color:$red;
-          }
-        }
-        p:hover {
-            background-color: $blue;
-            color: white;
-        }
-    }
-}
+// ALL CHARTS
 
 .axis path,
 .axis line {
@@ -66,20 +16,11 @@
   stroke-width: 1px;
 }
 
-.scotts-bluff-co {
-  stroke-width: 3px;
-  stroke: "red";
+#pop-chart, #snotel-chart {
+    font-size: 12px;
 }
 
-#average {
-    stroke: lightgray;
-}
-
-#actual {
-    stroke: $red;
-}
-
-// SNOTEL CHART
+// SNOTEL CHART - PART ONE
 
 #snotel-chart {
     height: 400px;
@@ -87,13 +28,6 @@
     @include breakpoint(mama-bear) {
         height: 300px;
     }
-
-    .line {
-      fill: none;
-      stroke-width: 1px;
-    }
-
-
 }
 
 #snotel-legend {
@@ -116,12 +50,107 @@
     }
 }
 
+// POPULATION CHART - PART THREE
+
+#pop-interactive {
+    h4 {text-align: center;}
+}
+
+#pop-chart {
+    height: 600px;
+    @include breakpoint(papa-bear) {
+        height: 500px;
+    }
+    @include breakpoint(baby-bear) {
+        height: 300px;
+    }
+
+    .line {
+        stroke: lightgray;
+        stroke-width: 1px;
+        &.hover {
+            stroke: $blue !important;
+            stroke-width: 4px;
+        }
+    }
+}
+
+.population-list {
+    height: 260px;
+    width: 200px;
+    margin: 0 auto;
+
+    border: 1px solid darkgray;
+    border-radius: 8px;
+    -moz-box-shadow:    inset 0 0 8px gray;
+   -webkit-box-shadow: inset 0 0 8px gray;
+   box-shadow:         inset 0 0 8px gray;
 
 
+    @include breakpoint(papa-bear) {
+        height: 200px;
+    }
+    @include breakpoint(baby-bear) {
+        height: 200px;
+    }
+
+    // overflow:auto;
+    overflow-y: scroll;
+    font-size: .8em;
+
+    ul {
+        list-style-type: none;
+        padding-left: 0px;
+    }
+
+    li {
+        margin: 0px;
+        height: 20px;
+        display: list-item;
+        p {
+          display: inline-block;
+          font-size:.8em;
+          margin-bottom: 0px;
+          padding: 2px 5px;
+          margin: 5px;
+          border-radius: 10px;
+          &#scotts-bluff-co-ne {
+            background-color:$red;
+            color:white;
+          }
+        }
+        p.hover {
+            background-color: $blue;
+            color: white;
+        }
+    }
+}
+
+#pop-map {
+    height: 240px;
+
+    .county-shape {
+        fill: white;
+        stroke: black;
+
+        &.hover {
+            fill: $blue;
+        }
+        &.no-data {
+            fill: #e9e9e9;
+            stroke: white;
+        }
+    }
+}
 
 
+// SCOTTS BLUFF ECON - PART THREE
 
-// SCOTTS BLUFF ECON
+#ag-stats {
+    .col-md-6 {
+        padding: 0 30px;
+    }
+}
 
 .table-title {
     text-align: center;

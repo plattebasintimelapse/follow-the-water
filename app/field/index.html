@@ -2,7 +2,7 @@
 <html class="no-js">
     <head>
         <meta charset="utf-8">
-		<title>Field</title>
+		<title>Lifeblood of the Cultivated Land</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width">
 		<link rel="shortcut icon" href="/favicon.ico">
@@ -32,33 +32,81 @@
 
 		
 
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" data-200-start="margin-top:-60px;" data-800-start="margin-top:0px;">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <h4 href="#">North Platte Irrigation</h4>
+        <nav id="nav" role="navigation" class="down" data-200-start="margin-top:-80px;" data-800-start="margin-top:0px;">
+            <div class="nav-wrapper container-fluid">
+                <div class="nav-button" id="home-btn">
+                    <h4><a href="http://www.plattebasintimelapse.com">PBT</a></h4>
                 </div>
-
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li><a href="../">intro</a></li>
-                        <li><a href="../snow">1</a></li>
-                        <li><a href="../storage">2</a></li>
-                        <li class="active"><a href="/field">3</a></li>
+                <div class="nav-button spacer">
+                    <h4>|</h4>
+                </div>
+                <div class="nav-button" id="credit-btn" data-toggle="modal" data-target="#credits-modal">
+                    <h4><i class="fa fa-group"></i></h4>
+                </div>
+                <div class="nav-button" id="nav-open">
+                    <h4><i class="fa fa-navicon"></i>Chapters</h4>
+                </div>
+                <div class="nav-container hidden">
+        
+                    <ul id="menu">
+                        <li id="intro"><a href="../" data-title="Intro"><i class="fa fa-chevron-left"></i></a></li>
+                        <li id="one"><a href="../snow" data-title="Part One: &#10; The White Wonder"><img src="../img/snow-nav.jpg" alt=""></a></li>
+                        <li id="two"><a href="../storage" data-title="Part Two: &#10; Guiding Each Precious Drop"><img src="../img/storage-nav.jpg" alt=""></a></li>
+                        <li id="three"><a href="../field" data-title="Part Three: &#10; Life Blood of the Cultivated Land"><img src="../img/field-nav.jpg" alt=""></a></li>
+                        <li><h3 id="nav-title" class="hidden"></h3></li>
+                        
                     </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-            <div class="container-fluid" id="pager-progress">
-                <div id="pager" data-0="width:0%" data-end="width:100%;">
+        
+                    <ul id="menu-mobile">
+                        <li id="intro"><a href="../"><h5>Intro</h5></a></li>
+                        <li id="one"><a href="../snow"><h5>Part One: The White Wonder</h5></a></li>
+                        <li id="two"><a href="../storage"><h5>Part Two: Guiding Each Precious Drop</h5></a></li>
+                        <li id="three"><a href="../field"><h5>Part Three: To The Field!</h5></a></li>
+                    </ul>
                     
                 </div>
             </div>
+            <div class="container-fluid" id="pager-progress">
+                <div id="pager" data-0="width:0%" data-end="width:100%;">
+                </div>
+            </div>
         </nav>
+        
+        <div class="modal fade" id="credits-modal" tabindex="-1" role="dialog" aria-labelledby="credits" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true"><i class="fa fa-times"></i></span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        <p class="modal-title" id="credits">Who Made This</p>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <p class="thanks">This project was created over the course of several years as part of the Platte Basin Timelapse project. Generous funding NET, IANR, Nebraska Environmental Trust and others made it possible.</p>
+                        </div>
+                        <div class="credits">
+                            <p class="credits">credits</p>
+                            <p class="credit">Design & Development: <span class="name">Steven Speicher</span></p>
+                            <p class="credit">Reporting: <span class="name">Ariana Brocious</span></p>
+                            <p class="credit">Video Shooting/Editing: <span class="name">Peter Stegen</span></p>
+                            <p class="credit">Multimedia: <span class="name">Peter Stegen & Steven Speicher</span></p>
+                            <p class="credit">Interactives: <span class="name">Steven Speicher</span></p>
+                            <p class="credit">Production Assistants: <span class="name">Joe Arneson</span></p>
+                            <p class="credit">Historical Research: <span class="name">Andrew DeCamp</span></p>
+                            <p class="credit">Editing: <span class="name">Matt Waite</span></p>
+                        </div>
+                        <div>
+                            <p class="credits">Speical Thanks</p>
+                            <p class="thanks">Bob Busch, Mage Hulstrand, Matt Hoobler, afna awnvawrjga a,aar gabg agakrgja rg ag, rwgbwgj gWRG,</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
 
         <header class="image-featured-behind">
             <div class="container-fluid">
@@ -69,7 +117,7 @@
             
             <div class="opening-title-right" data-start="opacity:1;" data-600-start="opacity:0;">
                 <h1>Lifeblood of the Cultivated Land</h1>
-                <h3>Mountain snowmelt arrives onto the plains to water thirsty fields, supporting the economy of an entire region.</h3>
+                <p>Mountain snowmelt arrives onto the plains to water thirsty fields, supporting the economy of an entire region.</p>
             </div>
             <div class="opening-scroll" data-start="opacity:1; bottom:1%;" data-100-start="opacity:0; bottom: -10%;">
                 <p>scroll</p>
@@ -81,17 +129,15 @@
             <div class="container container-small">
                 <div class="row">
                     <div class="col-sm-12">
-                        <p>“I’ll be waiting for you at seven, in my blue truck in the driveway,” instructed the kind yet gruff voice of Bob Busch on the phone. He’s prompt, and expects the same from visitors. Just past seven the next day, he directed the way to one of his sugar beet fields along the Gering/Fort Laramie Irrigation District’s canal in the cool morning breeze.</p>
+                        <p>Bob Busch is prompt, and expects the same from visitors.</p>
+                        
+                        <p>“I’ll be waiting for you at seven, in my blue truck in the driveway,” instructed his kind yet gruff voice on the phone.</p>
+                        
+                        <p>In the cool morning breeze just past seven, he directed the way to one of his sugar beet fields—a field that would not be here without irrigation water from the North Platte River. </p>
                         
                         <p>Wearing faded denim overalls, a toothy smile and a Kelly Bean Co. mesh hat, Busch watched his grandson and a farm hand “move water” with an approving gaze. He knows this process well. A third-generation farmer in the Nebraska panhandle, Busch has spent nearly all of his 77 years on the same patch of land outside of Gering. After a short stint at college, he took over farming the family property from his father in 1959.</p>
                         
-                        <p>“I dearly love farming,” Busch said. “I don’t like some of the adversity we have. Weather… You’d get a hail storm, oh, mercy. You’d be done. But farming’s my life and always has been.”</p>
-                        
-                        <p>Busch’s son Kendall, 52, now runs the operation, more than 1,000 acres of corn, sugar beets, dry edible beans and alfalfa. They still use flood or furrow irrigation, an older method than ?? that requires a lot of early summer mornings. </p>
-                        
-                        <p>After setting the siphon tubes, they’ll let the water flow across this field for 24 hours before moving it (what - the water or the tubes or the process?)again tomorrow morning. They do this throughout the irrigation season, from May through September, making the most of their water.</p>
-                        
-                        <p>“Our [operation] is very labor intense. It takes a lot of manpower and a lot of time,” Kendall Busch said. </p>
+                        <p>“I dearly love farming,” Busch said. “Farming’s my life and always has been.”</p>
                         
                     </div>
                 </div>
@@ -103,8 +149,10 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="field1">
-                            <p class="text-over-image">Day 13</p>
-                            <div id="bob-farm-title"><p class="text-over-image" >12 Days on the Busch Family's Sugarbeet Farm</p></div>
+                            <p class="text-over-image">July 3rd</p>
+                            <div id="bob-farm-title">
+                                <p class="text-over-image" >12 Days on the Busch Family's Sugarbeet Farm</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -114,7 +162,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="field2">
-                            <p class="text-over-image">Day 14</p>
+                            <p class="text-over-image">July 4th</p>
                         </div>
                     </div>
                 </div>
@@ -124,7 +172,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="field3">
-                            <p class="text-over-image">Day 15</p>
+                            <p class="text-over-image">July 5th</p>
                         </div>
                     </div>
                 </div>
@@ -134,7 +182,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="field4">
-                            <p class="text-over-image">Day 16</p>
+                            <p class="text-over-image">July 6th</p>
                         </div>
                     </div>
                 </div>
@@ -144,7 +192,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="field5">
-                            <p class="text-over-image">Day 17: Irrigation</p>
+                            <p class="text-over-image">July 7th</p>
                         </div>
                     </div>
                 </div>
@@ -154,7 +202,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="field6">
-                            <p class="text-over-image">Day 18</p>
+                            <p class="text-over-image">July 8th</p>
                         </div>
                     </div>
                 </div>
@@ -164,7 +212,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="field7">
-                            <p class="text-over-image">Day 19</p>
+                            <p class="text-over-image">July 9th</p>
                         </div>
                     </div>
                 </div>
@@ -174,7 +222,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="field8">
-                            <p class="text-over-image">Day 20</p>
+                            <p class="text-over-image">July 10th</p>
                         </div>
                     </div>
                 </div>
@@ -184,7 +232,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="field9">
-                            <p class="text-over-image">Day 21</p>
+                            <p class="text-over-image">July 11th</p>
                         </div>
                     </div>
                 </div>
@@ -194,7 +242,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="field10">
-                            <p class="text-over-image">Day 22</p>
+                            <p class="text-over-image">July 12th</p>
                         </div>
                     </div>
                 </div>
@@ -204,7 +252,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="field11">
-                            <p class="text-over-image">Day 23</p>
+                            <p class="text-over-image">July 13th</p>
                         </div>
                     </div>
                 </div>
@@ -214,7 +262,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="field12">
-                            <p class="text-over-image">Day 24</p>
+                            <p class="text-over-image">July 14th</p>
                         </div>
                     </div>
                 </div>
@@ -225,28 +273,29 @@
             <div class="container container-small">
                 <div class="row">
                     <div class="col-sm-12">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quibusdam cumque velit nihil perspiciatis voluptatum consequatur tenetur laudantium voluptatem temporibus, atque necessitatibus sapiente praesentium porro maiores est odit adipisci consequuntur!</p>
-                        <p>Iure repudiandae necessitatibus minus consequuntur earum minima ea officiis repellendus veniam. Labore, sequi quisquam earum dicta perspiciatis neque suscipit, illum doloremque similique odio nobis quam dolores eum, non provident nisi?</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quibusdam cumque velit nihil perspiciatis voluptatum consequatur tenetur laudantium voluptatem temporibus, atque necessitatibus sapiente praesentium porro maiores est odit adipisci consequuntur!</p>
-                        <p>Iure repudiandae necessitatibus minus consequuntur earum minima ea officiis repellendus veniam. Labore, sequi quisquam earum dicta perspiciatis neque suscipit, illum doloremque similique odio nobis quam dolores eum, non provident nisi?</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quibusdam cumque velit nihil perspiciatis voluptatum consequatur tenetur laudantium voluptatem temporibus, atque necessitatibus sapiente praesentium porro maiores est odit adipisci consequuntur!</p>
-                        <p>Iure repudiandae necessitatibus minus consequuntur earum minima ea officiis repellendus veniam. Labore, sequi quisquam earum dicta perspiciatis neque suscipit, illum doloremque similique odio nobis quam dolores eum, non provident nisi?</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quibusdam cumque velit nihil perspiciatis voluptatum consequatur tenetur laudantium voluptatem temporibus, atque necessitatibus sapiente praesentium porro maiores est odit adipisci consequuntur!</p>
-                        <p>Iure repudiandae necessitatibus minus consequuntur earum minima ea officiis repellendus veniam. Labore, sequi quisquam earum dicta perspiciatis neque suscipit, illum doloremque similique odio nobis quam dolores eum, non provident nisi?</p>
+                        <p>Busch’s son Kendall, 52, now runs the operation, more than 1,000 acres of corn, sugar beets, dry edible beans and alfalfa. They still use flood or furrow irrigation, an older method traded out in favor of sprinkler or center pivots by many other farmers in recent years. It’s a method that requires a lot of early summer mornings.</p>
+                        
+                        <p>After setting the siphon tubes, they’ll let the water flow across this field for 24 hours before moving the pipes, and thus the water, again tomorrow morning. They repeat this process daily throughout the irrigation season, from May through September, making the most of their water.</p>
+                        
+                        <p>“Our [operation] is very labor intense. It takes a lot of manpower and a lot of time,” Kendall Busch said.</p>
+                        
+                        <p>By summer, irrigation season is in full swing across the arid west. Mountain snowmelt, held back by dams and stored in reservoirs, starts to be released for use on fields in May. Without it, agriculture would not exist in this arid region, where annual rainfall rarely exceeds 16 inches. </p>
+                        
+                        <p>“Water is the most valuable resource we have,” Rick Preston said. He’s general manager of the Gering-Ft. Laramie Irrigation District, which provides irrigation water to nearly 55,000 acres in the Nebraska panhandle, including those owned by the Busch family. It’s one of four original government districts commissioned along with Pathfinder Dam in 1903 by the U.S. Reclamation Service (today’s Bureau of Reclamation), and one of the oldest water right holders on the North Platte River. </p>
+                        
+                        <p>The agricultural industry in this part of the state owes most of its existence to that massive engineering feat, built to control the North Platte River and transport water all the way from the upper reaches of the Rocky Mountains through a complex system of dams and reservoirs in Wyoming. The Gering-Ft. Laramie Irrigation District is the bottom end of this system, where the water is diverted into canals to be channeled to fields of thirsty crops. Lots of crops.</p>
+                        
+                        <p>Nebraska leads the nation in irrigated land, with more than 8 million acres reliant on supplemental water supplies. One-eighthTK of that is supplied by surface water from rivers and reservoirs. The western Nebraska panhandle produces nearly ten percent of the nation’s dry edible bean crop and ranks fifth nationally for sugar beet production. </p>
+                        
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="chart">
+        <section class="chart" id="ag-stats">
             <div class="container container-large">
                 <div class="row">
-                    <div class="col-sm-9">
-                       <!--  <div class="row">
-                            <div class="col-sm-12">
-                                <h4>Crops in Nebraska vs the Panhandle</h4>
-                            </div>
-                        </div> -->
+                    <div class="col-sm-12">
                         <div class="row">
                             <div class="col-md-6">
                                 <p class="table-title">Nebraska</p>
@@ -311,7 +360,7 @@
                                         <td class="rank">24</td>
                                     </tr>
                                     <tr>
-                                        <td>Sugarbeets for sugar</td>
+                                        <td>Sugar beets for sugar</td>
                                         <td class="amount">12,116</td>
                                         <td class="rank">2</td>
                                         <td class="rank">31</td>
@@ -331,10 +380,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-sm-3">
-                        <p class="chart-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quibusdam cumque velit nihil perspiciatis voluptatum consequatur tenetur laudantium voluptatem temporibus, atque necessitatibus sapiente praesentium porro maiores est odit adipisci consequuntur!</p>
-                    </div>
                 </div>
             </div>
         </section>
@@ -343,44 +388,41 @@
             <div class="container container-small">
                 <div class="row">
                     <div class="col-sm-12">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quibusdam cumque velit nihil perspiciatis voluptatum consequatur tenetur laudantium voluptatem temporibus, atque necessitatibus sapiente praesentium porro maiores est odit adipisci consequuntur!</p>
-                        <p>Iure repudiandae necessitatibus minus consequuntur earum minima ea officiis repellendus veniam. Labore, sequi quisquam earum dicta perspiciatis neque suscipit, illum doloremque similique odio nobis quam dolores eum, non provident nisi?</p>
-
-                        <p>Asperiores, veritatis harum vitae minus commodi. Quam sit explicabo perspiciatis deleniti, labore quas maiores non temporibus laudantium, cumque excepturi, accusantium sunt esse voluptas nulla! Doloremque debitis qui, repudiandae suscipit recusandae?</p>
-                        <p>Doloremque voluptatum, voluptas architecto facilis reiciendis doloribus neque at suscipit rerum nemo mollitia sit nulla quaerat totam impedit enim repellat qui quidem aut similique aperiam maiores veniam ullam amet. Quod.</p>
+                        <p>“A lot of people are grateful for what we do,” said Kendall Busch, who takes great pride in his work as a farmer. But he knows the value of the irrigation system because he depends completely on surface water, since this stretch of the North Platte Valley has no groundwater resources to tap into, unlike other parts of the panhandle perched above the High Plains Aquifer. “Without these canal systems it’d be dire straits for water,” Kendall Busch said.</p>
+                        
+                        <p>Irrigation districts also take pride in their operations and carefully manage the water to ensure it reaches all water rights holders on their system. But it all depends on how much snow lands in the mountains in the winter and what the spring rains bring, said Preston. Some years, like 2011, farmers have plenty, and irrigation districts dump the water downstream because they simply can’t use it all. Other years, like the span between 2002-2007 and again in 2012-2013TK, water use restrictions go into effect because there isn’t enough to go around.</p>
+                        
+                        <p>“You have to operate like the old airplane pilots did and fly by the seat of your pants from time to time,” Preston said.</p>
+                        
+                        <p>His district delivers water to farmers, Preston said, “so that we can have our cereals, so that we can have our sugars, our breads, our meats, our dairy products,” on grocery store shelves.</p>
+                        
+                        <p>Water from the North Platte irrigation system is used by several different irrigation districts throughout the area, cycled from field to field along ditches and canals. Local farmers and water managers estimate the same water is used seven times before eventually making its way back to the North Platte River. That approach to water conservation matters, said Bob Busch.</p>
+                        
+                        <p>“We live in a semi-arid region,” Bob Busch said, “14 inches of rain if we’re lucky.” All you have to do is drive out of the valley to neighboring dry pasture see the economic impact of water, he said. “There’s such a dramatic difference between irrigation and dry land, it’s just unbelievable.” Not to mention all the supporting industries and businesses that depend upon agriculture in the high plains.</p>
+                        
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="interactive">
+        <section class="interactive" id="pop-interactive">
             <div class="container container-large">
                 <div class="row">
-                    <div class="col-sm-9">
+                    <h2>Populations West of the 100<sup>th</sup> Meridian</h2>
+                    <div class="col-sm-8">
                         <div id="pop-chart"></div>
                     </div>
-                    <div class="col-sm-3">
-                        <h4 class="sticky">Selected Counties in Nebraska & Wyoming</h4>
-                        <div class="population-list">
-                        </div>
+                    <div class="col-sm-4">
+                        <h4 class="sticky">Counties in Nebraska, Wyoming & Colorado</h4>
+                        <div id="pop-map"></div>
+                        <div class="population-list"></div>
+                        
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
+                        <p class="interactive-note">Counties with population over 50,000 are not included.</p>
                         <p class="interactive-note">Scotts Bluff County in <span class="red">red</span>.</p>
-                        <p class="interactive-note">The current largest are not included.</p>
-                        <p class="interactive-note">Lancaster CO. Douglass CO. have too large populations.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="copy">
-            <div class="container container-small">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quibusdam cumque velit nihil perspiciatis voluptatum consequatur tenetur laudantium voluptatem temporibus, atque necessitatibus sapiente praesentium porro maiores est odit adipisci consequuntur!</p>
-                        <p>Iure repudiandae necessitatibus minus consequuntur earum minima ea officiis repellendus veniam. Labore, sequi quisquam earum dicta perspiciatis neque suscipit, illum doloremque similique odio nobis quam dolores eum, non provident nisi?</p>
                     </div>
                 </div>
             </div>
@@ -398,29 +440,50 @@
             </div>
         </section>
 
-        <section class="image-featured-behind footer">
-            <div class="container-fluid">
+        <section class="copy">
+            <div class="container container-small">
                 <div class="row">
-                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="image-featured-behind">
+                    <div class="col-sm-12">
+                        <p>Several years ago, Bob Busch decided western farmers didn’t know enough about where their water comes from, despite how much they value it. So he began leading tours all the way up into eastern Wyoming to show off the North Platte irrigation system. </p>
+                        
+                        <p>“It’s just amazing. We don’t give enough credit to our forefathers to have their visions, their dreams and the determination and the willpower to put this thing together. It took a lot of work. And we take that for granted today,” said Busch.</p>
+                        
+                        <p>More than a century after construction, the North Platte Project remains a critical and robust system of water delivery, but irrigation practices have changed in recent decades. While farmers under the Gering-Ft. Laramie Irrigation District are almost solely dependent on surface water, farmers in other areas of the panhandle can also pump groundwater to use on fields.</p>
+                        
+                        <p>Increasingly, both surface and groundwater water is delivered through sprinkler or center pivot systems. These systems significantly reduce the labor demands and allow farmers to give plants more precise amounts of water instead of flooding the entire crop row for a day. But it also means some of what irrigators call “return flows,” water that seeps into the groundwater table or runs off into creeks and streams, and eventually the North Platte River, are diminishing, because that “waste” water is no longer part of the process.</p>
+                        
+                        <p>“Prior to technology with pivots we used to gravity (flood) irrigate and got that water back to the system, got that water back into the streams,” Preston said. Now, “it’s slowly dwindling away. You’re not getting that deep, ground percolation.”</p>
+                        
+                        <p>In addition, some irrigation districts are now lining their canals and sending water via underground pipe instead of dirt sided laterals, further reducing seepage in an effort to conserve and maximize their water deliveries. Combined with more groundwater pumping from the aquifer, it all makes for an array of complicated modern issues, said Preston.</p>
+                        
+                        <p>“The increased demand for the produce, the increased demand for the livestock feeds, the increased amount for water…” Preston said, “it’s going to continue to get worse and more demanding as time goes on.”</p>
+                        
+                        <p>Standing by his sugar beet field in the mid-morning light, Bob Busch said that supply and control of water drives everything he does on the farm.</p>
+                        
+                        <p>“Water’s our very key,” Bob Busch said. “It’s our lifeblood.”</p>
+                        
                     </div>
                 </div>
             </div>
         </section>
 
+        <section class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- <div class="col-xs-12"> -->
+                        <div class="video-wrapper-16-9 vid-wrap">
+                            <iframe id="snowpack" src="//player.vimeo.com/video/107632078?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </section>
 
         <footer>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-6 col-sm-offset-2">
-                        <p class="credits">credits</p>
-                        <p class="credit">Design and Development: Steven Speicher</p>
-                        <p class="credit">Reporting: Ariana Brocious</p>
-                        <p class="credit">Video Editing: Peter Stegen</p>
-                        <p class="credit">Multimedia: Peter Stegen & Steven Speicher</p>
-                        <p class="credit">Production Assistants: Mariah Lundgren, Joe Arneson & Sierra Harris</p>
-                        <p class="credit">Historical Research: Andrew DeCamp</p>
-                    </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-offset-2 col-sm-6">
+                        <p class="next-page"><a href="http://www.plattebasintimelapse.com">Go Back</a></p>
                     </div>
                 </div>
             </div>
@@ -446,10 +509,10 @@
         <script src="../../../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
         <script src="../../../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
         <script src="../../../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
-        <script src="../../../bower_components/handlebars/handlebars.js"></script>
         <script src="../../../bower_components/leaflet/dist/leaflet.js"></script>
         <script src="../../../bower_components/leaflet/dist/leaflet-src.js"></script>
         <script src="../../../bower_components/jquery-ui/jquery-ui.js"></script>
+        <script src="../../../bower_components/vimeo-player-api/javascript/froogaloop.min.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
         
@@ -467,10 +530,10 @@
         
         <!-- endbuild -->
         <!-- build:js({app,.tmp}) ../scripts/main.js -->
-        <script src="../scripts/colorbrewer.js"></script>
         <script src="../scripts/pop-charts.js"></script>
         <script src="../scripts/snow-charts.js"></script>
         <script src="../scripts/swe.js"></script>
+        <script src="../scripts/mapping.js"></script>
         <script src="../scripts/main.js"></script>
         <!-- endbuild -->
         

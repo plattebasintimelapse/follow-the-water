@@ -335,7 +335,7 @@ module.exports = function (grunt) {
                         'media/{,*/}*.*',
                         'img/{,*/}*.*',
                         'data/{,*/}*.*',
-                        'bower_components/fontawesome/css/fonts/{,*/}*.*'
+                        '../bower_components/fontawesome/fonts/{,*/}*.*'
                     ]
                 }, {
                     expand: true,
@@ -353,26 +353,6 @@ module.exports = function (grunt) {
                 src: '{,*/}*.css'
             }
         },
-
-        // handlebars: {
-        //   compile: {
-        //     files: {
-        //       '.tmp/scripts/compiled-templates.js': [
-        //         '<%= yeoman.app %>/templates/**/*.hbs'
-        //       ]
-        //     },
-        //     options: {
-        //       namespace: 'MyApp.Templates',
-        //       wrapped: true,
-        //       processName: function(filename) {
-        //         // funky name processing here
-        //         return filename
-        //                 .replace(/^app/, '')
-        //                 .replace(/\.hbs$/, '');
-        //       }
-        //     }
-        //   }
-        // },
 
         // Generates a custom Modernizr build that includes only the tests you
         // reference in your app
@@ -396,18 +376,13 @@ module.exports = function (grunt) {
             server: [
                 'sass:server',
                 'copy:styles'
-                // ,
-                // 'handlebars'
             ],
             test: [
                 'copy:styles'
-                // ,
-                // 'handlebars'
             ],
             dist: [
                 'sass',
                 'copy:styles',
-                // 'handlebars',
                 'imagemin',
                 'svgmin'
             ]
