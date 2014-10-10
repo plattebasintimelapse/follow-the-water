@@ -27,13 +27,14 @@ function makeSnotelChart() {
         .scale(x)
         .orient("bottom");
 
-    if ( parseInt( $(window).width() ) < mobileThreshold) {
-        xAxis.ticks(5);
-    }
-
     var yAxis = d3.svg.axis()
         .scale(y)
         .orient("left");
+
+    if ( parseInt( $(window).width() ) < mobileThreshold) {
+        xAxis.ticks(5);
+        yAxis.ticks(5);
+    }
 
     var line = d3.svg.line()
         .interpolate("basis")
@@ -139,10 +140,13 @@ function makeSnotelChart() {
 
             if ( parseInt( $(window).width() ) < mobileThreshold) {
                 xAxis.ticks(5);
+                yAxis.ticks(5);
             }
 
             svg.select('.y.axis')
               .call(yAxis);
+            svg.select('.x.axis')
+              .call(xAxis);
 
             /* Force D3 to recalculate and update the line */
             svg.selectAll('.line')

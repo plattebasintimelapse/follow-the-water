@@ -28,6 +28,9 @@
         @include breakpoint(mama-bear) { margin: 2px auto;}
         @include breakpoint(baby-bear) { width: 60px; margin: 0 auto;}
     }
+    .btn-skip {
+        @include breakpoint(baby-bear) { margin-bottom: 100px;}
+    }
 }
 
 
@@ -35,6 +38,9 @@
 #btn-intro {
     margin: 30px;
 }
+
+
+
 
 #intro .btn-default, #intro .btn-default:focus {
     background-color:transparent;

@@ -143,6 +143,7 @@ function makePopChart() {
     function makeMap() {
         var width = parseInt(d3.select("#pop-map").style("width"));
         var height = parseInt(d3.select("#pop-map").style("height"));
+        var mobileThreshold = 1300;
 
         var svg = d3.select("#pop-map").append("svg")
             .attr("width", width)
@@ -150,8 +151,15 @@ function makePopChart() {
 
         d3.json("../data/three_states.json", function(json) {
             var center = d3.geo.centroid(json)
-            var scale  = 1200;
-            var offset = [150, 200];
+            var scale, offset;
+
+            if ( parseInt( $(window).width() ) < mobileThreshold) {
+                scale  = 900;
+                offset = [100, 200];
+            } else {
+                scale  = 1200;
+                offset = [150, 200];
+            }
             var xy = d3.geo.mercator().scale(scale).center(center).translate(offset);
             var path = d3.geo.path().projection(xy);
             var stateAbbr;

@@ -96,9 +96,12 @@ function setMasterStyles() {
         skrollr.init({
             forceHeight: false
         });
+
     }
 
-        
+    if($wWidth <= 1000) {
+        $('img.zoom').trigger('zoom.destroy');
+    }
 }
 
 function listenForAudioCntl( sound ) {

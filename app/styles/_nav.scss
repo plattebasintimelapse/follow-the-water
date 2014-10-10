@@ -1,7 +1,6 @@
 
-#intro-nav {
+#main-nav {
     position: fixed;
-    bottom: 0;
     left: 0;
     width: 100%;
     height: auto;
@@ -17,22 +16,22 @@
     }
 }
 
-#nav {
-    height: auto;
-    background: black;
-    color: white;
-    overflow: hidden;
-    z-index: 100000;
-    border-radius: 0;
-    @include breakpoint(baby-bear) { 
-        height: 30px;
+#intro {
+    #main-nav {
+        bottom: 0;
+    }
+}
+
+.part-one, .part-two, .part-three {
+    #main-nav {
+        top: 0;
     }
 }
 
 .nav-wrapper {
     padding: 10px 20px;
     @include breakpoint(baby-bear) { 
-        padding: 4px 10px;
+        padding: 0 10px;
     }
 }
 
@@ -85,7 +84,6 @@
 #menu {
     display: block;
     @include breakpoint(baby-bear) { display: none; }
-    
     li {
         display: inline-block;
     }

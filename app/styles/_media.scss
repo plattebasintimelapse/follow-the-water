@@ -9,14 +9,14 @@
 
 #snow-opening {
     // background-image: url('http://projects.plattebasintimelapse.com/assets/static/gifs/snowfall.gif');
-    background-image: url('../media/snowfall.gif');
+    background-image: url('../img/header-part-one.gif');
     @include breakpoint(mama-bear) {
 		background-image: url('../media/mobile/header-part-one.jpg');
 	}
 }
 #pathfinder-opening {
     // background-image: url('http://projects.plattebasintimelapse.com/assets/static/gifs/pathfinder.gif');
-    background-image: url('../media/pathfinder.gif');
+    background-image: url('../img/header-part-two.gif');
 	@include breakpoint(mama-bear) {
 		background-image: url('../media/mobile/header-part-two.jpg');
 	}
@@ -24,7 +24,7 @@
 
 #field-opening {
     // background-image: url('http://projects.plattebasintimelapse.com/assets/static/gifs/field.gif');
-    background-image: url('../media/field.gif');
+    background-image: url('../img/header-part-three.gif');
 	@include breakpoint(mama-bear) {
 		background-image: url('../media/mobile/header-part-three.jpg');
 	}
@@ -69,14 +69,24 @@
 	}
 }
 
-#bob-farm-title {
-	position: absolute;
-	top: 50%;
+#busch-farm-title {
+	top: 30%;
 	right: 10%;
+	left: auto;
+	bottom: auto;
 	text-align:right;
-	font-size: 2em;
-	line-height: 1.4em;
-	width: 500px;
+	width: 35%;
+	font-size: 3.6em;
+	line-height: 1em;
+
+	@include breakpoint(mama-bear) {
+		width: 50%;
+		font-size: 3em;
+	}
+	@include breakpoint(baby-bear) {
+		font-size: 2.2em;
+		top: 25%;
+	}
 }
 
 .tl-sequence {
@@ -84,6 +94,12 @@
 		left: 25px;
 		bottom: 15px;
 		font-size: 1.6em;
+		@include breakpoint(mama-bear) {
+			font-size: 1.4em;
+		}
+		@include breakpoint(baby-bear) {
+			font-size: 1.2em;
+		}
 	}
 }
 

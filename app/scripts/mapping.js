@@ -9,7 +9,8 @@ function makeDamMap() {
         center: [42.105, -105.99],
         zoom: 7,
         zoomControl: 'false',
-        maxBounds: bounds
+        maxBounds: bounds,
+        tap: false
     });
 
     map.scrollWheelZoom.disable();

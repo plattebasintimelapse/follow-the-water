@@ -229,7 +229,8 @@ header p {
 	border-top: 1px solid lightgray;
 
 	@include breakpoint(mama-bear) {
-		margin: 40px 0;
+		margin: 5px 0;
+		padding: 0;
 		border-bottom: none;
 		border-top: none;
 	}
@@ -255,7 +256,7 @@ header p {
 	      	background-attachment: fixed;
 	    }
 		@include breakpoint(baby-bear) {
-			background-attachment: fixed;
+			background-attachment: scroll;
 		}
 	}
 }

@@ -78,6 +78,12 @@ h1 {
 
 h2 { font-size: 1.6em; }
 
+h4 {
+	@include breakpoint(baby-bear) {
+		font-size:13px;
+	}
+}
+
 img {
 	width: 100%;
 }
