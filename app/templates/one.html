@@ -231,14 +231,24 @@
             </div>
         </section>
 
-        <section class="gap-full" id="video-closing">
+        <section class="gap-full mama-bear-hide" id="video-closing">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-12 video-behind col-no-pad">
-                        <video id="jack-creek-video" loop preload="metadata">
+                        <video id="jack-creek-video" loop preload="metadata" pposter="../media/part-one-end.jpg">
                             <source src="../media/jack-creek.mp4" type="video/mp4">
                             <source src="../media/jack-creek.ogg" type="video/ogg">
                         </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="image-featured-behind mama-bear footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <span class="image-caption image-caption-right">Little Jack Creek transforms from a raging</span>
+                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="part-one-end">
                     </div>
                 </div>
             </div>
@@ -264,7 +274,8 @@
                 .parent()
                 .zoom({
                     on: 'click',
-                    magnify: '1'
+                    magnify: '1',
+                    touch: 'true'
                 });
 
             $('#ui-slider-handle').draggable();

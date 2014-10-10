@@ -40,24 +40,34 @@
         <section class="interactive" id="pathfinder-historicals">
             <div class=" container container-large">
                 <div class="row images">
-                    <div class="col-sm-2">
+                    <div class="col-sm-2 baby-bear-hide">
                         <p><img class="zoom-in-icon" src="../media/zoom.png" />At it's time, Pathfinder Dam was a tremendous undertaking. Four people died during its construction.</p><p>The top spans the girth of Fremont Canyon, offering dramatic views down steep sides to the river below.</p>
                     </div>
-                    <div class="col-sm-5">
+                    <div class="col-md-5 col-xs-6">
                         <img class="zoom" src="../media/pathfinder-1.jpg" alt="">
                     </div>
-                    <div class="col-sm-5">
+                    <div class="col-md-5 col-xs-6">
                         <img class="zoom" src="../media/pathfinder-almost.jpg" alt="">
                     </div>
                 </div>
+                <div class="row baby-bear">
+                    <div class="col-sm-offset-1 col-sm-8">
+                        <p><img class="zoom-in-icon" src="../media/zoom.png" />At it's time, Pathfinder Dam was a tremendous undertaking. Four people died during its construction.</p><p>The top spans the girth of Fremont Canyon, offering dramatic views down steep sides to the river below.</p>
+                    </div>
+                </div>
                 <div class="row images">
-                    <div class="col-sm-5">
+                    <div class="col-sm-5 col-xs-6">
                         <img class="zoom" src="../media/pathfinder-base.jpg" alt="">
                     </div>
-                    <div class="col-sm-5">
+                    <div class="col-sm-5 col-xs-6">
                         <img class="zoom" src="../media/pathfinder-2.jpg" alt="">
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-2 baby-bear-hide">
+                        <p><img class="zoom-in-icon" src="../media/zoom.png" />Granite quarried from local hills was hewn into huge blocks to create the arch-style structure, 97 feet thick at the base narrowing to a mere 11 feet at the top.</p><p>The top spans the girth of Fremont Canyon, offering dramatic views down steep sides to the river below.</p>
+                    </div>
+                </div>
+                <div class="row baby-bear">
+                    <div class="col-sm-offset-1 col-sm-8">
                         <p><img class="zoom-in-icon" src="../media/zoom.png" />Granite quarried from local hills was hewn into huge blocks to create the arch-style structure, 97 feet thick at the base narrowing to a mere 11 feet at the top.</p><p>The top spans the girth of Fremont Canyon, offering dramatic views down steep sides to the river below.</p>
                     </div>
                 </div>
@@ -77,13 +87,17 @@
         <section class="interactive" id="np-dams-map">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-3 col-sm-offset-1">
+                    <div class="col-sm-3 col-sm-offset-1 baby-bear-hide">
                         <h2>The Dams of the North Platte River</h2>
                         <div id="dam-info-panel">
                             <p class="default-text"><em><i class="fa fa-hand-o-up"></i> Click markers on the map to learn about the dams in the North Platte River basin.</em></p>
                         </div>
                     </div>
-                    <div class="col-sm-7"><div id="dam-map"></div></div>
+
+                    <div class="col-md-7 col-sm-12">
+                        <h2 class="baby-bear">The Dams of the North Platte River</h2>
+                        <div id="dam-map"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -143,14 +157,25 @@
         <section class="image-featured-behind footer">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="part-two-end">
+                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-full" id="part-two-end">
                         <div id="bob-water-kicker">
                             <p class="text-over-image">“without water, we have nothing.”</p>
-                        </div>
+                        </div> 
                     </div>
                 </div>
             </div>
         </section>
+
+  <!--       <section class="image-featured-behind footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <span class="image-caption image-caption-right">Little Jack Creek transforms from a raging</span>
+                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-full" id="part-two-end">
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
 
 
         <footer>
@@ -173,7 +198,8 @@
             .parent()
             .zoom({
                 on: 'click',
-                magnify: '1'
+                magnify: '1',
+                touch: 'true'
             });
         </script>
 

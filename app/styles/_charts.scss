@@ -28,6 +28,9 @@
     @include breakpoint(mama-bear) {
         height: 300px;
     }
+    @include breakpoint(baby-bear) {
+        height: 200px;
+    }
 }
 
 #snotel-legend {
@@ -37,12 +40,20 @@
         height: 20px;
         padding: 0 6px;
         display: inline;
+        @include breakpoint(baby-bear) {
+            padding: 0 2px;
+        }
     }
     .legend-icon {
         height: 10px;
         width: 10px;
         display: inline-block;
         margin-right: 4px;
+        @include breakpoint(baby-bear) {
+            height: 8px;
+            width: 8px;
+            margin-right: 1px;
+        }
     }
     p {
         display: inline-block;

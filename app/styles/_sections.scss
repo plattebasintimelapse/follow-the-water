@@ -112,20 +112,26 @@ header p {
 .part-one .opening-title-right, .part-three .opening-title-right {
 	top: 150px;
 	right: 100px;
+	@include breakpoint(mama-bear) {
+		top: 30%;
+		right: 5%;
+		width: 80%;
+	}
 	@include breakpoint(baby-bear) {
-		top: 60px;
-		right: 30px;
-		width: 250px;
+		top: 25%;
 	}
 }
 
 .part-two .opening-title-left {
 	top: 150px;
 	left: 100px;
+	@include breakpoint(mama-bear) {
+		top: 30%;
+		left: 5%;
+		width: 80%;
+	}
 	@include breakpoint(baby-bear) {
-		top: 60px;
-		left: 30px;
-		width: 250px;
+		top: 25%;
 	}
 }
 
@@ -245,8 +251,11 @@ header p {
 		background-size: cover;
 		background-attachment: fixed;
 		background-repeat: no-repeat;
-		@include breakpoint(mama-bear) {
-			background-attachment: scroll;
+		@media only screen and (min-device-width: 681px) and (max-device-width: 1024px) {
+	      	background-attachment: fixed;
+	    }
+		@include breakpoint(baby-bear) {
+			background-attachment: fixed;
 		}
 	}
 }
@@ -320,9 +329,15 @@ img.zoomImg {
 
 .interactive {
 	padding: 40px 0;
+	@include breakpoint(baby-bear) {
+		padding: 10px 0;
+	}
 	p {
 		font-size: .8em;
-		line-height:1.2em;
+		line-height:1.3em;
+		@include breakpoint(baby-bear) {
+			font-size: .9em;
+		}
 	}
 	h2 {
 		text-align:center;
@@ -346,6 +361,7 @@ img.zoomImg {
 p.interactive-note {
 	font-size: .5em;
 	margin-bottom: 0px;
+
 }
 
 // CHARTS

@@ -16,12 +16,27 @@
     }
 }
 
+@include breakpoint(baby-bear) {
+    .baby-bear-hide {
+        display: none;
+    }
+}
+
 .mama-bear {
-	display: none;
+	   display: none;
+}
+.baby-bear {
+    display: none;
 }
 
 @include breakpoint(mama-bear) {
     .mama-bear {
     	display: inline-block;
+    }
+}
+
+@include breakpoint(baby-bear) {
+    .baby-bear {
+      display: inline-block;
     }
 }

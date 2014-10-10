@@ -1,3 +1,35 @@
+// HEADER IMAGES
+
+#lead-opening {
+	background-image: url('../media/cinemagraph-mid-snow.gif');
+	@include breakpoint(mama-bear) {
+		background-image: url('../media/mobile/header-lead.jpg');
+	}
+}
+
+#snow-opening {
+    // background-image: url('http://projects.plattebasintimelapse.com/assets/static/gifs/snowfall.gif');
+    background-image: url('../media/snowfall.gif');
+    @include breakpoint(mama-bear) {
+		background-image: url('../media/mobile/header-part-one.jpg');
+	}
+}
+#pathfinder-opening {
+    // background-image: url('http://projects.plattebasintimelapse.com/assets/static/gifs/pathfinder.gif');
+    background-image: url('../media/pathfinder.gif');
+	@include breakpoint(mama-bear) {
+		background-image: url('../media/mobile/header-part-two.jpg');
+	}
+}
+
+#field-opening {
+    // background-image: url('http://projects.plattebasintimelapse.com/assets/static/gifs/field.gif');
+    background-image: url('../media/field.gif');
+	@include breakpoint(mama-bear) {
+		background-image: url('../media/mobile/header-part-three.jpg');
+	}
+}
+
 .inline-video {
 	@include breakpoint(mama-bear) {
 		width: 100%;
@@ -52,12 +84,6 @@
 		left: 25px;
 		bottom: 15px;
 		font-size: 1.6em;
-		@include breakpoint(mama-bear) {
-			font-size: 1.2em;
-		}
-		@include breakpoint(baby-bear) {
-			font-size: .6em;
-		}
 	}
 }
 
@@ -74,31 +100,15 @@
 
 #pathfinder-historicals .images {
     padding-bottom: 25px;
+    @include breakpoint(baby-bear) {
+		padding-bottom: 0;
+	}
 }
 
 #historical-dam {
 	background-image: url('../media/early-pathfinder.jpg');
-}
 
-#lead-opening {
-	background-image: url('../media/cinemagraph-mid-snow.gif');
 }
-
-#snow-opening {
-    // background-image: url('http://projects.plattebasintimelapse.com/assets/static/gifs/snowfall.gif');
-    background-image: url('../media/snowfall.gif');
-}
-#pathfinder-opening {
-    // background-image: url('http://projects.plattebasintimelapse.com/assets/static/gifs/pathfinder.gif');
-    background-image: url('../media/pathfinder.gif');
-}
-
-#field-opening {
-    // background-image: url('http://projects.plattebasintimelapse.com/assets/static/gifs/field.gif');
-    background-image: url('../media/field.gif');
-}
-
-
 
 #bob-water-kicker {
 	position: absolute;
@@ -110,8 +120,12 @@
 	width: 600px;
 }
 
+#part-one-end {
+	background-image: url('../media/mobile/close-part-one.jpg');
+}
+
 #part-two-end {
-	background-image: url('../media/IMG_1086 copy.jpg');
+	background-image: url('../media/part-two-end.jpg');
 }
 
 #winter-wonderland {

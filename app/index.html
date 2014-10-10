@@ -34,19 +34,29 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-12 image-featured-behind-gap image-featured-behind-full" id="lead-opening"></div>
+
+                    <div class="opening-title-center" id="main-title">
+                        <div class="logo">
+                            <a href="http://www.plattebasintimelapse.com"><img src="img/PBTlogo-trans.png" alt=""></a>
+                        </div>
+                        <h1>Follow the Water</h1>
+                        <p>Follow a tiny snowflake as it makes its way to a sugarbeet field in the pandhandle of Nebraska.</p>
+                        <h5>By Steven Speicher, Ariana Brocious, & Peter Stegen</h5>
+
+                        <button class="btn btn-lg btn-default mama-bear-hide" id="btn-intro">Watch Intro</button>
+
+                        <div class="mama-bear" id="intro-video-wrapper-mobile">
+                            <div class="video-wrapper-16-9 vid-wrap">
+                                <iframe src="//player.vimeo.com/video/105373392?title=0&amp;byline=0&amp;portrait=0&amp;loop=0" frameborder="0"></iframe>
+                            </div>
+                        </div>
+
+                        <a href="snow" class="btn btn-lg btn-default btn-skip" role="button">Skip Intro</a>
+                    </div>
                 </div>
             </div>
-            <div class="opening-title-center" id="main-title">
-                <div class="logo">
-                    <a href="http://www.plattebasintimelapse.com"><img src="img/PBTlogo-trans.png" alt=""></a>
-                </div>
-                <h1>Follow the Water</h1>
-                <p>Follow a tiny snowflake as it makes its way to a sugarbeet field in the pandhandle of Nebraska.</p>
-                <h5>By Steven Speicher, Ariana Brocious, & Peter Stegen</h5>
-                <button class="btn btn-lg btn-default" id="btn-intro">Watch Intro</button>
-                <a href="snow" class="btn btn-lg btn-default btn-skip" role="button">Skip Intro</a>
-            </div>
-            <div class="video-wrapper">
+            
+            <div class="video-wrapper mama-bear-hide" id="intro-video-wrapper">
                 <div class="fluid-video-wrapper">
                     <iframe id="video-title" src="//player.vimeo.com/video/105373392?title=0&amp;byline=0&amp;portrait=0&amp;loop=0&amp;player_id=video-title&amp;api=1" frameborder="0"></iframe>
                 </div>
@@ -56,6 +66,7 @@
                     <button class="btn btn-sm btn-default" id="btn-loop">Restart <i class="fa fa-undo"></i></button>
                 </div>
             </div>
+
             <nav id="intro-nav" role="navigation" class="down">
                 <div class="nav-wrapper">
                     <div class="nav-button" id="nav-open">
@@ -159,50 +170,53 @@
         <!-- endbuild -->
 
         <script>
-            (function(){
-                console.log("Listening to Video...");
-                var $iframe = $('#video-title')[0];
-                var player = $f($iframe);
+            $(document).ready(function() {
+                (function(){
+                    console.log("Listening to Video...");
+                    var $iframe = $('#video-title')[0];
+                    var player = $f($iframe);
 
-                player.addEvent('ready', ready);
+                    player.addEvent('ready', ready);
 
-                function ready(player_id) {
-                    player.addEvent('finish', finish);
+                    function ready(player_id) {
+                        player.addEvent('finish', finish);
 
-                    $('#btn-intro').click(function() {
-                        $('.video-wrapper').fadeIn();
-                        player.api("play");
-                        $('.video-wrapper iframe').addClass('playing');
-                    });
-                    $('.btn-skip').click(function() {
-                        $('.video-wrapper iframe').removeClass('playing');
-                        player.api("stop");
-                        finish();
-                    });
-                    $('#btn-loop').click(function() {
-                        player.api("stop").api("seekTo", "0").api('play');
-                    });
-                    var vol_on = true;
-                    $('#btn-audio').click(function() {
-                        if (vol_on) {
-                            player.api('setVolume',0);
-                            $(this).find('i').addClass('fa-volume-up').removeClass('fa-volume-off');
-                            vol_on = false;
-                        } else {
-                            $(this).find('i').addClass('fa-volume-off').removeClass('fa-volume-up');
-                            player.api('setVolume',1);
-                            vol_on = true;
-                        }
-                    });
-                }
-                
-                function finish(player_id) {
-                    player.api("unload");
-                    $('.video-wrapper').remove();
-                    $('#intro header').remove();
-                    window.location.href = "snow";
-                }
-            }).call(this);
+                        $('#btn-intro').click(function() {
+                            $('#intro-video-wrapper').fadeIn(); 
+                            player.api("play");
+                            $('.video-wrapper iframe').addClass('playing');
+                        });
+                        $('.btn-skip').click(function() {
+                            $('#intro-video-wrapper iframe').removeClass('playing');
+                            player.api("stop");
+                            finish();
+                        });
+                        $('#btn-loop').click(function() {
+                            player.api("stop").api("seekTo", "0").api('play');
+                        });
+                        var vol_on = true;
+                        $('#btn-audio').click(function() {
+                            if (vol_on) {
+                                player.api('setVolume',0);
+                                $(this).find('i').addClass('fa-volume-up').removeClass('fa-volume-off');
+                                vol_on = false;
+                            } else {
+                                $(this).find('i').addClass('fa-volume-off').removeClass('fa-volume-up');
+                                player.api('setVolume',1);
+                                vol_on = true;
+                            }
+                        });
+                    }
+                    
+                    function finish(player_id) {
+                        player.api("unload");
+                        $('#intro-video-wrapper').remove();
+                        $('#intro header').remove();
+                        window.location.href = "snow";
+                    }
+                }).call(this);
+            });
+    
         </script>
     </body>
 </html>

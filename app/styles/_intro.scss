@@ -1,17 +1,36 @@
 #main-title {
     $main-width: 600px;
-    @include breakpoint(baby-bear) { width: 300px; margin-left: -150px; top: 15%;}
+    @include breakpoint(baby-bear) { width: 100%; margin-left: 0; left: 0; top: 15%;}
+    @include breakpoint(mama-bear) { top: 5%;}
     width: $main-width;
     left: 50%;
+    top: 15%;
     margin-left: -($main-width/2);
     background-color: rgba(0,0,0,.2);
     border-radius: 10px;
+    padding: 15px;
 }
 
-.logo {
-    width: 80px;
-    margin: 10px auto;
+#main-title {
+    h1 {
+        @include breakpoint(mama-bear) { font-size: 2.4em; margin-bottom: 0px; margin-top: 5px;}
+        @include breakpoint(baby-bear) { font-size: 1.8em; margin-top: 5px;}
+    }
+
+    p {
+        @include breakpoint(mama-bear) { margin-top: 0px;}
+        @include breakpoint(baby-bear) { }
+    }
+
+    .logo {
+        width: 80px;
+        margin: 10px auto;
+        @include breakpoint(mama-bear) { margin: 2px auto;}
+        @include breakpoint(baby-bear) { width: 60px; margin: 0 auto;}
+    }
 }
+
+
 
 #btn-intro {
     margin: 30px;
@@ -36,12 +55,24 @@
     left: 30px;
 }
 
+#intro-video-wrapper {
+    display: none;
+}
+
+#intro-video-wrapper-mobile {
+    width: 60%;
+    margin: 10px auto;
+    @include breakpoint(mama-bear) { display: block;}
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+      width: 30%;
+    }
+}
+
 .video-wrapper {
     position: absolute;
     top: 0;
     left: 0;
     width:100%;
-    display: none;
     background-color:black;
 }
 
