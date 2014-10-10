@@ -110,7 +110,7 @@ header p {
 }
 
 .part-one .opening-title-right, .part-three .opening-title-right {
-	top: 300px;
+	top: 150px;
 	right: 100px;
 	@include breakpoint(baby-bear) {
 		top: 60px;
@@ -120,7 +120,7 @@ header p {
 }
 
 .part-two .opening-title-left {
-	top: 300px;
+	top: 150px;
 	left: 100px;
 	@include breakpoint(baby-bear) {
 		top: 60px;
@@ -191,6 +191,14 @@ header p {
 	}
 }
 
+.inline-media-ex-large {
+	@extend .inline-media;
+	width: 85%;
+	@include breakpoint(mama-bear) {
+		width: 100%;
+	}
+}
+
 .inline-media-large {
 	@extend .inline-media;
 	width: 75%;
@@ -219,6 +227,10 @@ header p {
 		border-bottom: none;
 		border-top: none;
 	}
+}
+
+.no-border {
+	border: none;
 }
 
 // IMAGES

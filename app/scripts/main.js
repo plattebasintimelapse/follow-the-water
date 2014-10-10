@@ -1,50 +1,8 @@
 
 
-function listenForIntro() {
-    console.log("Listening to Video...");
-    var $iframe = $('#video-title')[0];
-    var player = $f($iframe);
-    var status = $('.status');
+// function listenForIntro() {
 
-    player.addEvent('ready', ready);
-
-    function ready(player_id) {
-        player.addEvent('finish', finish);
-
-        $('#btn-intro').click(function() {
-            $('.video-wrapper').fadeIn();
-            player.api("play");
-            $('.video-wrapper iframe').addClass('playing');
-        });
-        $('.btn-skip').click(function() {
-            $('.video-wrapper iframe').removeClass('playing');
-            player.api("stop");
-            finish();
-        });
-        $('#btn-loop').click(function() {
-            player.api("stop").api("seekTo", "0").api('play');
-        });
-        var vol_on = true;
-        $('#btn-audio').click(function() {
-            if (vol_on) {
-                player.api('setVolume',0);
-                $(this).find('i').addClass('fa-volume-up').removeClass('fa-volume-off');
-                vol_on = false;
-            } else {
-                $(this).find('i').addClass('fa-volume-off').removeClass('fa-volume-up');
-                player.api('setVolume',1);
-                vol_on = true;
-            }
-        });
-    }
-    
-    function finish(player_id) {
-        player.api("unload");
-        $('.video-wrapper').remove();
-        $('#intro header').remove();
-        window.location.href = "snow";
-    }
-};
+// };
 
 function listenVideo(id){
     console.log(id + ' video ready');
@@ -90,12 +48,26 @@ function listenVideo(id){
 var w = true;
 $('#toggle-canals').click(function(){
     if (w) {
-        $('#np-map').attr('src', '../media/north-platte-canals.png');
+        $('#canals-map-container').attr('src', '../media/canals/rivers.png');
         w = false;
     } else {
-        $('#np-map').attr('src', '../media/north-platte-river.png');
+        $('#canals-map-container').attr('src', '../media/canals/canals.png');
         w = true;
     }
+});
+
+$('#canals').click(function(){
+    console.log("clicked");
+    $('#canals-map-container').addClass('canals').removeClass('cities').removeClass('rivers');
+    $('#canals-map-container').attr('src', '../media/canals/canals.png');
+});
+$('#cities').click(function(){
+    $('#canals-map-container').addClass('cities').removeClass('canals').removeClass('rivers');
+    $('#canals-map-container').attr('src', '../media/canals/cities.png');
+});
+$('#rivers').click(function(){
+    $('#canals-map-container').addClass('rivers').removeClass('cities').removeClass('canals');
+    $('#canals-map-container').attr('src', '../media/canals/rivers.png');
 });
 
 
@@ -118,9 +90,15 @@ function setMasterStyles() {
 
     setTimeout(function() {
         $('.opening-scroll').fadeIn('slow')
-    }, 2000)
+    }, 1000)
 
-    skrollr.init();
+    if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+        skrollr.init({
+            forceHeight: false
+        });
+    }
+
+        
 }
 
 function listenForAudioCntl( sound ) {
@@ -173,19 +151,11 @@ $('#menu a').hover(function() {
 $(document).ready(function() {
     setMasterStyles();
 
-});
-
-$(window).resize(function() {
-    setMasterStyles();
-});
-
-$(window).load(function() {
-
     if ( $('body').is('#intro')  ) {
 
         // INTRO
         console.log("INTRO");
-        listenForIntro();
+        // listenForIntro();
 
     } else if ( $('body').is('.part-one')  ) {
 
@@ -196,7 +166,7 @@ $(window).load(function() {
         listenVideo('snowpack');
         makeSWE();
         makeSnotelChart();
-        
+
     } else if ( $('body').is('.part-two')  ) {
 
         // PART TWO: STORAGE
@@ -210,4 +180,14 @@ $(window).load(function() {
         console.log("PART THREE");
         makePopChart();
     }
+
+});
+
+$(window).resize(function() {
+    setMasterStyles();
+});
+
+$(window).load(function() {
+
+
 });

@@ -10,6 +10,12 @@
   }
 }
 
+@include breakpoint(mama-bear) {
+    .mama-bear-hide {
+        display: none;
+    }
+}
+
 .mama-bear {
 	display: none;
 }

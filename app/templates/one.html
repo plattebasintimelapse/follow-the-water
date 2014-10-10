@@ -35,13 +35,13 @@
                         <!--(bake partials/copy.html _foreach="grafs:snow.intro.grafs")-->
 
                         <div class="inline-media-large">
-                            <div class="inline-media-wrapper">
+                            <div class="inline-media-wrapper no-border">
                                 <img class="zoom" src="../media/north-platte-map.png" alt="">
-                                <span class="image-caption image-caption-right"><img class="zoom-in-icon" src="/media/zoom.png" />The North Platte River drains the northern Colorado Rockies and flows north into Wyoming. It's confluence with the South Platte River is in western Nebraska.</span>
+                                <span class="image-caption image-caption-right"><img class="zoom-in-icon" src="../media/zoom.png" />The North Platte River drains the northern Colorado Rockies and flows north into Wyoming. It's confluence with the South Platte River is in western Nebraska.</span>
                             </div>
                         </div>
 
-                        <!--(bake partials/copy.html _foreach="grafs:snow.intro.grafs")-->
+                        <!--(bake partials/copy.html _foreach="grafs:snow.intro_with_map.grafs")-->
 
                     </div>
                 </div>
@@ -81,13 +81,10 @@
             </div>
         </section>
 
-        
-
         <section class="image-featured-behind">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-small" id="jack-creek"></div>
-                    
+                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-small" id="winter-wonderland"></div>
                 </div>
                 <span class="image-caption image-caption-right">Late winter at Jack Creek, near the headwaters of the North Platte River.</span>
             </div>
@@ -120,7 +117,6 @@
                     </div>
                     <div class="col-sm-3">
                         <div id="snowflakes"></div>
-                        
                     </div>
 
                     <div class="col-sm-1 col-no-pad">
@@ -128,7 +124,6 @@
                     </div>
                     <div class="col-sm-3" >
                         <div id="waterdrops"></div>
-                        
                     </div>
 
                     <div class="col-sm-3" id="swe-desc">
@@ -239,7 +234,7 @@
         <section class="gap-full" id="video-closing">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="video-behind">
+                    <div class="col-sm-12 video-behind col-no-pad">
                         <video id="jack-creek-video" loop preload="metadata">
                             <source src="../media/jack-creek.mp4" type="video/mp4">
                             <source src="../media/jack-creek.ogg" type="video/ogg">
@@ -260,7 +255,6 @@
         </footer>
 
         <!--(bake partials/footer.html)-->
-        
 
         <!-- PAGE SPECIFIC SCRIPTS -->
         <script>
@@ -272,7 +266,7 @@
                     on: 'click',
                     magnify: '1'
                 });
-            
+
             $('#ui-slider-handle').draggable();
             $('#snow-type-selection p').popover({
                 trigger : 'hover',

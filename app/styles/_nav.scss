@@ -18,19 +18,22 @@
 }
 
 #nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: auto;
     background: black;
     color: white;
     overflow: hidden;
     z-index: 100000;
+    border-radius: 0;
+    @include breakpoint(baby-bear) { 
+        height: 30px;
+    }
 }
 
 .nav-wrapper {
     padding: 10px 20px;
+    @include breakpoint(baby-bear) { 
+        padding: 4px 10px;
+    }
 }
 
 .nav-button {
@@ -103,7 +106,9 @@
 #credits-modal {
 
     .modal-dialog {
-        margin-top: 20%;
+        margin-top: 10%;
+        @include breakpoint(baby-bear) { margin-top: 30%; }
+        @include breakpoint(mama-bear) { margin-top: 15%; }
     }
 
 	.modal-header {

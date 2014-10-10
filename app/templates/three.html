@@ -22,7 +22,7 @@
             <div class="container container-small">
                 <div class="row">
                     <div class="col-sm-12">
-                        <!--(bake partials/copy.html _foreach="grafs:field.section_one.grafs")-->
+                        <!--(bake partials/copy.html _foreach="grafs:field.intro.grafs")-->
                     </div>
                 </div>
             </div>
@@ -157,7 +157,18 @@
             <div class="container container-small">
                 <div class="row">
                     <div class="col-sm-12">
-                        <!--(bake partials/copy.html _foreach="grafs:field.section_two.grafs")-->
+                        <!--(bake partials/copy.html _foreach="grafs:field.after_beet_tl.grafs")-->
+
+                        <div class="inline-media-large inline-video" id="pipes-video">
+                            <div class="inline-media-wrapper">
+                                <div class="video-wrapper-16-9 vid-wrap">
+                                    <iframe id="pipes" src="//player.vimeo.com/video/108523452?title=0&amp;byline=0&amp;portrait=0&amp;loop=0&amp;player_id=lyle&amp;api=1" frameborder="0"></iframe>
+                                </div>
+                                <span class="image-caption image-caption-right">Lyle Myler talks about dams and stuff</span>
+                            </div>
+                        </div>
+
+                        <!--(bake partials/copy.html _foreach="grafs:field.irrigation_video.grafs")-->
                     </div>
                 </div>
             </div>
@@ -269,7 +280,7 @@
             <div class="container container-large">
                 <div class="row">
                     <h2>Counties West of the 100<sup>th</sup> Meridian</h2>
-                    <h3>Population growth from 1900 - today</h3>
+                    <h3><i class="fa fa-hand-o-up"></i> Population growth from 1900 - today</h3>
                     <div class="col-md-8">
                         <div id="pop-chart"></div>
                     </div>
@@ -287,20 +298,8 @@
                         <p class="interactive-note">Scotts Bluff County in <span class="red">red</span>.</p>
                     </div>
                     <div class="col-sm-6 credit">
-                        <p>Data from the <a href="http://www.census.gov/">US Census.</a></p>
+                        <p>Data from the 2010 <a href="http://www.census.gov/">US Census.</a></p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="container container-large">
-                <div class="row" id="stack-maps">
-                    <div class="col-sm-12">
-                        <img id="np-map" src="../media/north-platte-river.png">
-                        <!-- <img id="after" src="../media/north-platte-canals.png"> -->
-                    </div>
-                    <button class="btn btn-default" id="toggle-canals">Toggle Canals</button>
                 </div>
             </div>
         </section>
@@ -309,7 +308,50 @@
             <div class="container container-small">
                 <div class="row">
                     <div class="col-sm-12">
+
+                        <p>There are <span class="inline-video-btn" id="toggle-canals"><i class="fa fa-play"></i> canals</span> in the western part of the state that carry all of this water to farmer's fields.</p>
+
+                        <div class="inline-media-ex-large" id="canals-before-after">
+                            <div class="inline-media-wrapper no-border">
+                                <img id="canals-map-container" src="../media/canals/canals.png">
+                            </div>
+                        </div>
+
                         <!--(bake partials/copy.html _foreach="grafs:field.section_four.grafs")-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="image-featured">
+            <div class="container-fluid">
+                <div class="row">
+                    <img src="../media/IMG_1086 copy.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="interactive" id="pathfinder-historicals">
+            <div class=" container container-large">
+                <div class="row images">
+                    <div class="col-sm-2">
+                        <p><img class="zoom-in-icon" src="../media/zoom.png" />At it's time, Pathfinder Dam was a tremendous undertaking. Four people died during its construction.</p><p>The top spans the girth of Fremont Canyon, offering dramatic views down steep sides to the river below.</p>
+                    </div>
+                    <div class="col-sm-5">
+                        <img class="zoom" src="../media/IMG_1096 copy.jpg" alt="">
+                    </div>
+                    <div class="col-sm-5">
+                        <img class="zoom" src="../media/IMG_1100 copy.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="copy">
+            <div class="container container-small">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!--(bake partials/copy.html _foreach="grafs:field.section_five.grafs")-->
                     </div>
                 </div>
             </div>
@@ -318,11 +360,11 @@
         <section class="footer">
             <div class="container-fluid">
                 <div class="row">
-                    <!-- <div class="col-xs-12"> -->
-                        <div class="video-wrapper-16-9 vid-wrap">
+                    <div class="col-xs-12 col-no-pad video-wrapper-16-9 vid-wrap">
+                        <!-- <div class=""> -->
                             <iframe src="//player.vimeo.com/video/108289903?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                        </div>
-                    <!-- </div> -->
+                        <!-- </div> -->
+                    </div>
                 </div>
             </div>
         </section>
@@ -358,6 +400,15 @@
         <!-- PAGE SPECIFIC SCRIPTS -->
         <script>
             $('.tip').tooltip();
+
+            $('img.zoom')
+                .wrap('<span style="display:inline-block"></span>')
+                .css('display', 'block')
+                .parent()
+                .zoom({
+                    on: 'click',
+                    magnify: '1'
+                });
 
         </script>
     </body>

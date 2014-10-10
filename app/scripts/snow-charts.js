@@ -28,7 +28,6 @@ function makeSnotelChart() {
         .orient("bottom");
 
     if ( parseInt( $(window).width() ) < mobileThreshold) {
-        console.log("mobile");
         xAxis.ticks(5);
     }
 

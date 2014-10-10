@@ -63,16 +63,16 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-	font-size: 3em;
+	font-size: 4em;
 
 	@include breakpoint(papa-bear) {
-		font-size:2.4em;
+		font-size:3.6em;
 	}
 	@include breakpoint(mama-bear) {
-		font-size:1.8em;
+		font-size:3.2em;
 	}
 	@include breakpoint(baby-bear) {
-		font-size:1.2em;
+		font-size:2.4em;
 	}
 }
 

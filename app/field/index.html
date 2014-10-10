@@ -32,7 +32,7 @@
 
 		
 
-        <nav id="nav" role="navigation" class="down" data-200-start="margin-top:-80px;" data-800-start="margin-top:0px;">
+        <nav id="nav" role="navigation" class="navbar navbar-default navbar-fixed-top down" data-200-start="margin-top:-80px;" data-800-start="margin-top:0px;">
             <div class="nav-wrapper container-fluid">
                 <div class="nav-button" id="home-btn">
                     <h4><a href="http://www.plattebasintimelapse.com">PBT</a></h4>
@@ -66,7 +66,7 @@
                     
                 </div>
             </div>
-            <div class="container-fluid" id="pager-progress">
+            <div class="container-fluid mama-bear-hide" id="pager-progress">
                 <div id="pager" data-0="width:0%" data-end="width:100%;">
                 </div>
             </div>
@@ -96,11 +96,13 @@
                             <p class="credit">Production Assistants: <span class="name">Joe Arneson</span></p>
                             <p class="credit">Historical Research: <span class="name">Andrew DeCamp</span></p>
                             <p class="credit">Editing: <span class="name">Matt Waite</span></p>
+                            <p class="credit">Transcription: <span class="name">Pat Richmond & Jan Howard</span></p>
                         </div>
                         <div>
                             <p class="credits">Speical Thanks</p>
                             <p class="thanks">Bob Busch, Mage Hulstrand, Matt Hoobler, afna awnvawrjga a,aar gabg agakrgja rg ag, rwgbwgj gWRG,</p>
                         </div>
+                        <div><p class="thanks">Snowflake icons made by Freepik from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></p></div>
                     </div>
                 </div>
             </div>
@@ -279,6 +281,16 @@
                         
                         <p>“Our [operation] is very labor intense. It takes a lot of manpower and a lot of time,” Kendall Busch said.</p>
                         
+
+                        <div class="inline-media-large inline-video" id="pipes-video">
+                            <div class="inline-media-wrapper">
+                                <div class="video-wrapper-16-9 vid-wrap">
+                                    <iframe id="pipes" src="//player.vimeo.com/video/108523452?title=0&amp;byline=0&amp;portrait=0&amp;loop=0&amp;player_id=lyle&amp;api=1" frameborder="0"></iframe>
+                                </div>
+                                <span class="image-caption image-caption-right">Lyle Myler talks about dams and stuff</span>
+                            </div>
+                        </div>
+
                         <p>By summer, irrigation season is in full swing across the arid west. Mountain snowmelt, held back by dams and stored in reservoirs, starts to be released for use on fields in May. Without it, agriculture would not exist in this arid region, where annual rainfall rarely exceeds 16 inches. </p>
                         
                         <p>“Water is the most valuable resource we have,” Rick Preston said. He’s general manager of the Gering-Ft. Laramie Irrigation District, which provides irrigation water to nearly 55,000 acres in the Nebraska panhandle, including those owned by the Busch family. It’s one of four original government districts commissioned along with Pathfinder Dam in 1903 by the U.S. Reclamation Service (today’s Bureau of Reclamation), and one of the oldest water right holders on the North Platte River. </p>
@@ -409,7 +421,7 @@
             <div class="container container-large">
                 <div class="row">
                     <h2>Counties West of the 100<sup>th</sup> Meridian</h2>
-                    <h3>Population growth from 1900 - today</h3>
+                    <h3><i class="fa fa-hand-o-up"></i> Population growth from 1900 - today</h3>
                     <div class="col-md-8">
                         <div id="pop-chart"></div>
                     </div>
@@ -427,20 +439,8 @@
                         <p class="interactive-note">Scotts Bluff County in <span class="red">red</span>.</p>
                     </div>
                     <div class="col-sm-6 credit">
-                        <p>Data from the <a href="http://www.census.gov/">US Census.</a></p>
+                        <p>Data from the 2010 <a href="http://www.census.gov/">US Census.</a></p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="container container-large">
-                <div class="row" id="stack-maps">
-                    <div class="col-sm-12">
-                        <img id="np-map" src="../media/north-platte-river.png">
-                        <!-- <img id="after" src="../media/north-platte-canals.png"> -->
-                    </div>
-                    <button class="btn btn-default" id="toggle-canals">Toggle Canals</button>
                 </div>
             </div>
         </section>
@@ -449,10 +449,52 @@
             <div class="container container-small">
                 <div class="row">
                     <div class="col-sm-12">
+
+                        <p>There are <span class="inline-video-btn" id="toggle-canals"><i class="fa fa-play"></i> canals</span> in the western part of the state that carry all of this water to farmer's fields.</p>
+
+                        <div class="inline-media-ex-large" id="canals-before-after">
+                            <div class="inline-media-wrapper no-border">
+                                <img id="canals-map-container" src="../media/canals/canals.png">
+                            </div>
+                        </div>
+
                         <p>Several years ago, Bob Busch decided western farmers didn’t know enough about where their water comes from, despite how much they value it. So he began leading tours all the way up into eastern Wyoming to show off the North Platte irrigation system. </p>
                         
                         <p>“It’s just amazing. We don’t give enough credit to our forefathers to have their visions, their dreams and the determination and the willpower to put this thing together. It took a lot of work. And we take that for granted today,” said Busch.</p>
                         
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="image-featured">
+            <div class="container-fluid">
+                <div class="row">
+                    <img src="../media/IMG_1086 copy.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="interactive" id="pathfinder-historicals">
+            <div class=" container container-large">
+                <div class="row images">
+                    <div class="col-sm-2">
+                        <p><img class="zoom-in-icon" src="../media/zoom.png" />At it's time, Pathfinder Dam was a tremendous undertaking. Four people died during its construction.</p><p>The top spans the girth of Fremont Canyon, offering dramatic views down steep sides to the river below.</p>
+                    </div>
+                    <div class="col-sm-5">
+                        <img class="zoom" src="../media/IMG_1096 copy.jpg" alt="">
+                    </div>
+                    <div class="col-sm-5">
+                        <img class="zoom" src="../media/IMG_1100 copy.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="copy">
+            <div class="container container-small">
+                <div class="row">
+                    <div class="col-sm-12">
                         <p>More than a century after construction, the North Platte Project remains a critical and robust system of water delivery, but irrigation practices have changed in recent decades. While farmers under the Gering-Ft. Laramie Irrigation District are almost solely dependent on surface water, farmers in other areas of the panhandle can also pump groundwater to use on fields.</p>
                         
                         <p>Increasingly, both surface and groundwater water is delivered through sprinkler or center pivot systems. These systems significantly reduce the labor demands and allow farmers to give plants more precise amounts of water instead of flooding the entire crop row for a day. But it also means some of what irrigators call “return flows,” water that seeps into the groundwater table or runs off into creeks and streams, and eventually the North Platte River, are diminishing, because that “waste” water is no longer part of the process.</p>
@@ -475,11 +517,11 @@
         <section class="footer">
             <div class="container-fluid">
                 <div class="row">
-                    <!-- <div class="col-xs-12"> -->
-                        <div class="video-wrapper-16-9 vid-wrap">
+                    <div class="col-xs-12 col-no-pad video-wrapper-16-9 vid-wrap">
+                        <!-- <div class=""> -->
                             <iframe src="//player.vimeo.com/video/108289903?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                        </div>
-                    <!-- </div> -->
+                        <!-- </div> -->
+                    </div>
                 </div>
             </div>
         </section>
@@ -562,6 +604,15 @@
         <!-- PAGE SPECIFIC SCRIPTS -->
         <script>
             $('.tip').tooltip();
+
+            $('img.zoom')
+                .wrap('<span style="display:inline-block"></span>')
+                .css('display', 'block')
+                .parent()
+                .zoom({
+                    on: 'click',
+                    magnify: '1'
+                });
 
         </script>
     </body>

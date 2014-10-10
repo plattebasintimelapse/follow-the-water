@@ -34,7 +34,7 @@
 
 
 
-        <nav id="nav" role="navigation" class="down" data-200-start="margin-top:-80px;" data-800-start="margin-top:0px;">
+        <nav id="nav" role="navigation" class="navbar navbar-default navbar-fixed-top down" data-200-start="margin-top:-80px;" data-800-start="margin-top:0px;">
             <div class="nav-wrapper container-fluid">
                 <div class="nav-button" id="home-btn">
                     <h4><a href="http://www.plattebasintimelapse.com">PBT</a></h4>
@@ -68,7 +68,7 @@
                     
                 </div>
             </div>
-            <div class="container-fluid" id="pager-progress">
+            <div class="container-fluid mama-bear-hide" id="pager-progress">
                 <div id="pager" data-0="width:0%" data-end="width:100%;">
                 </div>
             </div>
@@ -98,11 +98,13 @@
                             <p class="credit">Production Assistants: <span class="name">Joe Arneson</span></p>
                             <p class="credit">Historical Research: <span class="name">Andrew DeCamp</span></p>
                             <p class="credit">Editing: <span class="name">Matt Waite</span></p>
+                            <p class="credit">Transcription: <span class="name">Pat Richmond & Jan Howard</span></p>
                         </div>
                         <div>
                             <p class="credits">Speical Thanks</p>
                             <p class="thanks">Bob Busch, Mage Hulstrand, Matt Hoobler, afna awnvawrjga a,aar gabg agakrgja rg ag, rwgbwgj gWRG,</p>
                         </div>
+                        <div><p class="thanks">Snowflake icons made by Freepik from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></p></div>
                     </div>
                 </div>
             </div>
@@ -145,15 +147,15 @@
                         
 
                         <div class="inline-media-large">
-                            <div class="inline-media-wrapper">
+                            <div class="inline-media-wrapper no-border">
                                 <img class="zoom" src="../media/north-platte-map.png" alt="">
-                                <span class="image-caption image-caption-right"><img class="zoom-in-icon" src="/media/zoom.png" />The North Platte River drains the northern Colorado Rockies and flows north into Wyoming. It's confluence with the South Platte River is in western Nebraska.</span>
+                                <span class="image-caption image-caption-right"><img class="zoom-in-icon" src="../media/zoom.png" />The North Platte River drains the northern Colorado Rockies and flows north into Wyoming. It's confluence with the South Platte River is in western Nebraska.</span>
                             </div>
                         </div>
 
-                        <p>The sharp peaks of the Nokhu Crags emerge slowly and gracefully above a dark ridge of pine on the steep climb to Lake Agnes. The trail ends on a rocky outcropping above a lake of black glass, where the sides of snowy mountains slide down to the shore. Winter winds whip around this remote alpine spot, near the headwaters of the North Platte River.</p>
+                        <p>The answer is the difference between a good year and a bad one. Water is the life and livelihood of downstream users, and it all starts high in the mountains with a single snowflake.</p>
                         
-                        <p>As it has for centuries, water arrives annually to these mountains as snow and ice, collecting at high elevations to wait for spring’s warmth. In the arid west, the majority of the water that fills streams and rivers comes from winter snowpack. Every year, farmers, raft guides, conservationists, fishermen, city planners and others wait anxiously to see what winter will bring.</p>
+                        <p>Ski fanatics know exactly how much fresh powder each storm brings to their mountains. But others track that data, too. For the last 100 years, January is when the annual cycle of water management begins, as hydrologists answer a critical question: how much water is up there this year?</p>
                         
 
                     </div>
@@ -198,13 +200,10 @@
             </div>
         </section>
 
-        
-
         <section class="image-featured-behind">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-small" id="jack-creek"></div>
-                    
+                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-small" id="winter-wonderland"></div>
                 </div>
                 <span class="image-caption image-caption-right">Late winter at Jack Creek, near the headwaters of the North Platte River.</span>
             </div>
@@ -237,7 +236,6 @@
                     </div>
                     <div class="col-sm-3">
                         <div id="snowflakes"></div>
-                        
                     </div>
 
                     <div class="col-sm-1 col-no-pad">
@@ -245,7 +243,6 @@
                     </div>
                     <div class="col-sm-3" >
                         <div id="waterdrops"></div>
-                        
                     </div>
 
                     <div class="col-sm-3" id="swe-desc">
@@ -374,7 +371,7 @@
         <section class="gap-full" id="video-closing">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="video-behind">
+                    <div class="col-sm-12 video-behind col-no-pad">
                         <video id="jack-creek-video" loop preload="metadata">
                             <source src="../media/jack-creek.mp4" type="video/mp4">
                             <source src="../media/jack-creek.ogg" type="video/ogg">
@@ -442,7 +439,6 @@
         <script src="../scripts/main.js"></script>
         <!-- endbuild -->
         
-        
 
         <!-- PAGE SPECIFIC SCRIPTS -->
         <script>
@@ -454,7 +450,7 @@
                     on: 'click',
                     magnify: '1'
                 });
-            
+
             $('#ui-slider-handle').draggable();
             $('#snow-type-selection p').popover({
                 trigger : 'hover',
