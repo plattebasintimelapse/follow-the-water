@@ -37,7 +37,7 @@
                         <div class="inline-media-large">
                             <div class="inline-media-wrapper no-border">
                                 <img class="zoom" src="../media/north-platte-map.png" alt="">
-                                <span class="image-caption image-caption-right"><img class="zoom-in-icon baby-bear-hide" src="../media/zoom.png" />The North Platte River drains the northern Colorado Rockies and flows north into Wyoming. It's confluence with the South Platte River is in western Nebraska.</span>
+                                <span class="image-caption image-caption-right"><img class="zoom-in-icon baby-bear-hide" src="../media/zoom.png" />The North Platte River drains the northern Colorado Rockies and flows north into Wyoming. It meets the South Platte River in western Nebraska.</span>
                             </div>
                         </div>
 
@@ -52,7 +52,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <img src="../img/agnes.jpg" alt="">
-                    <span class="image-caption image-caption-right">Lake Agnes, around 10,000 ft elevation, is in late winter, at a year's highest snowpack. On a good year here, over 8 feet of snowpack is common.</span>
+                    <span class="image-caption image-caption-right">Lake Agnes in late winter, in the highest reaches of the North Platte Basin around 10,000 feet. In a good year, this spot often receives more than 10 feet of snowpack.</span>
                 </div>
             </div>
         </section>
@@ -69,7 +69,7 @@
                                 <div class="video-wrapper-16-9 vid-wrap">
                                     <iframe id="snotel" src="//player.vimeo.com/video/107067451?title=0&amp;byline=0&amp;portrait=0&amp;loop=0&amp;player_id=snotel&amp;api=1" frameborder="0"></iframe>
                                 </div>
-                                <span class="image-caption image-caption-right">Mage explains a SNOTEL site.</span>
+                                <span class="image-caption image-caption-right">Mage Hultstrand of NRCS explains a SNOTEL site.</span>
                             </div>
                         </div>
 
@@ -90,15 +90,33 @@
             </div>
         </section>
 
+        <section class="copy">
+            <div class="container container-small">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!--(bake partials/copy.html _foreach="grafs:snow.before_snowpack_interactive.grafs")-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="interactive" id="interactive-swe">
             <div class="container container-large">
                 <div class="row">
                     <h2>Science of Measuring Snowpack </h2>
                 </div>
+                <div class="row mama-bear">
+                    <div class="col-sm-12" id="swe-desc">
+                        <p>Snow water equivalency is how much water will result from snow melting all at once. Scientists use the equation <b>SWE = Density * Depth</b> to calculate it.</p>
+                        <p>Due to factors like wind, temperature and compaction over time, different types of snow have different densities. The Natural Resources Conservation Service collects and compiles this data into monthly reports, issuing streamflow forcasts.</p>
+                        <p class="baby-bear"><b>Data from wind packed snow</b></p>
+                    </div>
+                </div>
+
                 <div class="row">
-                    <div class="col-sm-2">
+                    <div class="col-md-2 col-sm-3 col-xs-2">
                         <div class="row">
-                            <div class="col-xs-9 col-no-pad-right">
+                            <div class="col-md-9 col-sm-8 col-no-pad-right baby-bear-hide">
                                 <h4><i class="fa fa-hand-o-up"></i> Select a snow <em>type</em> and <em>depth</em>:</h4>
                                 <div id="snow-type-selection">
                                     <p id="new-snow" data-toggle="popover" data-content="<span>Density: <b>50-70 kg/m<sup>3</sup></b></span><br />Fresh snow immediately after falling in calm conditions"><span><img src="../img/swe/new-snow.png" alt="">New Snow</span></p>
@@ -109,36 +127,35 @@
                                     <p data-toggle="popover" data-content="Density: <b>700-800 kg/m<sup>3</sup></b>" id="very-wet-snow"><span><img src="../img/swe/very-wet-snow.png" alt="">Very Wet Snow</span></p>
                                 </div>
                             </div>
-                            <div class="col-xs-3 col-no-pad">
+                            <div class="col-md-3 col-sm-4 col-no-pad">
                                 <div class="ticks"></div>
                                 <div id="slider"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+
+                    <div class="col-md-3 col-sm-4 col-xs-5">
                         <div id="snowflakes"></div>
                     </div>
 
-                    <div class="col-sm-1 col-no-pad">
+                    <div class="col-md-1 col-sm-1 baby-bear-hide col-no-pad">
                         <div id="equals"></div>
                     </div>
-                    <div class="col-sm-3" >
+
+                    <div class="col-md-3 col-sm-4 col-xs-5" >
                         <div id="waterdrops"></div>
                     </div>
 
-                    <div class="col-sm-3" id="swe-desc">
-                        <p>Snow water equivalency is, basically, how much water will result from snow melting all at once. Scientists use the equation <b>SWE = Density * Depth</b> to calculate it.</p>
-                        <p>Due to factors like wind, temperature and compaction over time, different types of snow have different densities. The Natural Resources Conservation Service collects and compiles this data into monthly reports, issuing streamflow forcasts for that month.</p>
-
-                       <!--  <p><span><img src="../media/swe/wind-packed-snow.png" alt=""> = 1 inch of snow</span></p>
-                        <p><span><img src="../media/swe/waterdrop.png" alt=""> = 1 inch of water</span></p> -->
+                    <div class="col-sm-3 mama-bear-hide" id="swe-desc">
+                        <p>Snow water equivalency is how much water will result from snow melting all at once. Scientists use the equation <b>SWE = Density * Depth</b> to calculate it.</p>
+                        <p>Due to factors like wind, temperature and compaction over time, different types of snow have different densities. The Natural Resources Conservation Service collects and compiles this data into monthly reports, issuing streamflow forcasts.</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-2"></div>
-                    <div class="col-sm-3"><p class="swe-totals" id="snow-depth-text"></p></div>
-                    <div class="col-sm-1"><p class="swe-totals">equals</p></div>
-                    <div class="col-sm-3"><p class="swe-totals" id="water-depth-text"></p></div>
+                    <div class="col-md-2 col-sm-4 baby-bear-hide"></div>
+                    <div class="col-md-3 col-sm-3 col-xs-5"><p class="swe-totals" id="snow-depth-text"></p></div>
+                    <div class="col-md-1 col-sm-2 col-xs-2"><p class="swe-totals">equals</p></div>
+                    <div class="col-md-3 col-sm-3 col-xs-5"><p class="swe-totals" id="water-depth-text"></p></div>
                 </div>
                 <div class="row credit">
                     <div class="col-xs-12">
@@ -159,7 +176,7 @@
                                 <div class="video-wrapper-16-9 vid-wrap">
                                     <iframe id="snowpack" src="//player.vimeo.com/video/107071437?title=0&amp;byline=0&amp;portrait=0&amp;loop=0&amp;player_id=snowpack&amp;api=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                                 </div>
-                                <span class="image-caption image-caption-right">Matt Hoobler measures snowpack near Cheyenne, Wyo.</span>
+                                <span class="image-caption image-caption-right">Matt Hoobler of the Wyoming State Engineer's Office measures snowpack at sites throughout the North Platte River Basin.</span>
                             </div>
                         </div>
 
@@ -176,7 +193,7 @@
             <div class="container container-large">
                 <div class="row">
                     <div class="col-md-8">
-                        <h3>It's tough to predict snowfall</h3>
+                        <h3>Snowpack Variability in the North Platte River Basin</h3>
                         <div id="snotel-chart"></div>
                         <div id="snotel-legend"><i class="fa fa-hand-o-up"></i></div>
                         <div class="credit">
@@ -184,11 +201,11 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <p>All year, SNOTEL sites record snowpack data across the mountains of the American West. Each line in this chart represents snow water equivalency measured for selected SNOTEL sites within the North Platte River Basin in northern Colorado for the last decade.</p>
+                        <p>SNOTEL sites record snowpack data across the mountains of the American West throughout the year. Each line in this chart represents snow water equivalency measured for selected SNOTEL sites within the North Platte River Basin in northern Colorado for the last decade.</p>
 
-                        <p>While sites receive different amounts of snowfall due to their location, taken together these sites demonstrate the wide variability of snowpack from year to year.</p>
+                        <p>While sites receive different amounts of snowfall due to their location, taken together, these sites demonstrate the wide variability of snowpack from year to year.</p>
 
-                        <p>In the last decade, the North Platte River Basin has seen the highest snowpack in 30 years in 2011, followed by one of the lowest snowpack years on record in 2012. In any given year, it's difficult to predict how much snow a mountain range will receive.</p>
+                        <p>In the last decade, the North Platte River Basin has seen the highest snowpack in 30 years in 2011, followed by one of the lowest snowpack years on record in 2012.</p>
                     </div>
                 </div>
                 <div class="row">
@@ -209,7 +226,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="video-closing-trigger">
             <div class="container container-large">
                 <div class="row">
                     <div class="col-xs-12">
@@ -231,14 +248,25 @@
             </div>
         </section>
 
-        <section class="gap-full mama-bear-hide" id="video-closing">
+     <!--    <section class="gap-full mama-bear-hide hidden" id="video-closing">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-12 video-behind col-no-pad">
+                    <div class="col-sm-12 video-behind col-no-pad video-wrapper-16-9 vid-wrap">
                         <video id="jack-creek-video" loop preload="metadata" pposter="../media/part-one-end.jpg">
                             <source src="../media/jack-creek.mp4" type="video/mp4">
                             <source src="../media/jack-creek.ogg" type="video/ogg">
                         </video>
+                        <iframe id="jackcreek" src="//player.vimeo.com/video/108289903?title=0&amp;byline=0&amp;portrait=0&amp;loop=0&amp;player_id=jackcreek&amp;api=1" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section class="footer mama-bear-hide" id="video-closing">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-no-pad video-wrapper-16-9 vid-wrap">
+                        <iframe id="jackcreek" src="//player.vimeo.com/video/108909181?title=0&amp;byline=0&amp;portrait=0&amp;loop=0&amp;player_id=jackcreek&amp;api=1" frameborder="0"></iframe>
                     </div>
                 </div>
             </div>
@@ -247,7 +275,7 @@
         <section class="image-featured-behind mama-bear footer">
             <div class="container-fluid">
                 <div class="row">
-                    <span class="image-caption image-caption-right">Little Jack Creek transforms from a raging</span>
+                    <span class="image-caption image-caption-right">By spring, Jack Creek transforms from a snowy wonderland into a raging stream.</span>
                     <div class="col-sm-12 image-featured-behind-gap image-featured-behind-large" id="part-one-end">
                     </div>
                 </div>
@@ -284,21 +312,26 @@
                 html : 'true'
             });
 
+            var $iframe = $('#jackcreek')[0];
+            var player = $f($iframe);
+
+            player.addEvent('ready', ready);
+
+            function ready(player_id) {
+                console.log("Part One close ready")
+            }
+
+
             $('#video-closing').waypoint(function(direction) {
-                console.log('video loaded');
-                var video = document.getElementById('jack-creek-video');
-                video.load();
-                video.style.display="block";
 
                 if (direction == "up") {
-                    video.pause();
-                    video.style.display="none";
+                    player.api("unload")
                 } else if (direction == "down") {
-                    video.play();
+                    player.api("play");
                 }
 
+            }, {offset: 300});
 
-            }, {offset: 1500});
         </script>
     </body>
 </html>

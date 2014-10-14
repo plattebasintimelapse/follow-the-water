@@ -1,7 +1,7 @@
 #main-title {
     $main-width: 600px;
-    @include breakpoint(baby-bear) { width: 100%; margin-left: 0; left: 0; top: 15%;}
-    @include breakpoint(mama-bear) { top: 5%;}
+    @include breakpoint(mama-bear) { width: 800px; margin-left: -(400px); top: 5%;}
+    @include breakpoint(baby-bear) { width: 100%; margin-left: 0; left: 0; top: 10%;}
     width: $main-width;
     left: 50%;
     top: 15%;

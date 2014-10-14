@@ -112,6 +112,7 @@ header p {
 .part-one .opening-title-right, .part-three .opening-title-right {
 	top: 150px;
 	right: 100px;
+	width: 50%;
 	@include breakpoint(mama-bear) {
 		top: 30%;
 		right: 5%;
@@ -125,6 +126,7 @@ header p {
 .part-two .opening-title-left {
 	top: 150px;
 	left: 100px;
+	width: 50%;
 	@include breakpoint(mama-bear) {
 		top: 30%;
 		left: 5%;
@@ -225,14 +227,10 @@ header p {
 .inline-media-wrapper {
 	padding-top: 25px;
 	margin: 10px 20px;
-	border-bottom: 1px solid lightgray;
-	border-top: 1px solid lightgray;
 
 	@include breakpoint(mama-bear) {
 		margin: 5px 0;
 		padding: 0;
-		border-bottom: none;
-		border-top: none;
 	}
 }
 
@@ -253,7 +251,7 @@ header p {
 		background-attachment: fixed;
 		background-repeat: no-repeat;
 		@media only screen and (min-device-width: 681px) and (max-device-width: 1024px) {
-	      	background-attachment: fixed;
+	      	background-attachment: scroll;
 	    }
 		@include breakpoint(baby-bear) {
 			background-attachment: scroll;

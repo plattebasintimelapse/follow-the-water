@@ -1,7 +1,7 @@
 {
 	"main": {
 		"hed": "Follow the Water",
-		"subhed": "Follow a tiny snowflake as it makes its way to a sugarbeet field in the pandhandle of Nebraska."
+		"subhed": "Follow a tiny snowflake as it makes its way to a sugarbeet field in the panhandle of Nebraska."
 	},
 
 	"snow": {
@@ -23,7 +23,7 @@
 				{ "graf":
 					"The answer is the difference between a good year and a bad one. Water is the life and livelihood of downstream users, and it all starts high in the mountains with a single snowflake."
 				},{ "graf":
-					"Ski fanatics know exactly how much fresh powder each storm brings to their mountains. But others track that data, too. For the last 100 years, January is when the annual cycle of water management begins, as hydrologists answer a critical question: how much water is up there this year?"
+					"Ski fanatics know exactly how much fresh powder each storm brings to their mountains. But others track that data, too. For the last 100 years, as snow begins to fall, the annual cycle of water management begins, as hydrologists answer a critical question: how much water is up there this year?"
 				}
 			]
 		},
@@ -40,8 +40,16 @@
 			"grafs": [
 				{ "graf":
 					"“This is the headwater state, so this is where all of your water is coming from,” Hultstrand said, “with the exception of whatever precipitation is received in spring and summer. But really, this is the bulk of it.”"
+				}
+			]
+		},
+
+		"before_snowpack_interactive": {
+			"grafs": [
+				{ "graf":
+					"The SNOTEL system has been in place for decades, transmitting data back to centralized offices where it’s assessed and compiled into public reports. But it complements an even older method of data collection: manual snow surveys."
 				},{ "graf":
-					"The SNOTEL system has been in place for decades, transmitting data back to centralized offices where it’s assessed and compiled into public reports. But it complements an even older method of data collection: manual snow surveys. From January through May, teams go out to specific locations--the same ones year after year--to collect information about snowpack. They ski or snowshoe through forests heavy with snow to the more remote sites, weathering sleet, blizzards or ice storms."
+					"From January through May, teams ski, snowshoe or snowmobile through forests heavy with snow to remote sites, weathering sleet, blizzards or ice storms. They return to the same specific locations year after year, collecting snowpack data to help determine the supply for the coming water year."
 				}
 			]
 		},
@@ -51,7 +59,7 @@
 				{ "graf":
 					"A University of Nevada professor named Frank Church pioneered the system of snow surveying in 1905."
 				},{ "graf":
-					"“He wanted to find a better way of forecasting runoff,” Matt Hoobler said. And his method proved durable: during the last century, things haven’t changed much. Hoobler is a snow surveyor with the Wyoming State Engineer's Office who conducts manual surveys each winter. “The basic premise of filling a tube full of snow and weighing it...we do something very similar today,” Hoobler said."
+					"“He wanted to find a better way of forecasting runoff,” Matt Hoobler said. And his method proved durable: during the last century, things haven’t changed much. Hoobler is a snow surveyor with the Wyoming State Engineer's Office who conducts manual surveys each winter. “The basic premise of filling a tube full of snow and weighing it... we do something very similar today,” Hoobler said."
 				},{ "graf":
 					"Near the summit of Interstate 80 in southeastern Wyoming, weak sunlight makes its way through the thin air to where Hoobler is taking a core sample of the snowpack. He carefully holds a specially calibrated cylinder, which measures snow depth, weight, and density, then drops it vertically into the snow, twists it, and pulls it back out to analyze."
 				},{ "graf":
@@ -65,7 +73,7 @@
 				{ "graf":
 					"“The main reason we’re up here for snow survey is for river forecasting. In other words, once it all turns to water, how much water is going to exist in our rivers and our reservoirs,” Hoobler said."
 				},{ "graf":
-					"Each year surveyors add new data to the collection, validating the record and improving accuracy. The field data coming in from snow surveys and SNOTEL sites, including precipitation, is compiled into monthly stream flow forecasts for the spring and summer. That information is critical to many diverse downstream users, especially farmers who rely on irrigation water."
+					"Each year surveyors add new data to the collection, corroborating the record and improving accuracy. The field data coming in from snow surveys and SNOTEL sites, including precipitation, is compiled into monthly stream flow forecasts for the spring and summer. That information is critical to many diverse downstream users, especially farmers who rely on irrigation water."
 				},{ "graf":
 					"Basin-wide water users generally start to make decisions based upon the April 1st report. Knowing if the water supply is above or below average can determine a boom or bust year for crops, if rancher have to sell their cows, if migrating birds will have adequate nesting habitat, if raft guides will have summer employment."
 				}
@@ -95,7 +103,7 @@
 
 	"storage": {
 		"hed": "Guiding Each Precious Drop",
-		"subhed": "Once it descends from the mountains, this valuable resource meets human intervention, carefully directed downstream through an intricate system of dams and reservoirs.",
+		"subhed": "Once it descends from the mountains, water enters a highly-engineered system of dams and reservoirs, carefully directed downstream.",
 
 		"intro": {
 			"grafs": [
@@ -105,9 +113,13 @@
 					"Until this point the river has been mostly wild and untamed. Here the water intersects the course of westward expansion and the demands of humans who bent waterways to their will."
 				},{ "graf":
 					"The 100th meridian is often considered a dividing line between the western and eastern United States. As settlers learned, rainfall averages less than 20 inches a year west of this line; not a sustainable source of water for agriculture and industry. But snow collected in the mountains each winter, melting into torrential, sometimes flooding, rivers in the spring. And western pioneers were nothing if not enterprising. Early settlers capitalized on this resource by building irrigation systems to divert high spring runoff that would last through early summer. But each year the water would run out, abandoning crops and residents to the exactitudes of the sun and wind during the hottest time of the year. Thus began the concept of “reclaiming” western lands: restructuring natural water systems for human use through massive, federally-sponsored irrigation projects."
-				},{ "graf":
-					"Driven by growing public pressure from westerners, in the late 1800s, Congress passed a series of acts to encourage and study the development of irrigation in the west. But it wasn’t until President Theodore Roosevelt signed the Reclamation Act in 1902 that the federal government seriously invested in western irrigation projects. Then the newly-minted U.S. Reclamation Service began to build dams and reservoirs to store water and essentially “re-time” high spring flows to deliver a steady water supply to agricultural users and municipalities throughout the year. They authorized 25 projects between 1903 and 1906."
-				},{ "graf":
+				}
+			]
+		},
+
+		"after_rec_video": {
+			"grafs": [
+				{ "graf":
 					"The second of these projects, named in honor of one of the West’s most intrepid explorers, John C. Fremont, was Pathfinder Dam."
 				}
 			]
@@ -137,18 +149,20 @@
 					"The ruling fell in favor of Nebraska, splitting the water 75 percent/25 percent between it and Wyoming, respectively, because of the amount of land under agricultural production. That agreement still holds today."
 				},{ "graf":
 					"On the North Platte system, all of these complicated agreements and allotments are controlled from one central place, the Bureau of Reclamation’s Wyoming Area Office in Casper. On a visit one recent morning, the drab official-looking building matched the overcast sky."
+				},{ "graf":
+					"Lyle Myler is the deputy area manager for the office, which operates east of the Continental Divide. Each year, Myler’s office depends upon the snowpack data gathered by the Natural Conservation Resource Service and Wyoming State Engineer’s Office to make judgments based on how much water will be coming down from the mountains."
 				}
+
+
 			]
 		},
 
 		"after_rec_dams_video": {
 			"grafs": [
 				{ "graf":
-					"“We do a forecast beginning February 1st that gives an estimate of the volume of water that we think we’re going to get in four months. That gives us a feel for how we start positioning water in the reservoirs,” says Myler. Tall, with an easy smile and voice that carries just a hint of drawl, Myler is a veteran water manager. He’s been with the office for 24 years and can rattle off facts and figures from any of their systems with ease."
+					"“We do a forecast beginning February 1st that gives an estimate of the volume of water that we think we’re going to get in four months. That gives us a feel for how we start positioning water in the reservoirs,” says Myler. Tall, with a voice that carries just a hint of drawl, Myler is a veteran water manager. He’s been with the office for 24 years and can rattle off facts and figures from any of their systems with ease."
 				},{ "graf":
 					"“We keep track of the storage we deliver out and how much of that water is Glendo storage water, how much is Kendrick water, how much is North Platte storage,” says Myler. “The thing that’s difficult to judge is if you get a big rain event, how is that going to affect the volume that comes in?  So, it keeps us busy.”"
-				},{ "graf":
-					"In a small office inside the building, highly-trained operators sit in front of multiple computer screens, controlling water in three different states: Wyoming, Colorado and Montana. They work around the clock year-round, serving as the operators, security, and emergency personnel for all the dams and reservoirs, and coordinating power supply with the Western Area Power Administration. They follow target flow orders from the three different state water offices, says Ray Balerio, control room supervisor. Operators are always scanning their water and data logs, especially at volatile locations, continuously make minor adjustments across the system to keep them on track."
 				}
 			]
 		},
@@ -156,11 +170,11 @@
 		"section_five": {
 			"grafs": [
 				{ "graf":
-					"It is amazing with the push of a button we can release so much water. Just by selecting a power plant and pushing a button,” says Balerio. In his 25 years at the office, he’s seen all kinds of events, and laughs when asked which is easier: responding to droughts and floods, saying both often prove challenging."
+					"In a small office inside the building, highly-trained operators sit in front of multiple computer screens, controlling water in three different states: Wyoming, Colorado and Montana. They work around the clock year-round, serving as the operators, security, and emergency personnel for all the dams and reservoirs, and coordinating power supply with the Western Area Power Administration. They follow target flow orders from the three different state water offices, says Ray Balerio, control room supervisor. Operators are always scanning their water and data logs, especially at volatile locations, continuously make minor adjustments across the system to keep them on track."
+				},{ "graf":
+					"“It is amazing with the push of a button we can release so much water. Just by selecting a power plant and pushing a button,” says Balerio. In his 25 years at the office, he’s seen all kinds of events, and laughs when asked which is easier: responding to droughts and floods, saying both often prove challenging."
 				},{ "graf":
 					"“When you have a lot of water everything’s running full bore, everything’s going out full maximum so you don’t have a lot of changes. But during the drought season you’re trying to conserve water so you’re watching every drop so you have a lot of changes which is really stressful because you may be doing 15 changes every two hours,” says Balerio."
-				},{ "graf":
-					"Guernsey Reservoir, completed in 1927, is also part of the North Platte Project. It sits at the very end of the chain of seven dams and reservoirs carrying water through eastern Wyoming, the last in line to release water to the east. On this river system the irrigation season runs May 1st through September 30th, at which point the Bureau of Reclamation shuts the gates at Guernsey, holding back the rest of the water until the following year."
 				},{ "graf":
 					"“This year we had a good run-off season,” says Myler, with more than one million acre feet coming into the upper river system from snow melt runoff and rain. On average, it’s about 700,000 acre-feet. “The two previous years [2013 and 2012] saw well-below average inflows so the supply was quite depleted. It took a big amount of water to fill it up, but we got it full.” Those years offered a striking contrast to the huge water year of 2011, when the system received more than two million acre-feet of water."
 				},{ "graf":
@@ -190,7 +204,7 @@
 
 	"field": {
 		"hed": "Lifeblood of the Cultivated Land",
-		"subhed": "Mountain snowmelt arrives onto the plains to water thirsty fields, supporting the economy of an entire region.",
+		"subhed": "Channeled through dams and reservoirs, mountain snowmelt arrives to water thirsty fields on the plains, supporting the economy of an entire region.",
 
 		"intro": {
 			"grafs": [
@@ -212,10 +226,6 @@
 			"grafs": [
 				{ "graf":
 					"Busch’s son Kendall, 52, now runs the operation, more than 1,000 acres of corn, sugar beets, dry edible beans and alfalfa. They still use flood or furrow irrigation, an older method traded out in favor of sprinkler or center pivots by many other farmers in recent years. It’s a method that requires a lot of early summer mornings."
-				},{ "graf":
-					"After setting the siphon tubes, they’ll let the water flow across this field for 24 hours before moving the pipes, and thus the water, again tomorrow morning. They repeat this process daily throughout the irrigation season, from May through September, making the most of their water."
-				},{ "graf":
-					"“Our [operation] is very labor intense. It takes a lot of manpower and a lot of time,” Kendall Busch said."
 				}
 			]
 		},
@@ -223,6 +233,8 @@
 		"irrigation_video":{
 			"grafs": [
 				{ "graf":
+					"“Our [operation] is very labor intense. It takes a lot of manpower and a lot of time,” Kendall Busch said."
+				},{ "graf":
 					"By summer, irrigation season is in full swing across the arid west. Mountain snowmelt, held back by dams and stored in reservoirs, starts to be released for use on fields in May. Without it, agriculture would not exist in this arid region, where annual rainfall rarely exceeds 16 inches. "
 				},{ "graf":
 					"“Water is the most valuable resource we have,” Rick Preston said. He’s general manager of the Gering-Ft. Laramie Irrigation District, which provides irrigation water to nearly 55,000 acres in the Nebraska panhandle, including those owned by the Busch family. It’s one of four original government districts commissioned along with Pathfinder Dam in 1903 by the U.S. Reclamation Service (today’s Bureau of Reclamation), and one of the oldest water right holders on the North Platte River. "
@@ -247,7 +259,7 @@
 				},{"graf":
 					"Water from the North Platte irrigation system is used by several different irrigation districts throughout the area, cycled from field to field along ditches and canals. Local farmers and water managers estimate the same water is used seven times before eventually making its way back to the North Platte River. That approach to water conservation matters, said Bob Busch."
 				},{"graf":
-					"“We live in a semi-arid region,” Bob Busch said, “14 inches of rain if we’re lucky.” All you have to do is drive out of the valley to neighboring dry pasture see the economic impact of water, he said. “There’s such a dramatic difference between irrigation and dry land, it’s just unbelievable.” Not to mention all the supporting industries and businesses that depend upon agriculture in the high plains."
+					"“We live in a semi-arid region,” Bob Busch said, “14 inches of rain if we’re lucky.” All you have to do is drive out of the valley to neighboring dry pasture see the economic impact of water, he said. “There’s such a dramatic difference between irrigation and dry land, it’s just unbelievable.” The impact of irrigation trickles down to all kinds of related industries and businesses that depend upon agriculture, and sustains a stable population in this part of the high plains."
 				}
 			]
 		},
