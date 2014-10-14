@@ -69,6 +69,30 @@
 	}
 }
 
+#close-part-two {
+	background-image: url('../img/close-part-two.jpg');
+	background-attachment: scroll;
+
+	.text-over-image {
+		position: absolute;
+		top: 15%;
+		left: 100px;
+		font-size: 2.6em;
+		line-height: .9em;
+		width: 30%;
+
+		@include breakpoint(mama-bear) {
+			width: 50%;
+			font-size: 2.4em;
+		}
+		@include breakpoint(baby-bear) {
+			font-size: 2em;
+			top: 15%;
+			left: 25px;
+		}
+	}
+}
+
 #busch-farm-title {
 	top: 30%;
 	right: 10%;
