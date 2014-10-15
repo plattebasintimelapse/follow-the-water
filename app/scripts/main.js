@@ -182,6 +182,7 @@ $(document).ready(function() {
         // PART THREE: FIELD
         console.log("PART THREE");
         listenVideo('tubes');
+        listenVideo('preston');
         makePopChart();
     }
 
