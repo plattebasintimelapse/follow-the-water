@@ -1,24 +1,29 @@
 // HEADER IMAGES
 
-#lead-opening {
-	background-image: url('../media/cinemagraph-mid-snow.gif');
+.lead-opening {
+	background-image: url('../img/opening.gif');
 	@include breakpoint(mama-bear) {
-		background-image: url('../media/mobile/header-lead.jpg');
+		background-image: url('../img/mobile/header-lead.jpg');
 	}
+			background-color: white;
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
 }
 
 #snow-opening {
     // background-image: url('http://projects.plattebasintimelapse.com/assets/static/gifs/snowfall.gif');
     background-image: url('../img/header-part-one.gif');
     @include breakpoint(mama-bear) {
-		background-image: url('../media/mobile/header-part-one.jpg');
+		background-image: url('../img/mobile/header-part-one.jpg');
 	}
 }
 #pathfinder-opening {
     // background-image: url('http://projects.plattebasintimelapse.com/assets/static/gifs/pathfinder.gif');
     background-image: url('../img/header-part-two.gif');
 	@include breakpoint(mama-bear) {
-		background-image: url('../media/mobile/header-part-two.jpg');
+		background-image: url('../img/mobile/header-part-two.jpg');
 	}
 }
 
@@ -26,7 +31,7 @@
     // background-image: url('http://projects.plattebasintimelapse.com/assets/static/gifs/field.gif');
     background-image: url('../img/header-part-three.gif');
 	@include breakpoint(mama-bear) {
-		background-image: url('../media/mobile/header-part-three.jpg');
+		background-image: url('../img/mobile/header-part-three.jpg');
 	}
 }
 
@@ -165,7 +170,7 @@
 }
 
 #part-one-end {
-	background-image: url('../media/mobile/close-part-one.jpg');
+	background-image: url('../img/mobile/close-part-one.jpg');
 }
 
 #part-two-end {
@@ -222,18 +227,4 @@
 
 #field12 {
     background-image: url('../img/beet-tl/field12.JPG');
-}
-
-#canals-map-container {
-	// height: 600px;
-}
-
-.rivers {
-	background-image: url('../media/canals/rivers.png');
-}
-.canals {
-	background-image: url('../media/canals/canals.png');
-}
-.cities {
-	background-image: url('../media/canals/cities.png');
 }

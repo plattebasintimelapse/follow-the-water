@@ -70,12 +70,16 @@
     h3 {
         margin-top: 0;
     }
+    .interactive-desc {
+        margin-top: 40px;
+        font-size: 1em;
+    }
 }
 
 #pop-chart {
-    height: 600px;
+    height: 700px;
     @include breakpoint(papa-bear) {
-        height: 500px;
+        height: 600px;
     }
     @include breakpoint(baby-bear) {
         height: 300px;
@@ -91,59 +95,8 @@
     }
 }
 
-.population-list {
-    height: 260px;
-    width: 200px;
-    margin: 0 auto;
-
-    border: 1px solid darkgray;
-    border-radius: 8px;
-    -moz-box-shadow:    inset 0 0 8px gray;
-   -webkit-box-shadow: inset 0 0 8px gray;
-   box-shadow:         inset 0 0 8px gray;
-
-
-    @include breakpoint(papa-bear) {
-        height: 200px;
-    }
-    @include breakpoint(baby-bear) {
-        height: 200px;
-    }
-
-    // overflow:auto;
-    overflow-y: scroll;
-    font-size: .8em;
-
-    ul {
-        list-style-type: none;
-        padding-left: 0px;
-    }
-
-    li {
-        margin: 0px;
-        height: 20px;
-        display: list-item;
-        p {
-          display: inline-block;
-          font-size:.8em;
-          margin-bottom: 0px;
-          padding: 2px 5px;
-          margin: 5px;
-          border-radius: 10px;
-          &#scotts-bluff-co-ne {
-            background-color:$red;
-            color:white;
-          }
-        }
-        p.hover {
-            background-color: $blue;
-            color: white;
-        }
-    }
-}
-
 #pop-map {
-    height: 340px;
+    height: 320px;
 
     .county-shape {
         fill: white;
@@ -167,6 +120,8 @@
 }
 
 .econ-table {
+    padding-left: 35px;
+    padding-right: 35px;
     @include breakpoint(baby-bear) {
         margin-bottom:15px;
     }
@@ -198,7 +153,8 @@ table {
         margin: 8px;
         border-bottom: 1px solid lightgray;
         td:first-child {
-            padding: 4px 28px 4px 0;
+            width: 200px;
+            padding: 4px 22px 4px 0;
         }
         td.amount {
             padding: 4px 0 4px 14px;

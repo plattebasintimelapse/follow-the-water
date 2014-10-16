@@ -1,6 +1,6 @@
 // SNOW CHARTS
 function makeSWE() {
-    console.log("Making SWE interactive");
+    // console.log("Making SWE interactive");
     var snowDepthOptionBox  = $( '#snow-depth'),
         snowTypeOptionBox   = $( '#snow-type'),
         snowFlakesCanvas    = $( '#snowflakes' ),

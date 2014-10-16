@@ -1,6 +1,6 @@
 // POPULATION CHART
 function makeSnotelChart() {
-    console.log("Making snotel chart");
+    // console.log("Making snotel chart");
     
     var margin = {top: 20, right: 20, bottom: 40, left: 50},
         width = parseInt(d3.select("#snotel-chart").style("width")) - margin.left - margin.right,

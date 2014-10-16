@@ -1,6 +1,6 @@
 // POPULATION CHART
 function makePopChart() {
-    console.log("Making population chart");
+    // console.log("Making population chart");
     function makeChart() {
         var margin = {top: 20, right: 20, bottom: 40, left: 50},
             width = parseInt(d3.select("#pop-chart").style("width")) - margin.left - margin.right,
@@ -43,7 +43,7 @@ function makePopChart() {
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 
-        d3.tsv("../data/pop-selected-counties-2.tsv", function(error, data) {
+        d3.tsv("../data/pop-selected-counties.tsv", function(error, data) {
             color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
 
             data.forEach(function(d) {
@@ -155,10 +155,10 @@ function makePopChart() {
 
             if ( parseInt( $(window).width() ) < mobileThreshold) {
                 scale  = 900;
-                offset = [100, 200];
+                offset = [100, 150];
             } else {
                 scale  = 1200;
-                offset = [150, 200];
+                offset = [150, 150];
             }
             var xy = d3.geo.mercator().scale(scale).center(center).translate(offset);
             var path = d3.geo.path().projection(xy);

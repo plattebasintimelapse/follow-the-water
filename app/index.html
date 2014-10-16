@@ -25,25 +25,25 @@
         <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
     </head>
 
-    <body id="intro">
+    <body id="intro" class="lead-opening">
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <header class="image-featured-behind">
+        <header class="image-featured-behnd">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-full" id="lead-opening"></div>
+                    <div class="col-sm-12 image-featured-behind-gap image-featured-behind-full" id=""></div>
 
                     <div class="opening-title-center" id="main-title">
-                        <div class="logo">
+                       <!--  <div class="logo">
                             <a href="http://www.plattebasintimelapse.com"><img src="img/PBTlogo-trans.png" alt=""></a>
-                        </div>
-                        <h1>It Begins With a Snowflake</h1>
-                        <p>Follow a drop of water as it makes its way from the Colorado Rockies to a sugar beet field in the Nebraska panhandle.</p>
+                        </div> -->
+                        <h1>Nature Provides, Man Decides</h1>
+                        <p>Follow a tiny snowflake as it makes its way from the Colorado Rockies to a sugar beet field in the Nebraska panhandle.</p>
                         <h5>By Steven Speicher, Ariana Brocious, & Peter Stegen</h5>
 
-                        <button class="btn btn-lg btn-default mama-bear-hide" id="btn-intro">Watch Intro</button>
+                        <button id="btn-intro" class="btn btn-lg btn-default mama-bear-hide">Watch Intro</button>
 
                         <div class="mama-bear" id="intro-video-wrapper-mobile">
                             <div class="video-wrapper-16-9 vid-wrap">
@@ -55,8 +55,8 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="video-wrapper mama-bear-hide" id="intro-video-wrapper">
+
+            <div id="intro-video-wrapper" class="video-wrapper mama-bear-hide">
                 <div class="fluid-video-wrapper">
                     <iframe id="video-title" src="//player.vimeo.com/video/105373392?title=0&amp;byline=0&amp;portrait=0&amp;loop=0&amp;player_id=video-title&amp;api=1" frameborder="0"></iframe>
                 </div>
@@ -83,16 +83,16 @@
                     </div>
                     <div class="nav-container hidden">
                         <ul id="menu">
-                            <li id="one"><a href="snow" data-title="Part One: &#10; The White Wonder"><img src="img/nav-part-one.jpg" alt=""></a></li>
-                            <li id="two"><a href="storage" data-title="Part Two: &#10; Guiding Each Precious Drop"><img src="img/nav-part-two.jpg" alt=""></a></li>
-                            <li id="three"><a href="field" data-title="Part Three: &#10; Life Blood of the Cultivated Land"><img src="img/nav-part-three.jpg" alt=""></a></li>
+                            <li id="one"><a href="snow" data-title="Chapter One: &#10; Water Comes from White Wonder"><img src="img/nav-part-one.jpg" alt=""></a></li>
+                            <li id="two"><a href="storage" data-title="Chapter Two: &#10; Guiding Each Precious Drop"><img src="img/nav-part-two.jpg" alt=""></a></li>
+                            <li id="three"><a href="field" data-title="Chapter Three: &#10; Lifeblood of A Cultivated Land"><img src="img/nav-part-three.jpg" alt=""></a></li>
                             <li><h3 id="nav-title" class="hidden"></h3></li>
                         </ul>
 
                         <ul id="menu-mobile">
-                            <li id="one"><a href="snow"><h5>Part One: The White Wonder</h5></a></li>
-                            <li id="two"><a href="storage"><h5>Part Two: Guiding Each Precious Drop</h5></a></li>
-                            <li id="three"><a href="field"><h5>Part Three: Life Blood of the Cultivated Land</h5></a></li>
+                            <li id="one"><a href="snow"><h5>Chapter One: Water Comes from White Wonder</h5></a></li>
+                            <li id="two"><a href="storage"><h5>Chapter Two: Guiding Each Precious Drop</h5></a></li>
+                            <li id="three"><a href="field"><h5>Chapter Three: Lifeblood of A Cultivated Land</h5></a></li>
                         </ul>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
                     <div class="modal-body">
                         <div class="credits team">
                             <p class="credit">Design & Development: <span class="name">Steven Speicher</span></p>
-                            <p class="credit">Reporting and Writing: <span class="name">Ariana Brocious</span></p>
+                            <p class="credit">Reporting & Writing: <span class="name">Ariana Brocious</span></p>
                             <p class="credit">Video Shooting/Editing: <span class="name">Peter Stegen & Steven Speicher</span></p>
                             <p class="credit">Photography: <span class="name">Michael Forsberg</span></p>
                             <p class="credit">Production Assistants: <span class="name">Joe Arneson & Mariah Lundgren</span></p>
@@ -129,8 +129,6 @@
                         </div>
 
                         <div class="credits">
-                            <!-- <p class="credits">Special Thanks:</p>
-                            <p class="thanks">Bob Busch, Mage Hulstrand, Matt Hoobler, Lyle Myler, Rick Preston</p> -->
                             <p class="credit small">Special Thanks: <span class="name">Bob Busch, Mage Hultstrand, Matt Hoobler, Lyle Myler & Rick Preston</span></p>
                         </div>
 
@@ -164,7 +162,7 @@
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
+            ga('create','UA-40570778-1');ga('send','pageview');
         </script>
 
         <!-- build:js scripts/plugins.js -->
@@ -178,54 +176,5 @@
         <script src="/scripts/swe.js"></script>
         <!-- endbuild -->
 
-        <script>
-            $(document).ready(function() {
-                (function(){
-                    console.log("Listening to Video...");
-                    var $iframe = $('#video-title')[0];
-                    var player = $f($iframe);
-
-                    player.addEvent('ready', ready);
-
-                    function ready(player_id) {
-                        player.addEvent('finish', finish);
-
-                        $('#btn-intro').click(function() {
-                            $('#intro-video-wrapper').fadeIn(); 
-                            player.api("play");
-                            $('.video-wrapper iframe').addClass('playing');
-                        });
-                        $('.btn-skip').click(function() {
-                            $('#intro-video-wrapper iframe').removeClass('playing');
-                            player.api("stop");
-                            finish();
-                        });
-                        $('#btn-loop').click(function() {
-                            player.api("stop").api("seekTo", "0").api('play');
-                        });
-                        var vol_on = true;
-                        $('#btn-audio').click(function() {
-                            if (vol_on) {
-                                player.api('setVolume',0);
-                                $(this).find('i').addClass('fa-volume-up').removeClass('fa-volume-off');
-                                vol_on = false;
-                            } else {
-                                $(this).find('i').addClass('fa-volume-off').removeClass('fa-volume-up');
-                                player.api('setVolume',1);
-                                vol_on = true;
-                            }
-                        });
-                    }
-                    
-                    function finish(player_id) {
-                        player.api("unload");
-                        $('#intro-video-wrapper').remove();
-                        $('#intro header').remove();
-                        window.location.href = "snow";
-                    }
-                }).call(this);
-            });
-    
-        </script>
     </body>
 </html>

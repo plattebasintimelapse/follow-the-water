@@ -44,7 +44,7 @@
             "type": "Feature",
             "properties": {
                 "name": "Kortes Dam",
-                "info": "<p>Project: PSMBP-Kortes Project</p><p>Built: 1946-1951</p>",
+                "info": "<p>Project: Pick Sloan Missouri Basin Program - Kortes Project</p><p>Built: 1946-1951</p>",
                 "image": "www.usbr.gov/projects/ImageServer?imgName=A_KORTES01.JPG",
                 "marker-color": "steelblue",
                 "marker_radius": "8"
@@ -70,7 +70,7 @@
             "type": "Feature",
             "properties": {
                 "name": "Glendo Dam",
-                "info": "<p>Project: PSMBP-Glendo Unit</p><p>Built: 1955-1958</p><p>Capacity: 789,402 af</p><p>Dam Type: Zoned Earthfill</p>",
+                "info": "<p>Project: Pick Sloan Missouri Basin Program - Glendo Unit</p><p>Built: 1955-1958</p><p>Capacity: 789,402 af</p><p>Dam Type: Zoned Earthfill</p>",
                 "image": "www.nps.gov/nr/travel/ReclamationDamsAndWaterProjects/photos/Glendo%20Dam-172.jpg",
                 "marker-color": "steelblue",
                 "marker_radius": "6"
@@ -96,7 +96,7 @@
             "type": "Feature",
             "properties": {
                 "name": "Gray Reef Dam",
-                "info": "<p>Project: PSMBP-Glendo Unit</p><p>Built: 1959-1961</p>",
+                "info": "<p>Project: Pick Sloan Missouri Basin Program - Glendo Unit</p><p>Built: 1959-1961</p>",
                 "image": "www.usbr.gov/projects/ImageServer?imgName=GRAYREEF.JPG",
                 "marker-color": "steelblue",
                 "marker_radius": "6"
@@ -145,7 +145,7 @@
                 "type": "Point",
                 "coordinates": [-103.596632,41.983420]
             }
-	   },{
+	    },{
             "type": "Feature",
             "properties": {
                 "name": "Lake Alice Dam No 1 (West End)",
@@ -157,19 +157,6 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [-103.596632,41.983420]
-            }
-        },{
-            "type": "Feature",
-            "properties": {
-            	"name": "Lake Winters Creek",
-            	"info": "<p>Project: North Platte Project</p><p>Built: 1979</p><p>Capacity: 2,964 af</p>",
-            	"image": "wms.mytopo.com/wrap/netmapwrapper_mytopo.aspx?VERSION=1.1.1&REQUEST=GetMap&layers=drg,hillshade&map=%5CMapserver%5Cmapfiles%5Czone13.map&width=250&height=250&bbox=620884,4644752,623384,4647252&srs=EPSG:26913&format=image/jpeg",
-            	"marker-color": "steelblue",
-            	"marker_radius": "8"
-            },
-            "geometry": {
-            	"type": "Point",
-            	"coordinates": [-103.6221652, 41.8660784]
             }
         },{
             "type": "Feature",

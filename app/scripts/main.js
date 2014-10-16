@@ -1,11 +1,50 @@
 
 
-// function listenForIntro() {
+function listenForIntro() {
+    console.log("Opening video...");
+    var $iframe = $('#video-title')[0];
+    var player = $f($iframe);
 
-// };
+    player.addEvent('ready', function() {
+        player.addEvent('finish', finish);
+
+        $('#btn-intro').click(function() {
+            $('#intro-video-wrapper').css('display', 'block');
+            player.api("play");
+            $('.video-wrapper iframe').addClass('playing');
+        });
+        $('.btn-skip').click(function() {
+            $('#intro-video-wrapper iframe').removeClass('playing');
+            player.api("stop");
+            finish();
+        });
+        $('#btn-loop').click(function() {
+            player.api("stop").api("seekTo", "0").api('play');
+        });
+        var vol_on = true;
+        $('#btn-audio').click(function() {
+            if (vol_on) {
+                player.api('setVolume',0);
+                $(this).find('i').addClass('fa-volume-up').removeClass('fa-volume-off');
+                vol_on = false;
+            } else {
+                $(this).find('i').addClass('fa-volume-off').removeClass('fa-volume-up');
+                player.api('setVolume',1);
+                vol_on = true;
+            }
+        });
+    });
+
+    function finish(player_id) {
+        player.api("unload");
+        $('#intro-video-wrapper').remove();
+        $('#intro header').remove();
+        window.location.href = "snow";
+    }
+};
 
 function listenVideo(id){
-    console.log(id + ' video ready');
+    // console.log(id + ' video ready');
     var $iframe = $('#' + id)[0];
     var player = $f($iframe);
 
@@ -45,34 +84,8 @@ function listenVideo(id){
     }
 }
 
-var w = true;
-$('#toggle-canals').click(function(){
-    if (w) {
-        $('#canals-map-container').attr('src', '../media/canals/rivers.png');
-        w = false;
-    } else {
-        $('#canals-map-container').attr('src', '../media/canals/canals.png');
-        w = true;
-    }
-});
-
-$('#canals').click(function(){
-    console.log("clicked");
-    $('#canals-map-container').addClass('canals').removeClass('cities').removeClass('rivers');
-    $('#canals-map-container').attr('src', '../media/canals/canals.png');
-});
-$('#cities').click(function(){
-    $('#canals-map-container').addClass('cities').removeClass('canals').removeClass('rivers');
-    $('#canals-map-container').attr('src', '../media/canals/cities.png');
-});
-$('#rivers').click(function(){
-    $('#canals-map-container').addClass('rivers').removeClass('cities').removeClass('canals');
-    $('#canals-map-container').attr('src', '../media/canals/rivers.png');
-});
-
-
 function setMasterStyles() {
-    console.log("Setting Master Styles")
+    // console.log("Setting Master Styles")
     var $wHeight = $(window).height();
     var $wWidth = $(window).width();
 
@@ -82,7 +95,6 @@ function setMasterStyles() {
     $('.image-featured-behind-full').height($wHeight);
     $('.video-wrapper').height($wHeight);
     $('.video-wrapper').width($wWidth);
-    var title_top = ( $wHeight - $('#video-title').height() ) / 2;
 
     $('body').animate({
         opacity: 1
@@ -96,10 +108,8 @@ function setMasterStyles() {
         skrollr.init({
             forceHeight: false
         });
-
     }
-
-    if($wWidth <= 1000) {
+    if($wWidth < 1200) {
         $('img.zoom').trigger('zoom.destroy');
     }
 }
@@ -157,13 +167,13 @@ $(document).ready(function() {
     if ( $('body').is('#intro')  ) {
 
         // INTRO
-        console.log("INTRO");
-        // listenForIntro();
+        // console.log("INTRO");
+        listenForIntro();
 
     } else if ( $('body').is('.part-one')  ) {
 
         // PART ONE: SNOW
-        console.log("PART ONE");
+        // console.log("PART ONE");
         listenForAudioCntl( $("#snow-sounds") );
         listenVideo('snotel');
         listenVideo('snowpack');
@@ -173,14 +183,14 @@ $(document).ready(function() {
     } else if ( $('body').is('.part-two')  ) {
 
         // PART TWO: STORAGE
-        console.log("PART TWO");
+        // console.log("PART TWO");
         listenVideo('lyle');
         makeDamMap();
 
     } else if ( $('body').is('.part-three')  ) {
 
         // PART THREE: FIELD
-        console.log("PART THREE");
+        // console.log("PART THREE");
         listenVideo('tubes');
         listenVideo('preston');
         makePopChart();

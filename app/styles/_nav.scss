@@ -73,7 +73,9 @@
     img {
         border-radius: 8px;
         width: auto;
-        height: 100px;
+        height: 120px;
+        @include breakpoint(mama-bear) { height: 80px; }
+        
     }
 
     img:hover {
@@ -107,6 +109,10 @@
         margin-top: 10%;
         @include breakpoint(baby-bear) { margin-top: 30%; }
         @include breakpoint(mama-bear) { margin-top: 15%; }
+    }
+
+    .modal-title {
+        text-transform: uppercase;
     }
 
 	.modal-header {
