@@ -110,15 +110,21 @@
 				{ "graf":
 					"Born in the high reaches of the Rocky Mountains, the headwaters of the North Platte River flow down in ice-cold tributaries to form a channel that winds across the Wyoming-Colorado state line. The river runs free across yellow-brown sagebrush steppe until it backs up behind Seminoe, the first of several major dams north of Sinclair, Wyo."
 				},{ "graf":
-					"Aside from a few small dams and diversions close to the headwaters, until this point the river has been mostly wild and untamed. Here the water intersects with the course of westward expansion and the demands of humans who bent waterways to their will."
+					"Aside from a few small dams and diversions close to the headwaters, the river has been mostly wild and untamed. Here the water intersects with the course of historic westward expansion and the demands of humans who bent waterways to their will."
 
 				},{ "graf":
-					"That force altered the annual water cycle that existed for millennia. River water no longer races out of the mountains each spring, leaving the Plains dry by early summer. It’s now carefully managed on a landscape that has been “reclaimed.”"
+					"During the last century, that force altered the annual water cycle that existed for millennia. River water no longer races out of the mountains each spring, leaving the Plains dry by early summer. It’s now carefully managed on a landscape that has been “reclaimed.”"
 
+				}
+			]
+		},
+
+		"history_section": {
+			"grafs": [
+				{ "graf":
+					"Spurred by the fur trade, gold rush, and the Homestead Act of 1862, pioneering men and women set out to colonize the American West, looking for a place to raise their families and make a living from the land. Settlers coming from the lush, rain-fed East found western lands dauntingly dry, and quickly experienced the difficulty of relying solely upon the region’s capricious rainfall. Though early western boosters lured settlers by suggesting that “rain follows the plow” and the climate was getting wetter, those who arrived soon found the climate closer to explorer Steven A. Long’s description of the “Great American Desert.” Without a reliable source of water, there was no way to develop the expansive land that seemed so full of promise."
 				},{ "graf":
-					"Spurred by the fur trade, gold rush, and the Homestead Act of 1862, pioneering men and women set out to colonize the American West, looking for a place to raise their families and make a living from the land. Settlers coming from the lush, rain-fed East found western lands dauntingly dry, and quickly learned the difficulty of relying solely upon the region’s capricious rainfall. Though early western boosters lured settlers by suggesting that “rain follows the plow,” and the climate was getting wetter, those who arrived soon found the climate closer to explorer Steven A. Long’s description of “The Great American Desert.” Without a reliable source of water, there was no way to develop the expansive land that seemed so full of promise."
-				},{ "graf":
-					"The 100<sup>th</sup> meridian is often considered a dividing line between the western and eastern United States. As settlers learned, rainfall averages less than 20 inches a year west of this line; not a sustainable source of water for agriculture and industry. But snow collected in the mountains each winter, melting into torrential, sometimes flooding, rivers in the spring. And western pioneers were nothing if not enterprising. Early settlers capitalized on this resource by building irrigation systems to divert high spring runoff that would last through early summer. But each year the water would run out, abandoning crops and residents to the exactitudes of the sun and wind during the hottest time of the year. Thus began the concept of “reclaiming” western lands: restructuring natural water systems for human use through massive, federally-sponsored irrigation projects."
+					"The 100<sup>th</sup> meridian is often considered a dividing line between the western and eastern United States. As settlers learned, rainfall averages less than 20 inches a year west of this line, not a sustainable source of water for agriculture and industry. But snow collected in the mountains each winter, flooding riverbeds in the spring. And western pioneers were nothing if not enterprising. Early settlers capitalized on this resource by building irrigation systems to divert high spring runoff. But many years the river water would only lastthrough early summer, abandoning crops and residents to the exactitudes of the sun and wind during the hottest time of the year. Thus began the concept of “reclaiming” western lands: restructuring natural water systems for human use through massive, federally-sponsored irrigation projects."
 				}
 			]
 		},
@@ -134,9 +140,9 @@
 		"before_map": {
 			"grafs": [
 				{ "graf":
-					"Pathfinder was the first major piece of the North Platte Project, one of several huge irrigation projects that determined the history of the American West by providing a reliable water supply to dry agricultural lands, industries and burgeoning cities. Today the project provides water to around 335,000 acres in eastern Wyoming and western Nebraska."
+					"Pathfinder was the first major piece of the North Platte Project, one of several huge irrigation projects critical to the development of the American West by providing a reliable water supply to dry agricultural lands, industries and burgeoning cities. Today the project provides water to around 335,000 acres in eastern Wyoming and western Nebraska."
 				},{ "graf":
-					"As the twentieth century progressed, various entities acquired more water rights on the North Platte River. Dams, reservoirs and power plants were built to generate hydroelectric power and supply water for the Missouri River Basin and irrigated land north of Casper, and a complex system of water management emerged."
+					"As the twentieth century progressed, various entities acquired more water rights on the North Platte River. More dams, reservoirs and power plants were built to generate electricity and supply irrigation water for the region, and a complex system of water management emerged."
 				}
 			]
 		},
@@ -146,17 +152,17 @@
 				{ "graf":
 					"Water rights west of the Missouri River generally follow the Prior Appropriation Doctrine, commonly explained as “first in time, first in right.” But from the beginning of the Bureau of Reclamation’s history, navigating myriad water rights has been a challenging yet critical piece of the puzzle."
 				},{ "graf":
-					"As North Platte River water moves from Colorado all the way down to fields in Nebraska, it’s carefully accounted for and divvyed up. Many interests have a share in it: farmers and ranchers to cities to even a few birds and fish, federally protected under the 1973 Endangered Species Act. In the Plains and West, few issues are as contentious as water, and few require such an arsenal of lawyers."
+					"As North Platte River water moves from Colorado to fields in Wyoming and Nebraska, it’s carefully accounted for and divvyed up. Many interests have a share in it: from agriculture to cities to federally-protected wildlife. In the West, few issues are as contentious as water."
 				},{ "graf":
 					"In 1934, Nebraska sued Wyoming over the amount of North Platte River water it received."
 				},{ "graf":
 					"“It’s basic water history in the West,” Matt Hoobler with the Wyoming State Engineer’s Office said. “It doesn’t matter if you’re Kansas to Colorado, or California to Colorado or California to Wyoming, it doesn’t matter. Downstream states look upstream for more water.”"
 				},{ "graf":
-					"The ruling fell in favor of Nebraska, splitting the water 75 percent/25 percent between it and Wyoming, respectively, because of the amount of land under agricultural production. That agreement, one of several such compacts on the river, still holds today."
+					"The ruling fell in favor of Nebraska, splitting the water 75 percent to Nebraska and 25 percent to Wyoming, in accordance with the amount of land under agricultural production in the Platte River Valley. That agreement, one of several such compacts on the river, still holds today."
 				},{ "graf":
-					"On the North Platte system, all of these complicated agreements and allotments are controlled from one central place, the Bureau of Reclamation’s Wyoming Area Office in Casper. On a visit one recent morning, the drab official-looking building matched the overcast sky."
+					"On the North Platte system, all of these complicated water allotments are implemented from one central place, the Bureau of Reclamation’s Wyoming Area Office in Casper. On a recent visit, the drab building matched the overcast sky."
 				},{ "graf":
-					"In a small office inside the building, highly-trained operators sit in front of multiple computer screens, controlling water in three different states: Wyoming, Colorado and Montana. They work around the clock year-round, serving as the operators, security, and emergency personnel for all the dams and reservoirs, and coordinating power supply with the Western Area Power Administration. They follow target flow orders from the three different state water offices, Ray Balerio, control room supervisor said. Operators are always scanning their water and data logs, especially at volatile locations, continuously make minor adjustments across the system to keep them on track."
+					"In a small office inside the building, highly-trained operators sit in front of multiple computer screens, controlling water in three different states: Wyoming, Colorado and Montana. They work around the clock, serving as the operators, security, and emergency personnel for all the dams and reservoirs, and coordinating power supply with the federal Western Area Power Administration (which markets and transmits electricity across 15 states). They follow target flow orders from the three different state water offices, Ray Balerio, control room supervisor said. Operators are always scanning their water and data logs, continuously make minor adjustments across the system to keep them on track."
 				}
 
 
@@ -166,13 +172,13 @@
 		"after_photo": {
 			"grafs": [
 				{ "graf":
-					"“It is amazing with the push of a button we can release so much water. Just by selecting a power plant and pushing a button,” Balerio said. In his 25 years at the office, he’s seen all kinds of events, and laughed when asked which is easier: responding to droughts and floods, and said both often prove challenging."
+					"“It is amazing with the push of a button we can release so much water. Just by selecting a power plant and pushing a button,” Balerio said. In his 25 years at the office, he’s seen all kinds of events. He laughed when asked whether droughts or floods are easier to respond to, and said both often prove challenging."
 				},{ "graf":
-					"“When you have a lot of water everything’s running full bore, everything’s going out full maximum so you don’t have a lot of changes. But during the drought season you’re trying to conserve water so you’re watching every drop so you have a lot of changes which is really stressful because you may be doing 15 changes every two hours,” Balerio said."
+					"“When you have a lot of water everything’s running full bore, everything’s going out full maximum so you don’t have a lot of changes. But during the drought season you’re trying to conserve water so you’re watching every drop... which is really stressful because you may be doing 15 changes every two hours,” Balerio said."
 				},{ "graf":
 					"Each year, this office depends upon the snowpack data gathered by the Natural Conservation Resource Service to make judgments based on how much water will be coming down from the mountains east of the Continental Divide."
 				},{ "graf":
-					"Lyle Myler, deputy area manager for the office, is tall, with a voice that carries just a hint of drawl. Myler is a veteran water manager. He’s been with the office for 24 years and can off rattle facts and figures from any of their systems with ease."
+					"Lyle Myler, deputy area manager for the office, is tall, with a voice that carries just a hint of a drawl. Myler is a veteran water manager. He’s been with the office for 24 years and can rattle off facts and figures from any of their systems with ease."
 				},{ "graf":
 					"“We do a forecast beginning February 1st that gives an estimate of the volume of water that we think we’re going to get in four months. That gives us a feel for how we start positioning water in the reservoirs,” Myler said."
 				},{ "graf":
@@ -180,9 +186,9 @@
 				},{ "graf":
 					"“[In 2014] we had a good run-off season,” Myler said, with more than one million acre feet coming into the upper river system from snow melt runoff and rain. On average, it’s about 700,000 acre-feet. “The two previous years [2012 and 2013] saw well-below average inflows so the supply was quite depleted. It took a big amount of water to fill it up, but we got it full.” Those years offered a striking contrast to the huge water year of 2011, when the system received more than two million acre-feet of water."
 				},{ "graf":
-					"Like most other western river basins, the accounting and managing of water on the North Platte River is complex, and the water flowing through the complicated network is vital to the survival of ranchers, farmers, cities and wildlife."
+					"Like most other western river basins, the accounting and managing of water on the North Platte River is complex, and the water flowing through the intricate network is vital to the survival of ranchers, farmers, cities and wildlife."
 				},{ "graf":
-					"Today, during an average water year, the Bureau of Reclamation projects deliver water to roughly one-third of the irrigated acreage and people in western states. Without “reclaiming” or bringing western watersheds under human control, nothing in the arid west would be the same: agriculture, industry, cities and towns."
+					"Today, during an average water year, Bureau of Reclamation projects deliver water to roughly one-third of the irrigated acreage and people in western states. Without “reclaiming” or bringing western watersheds under human control, nothing in the region would be the same: agriculture, industry, cities and towns."
 				}
 			]
 		}
@@ -190,8 +196,8 @@
 	},
 
 	"field": {
-		"hed": "Lifeblood of the Cultivated Land",
-		"subhed": "Channeled through dams and reservoirs, mountain snowmelt arrives to water thirsty fields on the plains, supporting the economy of an entire region.",
+		"hed": "Lifeblood of A Cultivated Land",
+		"subhed": "Channeled through dams, reservoirs and canals, mountain snowmelt arrives to water thirsty fields on the plains, supporting the economy of an entire region.",
 
 		"intro": {
 			"grafs": [
@@ -200,18 +206,12 @@
 				},{"graf":
 					"“I’ll be waiting for you at seven, in my blue truck in the driveway,” instructed his kind yet gruff voice on the phone."
 				},{"graf":
-					"In the cool morning breeze just past seven, he directed the way to one of his sugar beet fields—a field that would not be here without irrigation water from the North Platte River. "
+					"In the cool breeze the next morning, he directed the way to one of his sugar beet fields—a field that would not be here without irrigation water from the North Platte River. "
 				},{ "graf":
 					"Wearing a faded denim shirt, a toothy smile and a mesh hat, Busch watched his grandson and a farm hand “move water” with an approving gaze. He knows this process well. A third-generation farmer in the Nebraska panhandle, Busch has spent nearly all of his 77 years on the same patch of land outside of Gering. After a short stint at college, he took over farming the family property from his father in 1959."
 				},{ "graf":
 					"“I dearly love farming,” Busch said. “Farming’s my life and always has been.”"
-				}
-			]
-		},
-
-		"after_beet_tl": {
-			"grafs": [
-				{ "graf":
+				},{ "graf":
 					"Busch’s son Kendall now runs the operation, more than 1,000 acres of corn, sugar beets, dry edible beans and alfalfa. They still use flood or furrow irrigation, an older method traded out in favor of sprinkler or center pivots by many other farmers in recent years. It’s a method that requires a lot of early summer mornings."
 				},{ "graf":
 					"By summer, irrigation season is in full swing. Mountain snowmelt, held back by dams and stored in reservoirs, starts to be released for use on fields in May. Without it, agriculture would not exist in this arid region, where annual rainfall rarely exceeds 16 inches."
@@ -219,7 +219,7 @@
 			]
 		},
 
-		"irrigation_video":{
+		"irrigation_video": {
 			"grafs": [
 				{ "graf":
 					"“Our [operation] is very labor intense. It takes a lot of manpower and a lot of time,” Kendall Busch said."
@@ -227,7 +227,13 @@
 					"Much of their water comes from the Gering-Ft. Laramie Irrigation District, which provides irrigation water to nearly 55,000 acres in the Nebraska panhandle. Rick Preston is the district’s general manager."
 				},{ "graf":
 					"“Water is the most valuable resource we have,” Preston said. His district is one of four original government districts commissioned along with Pathfinder Dam in 1903 by the U.S. Reclamation Service (today’s U.S. Bureau of Reclamation), and one of the oldest water right holders on the North Platte River."
-				},{ "graf":
+				}
+			]
+		},
+
+		"after_tl_sequence":{
+			"grafs": [
+				{ "graf":
 					"The agricultural industry in this part of the state owes most of its existence to that massive engineering feat, built to control the North Platte River and transport water all the way from the upper reaches of the Rocky Mountains through a complex system of dams and reservoirs in Wyoming. The Gering-Ft. Laramie Irrigation District sits at the bottom end of this system, where the water is diverted into canals to be channeled to fields of thirsty crops."
 				},{ "graf":
 					"Nebraska leads the nation in irrigated land, with more than 8 million acres reliant on supplemental water supplies. The western Nebraska panhandle produces nearly ten percent of the nation’s dry edible bean crop and ranks fifth nationally for sugar beet production. "
@@ -272,9 +278,7 @@
 		"section_four": {
 			"grafs": [
 				{"graf":
-					"Several years ago, Bob Busch decided western farmers didn’t know enough about where their water comes from, despite how much they value it. So he began leading tours all the way up into eastern Wyoming to show off the North Platte irrigation system. "
-				},{"graf":
-					"“It’s just amazing. We don’t give enough credit to our forefathers to have their visions, their dreams and the determination and the willpower to put this thing together. It took a lot of work. And we take that for granted today,” said Busch."
+					"Several years ago, Bob Busch decided western farmers didn’t know enough about where their water comes from, despite how much they value it. So he began leading tours all the way up into eastern Wyoming to show off the North Platte irrigation system."
 				}
 			]
 		},
@@ -282,11 +286,17 @@
 		"section_five": {
 			"grafs": [
 				{"graf":
+					"“It’s just amazing. We don’t give enough credit to our forefathers to have their visions, their dreams and the determination and the willpower to put this thing together. It took a lot of work. And we take that for granted today,” said Busch."
+				},{"graf":
 					"More than a century after construction, the North Platte Project remains a critical and robust system of water delivery for farmers in the eastern Wyoming and western Nebraska."
 				},{"graf":
-					"Standing by his sugar beet field in the mid-morning light, Busch said knowing where his water comes from and what it took to arrive at his field is critical, because it drives everything he does on the farm."
-				},{"graf":
 					"“Water’s our very key,” Bob Busch said. “It’s our lifeblood.”"
+				},{"graf":
+					"Standing by his sugar beet field in the mid-morning light, Busch said knowing where his water comes from and what it took to arrive at his field is critical, because it drives everything he does on the farm."
+				
+				},{"graf":
+					"And it all starts with a snowflake."
+				
 				}
 			]
 		}

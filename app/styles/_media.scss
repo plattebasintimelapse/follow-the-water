@@ -138,6 +138,10 @@
 	z-index: -100;
 }
 
+#seminoe {
+	background-image: url('../img/seminoe.jpg');
+}
+
 #pathfinder-historicals .images {
     padding-bottom: 25px;
     @include breakpoint(baby-bear) {

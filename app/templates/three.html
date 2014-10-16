@@ -1,4 +1,4 @@
-<!--(bake partials/header.html title="Lifeblood of the Cultivated Land" id="part-three")-->
+<!--(bake partials/header.html title="Lifeblood of A Cultivated Land" id="part-three")-->
 
         <!--(bake partials/nav.html)-->
 
@@ -23,6 +23,19 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <!--(bake partials/copy.html _foreach="grafs:field.intro.grafs")-->
+
+                        <div class="inline-media-large inline-video" id="tubes-video">
+                            <div class="inline-media-wrapper">
+                                <div class="video-wrapper-16-9 vid-wrap">
+                                    <iframe id="tubes" src="//player.vimeo.com/video/108523452?title=0&amp;byline=0&amp;portrait=0&amp;loop=0&amp;player_id=tubes&amp;api=1" frameborder="0"></iframe>
+                                </div>
+                                <span class="image-caption image-caption-right">Bob Busch's grandson and farm hand set siphon tubes.</span>
+                            </div>
+                        </div>
+
+                        <p>After setting the <span class="inline-video-btn" id="play-tubes"><i class="fa fa-play"></i> siphon tubes</span><span class="mama-bear">siphon tubes</span>, they’ll let the water flow across this field for 24 hours before moving the pipes, and thus the water, again tomorrow morning. They repeat this process daily throughout the irrigation season, from May through September, making the most of their water.</p>
+
+                        <!--(bake partials/copy.html _foreach="grafs:field.irrigation_video.grafs")-->
                     </div>
                 </div>
             </div>
@@ -155,22 +168,7 @@
             <div class="container container-small">
                 <div class="row">
                     <div class="col-sm-12">
-                        <!--(bake partials/copy.html _foreach="grafs:field.after_beet_tl.grafs")-->
-
-
-
-                        <div class="inline-media-large inline-video" id="tubes-video">
-                            <div class="inline-media-wrapper">
-                                <div class="video-wrapper-16-9 vid-wrap">
-                                    <iframe id="tubes" src="//player.vimeo.com/video/108523452?title=0&amp;byline=0&amp;portrait=0&amp;loop=0&amp;player_id=tubes&amp;api=1" frameborder="0"></iframe>
-                                </div>
-                                <span class="image-caption image-caption-right">Bob Busch's grandson and farm hand lay siphon tubes.</span>
-                            </div>
-                        </div>
-
-                        <p>After setting the <span class="inline-video-btn" id="play-tubes"><i class="fa fa-play"></i> siphon tubes</span><span class="mama-bear">siphon tubes</span>, they’ll let the water flow across this field for 24 hours before moving the pipes, and thus the water, again tomorrow morning. They repeat this process daily throughout the irrigation season, from May through September, making the most of their water.</p>
-
-                        <!--(bake partials/copy.html _foreach="grafs:field.irrigation_video.grafs")-->
+                        <!--(bake partials/copy.html _foreach="grafs:field.after_tl_sequence.grafs")-->
                     </div>
                 </div>
             </div>
@@ -187,7 +185,7 @@
                                     <tr>
                                         <td>Top Crop</td>
                                         <td class="amount">Acres</td>
-                                        <td class="rank">US Rank</td>
+                                        <td class="rank">US Rank by State</td>
                                     </tr>
                                     <tr>
                                         <td>Corn for grain</td>
@@ -222,8 +220,8 @@
                                     <tr>
                                         <td>Top Crop</td>
                                         <td class="amount">Acres</td>
-                                        <td class="rank">State Rank</td>
-                                        <td class="rank">US Rank</td>
+                                        <td class="rank">State Rank by County</td>
+                                        <td class="rank">US Rank by County</td>
                                     </tr>
                                     <tr>
                                         <td>Corn for grain</td>
@@ -244,7 +242,7 @@
                                         <td class="rank">24</td>
                                     </tr>
                                     <tr>
-                                        <td>Sugar beets for sugar</td>
+                                        <td>Sugar beets</td>
                                         <td class="amount">12,116</td>
                                         <td class="rank">2</td>
                                         <td class="rank">31</td>
@@ -279,7 +277,7 @@
                                 <div class="video-wrapper-16-9 vid-wrap">
                                     <iframe id="preston" src="//player.vimeo.com/video/109027060?title=0&amp;byline=0&amp;portrait=0&amp;loop=0&amp;player_id=preston&amp;api=1" frameborder="0"></iframe>
                                 </div>
-                                <span class="image-caption image-caption-right">Rick Preston with something.</span>
+                                <span class="image-caption image-caption-right">Rick Preston describes water reuse in the Nebraska panhandle.</span>
                             </div>
                         </div>
 
@@ -294,7 +292,7 @@
         <section class="interactive" id="pop-interactive">
             <div class="container container-large">
                 <div class="row">
-                    <h2>Counties West of the 100<sup>th</sup> Meridian</h2>
+                    <h2>Select Rural Counties West of the 100<sup>th</sup> Meridian</h2>
                     <h3><i class="fa fa-hand-o-up"></i> Population growth from 1900 - today</h3>
                     <div class="col-md-8 col-sm-7">
                         <div id="pop-chart"></div>
@@ -316,25 +314,37 @@
             </div>
         </section>
 
-        <section class="image-featured">
-            <div class="container container-large">
-                <div class="row">
-                    <img src="../media/canals/canals.jpg" alt="">
-                </div>
-            </div>
-        </section>
-
         <section class="copy">
             <div class="container container-small">
                 <div class="row">
                     <div class="col-sm-12">
                         <!--(bake partials/copy.html _foreach="grafs:field.section_four.grafs")-->
+
+                        <div class="inline-media-large">
+                            <div class="inline-media-wrapper no-border">
+                                <img class="zoom" src="../media/canals/canals.jpg" alt="">
+                                <span class="image-caption image-caption-right"><img class="zoom-in-icon baby-bear-hide" src="../media/zoom.png" />Surrounding the Scottsbluff area, roads and canals intersect, serving the predominately agricultural economy.</span>
+                            </div>
+                        </div>
+
+                        <!--(bake partials/copy.html _foreach="grafs:field.section_five.grafs")-->
+
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="image-featured">
+       <!--  <section class="image-featured">
+            <div class="container container-large">
+                <div class="row">
+                    <img src="../media/canals/canals.jpg" alt="">
+                </div>
+            </div>
+        </section> -->
+
+        
+
+       <!--  <section class="image-featured">
             <div class="container-fluid">
                 <div class="row">
                     <img src="../media/IMG_1086 copy.jpg" alt="">
@@ -356,17 +366,17 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
-        <section class="copy">
+      <!--   <section class="copy">
             <div class="container container-small">
                 <div class="row">
                     <div class="col-sm-12">
-                        <!--(bake partials/copy.html _foreach="grafs:field.section_five.grafs")-->
+                        
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="footer" id="ftw-close">
             <div class="container-fluid">
@@ -385,14 +395,14 @@
 
                     <div class="credits">
                         <p class="credit">Design & Development: <span class="name">Steven Speicher</span></p>
-                        <p class="credit">Reporting and Writing: <span class="name">Ariana Brocious</span></p>
+                        <p class="credit">Reporting & Writing: <span class="name">Ariana Brocious</span></p>
                         <p class="credit">Video Shooting/Editing: <span class="name">Peter Stegen & Steven Speicher</span></p>
                         <p class="credit">Photography: <span class="name">Michael Forsberg</span></p>
                         <p class="credit">Production Assistants: <span class="name">Joe Arneson & Mariah Lundgren</span></p>
                         <p class="credit">Historical Research: <span class="name">Andrew DeCamp</span></p>
-                        <p class="credit">Editing: <span class="name">Matt Waite</span></p>
-                        <p class="credit">Transcription: <span class="name">Pat Richmond & Jan Howard</span></p>
-                        <p class="credit">Executive Producer: <span class="name">Michael Farrell & Michael Forsberg</span></p>
+                        <p class="credit">Editorial Advisor: <span class="name">Matt Waite</span></p>
+                        <p class="credit">Transcription: <span class="name">Pat Richmond & Jann Howard</span></p>
+                        <p class="credit">Executive Producers: <span class="name">Michael Farrell & Michael Forsberg</span></p>
                     </div>
 
                     </div>
