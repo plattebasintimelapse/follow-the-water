@@ -11,6 +11,7 @@
 		<!-- bower:css -->
 		<link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.css" />
 		<link rel="stylesheet" href="../bower_components/jquery-ui/themes/smoothness/jquery-ui.css" />
+		<link rel="stylesheet" href="../bower_components/lightbox/css/lightbox.css" />
 		<!-- endbower -->
 		<!-- endbuild -->
 		<!-- build:css(.tmp) ../styles/main.css -->
@@ -32,25 +33,39 @@
 
         <nav id="main-nav" role="navigation" class="down" data-200-start="margin-top:-80px;" data-800-start="margin-top:0px;">
             <div class="nav-wrapper">
+        
                 <div class="nav-button" id="home-btn">
                     <h4><a href="http://www.plattebasintimelapse.com">PBT</a></h4>
                 </div>
+        
                 <div class="nav-button spacer">
                     <h4>|</h4>
                 </div>
+        
                 <div class="nav-button" id="credit-btn" data-toggle="modal" data-target="#credits-modal">
                     <h4><i class="fa fa-group"></i></h4>
                 </div>
+        
+                <div class="nav-button spacer">
+                    <h4>|</h4>
+                </div>
+        
+                <div class="nav-button" id="twitter-share">
+                    <a target="_blank" href="https://twitter.com/share" data-count="none" data-url="http://projects.plattebasintimelapse.com/follow-the-water"><h4><i class="fa fa-twitter"></i></h4></a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                </div>
+        
                 <div class="nav-button" id="nav-open">
                     <h4><i class="fa fa-navicon"></i><span class="baby-bear-hide">Chapters</span></h4>
                 </div>
+        
                 <div class="nav-container hidden">
         
                     <ul id="menu">
                         <li id="intro"><a href="../" data-title="Intro"><i class="fa fa-chevron-left"></i></a></li>
-                        <li id="one"><a href="../snow" data-title="Chapter One: &#10; Water Comes from White Wonder"><img src="../img/nav-part-one.jpg" alt=""></a></li>
-                        <li id="two"><a href="../storage" data-title="Chapter Two: &#10; Guiding Each Precious Drop"><img src="../img/nav-part-two.jpg" alt=""></a></li>
-                        <li id="three"><a href="../field" data-title="Chapter Three: &#10; Lifeblood of A Cultivated Land"><img src="../img/nav-part-three.jpg" alt=""></a></li>
+                        <li id="one"><a href="../snow" data-title="Water Comes from White Wonder"><img src="../img/nav-part-one.jpg" alt=""></a></li>
+                        <li id="two"><a href="../storage" data-title="Guiding Each Precious Drop"><img src="../img/nav-part-two.jpg" alt=""></a></li>
+                        <li id="three"><a href="../field" data-title="Lifeblood of A Cultivated Land"><img src="../img/nav-part-three.jpg" alt=""></a></li>
                         <li><h3 id="nav-title" class="hidden"></h3></li>
                     </ul>
         
@@ -93,25 +108,25 @@
                             <p class="credit">Executive Producers: <span class="name">Michael Farrell & Michael Forsberg</span></p>
                         </div>
         
-                        <div class="credits">
+                        <div class="credits team">
+                            <p class="credit small">Special Thanks: <span class="name">Bob Busch, Mage Hultstrand, Matt Hoobler, Lyle Myler & Rick Preston</span></p>
                             <p class="credit small">Historical Images: <span class="name"><a href="http://www.archives.gov/">The U.S. National Archives and Records Administration</a> & <a href="http://www.nebraskahistory.org/index.shtml">Nebraska State Historical Society</a></span></p>
                             <p class="credit small">Snowflake Icons: <span class="name"><a href="http://www.flaticon.com">Freepik</a></span></p>
-                            <p class="credit small">Music: <span class="name">DeWolfe Music Library</span></p>
+                            <p class="credit small">Music: <span class="name"><a href="http://www.dewolfemusic.com/">DeWolfe Music Library</a></span></p>
+        
                         </div>
+        
+                       <!--  <div class="credits">
+                            
+                        </div> -->
         
                         <div class="credits">
-                            <p class="credit small">Special Thanks: <span class="name">Bob Busch, Mage Hultstrand, Matt Hoobler, Lyle Myler & Rick Preston</span></p>
-                        </div>
-        
-                        <div>
-                            <p class="thanks"><b>This project is part of the <a target="_blank" href="http://www.plattebasintimelapse.com">Platte Basin Timelapse</a> project, which puts an entire watershed in motion, revealing stories about our most precious resource: <span class="blue">water</span>.</b></p>
+                            <p class="thanks">This project is part of the <a target="_blank" href="http://www.plattebasintimelapse.com">Platte Basin Timelapse</a> project, which puts an entire watershed in motion, revealing stories about our most precious resource: <span class="blue">water</span>.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        
 
         <header class="image-featured-behind">
             <div class="container-fluid">
