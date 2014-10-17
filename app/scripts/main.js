@@ -1,48 +1,3 @@
-
-
-function listenForIntro() {
-    console.log("Opening video...");
-    var $iframe = $('#video-title')[0];
-    var player = $f($iframe);
-
-    player.addEvent('ready', function() {
-        player.addEvent('finish', finish);
-
-        $('#btn-intro').click(function() {
-            $('#intro-video-wrapper').css('display', 'block');
-            player.api("play");
-            $('.video-wrapper iframe').addClass('playing');
-        });
-        $('.btn-skip').click(function() {
-            $('#intro-video-wrapper iframe').removeClass('playing');
-            player.api("stop");
-            finish();
-        });
-        $('#btn-loop').click(function() {
-            player.api("stop").api("seekTo", "0").api('play');
-        });
-        var vol_on = true;
-        $('#btn-audio').click(function() {
-            if (vol_on) {
-                player.api('setVolume',0);
-                $(this).find('i').addClass('fa-volume-up').removeClass('fa-volume-off');
-                vol_on = false;
-            } else {
-                $(this).find('i').addClass('fa-volume-off').removeClass('fa-volume-up');
-                player.api('setVolume',1);
-                vol_on = true;
-            }
-        });
-    });
-
-    function finish(player_id) {
-        player.api("unload");
-        $('#intro-video-wrapper').remove();
-        $('#intro header').remove();
-        window.location.href = "snow";
-    }
-};
-
 function listenVideo(id){
     // console.log(id + ' video ready');
     var $iframe = $('#' + id)[0];
@@ -168,7 +123,7 @@ $(document).ready(function() {
 
         // INTRO
         // console.log("INTRO");
-        listenForIntro();
+        // listenForIntro();
 
     } else if ( $('body').is('.part-one')  ) {
 

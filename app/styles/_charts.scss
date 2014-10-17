@@ -72,7 +72,7 @@
     }
     .interactive-desc {
         margin-top: 40px;
-        font-size: 1em;
+        font-size: .9em;
     }
 }
 
@@ -122,6 +122,9 @@
 .econ-table {
     padding-left: 35px;
     padding-right: 35px;
+    @include breakpoint(mama-bear) {
+        margin-bottom:25px;
+    }
     @include breakpoint(baby-bear) {
         margin-bottom:15px;
     }

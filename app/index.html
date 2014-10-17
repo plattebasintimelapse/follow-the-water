@@ -112,9 +112,11 @@
                     <div class="modal-body">
                         <div class="credits team">
                             <p class="credit">Design & Development: <span class="name">Steven Speicher</span></p>
-                            <p class="credit">Reporting & Writing: <span class="name">Ariana Brocious</span></p>
-                            <p class="credit">Video Shooting/Editing: <span class="name">Peter Stegen & Steven Speicher</span></p>
+                            <p class="credit">Reporter & Writer: <span class="name">Ariana Brocious</span></p>
+                            <p class="credit">Video/Stills Editor: <span class="name">Peter Stegen</span></p>
+                            <p class="credit">Videography: <span class="name">Peter Stegen & Steven Speicher</span></p>
                             <p class="credit">Photography: <span class="name">Michael Forsberg</span></p>
+                            <p class="credit">Audio: <span class="name">Emily Kreutz</span></p>
                             <p class="credit">Production Assistants: <span class="name">Joe Arneson & Mariah Lundgren</span></p>
                             <p class="credit">Historical Research: <span class="name">Andrew DeCamp</span></p>
                             <p class="credit">Editorial Advisor: <span class="name">Matt Waite</span></p>
@@ -175,6 +177,53 @@
         <script src="/scripts/mapping.js"></script>
         <script src="/scripts/swe.js"></script>
         <!-- endbuild -->
+
+        <script>
+            $(function() {
+                console.log("Opening video...");
+                var $iframe = $('#video-title')[0];
+                var player = $f($iframe);
+
+                player.addEvent('ready', function() {
+                    player.addEvent('finish', finish);
+                });
+
+                function finish(player_id) {
+                    player.api("unload");
+                    $('#intro-video-wrapper').remove();
+                    $('#intro header').remove();
+                    window.location.href = "snow";
+                }
+
+                $('#btn-intro').click(function() {
+                    console.log("click");
+                    $('#intro-video-wrapper').css('display', 'block');
+                    player.api("play");
+                    $('.video-wrapper iframe').addClass('playing');
+                });
+
+                $('.btn-skip').click(function() {
+                    $('#intro-video-wrapper iframe').removeClass('playing');
+                    player.api("stop");
+                    finish();
+                });
+                $('#btn-loop').click(function() {
+                    player.api("stop").api("seekTo", "0").api('play');
+                });
+                var vol_on = true;
+                $('#btn-audio').click(function() {
+                    if (vol_on) {
+                        player.api('setVolume',0);
+                        $(this).find('i').addClass('fa-volume-up').removeClass('fa-volume-off');
+                        vol_on = false;
+                    } else {
+                        $(this).find('i').addClass('fa-volume-off').removeClass('fa-volume-up');
+                        player.api('setVolume',1);
+                        vol_on = true;
+                    }
+                });
+            });
+        </script>
 
     </body>
 </html>
