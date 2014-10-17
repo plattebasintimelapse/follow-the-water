@@ -1,7 +1,7 @@
 {
 	"main": {
-		"hed": "Nature Provides, Man Decides",
-		"subhed": "Follow a tiny snowflake as it makes its way from the Colorado Rockies to a sugar beet field in the Nebraska panhandle."
+		"hed": "From Mountain Snowpack to Thirsty Fields",
+		"subhed": "Follow a snowflake from the Colorado Rockies through Wyoming dams and reservoirs to fields in the Nebraska panhandle."
 	},
 
 	"snow": {
@@ -11,7 +11,7 @@
 		"intro": {
 			"grafs": [
 				{ "graf":
-					"The sharp peaks of the Nokhu Crags emerge slowly above a dark ridge of pine on the steep climb to Lake Agnes. The trail ends on a rocky outcropping above a lake of black glass, where snowy mountains slide down to the shore. Winter winds whip around this remote alpine spot, near the headwaters of the North Platte River."
+					"The sharp peaks of the Nokhu Crags emerge slowly above a dark ridge of pine on the steep climb to Lake Agnes. The trail ends on a rocky outcropping above a lake of black glass, where snowy mountains slide down to the shore. Winter winds whip around this remote alpine spot, near the headwaters of the North Platte River in Colorado."
 				},{ "graf":
 					"As it has for centuries, water arrives annually to these mountains as snow and ice, collecting at high elevations to wait for spring’s warmth. In the arid West, the majority of the water that fills streams and rivers comes from winter snowpack. Every year, farmers, raft guides, conservationists, fishermen, city planners and others wait anxiously to see what winter will bring."
 				}
@@ -21,9 +21,9 @@
 		"intro_with_map": {
 			"grafs": [
 				{ "graf":
-					"The answer means the difference between a good year and a bad one, because water is the life and livelihood of downstream users."
+					"The answer means the difference between a good year and a bad one, because water is life and livelihood for many downstream."
 				},{ "graf":
-					"Ski fanatics know exactly how much fresh powder each storm brings to their mountains. But others track that data, too. For the last 100 years, as snow begins to fall, the annual cycle of water management begins, as hydrologists answer a critical question: how much water is up there <em>this</em> year?"
+					"Ski fanatics know exactly how much fresh powder each storm brings to their mountains. But others track that data, too. For the last 100 years, as snow begins to fall, the annual cycle of water management begins, as hydrologists answer a critical question: how much water is up there this year?"
 				}
 			]
 		},
@@ -57,11 +57,11 @@
 		"before_snowpack_video": {
 			"grafs": [
 				{ "graf":
-					"Starting in 1905, a University of Nevada professor named James Church pioneered the system of manual snow surveying."
+					"In 1906, a University of Nevada professor named James Church pioneered the system of manual snow surveying."
 				},{ "graf":
-					"“He wanted to find a better way of forecasting runoff,” Matt Hoobler said. And his method proved durable: during the last century, things haven’t changed much. Hoobler is a snow surveyor with the Wyoming State Engineer's Office who conducts manual surveys each winter. “The basic premise of filling a tube full of snow and weighing it... we do something very similar today,” Hoobler said."
+					"“He wanted to find a better way of forecasting runoff,” Matt Hoobler said. And his method proved durable; during the last century, the process hasn't changed much. Hoobler works in the Wyoming State Engineer's Office and conducts manual surveys each winter. “The basic premise of filling a tube full of snow and weighing it... we do something very similar today,” Hoobler said."
 				},{ "graf":
-					"Near Interstate 80 in southeastern Wyoming, weak sunlight makes its way through the thin air to where Hoobler is taking a core sample of the snowpack. He carefully holds a specially calibrated cylinder, which measures snow depth, weight, and density, then drops it vertically into the snow, twists it, and pulls it back out to analyze."
+					"Near Interstate 80 in southeastern Wyoming, weak sunlight makes its way through the thin air to where Hoobler is taking a core sample of the snowpack. He carefully holds a specially calibrated cylinder, which measures snow depth and weight, then drops it vertically into the snow, twists it and pulls it back out to calculate snow density. He looks at the tube and reads the measurement, “31 inches,” to his survey partner."
 				},{ "graf":
 					"“Water content at this site is five and a half inches,” Hoobler said. “That means if this snow was to melt instantaneously, there’d be five and a half inches of water sitting in this meadow.”"
 				}
@@ -93,9 +93,9 @@
 		"ending": {
 			"grafs": [
 				{ "graf":
-					"But snow accumulation is only one part of the story, since the climate of the region matters too. In the historic drought year of 2012, some farmers ran out of surface irrigation water partway through the season. Those that could drew heavily from the aquifer, pumping groundwater up to their fields when river water ran out. In 2014, irrigation demands were slow to start because of a cool, wet spring. That combined with high snowpack runoff meant reservoirs along the North Platte River had time to fill, banking water for another dry year in the future."
+					"But snow accumulation is only one part of the story, since the climate of the region matters too. In the historic drought year of 2012, some farmers ran out of surface irrigation water partway through the season. Those that could drew heavily from the aquifer, pumping groundwater up to their fields when river water ran out. In 2014, irrigation demands were slow to start because of a cool, wet spring. That, combined with high snowpack runoff, meant reservoirs along the North Platte River had time to fill, banking water for another dry year in the future."
 				},{ "graf":
-					"As winter relaxes into spring, that massive quantity of water stored high in the mountains begins to melt and make its way into streams and rivers. The North Platte River travels north from Colorado into Wyoming, guided through a system of dams and reservoirs on the way to a farmer’s field."
+					"As winter relaxes into spring, that massive quantity of water stored high in the mountains begins to melt and make its way into streams and rivers. The North Platte River travels from Colorado into Wyoming, guided through a system of dams and reservoirs on the way to a farmer’s field."
 				}
 			]
 		}
@@ -122,7 +122,7 @@
 		"history_section": {
 			"grafs": [
 				{ "graf":
-					"Spurred by the fur trade, gold rush, and the Homestead Act of 1862, pioneering men and women set out to colonize the American West, looking for a place to raise their families and make a living from the land. Settlers coming from the lush, rain-fed East found western lands dauntingly dry, and quickly experienced the difficulty of relying solely upon the region’s capricious rainfall. Though early western boosters lured settlers by suggesting that “rain follows the plow” and the climate was getting wetter, those who arrived soon found the climate closer to Major Stephen H. Long’s description of the “Great American Desert.” Without a reliable source of water, there was no way to develop the expansive land that seemed so full of promise."
+					"Spurred by the fur trade, gold rush, and the Homestead Act of 1862, pioneering men and women set out to colonize the American West, looking for a place to raise their families and make a living from the land. Settlers coming from the lush, rain-fed East found western lands dauntingly dry, and quickly experienced the difficulty of relying solely upon the region’s capricious rainfall. Though early western boosters lured settlers by suggesting that “rain follows the plow” and the climate was getting wetter, those who arrived soon found the climate closer to Major Stephen H. Long’s description: the “Great American Desert.” Without a reliable source of water, there was no way to develop the expansive land that seemed so full of promise."
 				},{ "graf":
 					"The 100<sup>th</sup> meridian is often considered a dividing line between the western and eastern United States. As settlers learned, rainfall averages less than 20 inches a year west of this line, not a sustainable source of water for agriculture and industry. But snow collected in the mountains each winter, flooding riverbeds in the spring. And western pioneers were nothing if not enterprising. Early settlers capitalized on this resource by building irrigation systems to divert high spring runoff. But many years the river water would only last through early summer, abandoning crops and residents to the exactitudes of the sun and wind during the hottest time of the year. Thus began the concept of “reclaiming” western lands: restructuring natural water systems for human use through massive, federally-sponsored irrigation projects."
 				}
@@ -164,7 +164,7 @@
 		"before_photo": {
 			"grafs": [
 				{ "graf":
-					"The 1945 ruling split the natural water flows of the river 75 percent to Nebraska and 25 percent to Wyoming, in accordance with the amount of land under agricultural production. Nebraska returned to the court in 1986, accusing Wyoming of taking more than its share of water, and in 2001 the court issued a new decree which further restricted Wyoming's consumptive water use."
+					"When the case was finally settled in 1945, the ruling split the natural flows of the river 75 percent to Nebraska and 25 percent to Wyoming, in accordance with the amount of land under agricultural production. Nebraska returned to the court in 1986, accusing Wyoming of taking more than its share of water, and in 2001 the court issued a new decree which further restricted Wyoming's consumptive water use."
 				},{ "graf":
 					"On the North Platte system, all of these complicated water allotments are implemented from one central place, the Bureau of Reclamation’s Wyoming Area Office in Casper. On a recent visit, the drab building matched the overcast sky."
 				},{ "graf":
@@ -202,7 +202,6 @@
 				}
 			]
 		}
-		
 	},
 
 	"field": {
@@ -236,7 +235,7 @@
 				},{ "graf":
 					"Much of their water comes from the Gering-Ft. Laramie Irrigation District, which provides irrigation water to nearly 55,000 acres in the Nebraska panhandle. Rick Preston is the district's manager."
 				},{ "graf":
-					"“Water is the most valuable resource we have,” Preston said. His district is one of four original irrigation districts that distributes water from the North Platte Project. The U.S. Reclamation Service (today’s U.S. Bureau of Reclamation) built the Fort Laramie Canal from 1915 to 1924, following the construction of Pathfinder Dam."
+					"“Water is the most valuable resource we have,” Preston said. His district is one of four original irrigation districts that distribute water from the North Platte Project. The U.S. Reclamation Service (today’s U.S. Bureau of Reclamation) built the Fort Laramie Canal from 1915 to 1924, following the construction of Pathfinder Dam."
 				}
 			]
 		},
@@ -244,7 +243,7 @@
 		"after_tl_sequence":{
 			"grafs": [
 				{ "graf":
-					"The agricultural industry in this part of the state owes most of its existence to that massive engineering feat, built to control the North Platte River and transport water all the way from the upper reaches of the Rocky Mountains through a complex system of dams and reservoirs in Wyoming. The Gering-Ft. Laramie Irrigation District sits at the bottom end of this system, where the water is diverted into canals to be channeled to fields of thirsty crops."
+					"The agricultural industry in this part of Nebraska owes most of its existence to that massive engineering feat, built to control the North Platte River and transport water all the way from the upper reaches of the Rocky Mountains through a complex system of dams and reservoirs in Wyoming. The Gering-Ft. Laramie Irrigation District sits at the bottom end of this system, where the water is diverted into canals to be channeled to fields of thirsty crops."
 				},{ "graf":
 					"Nebraska leads the nation in irrigated land, with more than 8 million acres reliant on supplemental water supplies. The western Nebraska panhandle produces nearly 10 percent of the nation’s dry edible bean crop and ranks fifth nationally for sugar beet production. "
 				}
@@ -254,7 +253,7 @@
 		"before_preston_video": {
 			"grafs": [
 				{"graf":
-					"“A lot of people are grateful for what we do,” said Kendall Busch, who takes great pride in his work as a farmer. But he knows the value of the irrigation system because he depends completely on surface water, since this stretch of the North Platte Valley has no groundwater resources to tap into, unlike other parts of the panhandle. “Without these canal systems it’d be dire straits for water,” Kendall Busch said."
+					"“A lot of people are grateful for what we do,” said Kendall Busch, who takes great pride in his work as a farmer. But he knows the value of the irrigation system because he depends completely on surface water, since this stretch of the North Platte Valley has no practical groundwater resources to tap into, unlike other parts of the panhandle. “Without these canal systems it’d be dire straits for water,” Kendall Busch said."
 				},{"graf":
 					"Irrigation districts carefully manage the water to ensure it reaches all water rights holders on their system. But it all depends on how much snow lands in the mountains in the winter and what the spring rains bring, said Preston. Some years, like 2011, farmers have plenty, and irrigation districts dump the water downstream because they simply can’t use it all. Other years, like the span between 2002-2007 and again in 2012-2013, water use restrictions go into effect because there isn’t enough to go around."
 				},{"graf":

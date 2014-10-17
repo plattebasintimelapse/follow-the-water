@@ -162,12 +162,12 @@ function makePopChart() {
             }
             var xy = d3.geo.mercator().scale(scale).center(center).translate(offset);
             var path = d3.geo.path().projection(xy);
-            var stateAbbr;
 
             svg.selectAll("path")
                .data(json.features)
             .enter().append("path")
                .attr("id", function(json) {
+                    var stateAbbr;
                     if (json.properties.STATEFP10 == 31) {
                         stateAbbr = 'ne';
                     } else if  (json.properties.STATEFP10 == 56){
@@ -201,7 +201,17 @@ function makePopChart() {
                     d3.select(".line#" + c).classed({"hover": true}).moveToFront();
                     d3.select('.county #scotts-bluff-county-ne').moveToFront();
 
-                    d3.select(".county-name").html( '<h3>' + d.properties.NAMELSAD10 + '</h3>' );
+                    var stateAbbr;
+                    if (d.properties.STATEFP10 == 31) {
+                        stateAbbr = 'NE';
+                    } else if  (d.properties.STATEFP10 == 56){
+                        stateAbbr = 'WY';
+                    } else if  (d.properties.STATEFP10 == 8){
+                        stateAbbr = 'CO';
+                    }
+
+                    d3.select(".county-name").html( '<h3>' + d.properties.NAMELSAD10 + ' ' + stateAbbr + '</h3>' );
+
                 })
                 .on("mouseout", function(d) {
                     d3.select(this).classed({"hover": false});

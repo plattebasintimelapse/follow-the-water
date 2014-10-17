@@ -3,6 +3,8 @@
 }
 #interactive-swe h3 {
     margin-top: 4px;
+    margin-bottom: 45px;
+    @include breakpoint(mama-bear) { margin-bottom: 15px; }
 }
 
 #snowflakes, #waterdrops {
@@ -64,6 +66,7 @@
 .water-drop {
     color:#ff5d58;
 }
+
 #equals {
 	height: 30px;
 	border-bottom: 8px solid darkgray;
@@ -92,6 +95,10 @@
         cursor: pointer;
         padding: 6px;
         margin-bottom: 0;
+    }
+
+    #firn {
+        letter-spacing: 1px;
     }
 
     .selected {

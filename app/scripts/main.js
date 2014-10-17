@@ -72,7 +72,6 @@ function setMasterStyles() {
 function listenForAudioCntl( sound ) {
 
     if ($(window).scrollTop() == 0) {
-        console.log("top")
         var playing = true;
         sound[0].play();
     }

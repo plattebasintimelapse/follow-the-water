@@ -76,7 +76,8 @@ footer {
 
 // TEXT
 
-header p {
+header p.subhed {
+	font-size: 1.4em;
 	line-height: 1em;
 }
 
@@ -148,12 +149,13 @@ header p {
 .opening-scroll {
 	@extend .text-over-image;
 	bottom: 1%;
-	left: 50%;
+	left: 46%;
 	display:none;
 	text-align: center;
 
 	p {
-		font-size: .9em;
+		font-size: 1.1em;
+		@include breakpoint(baby-bear) { font-size: 1.2em; }
 		margin-bottom: 0px;
 	}
 
