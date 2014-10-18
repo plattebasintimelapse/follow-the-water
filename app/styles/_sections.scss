@@ -79,6 +79,11 @@ footer {
 header p.subhed {
 	font-size: 1.4em;
 	line-height: 1em;
+
+	@include breakpoint(baby-bear) {
+		font-size: 1em;
+		line-height: 1em;
+	}
 }
 
 .text-over-image {
@@ -120,7 +125,7 @@ header p.subhed {
 		width: 80%;
 	}
 	@include breakpoint(baby-bear) {
-		top: 25%;
+		top: 5%;
 	}
 }
 
@@ -134,7 +139,7 @@ header p.subhed {
 		width: 80%;
 	}
 	@include breakpoint(baby-bear) {
-		top: 25%;
+		top: 5%;
 	}
 }
 
