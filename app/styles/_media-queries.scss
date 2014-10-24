@@ -10,28 +10,26 @@
   }
 }
 
+.mama-bear { display: none }
+
 @include breakpoint(mama-bear) {
     .mama-bear-hide {
         display: none;
     }
 }
 
-@include breakpoint(baby-bear) {
-    .baby-bear-hide {
-        display: none;
+@include breakpoint(mama-bear) {
+    .mama-bear {
+      display: inline-block;
     }
 }
 
-.mama-bear {
-	   display: none;
-}
-.baby-bear {
-    display: none;
-}
 
-@include breakpoint(mama-bear) {
-    .mama-bear {
-    	display: inline-block;
+.baby-bear { display: none; }
+
+@include breakpoint(baby-bear) {
+    .baby-bear-hide {
+        display: none;
     }
 }
 
