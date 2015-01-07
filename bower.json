@@ -14,7 +14,7 @@
     "jquery-ui": "~1.11.1",
     "jquery-ui-touch-punch-working": "*",
     "vimeo-player-api": "*",
-    "lightbox": "~2.7.1"
+    "jquery-colorbox": "~1.5.14"
   },
   "version": "0.0.0",
   "authors": [

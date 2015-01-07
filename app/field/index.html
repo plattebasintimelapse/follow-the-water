@@ -11,7 +11,7 @@
 		<!-- bower:css -->
 		<link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.css" />
 		<link rel="stylesheet" href="../bower_components/jquery-ui/themes/smoothness/jquery-ui.css" />
-		<link rel="stylesheet" href="../bower_components/lightbox/css/lightbox.css" />
+		<link rel="stylesheet" href="../bower_components/jquery-colorbox/example1/colorbox.css" />
 		<!-- endbower -->
 		<!-- endbuild -->
 		<!-- build:css(.tmp) ../styles/main.css -->
@@ -503,13 +503,13 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-4 col-xs-offset-1">
-                            <img src="../img/close-snow.jpg" alt="Lake Agnes during a wind and snow storm.">
+                        <a href="../img/close-snow.jpg" class="gallery"><img src="../img/close-snow.jpg" alt="Lake Agnes during a wind and snow storm."></a>
                     </div>
                     <div class="col-xs-2">
-                            <img src="../img/close-canyon.jpg" alt="Fremont Canyon and Pathfinder Dam in golden light.">
+                        <a href="../img/close-canyon.jpg" class="gallery"><img src="../img/close-canyon.jpg" alt="Fremont Canyon and Pathfinder Dam in golden light."></a>
                     </div>
                     <div class="col-xs-4">
-                            <img src="../img/close-field.jpg" alt="The Gering-Ft. Laramie Irrigation canal near Scotts Bluff National Monument.">
+                        <a href="../img/close-field.jpg" class="gallery"><img src="../img/close-field.jpg" alt="The Gering-Ft. Laramie Irrigation canal near Scotts Bluff National Monument."></a>
                     </div>
                 </div>
             </div>
@@ -519,7 +519,7 @@
             <div class="container container-small">
                 <div class="row">
                     <div class="col-sm-12">
-                        <p>More than a century after construction, the North Platte Project remains a critical and robust system of water delivery for farmers in the eastern Wyoming and western Nebraska.</p>
+                        <p>More than a century after construction, the North Platte Project remains a critical and robust system of water delivery for farmers in eastern Wyoming and western Nebraska.</p>
                         
                         <p>“Water’s our very key,” Bob Busch said. “It’s our lifeblood.”</p>
                         
@@ -598,15 +598,12 @@
         <script src="../../../bower_components/leaflet/dist/leaflet.js"></script>
         <script src="../../../bower_components/leaflet/dist/leaflet-src.js"></script>
         <script src="../../../bower_components/jquery-ui/jquery-ui.js"></script>
-        <<<<<<< Updated upstream
         <script src="../../../bower_components/vimeo-player-api/javascript/froogaloop.min.js"></script>
-        <script src="../../../bower_components/lightbox/js/lightbox.min.js"></script>
-        =======
-        >>>>>>> Stashed changes
+        <script src="../../../bower_components/jquery-colorbox/jquery.colorbox-min.js"></script>
+        
         <!-- endbower -->
         <!-- endbuild -->
         
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -632,6 +629,10 @@
         <!-- PAGE SPECIFIC SCRIPTS -->
         <script>
             $('.tip').tooltip();
+            $('a.gallery').colorbox({
+                rel: 'gallery',
+                width: '60%;'
+            });
 
             if ( $(window).width() > 1200 ){
                 $('img.zoom')

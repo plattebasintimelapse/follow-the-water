@@ -9,7 +9,24 @@
 
 #snowflakes, #waterdrops {
     height: 300px;
-    display:flex;
+}
+
+.snowflake {
+    color: steelblue;
+    display:inline-block;
+}
+.water-drop {
+    color:#ff5d58;
+    display:inline-block;
+}
+
+.flexbox #snowflakes, .flexbox #waterdrops {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
     flex-direction: row-reverse;
     flex-wrap: wrap-reverse;
     align-items: flex-start;
@@ -17,15 +34,14 @@
 }
 
 #waterdrops .water-drop {
-    height: 28px;
-    width: 26px;
+    height: 24px;
+    width: 22px;
 
-    padding: 5px;
+    padding: 3px;
     img {
         width: 100%;
     }
 
-    
     @include breakpoint(mama-bear) {
         height: 22px;
         width: 20px;
@@ -38,16 +54,22 @@
     }
 }
 
-#snowflakes .snowflake {
+#waterdrops .water-drop {
     height: 28px;
-    width: 28px;
+    width: 26px;
 
-    padding: 4px;
+    padding: 5px;
+}
+
+#snowflakes .snowflake {
+    height: 22px;
+    width: 22px;
+
+    padding: 2px;
     img {
         width: 100%;
     }
 
-    
     @include breakpoint(mama-bear) {
         height: 22px;
         width: 20px;
@@ -60,12 +82,13 @@
     }
 }
 
-.snowflake {
-    color: steelblue;
+.flexbox #snowflakes .snowflake {
+    height: 28px;
+    width: 28px;
+    padding: 4px;
 }
-.water-drop {
-    color:#ff5d58;
-}
+
+
 
 #equals {
 	height: 30px;

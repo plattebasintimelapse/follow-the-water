@@ -8,7 +8,6 @@ By Steven Speicher, Ariana Brocious, & Peter Stegen
 
 ---
 
-
 ### The Rig
 
 Note: This rig was later adapted into the daily graphics rig for the PBT project's CMS which is available [here](https://github.com/plattebasintimelapse/pbt-graphics-rig).
@@ -16,7 +15,7 @@ Note: This rig was later adapted into the daily graphics rig for the PBT project
 #### About
 This app template spits out flat HTML, CSS, JS files to the PBT Amazon S3 account. Visit it [here](http://projects.plattebasintimelapse.com/mountains-to-fields/).
 
-##### Requirements
+### Requirements
 
 * [Node](http://nodejs.org/)
 * [Bower](http://bower.io/)

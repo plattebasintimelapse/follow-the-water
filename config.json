@@ -1,6 +1,7 @@
 {
-	"app": "app",
-	"dist": "dist",
+	"STAGING": "mountains-to-fields/",
+	"PRODUCTION": "mountains-to-fields/",
+
 	"one": "snow",
 	"two": "storage",
 	"three": "field"

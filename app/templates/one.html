@@ -53,7 +53,7 @@
                 <div class="row">
                     <img src="../img/agnes.jpg" alt="Lake Agnes sits just below the Continental Divide at 10,290 feet, in the highest reaches of the North Platte River Basin.">
                     <span class="image-caption image-caption-right">Lake Agnes sits just below the Continental Divide at 10,290 feet, in the highest reaches of the North Platte River Basin. It often receives more than 10 feet of snow.
-                        <a target="_blank" href="http://player.vimeo.com/video/76900788" class="tl-link"><i class="fa fa-video-camera"></i> Watch timelapse</a>
+                        <a id="#tl-agnes" href="http://player.vimeo.com/video/76900788" class="vimeo cboxElement tl-link"><i class="fa fa-video-camera"></i> Watch timelapse</a>
                     </span>
                 </div>
             </div>
@@ -280,6 +280,11 @@
 
         <!-- PAGE SPECIFIC SCRIPTS -->
         <script>
+            $('a#tl-agnes').colorbox({
+                iframe: 'http://player.vimeo.com/video/76900788',
+                width: '60%;'
+            });
+
             if ( $(window).width() > 1200 ){
                 $('img.zoom')
                     .wrap('<span style="display:inline-block"></span>')

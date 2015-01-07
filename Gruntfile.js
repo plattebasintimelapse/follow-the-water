@@ -8,16 +8,15 @@ module.exports = function (grunt) {
     // Configurable paths
     var config = {
         app: 'app',
-        dist: 'dist',
-        one: 'snow',
-        two: 'storage',
-        three: 'field'
+        dist: 'dist'
     };
 
     grunt.initConfig({
 
         config: config,
-        app: grunt.file.readJSON('config.json'),
+
+        app: grunt.file.readJSON("config.json"),
+        aws: grunt.file.readJSON("secrets.json"),
 
         watch: {
             bower: {
@@ -124,9 +123,9 @@ module.exports = function (grunt) {
                 },
                 files: {
                     '<%= config.app %>/index.html': '<%= config.app %>/templates/main.html',
-                    '<%= config.app %>/<%= config.one %>/index.html': '<%= config.app %>/templates/one.html',
-                    '<%= config.app %>/<%= config.two %>/index.html': '<%= config.app %>/templates/two.html',
-                    '<%= config.app %>/<%= config.three %>/index.html': '<%= config.app %>/templates/three.html'
+                    '<%= config.app %>/<%= app.one %>/index.html': '<%= config.app %>/templates/one.html',
+                    '<%= config.app %>/<%= app.two %>/index.html': '<%= config.app %>/templates/two.html',
+                    '<%= config.app %>/<%= app.three %>/index.html': '<%= config.app %>/templates/three.html'
                 }
             }
         },
@@ -298,18 +297,21 @@ module.exports = function (grunt) {
                         '.htaccess',
                         'images/{,*/}*.webp',
                         '{,*/}*.html',
+                        '!templates/{,*/}*.html',
                         'styles/fonts/{,*/}*.*',
                         'media/{,*/}*.*',
                         'img/{,*/}*.*',
-                        'data/{,*/}*.*',
-                        '../bower_components/fontawesome/fonts/{,*/}*.*'
+                        'data/{,*/}*.*'
                     ]
                 }, {
                     expand: true,
                     dot: true,
+                    flatten: true,
                     cwd: '.',
-                    src: ['bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/*.*'],
-                    dest: '<%= config.dist %>'
+                    dest: '<%= config.dist %>/fonts',
+                    src: ['bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/*.*',
+                        'bower_components/fontawesome/fonts/{,*/}*.*'
+                    ]
                 }]
             },
             styles: {
@@ -321,8 +323,6 @@ module.exports = function (grunt) {
             }
         },
 
-        // Generates a custom Modernizr build that includes only the tests you
-        // reference in your app
         modernizr: {
             dist: {
                 devFile: 'bower_components/modernizr/modernizr.js',
@@ -353,6 +353,30 @@ module.exports = function (grunt) {
                 'imagemin',
                 'svgmin'
             ]
+        },
+        aws_s3: {
+            options: {
+                accessKeyId: "<%= aws.accessKeyId %>",
+                secretAccessKey: "<%= aws.secretAccessKey %>",
+                region: "<%= aws.region %>",
+                uploadConcurrency: 5
+            },
+            production: {
+                options: {
+                    bucket: 'projects.plattebasintimelapse.com'
+                },
+                files: [
+                    {expand: true, cwd: '<%= config.dist %>/', src: ['**'], dest: '<%= app.PRODUCTION %>/'}
+                ]
+            },
+            staging: {
+                options: {
+                    bucket: 'staging.plattebasintimelapse.com'
+                },
+                files: [
+                    {expand: true, cwd: '<%= config.dist %>/', src: ['**'], dest: '<%= app.STAGING %>/'}
+                ]
+            }
         }
     });
 
@@ -405,6 +429,16 @@ module.exports = function (grunt) {
         'rev',
         'usemin',
         'htmlmin'
+    ]);
+
+    grunt.registerTask('stage', [
+        'build',
+        'aws_s3:staging'
+    ]);
+
+    grunt.registerTask('deploy', [
+        'build',
+        'aws_s3:production'
     ]);
 
     grunt.registerTask('default', [

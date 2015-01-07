@@ -11,3 +11,5 @@ app/img
 app/snow
 app/storage
 app/field
+
+secrets.json
