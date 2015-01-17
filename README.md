@@ -2,7 +2,7 @@
 
 ### Follow a snowflake from the Colorado Rockies through Wyoming dams and reservoirs to fields in the Nebraska panhandle.
 
-Over the course of two production & reporting years, the Platte Basin Timelapse team produced content surround water use in the North Platte Basin. Beginning in summer of 2014, over the course of several months, this content was compiled and distilled to this story. This news app is the result.
+Over the course of two production & reporting years, the Platte Basin Timelapse team produced content surrounding water use in the North Platte Basin. Beginning in summer of 2014, over the course of several months, this content was compiled and distilled to this story. This news app is the result.
 
 By Steven Speicher, Ariana Brocious, & Peter Stegen
 
@@ -51,7 +51,7 @@ Data used for the visualization are here. D3.js is used to load them into the pa
 #### app/templates
 In here, you'll find an assortment of `.html` template files which are used to spit out the `copy.json` contents to the `app/snow`, `app/storage`, and `app/field` directories.
 
-Everything above gets minimized, concatinated, etc. when running the `grunt deploy` command.
+Everything above gets uglified, minimized and concatenated when running the `grunt deploy` command.
 
 Speaking of commands...
 
